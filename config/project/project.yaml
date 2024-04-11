@@ -1,4 +1,4 @@
-dateModified: 1712822694
+dateModified: 1712826875
 email:
   fromEmail: mani.bae@williamjoseph.co.uk
   fromName: 'WJ Boilerplate'
@@ -7,6 +7,72 @@ meta:
   __names__:
     1a5747be-fb88-4384-a10e-ab7459382bc0: 'WJ Boilerplate' # WJ Boilerplate
     17ea053e-13d0-4c0f-a465-42342bea6915: 'WJ Boilerplate' # WJ Boilerplate
+    125a39f1-c7fd-462c-beff-e3dfd421bec7: Simple # Simple
+    3031c488-fd65-4a4c-b69b-770f27f5fd77: 'Contact Form' # Contact Form
+    b85f18dc-5c7d-4c3d-be23-437b9c3675f3: New # New
+plugins:
+  admin-bar:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.0
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  cookies:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      additionalCss: ''
+      cacheBusting: true
+      cssFile: $CRAFT_CP_CSS
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  dashboard-begone:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: K73T4S4RZ6HPWJUIQB7AG4M2
+    schemaVersion: 3.4.2
+  image-resizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      enabled: true
+      imageHeight: 4096
+      imageQuality: 100
+      imageWidth: 4096
+      nonDestructiveCrop: false
+      nonDestructiveResize: false
+      skipLarger: true
+  knock-knock:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.1
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: 54OLWN3NMDQ0NZHSV00E6YVR
+    schemaVersion: 3.0.12
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true
