@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-GB
+name: 'WJ Boilerplate'
+primary: true
+siteGroup: 1a5747be-fb88-4384-a10e-ab7459382bc0 # WJ Boilerplate
+sortOrder: 1
