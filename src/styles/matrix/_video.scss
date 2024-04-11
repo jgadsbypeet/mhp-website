@@ -1,0 +1,14 @@
+.video {
+ &__playing {
+    .video__image,
+    .video__button {
+      @apply hidden;
+    }
+  }
+}
+
+.matrix--video {
+  .accordion {
+    @apply border-t-0 my-0;
+  }
+}

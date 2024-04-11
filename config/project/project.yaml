@@ -1,4 +1,4 @@
-dateModified: 1712826875
+dateModified: 1712834341
 email:
   fromEmail: mani.bae@williamjoseph.co.uk
   fromName: 'WJ Boilerplate'
@@ -6,8 +6,10 @@ email:
 meta:
   __names__:
     1a5747be-fb88-4384-a10e-ab7459382bc0: 'WJ Boilerplate' # WJ Boilerplate
-    17ea053e-13d0-4c0f-a465-42342bea6915: 'WJ Boilerplate' # WJ Boilerplate
+    17ea053e-13d0-4c0f-a465-42342bea6915: 'WJ Craft5 Boilerplate' # WJ Craft5 Boilerplate
+    75e255f2-86f8-4b83-8bfa-39f20fa4eedd: Standard # Standard
     125a39f1-c7fd-462c-beff-e3dfd421bec7: Simple # Simple
+    545bf85d-2516-4846-ab8f-778f8f10fcab: 'Website documentation' # Website documentation
     3031c488-fd65-4a4c-b69b-770f27f5fd77: 'Contact Form' # Contact Form
     b85f18dc-5c7d-4c3d-be23-437b9c3675f3: New # New
 plugins:

@@ -1,0 +1,177 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './templates/*.twig',
+    './templates/**/*.twig',
+    './src/js/**/*.js'
+  ],
+  theme: {
+    screens: {
+      'xs': '420px',
+      'sm': '600px',
+      'md': '720px',
+      'mdlg': '900px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1440px',
+    },
+    fontFamily: {
+      // 'display': ['RFC Stencil', 'sans-serif'],
+      // 'heading': ['RFC Heading', 'sans-serif'],
+      // 'body': ['Inter', 'sans-serif'],
+    },
+    fontWeight: {
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+    },
+    fontSize: {
+      reset: "62.5%",
+      // for h1
+      '4xl': ['4.8rem',  '4.4rem'],
+      '4xl-lg': ['8.6rem', '7.8rem'],
+      // for heading-3xl (used in statistics)
+      '3xl': ['6.4rem',  '6rem'],
+      '3xl-lg': ['8rem', '7.2rem'],
+      // for heading-2xl (used in call to action)
+      '2xl': ['4.8rem',  '4.4rem'],
+      '2xl-lg': ['5.6rem', '5.2rem'],
+      // for h2 / heading-xl
+      'xl': ['3rem', '3.6rem'],
+      'xl-lg': ['4.8rem', '5.6rem'],
+      // for h3 / heading-lg
+      'lg': ['2.4rem', '3rem'],
+      'lg-lg': ['3rem', '3.8rem'],
+      // for h4 / heading-md
+      'h-md': ['1.9rem', '2.4rem'],
+      'h-md-lg': ['2.5rem', '3.2rem'],
+      // heading-sm
+      'h-sm': ['1.7rem', '2.2rem'],
+      'h-sm-lg': ['2.1rem', '2.8rem'],
+      // heading-xs
+      'h-xs': ['1.6rem', '2rem'],
+      'h-xs-lg': ['1.9rem', '2.4rem'],
+      // for body-md
+      'md': ['1.9rem', '2.4rem'],
+      'md-lg': ['2.5rem', '3.2rem'],
+      // for body / body-sm
+      'base': ['1.7rem', '2.2rem'],
+      'base-lg': ['2.1rem', '2.8rem'],
+      // for body-xs
+      'xs': ['1.6rem', '2rem'],
+      'xs-lg': ['1.9rem', '2.4rem'],
+      // for body-2xs
+      '2xs': ['1.4rem', '1.8rem'],
+      '2xs-lg': ['1.6rem', '2rem'],
+      // for body-3xs
+      '3xs': ['1.2rem', '1.4rem'],
+      '3xs-lg': ['1.4rem', '1.6rem'],
+    },
+    extend: {
+      colors: {
+        'white': {
+          DEFAULT: '#FFF',
+          'off': '#F7F7F7',
+        },
+        'black': {
+          'secondary': '#625C66',
+          DEFAULT: '#232323',
+          'dark': '#000000',
+        },
+        'red': {
+          'bright-tint-10': '#FFE6ED',
+          'bright-tint-25': '#FFBFD2',
+          DEFAULT: '#FF004B',
+          'dark': '#DE004A',
+          'dark-2': '#B2003C',
+        },
+        'purple': {
+          'bright-tint-25': '#D4C1E2',
+          'bright-tint-50': '#AA82C4',
+          'bright': '#55068A',
+          'md': '#460375',
+          DEFAULT: '#36005F',
+        },
+        'link': {
+          DEFAULT: '#B2003C',
+          'hover': '#80002B',
+        },
+        'grey': {
+          DEFAULT: '#8B878E',
+          '3': '#C5C3C7',
+          '4': '#F6F5F7',
+        },
+        'error-red': '#F00',
+        'highlight': '#FFE100', // should match with accessibility hightlight colour
+      },
+      maxWidth: {
+        'sm' : '696px',
+        'md' : '800px',
+        'lg' : '1008px',
+        'xl' : '1216px',
+      },
+      spacing: {
+        '1': '4px',
+        '2': '8px',
+        '3': '12px',
+        '4': '16px',
+        '5': '24px',
+        '6': '32px',
+        '7': '40px',
+        '8': '48px',
+        '9': '56px',
+        '10': '64px',
+        // responsive spacing
+        '1-lg': '4px',
+        '2-lg': '8px',
+        '3-lg': '16px',
+        '4-lg': '24px',
+        '5-lg': '32px',
+        '6-lg': '40px',
+        '7-lg': '48px',
+        '8-lg': '56px',
+        '9-lg': '64px',
+        '10-lg': '80px',
+      },
+      padding: {
+        '3xs' : '4px',
+        '2xs' : '8px',
+        'xs' : '12px',
+        'sm' : '16px',
+        'md' : '20px',
+        'lg' : '24px',
+        'xl' : '32px',
+        '2xl' : '40px',
+        '3xl' : '48px',
+        '4xl' : '56px',
+        '5xl' : '64px',
+      },
+      margin: {
+        '3xs' : '4px',
+        '2xs' : '8px',
+        'xs' : '12px',
+        'sm' : '16px',
+        'md' : '20px',
+        'lg' : '24px',
+        'xl' : '32px',
+        '2xl' : '40px',
+        '3xl' : '48px',
+        '4xl' : '56px',
+        '5xl' : '64px',
+      },
+      borderRadius: {
+        'sm': '4px',
+        DEFAULT: '8px',
+        'md': '12px',
+        'lg': '20px',
+      },
+      boxShadow: {
+        'md': '0px 3px 15px rgba(0,0,0,0.2)',
+      },
+      // backgroundImage: {
+      //   'hero-bubbles': "url('../images/graphics/hero-bubbles.svg')",
+      // },
+    },
+  },
+  plugins: [],
+}

@@ -1,0 +1,43 @@
+$white: #FFFFFF;
+$off-white: #F7F7F7;
+$brand: #55068A;
+$brand-darker: #36005F;
+
+/* purpleactor styles */
+.ck-content {
+  h5 {
+    color: $brand-darker;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .table {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+body {
+  background: $off-white;
+}
+
+/* CP styles */
+#global-sidebar {
+  color: $white;
+  background-color: $brand;
+
+  #system-info:hover,
+  .sidebar-action:hover {
+    background-color: $brand-darker;
+  }
+
+  .badge {
+    background-color: darken($brand-darker, 15%);
+  }
+}
+
+#global-header {
+  background-color: $white;
+  box-shadow: none;
+}

@@ -1,0 +1,135 @@
+// body {
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   font-smooth: never;
+// }
+
+@layer base {
+  // headings
+  h1 {
+    @apply font-display font-semibold text-4xl md:text-4xl-lg tracking-[0];
+  }
+  .heading-3xl {
+    @apply font-display font-semibold text-3xl md:text-3xl-lg tracking-[0];
+  }
+  .heading-2xl {
+    @apply font-display font-semibold text-2xl md:text-2xl-lg mb-8 md:mb-8-lg tracking-[0];
+  }
+  h2, .heading-xl {
+    @apply font-heading font-semibold text-center text-purple text-xl md:text-xl-lg mt-9 mb-7 md:mt-9-lg md:mb-7-lg -tracking-[.0375rem] md:-tracking-[0.06rem];
+  }
+  h3, .heading-lg {
+    @apply font-heading font-semibold text-purple text-lg md:text-lg-lg mt-5 mb-4 md:mt-5-lg md:mb-4-lg -tracking-[.03rem] md:-tracking-[0.0375rem];
+  }
+  h4, .heading-md {
+    @apply font-heading font-semibold text-h-md md:text-h-md-lg mt-5 mb-4 md:mt-5-lg md:mb-4-lg -tracking-[.02375rem] md:-tracking-[0.03125rem];
+  }
+  .heading-sm {
+    @apply font-body font-semibold text-h-sm md:text-h-sm-lg tracking-[0];
+  }
+  h5 {
+    @apply heading-sm text-purple;
+  }
+  .heading-xs {
+    @apply font-body font-semibold text-h-xs md:text-h-xs-lg tracking-[0];
+  }
+  .heading {
+    @apply font-heading font-semibold;
+  }
+  // paragraphs
+  .body-md {
+    @apply text-md md:text-md-lg;
+  }
+  .body-xs {
+    @apply text-xs md:text-xs-lg;
+  }
+  .body-2xs {
+    @apply text-black-secondary text-2xs md:text-2xs-lg;
+  }
+  .body-3xs {
+    @apply text-black-secondary text-3xs md:text-3xs-lg;
+  }
+  .lead-paragraph {
+    @apply font-semibold mb-5 md:mb-5-lg;
+  }
+  p, ol, ul {
+    @apply mb-4 md:mb-4-lg;
+  }
+  ol {
+    @apply [counter-reset:section];
+  }
+  ol li {
+    @apply [counter-increment:section] relative pl-[22px] mb-2xs last:mb-0 md:pl-[24px];
+  }
+  ol li:before {
+    @apply [content:counters(section,'.')'.'] absolute left-0;
+  }
+  ul li {
+    @apply relative pl-[22px] mb-2xs last:mb-0 md:pl-[24px];
+  }
+  ul li:before {
+    @apply content-[''] block absolute left-[1px] top-[6px] w-[8px] h-[8px] bg-black rounded-full md:top-[10px] md:w-[8px] md:h-[8px];
+  }
+  .list-reset li {
+    @apply static pl-0 md:pl-0;
+  }
+  .list-reset li:before {
+    @apply content-none;
+  }
+  a, .link {
+    @apply text-link underline decoration-1 underline-offset-[3px] hover:text-link-hover hover:decoration-[3px] group-hover:text-link-hover group-hover:decoration-[3px];
+  }
+  a.invert, .link-invert, .link-invert a {
+    @apply text-white hover:text-white group-hover:text-white;
+  }
+  .link-no-underline {
+    @apply no-underline;
+  }
+  strong {
+    @apply font-semibold;
+  }
+  .text-testimonial {
+    @apply text-[2.2rem] leading-[2.8rem] md:text-[2.8rem] md:leading-[3.6rem] text-purple-bright;
+  }
+  // table
+  table {
+    @apply w-full mb-7 md:mb-7-lg;
+  }
+  th, td {
+    @apply text-left align-top border-b py-3 pr-4 md:py-3-lg md:pr-4-lg last:pr-0;
+
+    & > *:last-child {
+      @apply mb-0;
+    }
+  }
+  th {
+    @apply font-semibold border-b-grey;
+  }
+  td {
+    @apply border-b-grey-3;
+  }
+  // CK editor table
+  figure.table {
+    @apply w-full mb-7 md:mb-7-lg;
+
+    table {
+      @apply mb-0;
+    }
+  }
+  // buttons
+  button, 
+  .button, 
+  [type="button"], 
+  [type="submit"] {
+    @apply inline-flex justify-center items-center bg-purple-bright heading-sm text-white rounded-full px-[18px] py-[10px] md:px-[20px] md:pt-[9px] no-underline border-none outline-none hover:bg-purple-md hover:text-white active:bg-purple;
+  }
+  .button-red {
+    @apply bg-red-dark hover:bg-red-dark-2 active:bg-red-dark-2;
+  }
+  .button-reset {
+    @apply inline bg-transparent border-none rounded-none leading-normal m-0 p-0 hover:bg-transparent;
+  }
+  .group-hover-button {
+    @apply group-hover:bg-purple-md group-hover:text-white group-active:bg-purple;
+  }
+}

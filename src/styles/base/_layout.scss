@@ -1,0 +1,10 @@
+@layer components {
+  // layout 
+  .container {
+    @apply max-w-none mx-auto px-sm xs:px-lg lg:px-xl;
+  }
+  // for blocks like the accordion
+  .container .container {
+    @apply px-0;
+  }
+}

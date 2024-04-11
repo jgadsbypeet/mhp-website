@@ -1,8 +1,9 @@
 baseUrl: $PRIMARY_SITE_URL
+enabled: true
 handle: default
 hasUrls: true
 language: en-GB
-name: 'WJ Boilerplate'
+name: 'WJ Craft5 Boilerplate'
 primary: true
 siteGroup: 1a5747be-fb88-4384-a10e-ab7459382bc0 # WJ Boilerplate
 sortOrder: 1

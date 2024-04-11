@@ -1,0 +1,54 @@
+@mixin accessible-focus-state() {
+  &:focus-visible {
+    @apply outline-none bg-highlight no-underline hover:no-underline hover:bg-highlight group-hover:bg-highlight;
+    @apply text-black #{!important};
+
+    &:not(.no-path-fill) {
+      path {
+        @apply fill-black #{!important};
+      }
+    }
+  }
+}
+
+a, 
+button {
+  @include accessible-focus-state();
+  @apply focus-visible:shadow-[0_-3px_0_0_theme(colors.highlight),0_1px_0_0_theme(colors.highlight),0_4px_0_0_theme(colors.black.DEFAULT)];
+}
+
+.button  {
+  @include accessible-focus-state();
+  @apply focus-visible:shadow-[0_0_0_4px_theme(colors.black.DEFAULT)];
+}
+
+/* Fallback for browsers without :focus-visible support */
+@supports not selector(:focus-visible) {
+  a, 
+  button {
+    @include accessible-focus-state();
+    @apply focus-visible:shadow-[0_-3px_0_0_theme(colors.highlight),0_1px_0_0_theme(colors.highlight),0_4px_0_0_theme(colors.black.DEFAULT)];
+  }
+
+  .button {
+    @include accessible-focus-state();
+    @apply focus-visible:shadow-[0_0_0_4px_theme(colors.black.DEFAULT)];
+  }
+}
+
+.visually-hidden {
+  @apply absolute -left-[9999px] top-auto w-[1px] h-[1px] overflow-hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    @apply animate-none #{!important};
+    @apply transition-none #{!important};
+  }
+}
+
+.skip-link:focus-visible {
+  @include accessible-focus-state();
+  @apply focus-visible:shadow-[0_-3px_0_0_theme(colors.highlight),0_1px_0_0_theme(colors.highlight),0_4px_0_0_theme(colors.black.DEFAULT)];
+  @apply fixed top-[1px] left-[1px] w-auto h-auto z-[99];
+}

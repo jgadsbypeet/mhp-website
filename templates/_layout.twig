@@ -1,0 +1,109 @@
+{% set bodyClasses = bodyClasses ?? "" %}
+{% set cookiePolicyEntry = cookies.cookiePolicyEntry.one() ?? null %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="text-reset scroll-smooth min-h-screen box-border">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {# TODO - Favicons - use https://realfavicongenerator.net/ to generate the files, add them to a folder named ‘favicons’ in the folder named ‘src’ and run ‘gulp’ to save versions of the files in the ‘web’ folder. #}
+    {# <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e35205">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff"> #}
+
+    {# Google Tag Manger #}
+    {% if not craft.app.request.isLivePreview and getenv("ENVIRONMENT") == "production" and not currentUser %}
+      <!-- Google Tag Manager -->
+    {% endif %}
+
+    {# Main stylesheet #}
+    <link rel="preload" href="/dist/styles/{{ rev('main.css') }}" as="style" onerror="this.onerror=null;this.href='/dist/styles/main.css';">
+    <link href="/dist/styles/{{ rev('main.css') }}" rel="stylesheet" onerror="this.onerror=null;this.href='/dist/styles/main.css';">
+
+    {# Add noindex and nofollow the website documentation so it doesn't appear in search results #}
+    {% if entry is defined and entry.section.handle == 'webDoc' %}
+      <meta name="robots" content="none">
+    {% endif %}
+
+    {% block head %}
+    {% endblock %}
+  </head>
+
+  <body class="font-body font-normal text-black text-base md:text-base-lg min-h-screen flex flex-col subpixel-antialiased{{ bodyClasses ? ' ' ~ bodyClasses : '' }}">
+    {% block adminBar %}
+    {% endblock %}
+
+    {% if cookiePolicyEntry %}
+      {% if entry is defined and entry.id == cookiePolicyEntry.id %}
+        {# Don't show the cookie notice on the cookie policy entry #}
+      {% else %}
+        {# Show the cookie notice #}
+        {# {% include "components/_cookie-notice" %} #}
+      {% endif %}
+    {% endif %}
+
+    <a class="visually-hidden skip-link" href="#content">Skip to main content</a>
+
+    {% block header %}
+      {% include "components/_site-header" %}
+    {% endblock %}
+
+    <main id="content" class="flex-grow">
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    {% block footer %}
+      {% include "components/_site-footer" %}
+    {% endblock %}
+
+    {# CSRF for javascript post request #}
+    <script type="text/javascript">
+        window.csrfTokenName = "{{ craft.app.config.general.csrfTokenName|e('js') }}";
+        window.csrfTokenValue = "{{ craft.app.request.csrfToken|e('js') }}";
+    </script>
+    {# Javascript for fallback js files #}
+    <script>
+      function createScriptElement(src) {
+        const script = document.createElement('script');
+        script.src = src;
+        return script;
+      }
+
+      function loadFallbackScript(fallbackScript) {
+          const fallbackScriptElement = createScriptElement(fallbackScript);
+          document.head.append(fallbackScriptElement);
+      }
+    </script>
+    {# Javascript #}
+    <script src="/dist/js/vendor/{{ rev('jquery/jquery-3.6.0.min.js') }}" onerror="loadFallbackScript('/dist/js/vendor/jquery/jquery-3.6.0.min.js')"></script>
+    <script src="/dist/js/{{ rev('main.js') }}" onerror="loadFallbackScript('/dist/js/main.js')"></script>
+
+    {% block footerScripts %}
+    {% endblock %}
+
+  <script id="__bs_script__">//<![CDATA[
+  (function() {
+    try {
+      var script = document.createElement('script');
+      if ('async') {
+        script.async = true;
+      }
+      script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.3'.replace("HOST", location.hostname);
+      if (document.body) {
+        document.body.appendChild(script);
+      } else if (document.head) {
+        document.head.appendChild(script);
+      }
+    } catch (e) {
+      console.error("Browsersync: could not append script tag", e);
+    }
+  })()
+//]]></script>
+  </body>
+</html>   

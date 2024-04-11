@@ -1,0 +1,50 @@
+color: null
+fieldLayouts:
+  87c335ca-6f14-483b-b742-b28d48965c5c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 4eaffa64-446e-46ed-aece-ac8a6e211b7e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bdb88b26-d6f3-4c33-89b3-a4b2b1cfbb65
+        userCondition: null
+handle: entry__standard
+hasTitleField: true
+icon: newspaper
+name: Standard
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

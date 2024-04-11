@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 75e255f2-86f8-4b83-8bfa-39f20fa4eedd # Standard
+handle: webDoc
+maxAuthors: 1
+name: 'Website documentation'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  17ea053e-13d0-4c0f-a465-42342bea6915: # WJ Craft5 Boilerplate
+    enabledByDefault: true
+    hasUrls: true
+    template: _entry
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 8c20520f-e761-4122-b917-e763cc6731a1
+type: structure

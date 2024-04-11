@@ -1,0 +1,66 @@
+{% extends "_layout" %}
+{% import "_macro" as macro %}
+
+{% set entryBody = entry.body__section.all() ?? null %}
+{% set heroImage = entry.heroImage.one() ?? null %}
+
+{% block adminBar %}
+  {{ adminBar({editLinkUrl: entry.cpEditUrl, editLinkLabel: "entry"}) }}
+{% endblock %}
+
+{% block content %}
+  {% apply typogrify %}
+    {% block hero %}
+      {% if heroImage %}
+        {% include [
+            "components/hero/" ~ entry.section.handle|kebab ~ "/_" ~ entry.type|kebab ~ "-image", 
+            "components/hero/_" ~ entry.type|kebab ~ "-image", 
+            "components/hero/_standard"
+          ] with {
+          standfirst: entry.standfirst ?? "",
+          image: heroImage
+        } %}
+      {% else %}
+        {% include "components/hero/_standard" with {
+          standfirst: entry.standfirst ?? ""
+        } %}
+      {% endif %}
+    {% endblock %}
+    
+    <div class="site-content pt-9 lg:pt-9-lg">
+      {% block jumplinks %}
+        {% include "components/_jump-links" %}
+      {% endblock %}
+
+      {% block body %}
+        {% if entry.leadParagraph %}
+          <div class="container">
+            <div class="max-w-sm mx-auto">
+              <div class="lead-paragraph lc--nbm">
+                {{ entry.leadParagraph }}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+
+        {% block careerDetails %}
+        {% endblock %}
+        
+        {% if entryBody %}
+          <div class="matrix-sections">
+            {% include "_matrix" with { 
+              "matrix": entryBody 
+            } %}
+            
+            {% if cookiePolicyEntry %}
+              {% if entry.id == cookiePolicyEntry.id %}
+                {% include "components/_cookie-preference-toggle" %}
+              {% endif %}
+            {% endif %}
+          </div>
+        {% endif %}
+
+      {% endblock %}
+    </div>
+  {% endapply %}
+{% endblock %}

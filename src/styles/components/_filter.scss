@@ -1,0 +1,11 @@
+#filter {
+  .tags {
+    label {
+      @apply bg-white;
+    }
+
+    input[type="checkbox"]:checked + label {
+      @apply text-white bg-black;
+    }
+  }
+}

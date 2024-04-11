@@ -1,0 +1,113 @@
+{#******************************************************************************************
+Youtube video {{ macro.videoEmbed('videoUrl') }}
+*******************************************************************************************#}
+{% macro videoEmbed(videoUrl) %}
+  {% if 'youtu' in videoUrl %}
+    {% if 'youtube.com' in videoUrl %}
+      {% set videoId = videoUrl|split('?v=')|last %}
+      {% set videoId = videoId|split('&')|first %}{# clean up extra paremeters #}
+    {% elseif 'youtu.be' in videoUrl %}
+      {% set videoId = videoUrl|split('/')|last %}
+      {% set videoId = videoId|split('?')|first %}{# clean up extra paremeters #}
+    {% endif %}
+    {% set videoEmbedUrl = 'https://www.youtube.com/embed/' ~ videoId %}   
+  {% elseif 'vimeo' in videoUrl %}
+    {% set videoId = videoUrl|split('/')|last %}
+    {% set videoEmbedUrl = 'https://player.vimeo.com/video/' ~ videoId %}
+  {% endif %}
+
+  <iframe src="{{ videoEmbedUrl }}" frameborder="0" allowfullscreen allow="autoplay" class="video__asset video__asset-iframe absolute top-0 left-0 w-full h-full"></iframe>
+{% endmacro %}
+
+{#******************************************************************************************
+Image srcset by screen sizes
+Usage:
+{{ macro.image({
+  image: block.image.one(),
+  imageClass: "image",
+  alt: block.image.one().alt,
+  sizes: [
+    { maxScreen: "479px", width: 448, height: null },
+    { maxScreen: "767px", width: 688, height: null },
+    { maxScreen: "", width: 904, height: null }
+  ]
+}) }}
+*******************************************************************************************#}
+{% macro image(atr) %}
+  {% set defaults = {
+    image: null,
+    imageClass: '',
+    alt: null,
+    lazyLoad: null,
+    sizes: [
+      { maxScreen: "", width: null, height: null },
+      { maxScreen: "", width: null, height: null },
+      { maxScreen: "", width: null, height: null }
+    ]
+  } %}
+  {% set atr = defaults|merge(atr) %}
+
+  {# image transform settings #}
+  {% set quality = '82' %}{# very high #}
+  {% set formats = ['webp', ''] %}
+
+  {# only output srcset if there is an image to output! #}
+  {% if atr.image %}
+    <picture>
+      {% for format in formats %}
+        {# set default image src details #}
+        {% set defaultImageSrcUrl = [] %}
+        {% set defaultImageWidth = [] %}
+        {% set defaultImageHeight = [] %}
+
+        {% for size in atr.sizes %}
+          {% set screenSize = size.maxScreen ? '(max-width:' ~ size.maxScreen ~ ')' : '' %}
+          {% if size.height %}
+            {% set mode = 'crop' %}
+          {% else %}
+            {% set mode = 'fit' %}
+          {% endif %}
+          {% set imageSrc = {mode: mode, width: size.width, height: size.height, quality: quality, format: format} %}
+          {% set imageSrcUrl = url(atr.image.getUrl(imageSrc), {v: atr.image.dateModified.timestamp}) %}
+          {% set imageSrc2x = {mode: mode, width: (size.width)|round|number_format(2, '.', '') * 2, height: (size.height)|round|number_format(2, '.', '') * 2, quality: quality, format: format} %}
+          {% set imageSrcUrl2x = url(atr.image.getUrl(imageSrc2x), {v: atr.image.dateModified.timestamp}) %}
+          {% set srcset = imageSrcUrl ~ ', ' ~ imageSrcUrl2x ~ ' 2x' %}
+
+          {# webp format source #}
+          {% if format == 'webp' %}
+            <source {{ attr({
+              media: screenSize, 
+              type: 'image/' ~ format,
+              srcset: srcset ?? '',
+              sizes: '100vw',
+            }) }}>
+          {# other format source #}
+          {% else %}
+            <source {{ attr({
+              media: screenSize, 
+              srcset: srcset ?? '',
+              sizes: '100vw',
+            }) }}>
+          {% endif %}
+          
+          {# add default image src details once #}
+          {% if loop.last %}
+            {% set defaultImageSrcUrl = defaultImageSrcUrl|merge([imageSrcUrl]) %}
+            {% set defaultImageWidth = defaultImageWidth|merge([atr.image.getWidth(imageSrc)]) %}
+            {% set defaultImageHeight = defaultImageHeight|merge([atr.image.getHeight(imageSrc)]) %}
+          {% endif %}
+        {% endfor %}
+
+        {# display image once #}
+        {% if loop.last %}
+          {# layloading option #}
+          {% if atr.lazyLoad == true %}
+              <img loading="lazy" src="{{ defaultImageSrcUrl[0] }}" class="{{ atr.imageClass ?? 'image' }}" width="{{ defaultImageWidth[0] }}" height="{{ defaultImageHeight[0] }}" alt="{{ atr.alt ?? '' }}" />
+          {% else %}
+              <img src="{{ defaultImageSrcUrl[0] }}" class="{{ atr.imageClass ?? 'image' }}" width="{{ defaultImageWidth[0] }}" height="{{ defaultImageHeight[0] }}" alt="{{ atr.alt ?? '' }}" />
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </picture>
+  {% endif %}
+{% endmacro %}

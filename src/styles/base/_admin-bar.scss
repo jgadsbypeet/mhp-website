@@ -1,0 +1,5 @@
+admin-bar {
+  --admin-bar-font-size: 1.4rem;
+  --admin-bar-bg: #333;
+  z-index: var(--admin-bar-z-index, 100000);
+}

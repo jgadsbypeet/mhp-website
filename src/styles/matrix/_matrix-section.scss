@@ -1,0 +1,37 @@
+.matrix-section-top-curve {
+  @apply curve-graphic-size;
+}
+
+.matrix-blocks {
+  @apply pb-9 md:pb-9-lg;
+}
+
+.matrix-section {
+  &:nth-child(odd) {
+    .matrix-section-top-curve {
+      @apply bg-grey-4 bg-section-curve-top-white;
+    }
+
+    .matrix-blocks {
+      @apply bg-white;
+
+      .bg-grey-swap {
+        @apply bg-grey-4;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    .matrix-section-top-curve {
+      @apply bg-white bg-section-curve-top-grey-4;
+    }
+
+    .matrix-blocks {
+      @apply bg-grey-4;
+
+      .bg-grey-swap {
+        @apply bg-white;
+      }
+    }
+  }
+}

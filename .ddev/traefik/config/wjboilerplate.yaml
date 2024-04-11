@@ -1,0 +1,121 @@
+#ddev-generated
+
+http:
+  routers:
+    
+    
+    wjboilerplate-web-80-http:
+      
+      rule: HostRegexp(`wjboilerplate.ddev.site`)
+      
+      service: "wjboilerplate-web-80-http"
+      tls: false
+      entrypoints:
+        - http-80
+    
+    
+    wjboilerplate-web-8025-http:
+      
+      rule: HostRegexp(`wjboilerplate.ddev.site`)
+      
+      service: "wjboilerplate-web-8025-http"
+      tls: false
+      entrypoints:
+        - http-8025
+    
+    
+    wjboilerplate-web-3000-http:
+      
+      rule: HostRegexp(`wjboilerplate.ddev.site`)
+      
+      service: "wjboilerplate-web-3000-http"
+      tls: false
+      entrypoints:
+        - http-3001
+    
+    
+    
+    
+    
+    
+    
+    
+    wjboilerplate-web-80-https:
+      
+      rule: HostRegexp(`wjboilerplate.ddev.site`)
+      
+      service: "wjboilerplate-web-80-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-443
+    
+    
+    wjboilerplate-web-8025-https:
+      
+      rule: HostRegexp(`wjboilerplate.ddev.site`)
+      
+      service: "wjboilerplate-web-8025-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-8026
+    
+    
+    wjboilerplate-web-3000-https:
+      
+      rule: HostRegexp(`wjboilerplate.ddev.site`)
+      
+      service: "wjboilerplate-web-3000-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-3000
+    
+    
+
+  services:
+    
+    wjboilerplate-web-80-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-wjboilerplate-web:80
+    
+    wjboilerplate-web-8025-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-wjboilerplate-web:8025
+    
+    wjboilerplate-web-3000-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-wjboilerplate-web:3000
+    
+    wjboilerplate-web-80-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-wjboilerplate-web:80
+    
+    wjboilerplate-web-8025-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-wjboilerplate-web:8025
+    
+    wjboilerplate-web-3000-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-wjboilerplate-web:3000
+    
+
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/wjboilerplate.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/wjboilerplate.key
+
