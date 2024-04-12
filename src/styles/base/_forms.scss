@@ -63,7 +63,7 @@ form button:not(.custom-button),
 form [type=button]:not(.custom-button), 
 form [type=submit]:not(.custom-button) {
   @apply py-[13px] px-[28px] md:py-[14px] md:px-[32px];
-  @apply active:shadow-[inset_0_6px_0_0_rgba(0,0,0,0.25)] active:bg-purple-md;
+  @apply active:shadow-[inset_0_6px_0_0_rgba(0,0,0,0.25)] active:bg-brand-sub;
   @apply focus-visible:shadow-[0_0_0_4px_theme(colors.black.DEFAULT)];
 }
 
@@ -73,7 +73,7 @@ form [type=submit]:not(.custom-button) {
 }
 
 .fui-instructions {
-  @apply mb-sm text-black-secondary;
+  @apply mb-sm text-black-light;
 
   & > *:last-child {
     @apply mb-0;
@@ -123,7 +123,7 @@ form [type=submit]:not(.custom-button) {
 }
 
 .fui-field.fui-error {
-  @apply border-l-4 border-l-error-red p-[16px] mb-4 md:mb-4-lg bg-red-bright-tint-10;
+  @apply border-l-4 border-l-error-red p-[16px] mb-4 md:mb-4-lg;
 
   input[type="date"],
   input[type="email"],
@@ -140,7 +140,7 @@ form [type=submit]:not(.custom-button) {
 }
 
 .fui-alert {
-  @apply font-semibold border-4 border-error-red p-[16px] mb-8 md:p-[24px] md:mb-8-lg bg-red-bright-tint-10;
+  @apply font-semibold border-4 border-error-red p-[16px] mb-8 md:p-[24px] md:mb-8-lg;
 
   p {
     @apply last:mb-0;
@@ -157,6 +157,6 @@ form [type=submit]:not(.custom-button) {
   }
 
   .fui-limit-text {
-    @apply text-black-secondary;
+    @apply text-black-light;
   }
 }

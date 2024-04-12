@@ -34,14 +34,14 @@
     }
 
     a {
-      @apply text-purple-bright hover:text-purple;
+      @apply text-brand-sub-bright hover:text-brand-sub;
     }
   }
 }
 
 .header-nav__menu-bar > li > span, 
 .header-nav__menu-bar > li > a {
-  @apply font-semibold text-purple-bright hover:text-purple hover:decoration-1 md:font-medium;
+  @apply font-semibold text-brand-sub-bright hover:text-brand-sub hover:decoration-1 md:font-medium;
   @apply focus-visible:shadow-[inset_0_-4px_0_0_theme(colors.black.DEFAULT)];
 }
 

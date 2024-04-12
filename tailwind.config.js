@@ -16,9 +16,9 @@ module.exports = {
       '2xl': '1440px',
     },
     fontFamily: {
-      // 'display': ['RFC Stencil', 'sans-serif'],
-      // 'heading': ['RFC Heading', 'sans-serif'],
-      // 'body': ['Inter', 'sans-serif'],
+      'display': ['sans-serif'],
+      'heading': ['sans-serif'],
+      'body': ['sans-serif'],
     },
     fontWeight: {
       normal: '400',
@@ -74,22 +74,15 @@ module.exports = {
           'off': '#F7F7F7',
         },
         'black': {
-          'secondary': '#625C66',
+          'light': '#625C66',
           DEFAULT: '#232323',
           'dark': '#000000',
         },
-        'red': {
-          'bright-tint-10': '#FFE6ED',
-          'bright-tint-25': '#FFBFD2',
+        'brand': {
           DEFAULT: '#FF004B',
-          'dark': '#DE004A',
-          'dark-2': '#B2003C',
         },
-        'purple': {
-          'bright-tint-25': '#D4C1E2',
-          'bright-tint-50': '#AA82C4',
+        'brand-sub': {
           'bright': '#55068A',
-          'md': '#460375',
           DEFAULT: '#36005F',
         },
         'link': {
@@ -150,6 +143,7 @@ module.exports = {
       margin: {
         '4xs' : '4px',
         '3xs' : '6px',
+        '2xs' : '8px',
         'xs' : '12px',
         'sm' : '16px',
         'md' : '20px',
