@@ -1,7 +1,7 @@
 {% extends "_layout" %}
 {% import "_macro" as macro %}
 
-{% set entryBody = entry.body__section.all() ?? null %}
+{% set entryBody = entry.body__content.all() ?? null %}
 {% set heroImage = entry.heroImage.one() ?? null %}
 
 {% block adminBar %}
@@ -11,20 +11,9 @@
 {% block content %}
   {% apply typogrify %}
     {% block hero %}
-      {% if heroImage %}
-        {% include [
-            "components/hero/" ~ entry.section.handle|kebab ~ "/_" ~ entry.type|kebab ~ "-image", 
-            "components/hero/_" ~ entry.type|kebab ~ "-image", 
-            "components/hero/_standard"
-          ] with {
-          standfirst: entry.standfirst ?? "",
-          image: heroImage
-        } %}
-      {% else %}
-        {% include "components/hero/_standard" with {
-          standfirst: entry.standfirst ?? ""
-        } %}
-      {% endif %}
+      {% include "components/hero/_standard" with {
+        standfirst: entry.standfirst ?? ""
+      } %}
     {% endblock %}
     
     <div class="site-content pt-9 lg:pt-9-lg">
@@ -33,7 +22,7 @@
       {% endblock %}
 
       {% block body %}
-        {% if entry.leadParagraph %}
+        {# {% if entry.leadParagraph %}
           <div class="container">
             <div class="max-w-sm mx-auto">
               <div class="lead-paragraph lc--nbm">
@@ -41,7 +30,7 @@
               </div>
             </div>
           </div>
-        {% endif %}
+        {% endif %} #}
 
         {% block careerDetails %}
         {% endblock %}

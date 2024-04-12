@@ -1,0 +1,16 @@
+{% set matrixClass = matrixClass ?? "" %}
+{% set containerWidth = containerWidth ?? "max-w-md" %}
+
+<div class="matrix matrix--{{ block.type|kebab }}{{ matrixClass ? ' ' ~ matrixClass : '' }}">
+  <div class="container">
+    <div class="{{ containerWidth }} mx-auto">
+      {% block matrixBlock %}
+        {% if block.type == "vizyBlock" %}
+          <p>Matrix "_{{ block.handle|kebab }}" not found</p>
+        {% else %}
+          <p>Matrix "_{{ block.type|kebab }}" not found</p>
+        {% endif %}
+      {% endblock %}
+    </div>
+  </div>
+</div>

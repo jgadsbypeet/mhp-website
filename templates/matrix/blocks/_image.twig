@@ -1,0 +1,21 @@
+{% extends "matrix/containers/_standard" %}
+{% import "_macro" as macro %}
+{% set image = block.image__image.one() %}
+{% set crop = block.image__imageRatio == "standard" %}
+
+{% block matrixBlock %}
+	<div class="content-image my-12 md:my-12-lg">
+		{{ macro.image({
+			image: image,
+			imageClass: "",
+			alt: image.alt,
+			sizes: [
+				{ maxScreen: "479px", width: 448, height: (crop ? 252 : "") },
+				{ maxScreen: "767px", width: 688, height: (crop ? 387 : "") },
+				{ maxScreen: "", width: 800, height: (crop ? 450 : "") }
+			]
+		}) }}
+
+		{# {{ block.caption ? ('<div class="border-l-2 border-grey body-sm text-grey max-w-md pl-4 mt-6 md:pl-5 md:mt-5-lg">' ~ block.caption ~ '</div>')|raw : '' }} #}
+	</div>
+{% endblock %}

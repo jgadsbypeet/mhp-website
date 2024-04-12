@@ -1,0 +1,32 @@
+columnSuffix: null
+handle: image__imageRatio
+instructions: null
+name: 'Image ratio'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Standard (16:9)'
+        -
+          - value
+          - standard
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Fit (non-crop)'
+        -
+          - value
+          - fit
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

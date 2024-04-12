@@ -10,7 +10,7 @@ module.exports = {
       'xs': '420px',
       'sm': '600px',
       'md': '720px',
-      'mdlg': '900px',
+      'nav': '900px',
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1440px',
@@ -105,10 +105,10 @@ module.exports = {
         'highlight': '#FFE100', // should match with accessibility hightlight colour
       },
       maxWidth: {
-        'sm' : '696px',
-        'md' : '800px',
-        'lg' : '1008px',
-        'xl' : '1216px',
+        'sm' : '600px',
+        'md' : '768px',
+        'lg' : '1088px',
+        'xl' : '1240px',
       },
       spacing: {
         '1': '4px',
@@ -134,7 +134,8 @@ module.exports = {
         '10-lg': '80px',
       },
       padding: {
-        '3xs' : '4px',
+        '4xs' : '4px',
+        '3xs' : '6px',
         '2xs' : '8px',
         'xs' : '12px',
         'sm' : '16px',
@@ -147,8 +148,8 @@ module.exports = {
         '5xl' : '64px',
       },
       margin: {
-        '3xs' : '4px',
-        '2xs' : '8px',
+        '4xs' : '4px',
+        '3xs' : '6px',
         'xs' : '12px',
         'sm' : '16px',
         'md' : '20px',

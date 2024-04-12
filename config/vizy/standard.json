@@ -1,0 +1,6 @@
+{
+  "buttons": ["formatting", "bold", "italic", "ordered-list", "unordered-list", "link", "table", "clear-format", "line-break", "undo", "redo"],
+  "formatting": ["paragraph", "blockquote"],
+  "table": ["insert-table", "delete-table", "add-col-before", "add-col-after", "delete-col", "add-row-before", "add-row-after", "delete-row", "merge-cells", "split-cells", "toggle-header-column", "toggle-header-row", "toggle-header-cell"],
+  "toolbarFixed": true
+}
