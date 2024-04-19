@@ -1,4 +1,4 @@
-dateModified: 1712853862
+dateModified: 1713540107
 email:
   fromEmail: mani.bae@williamjoseph.co.uk
   fromName: 'WJ Boilerplate'
@@ -42,23 +42,32 @@ fs:
 meta:
   __names__:
     1a5747be-fb88-4384-a10e-ab7459382bc0: 'WJ Boilerplate' # WJ Boilerplate
+    1c25abdf-4ed0-4f3e-9efc-afaa953f4da7: 'Video URL' # Video URL
+    3b11d463-accb-41de-ba6b-9331689fa7ce: Transcript # Transcript
+    3fe2c1d5-8a1b-4113-898e-9819f561f482: 'Video file' # Video file
     9d1bef95-d78d-4735-952e-4b60158cf167: Images # Images
     10d1394f-6863-440f-945c-891da0c65bad: Videos # Videos
     17ea053e-13d0-4c0f-a465-42342bea6915: 'WJ Craft5 Boilerplate' # WJ Craft5 Boilerplate
-    62bd9751-3c68-48c1-b0d0-f28f7efaece2: Image # Image
     75e255f2-86f8-4b83-8bfa-39f20fa4eedd: Standard # Standard
     125a39f1-c7fd-462c-beff-e3dfd421bec7: Simple # Simple
-    519d5c53-125c-42c2-b751-6f699f14e306: Content # Content
     545bf85d-2516-4846-ab8f-778f8f10fcab: 'Website documentation' # Website documentation
+    673cb6e1-eb77-40ba-b02e-122c3a42286a: 'Cover image' # Cover image
+    944eb893-6b00-4c63-b7b9-9ee73630a1f1: Type # Type
     3031c488-fd65-4a4c-b69b-770f27f5fd77: 'Contact Form' # Contact Form
+    93688f52-2bc2-4914-aac6-0f949e89919e: Heading # Heading
+    409117cb-de3e-4900-82ec-2a7440e33e84: Image # Image
     53112398-e0df-4ef1-976b-8272da500720: Standfirst # Standfirst
     adf10d1b-d5b5-4564-a880-732b9ec4e22c: 'Image ratio' # Image ratio
     b85f18dc-5c7d-4c3d-be23-437b9c3675f3: New # New
     b502800f-c7b7-47b3-85b1-a0d7a179ea00: Image # Image
     bc60a081-9838-490c-abd8-4401a5bd6e1e: Standard # Standard
+    c0a70d36-1182-4a66-aad7-1cbfbe3da1dc: Video # Video
     cd14ae12-0e6a-4f07-9de0-bd0536bd55c1: Heading # Heading
+    d0247de8-ec57-403b-b334-bbf9703049f8: Video # Video
+    d4b5dd99-9088-494e-b54b-39b5d76840f0: Image # Image
     d8da528a-5de1-4ea5-9278-983c10cfe9a5: Documents # Documents
     e618d81f-6316-4a68-b87b-c324a5ba248b: Icons # Icons
+    eb8ef9d9-e105-41b5-ba50-3c4c6e9871e7: Content # Content
     ec8c86e6-93eb-406e-959b-b955e23b35e8: Logos # Logos
 plugins:
   admin-bar:
@@ -97,7 +106,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: K73T4S4RZ6HPWJUIQB7AG4M2
-    schemaVersion: 3.4.2
+    schemaVersion: 3.4.3
   image-resizer:
     edition: standard
     enabled: true

@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: video__videoUrl
+instructions: null
+name: 'Video URL'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

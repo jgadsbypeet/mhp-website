@@ -1,0 +1,43 @@
+columnSuffix: null
+handle: video__type
+instructions: null
+name: Type
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Vimeo
+        -
+          - value
+          - vimeo
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Youtube
+        -
+          - value
+          - youtube
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Upload
+        -
+          - value
+          - upload
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

@@ -1,7 +1,7 @@
 {% extends "_layout" %}
 {% import "_macro" as macro %}
 
-{% set entryBody = entry.body__content.all() ?? null %}
+{% set entryBody = entry.content__content.all() ?? null %}
 {% set heroImage = entry.heroImage.one() ?? null %}
 
 {% block adminBar %}
@@ -12,6 +12,7 @@
   {% apply typogrify %}
     {% block hero %}
       {% include "components/hero/_standard" with {
+        title: entry.title ?? "",
         standfirst: entry.standfirst ?? ""
       } %}
     {% endblock %}

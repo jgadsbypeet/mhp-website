@@ -1,0 +1,150 @@
+color: null
+fieldLayouts:
+  81dcc96a-7ab4-4769-8ea2-062a0f3838e1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: db60901b-a50c-4226-93ff-70e6d4d4e9f9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 944eb893-6b00-4c63-b7b9-9ee73630a1f1 # Type
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d183407-0aec-43db-b96f-5c5f33946bfa
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 944eb893-6b00-4c63-b7b9-9ee73630a1f1 # Type
+                  layoutElementUid: 1d183407-0aec-43db-b96f-5c5f33946bfa
+                  operator: in
+                  uid: 410ed677-15c7-4581-9e7d-26375584a02e
+                  values:
+                    - vimeo
+                    - youtube
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 1c25abdf-4ed0-4f3e-9efc-afaa953f4da7 # Video URL
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 699650bb-f683-4aec-991a-5c7025228420
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 944eb893-6b00-4c63-b7b9-9ee73630a1f1 # Type
+                  layoutElementUid: 1d183407-0aec-43db-b96f-5c5f33946bfa
+                  operator: in
+                  uid: 9e1d757d-8671-475e-9540-951e278e4a0d
+                  values:
+                    - upload
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 3fe2c1d5-8a1b-4113-898e-9819f561f482 # Video file
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c3f9d2c1-e31a-40c3-a6a5-b07e02feede9
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 673cb6e1-eb77-40ba-b02e-122c3a42286a # Cover image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 01c4396d-db4f-47f8-b03c-c33902559aad
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3b11d463-accb-41de-ba6b-9331689fa7ce # Transcript
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 714970c5-b950-48dd-bfa8-2b0f45454e6c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 7c65d4f7-7303-4dc3-8f45-eece8060b2da
+        userCondition: null
+handle: content__video
+hasTitleField: false
+icon: ''
+name: Video
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
