@@ -1,0 +1,65 @@
+color: blue
+fieldLayouts:
+  40f62781-6812-44e4-9db3-86bcdc6a6a22:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5f0f4067-8cb7-4fcd-a32a-922abcb9ed74
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d0fc3bd4-7289-4c25-ab69-5e6b7d086eed # Accordion
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8de2139a-fa64-461f-98e5-f033d2853ed5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cacc48d7-58e2-48b8-8811-cf60c738a443
+        userCondition: null
+handle: content__accordions
+hasTitleField: false
+icon: table-list
+name: Accordions
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

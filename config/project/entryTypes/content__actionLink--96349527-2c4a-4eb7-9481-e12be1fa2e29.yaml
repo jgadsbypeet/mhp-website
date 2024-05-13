@@ -131,7 +131,21 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 52c4e51e-b5d1-433e-8683-073d97a20e51 # Option
+                  layoutElementUid: ca9af274-930f-4a77-812b-0601fad4b3d2
+                  operator: in
+                  uid: bfdcc309-b5b8-4b0b-92a6-c7a19cda17a8
+                  values:
+                    - entryLink
+                    - urlLink
+                    - assetLink
+              elementType: craft\elements\Entry
+              fieldContext: global
             fieldUid: 7a82df58-7169-4f16-9078-ab400c68ac97 # Link text
             handle: null
             includeInCards: false

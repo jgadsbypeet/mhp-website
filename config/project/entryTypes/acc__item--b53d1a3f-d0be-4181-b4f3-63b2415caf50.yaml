@@ -1,0 +1,80 @@
+color: blue
+fieldLayouts:
+  ef2abe74-6689-4b90-a4c8-44690f7f0999:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8b0e1dc3-4b41-4d7f-9d48-7444d9a445c2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cdd0917f-398e-46b8-a373-2fcb84257eca # Heading
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b3631407-f99b-493a-a6c7-757156bdef0f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7dd6601d-5a16-4e28-8d2a-2f0340c48b65 # Content
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f9f7a5c3-f36e-4fdf-aab7-3fa94b513cd7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 58d25e37-f36d-42c7-8655-48306fd7106b
+        userCondition: null
+handle: acc__item
+hasTitleField: false
+icon: table-list
+name: Item
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
