@@ -2,6 +2,7 @@
 {% import "_macro" as macro %}
 {% set image = block.image__image.one() %}
 {% set crop = block.image__imageRatio == "standard" %}
+{% set caption = block.image__caption %}
 
 {% block matrixBlock %}
 	<div class="content-image my-12 md:my-12-lg">
@@ -16,6 +17,6 @@
 			]
 		}) }}
 
-		{# {{ block.caption ? ('<div class="border-l-2 border-grey body-sm text-grey max-w-md pl-4 mt-6 md:pl-5 md:mt-5-lg">' ~ block.caption ~ '</div>')|raw : '' }} #}
+		{{ caption ? ('<div class="border-l-2 border-grey body-xs text-grey max-w-md pl-4 mt-2 md:pl-5 md:mt-2-lg">' ~ caption ~ '</div>')|raw : '' }}
 	</div>
 {% endblock %}

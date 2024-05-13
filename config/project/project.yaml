@@ -1,4 +1,4 @@
-dateModified: 1715610504
+dateModified: 1715611972
 email:
   fromEmail: mani.bae@williamjoseph.co.uk
   fromName: 'WJ Boilerplate'
@@ -64,6 +64,7 @@ meta:
     af11e5ad-a8af-4df5-a21c-e2608c19edeb: Text # Text
     b85f18dc-5c7d-4c3d-be23-437b9c3675f3: New # New
     b502800f-c7b7-47b3-85b1-a0d7a179ea00: Image # Image
+    ba07e685-77b8-422c-a2ff-2c5ba52decc3: Caption # Caption
     bc60a081-9838-490c-abd8-4401a5bd6e1e: Standard # Standard
     c0a70d36-1182-4a66-aad7-1cbfbe3da1dc: Video # Video
     cd14ae12-0e6a-4f07-9de0-bd0536bd55c1: Heading # Heading

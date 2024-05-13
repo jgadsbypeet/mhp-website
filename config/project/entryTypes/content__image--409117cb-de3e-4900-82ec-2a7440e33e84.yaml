@@ -1,4 +1,4 @@
-color: null
+color: cyan
 fieldLayouts:
   f0e94ed0-f641-41b7-8877-91a9c78b82e0:
     tabs:
@@ -42,10 +42,25 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 3f3e02c8-8847-438b-8732-d4ee36fc17e4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ba07e685-77b8-422c-a2ff-2c5ba52decc3 # Caption
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 39a40d56-e92a-4692-b96a-c35603ecde2f
             userCondition: null
             warning: null
             width: 100
@@ -75,7 +90,7 @@ fieldLayouts:
         userCondition: null
 handle: content__image
 hasTitleField: false
-icon: ''
+icon: image
 name: Image
 showSlugField: false
 showStatusField: false
