@@ -1,0 +1,54 @@
+columnSuffix: null
+handle: action__option
+instructions: null
+name: Option
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Select
+        -
+          - value
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Internal (entry) link'
+        -
+          - value
+          - entryLink
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'External (URL) link'
+        -
+          - value
+          - urlLink
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Download (asset) link'
+        -
+          - value
+          - assetLink
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

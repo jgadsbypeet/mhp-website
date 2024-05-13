@@ -1,0 +1,188 @@
+color: violet
+fieldLayouts:
+  300461e9-7560-41a7-ba53-516f2af3d005:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c3ebace7-f6b9-400b-b9bc-733bb4785f9e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 52c4e51e-b5d1-433e-8683-073d97a20e51 # Option
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca9af274-930f-4a77-812b-0601fad4b3d2
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 52c4e51e-b5d1-433e-8683-073d97a20e51 # Option
+                  layoutElementUid: ca9af274-930f-4a77-812b-0601fad4b3d2
+                  operator: in
+                  uid: 376ef665-87ad-4726-bd4f-4cef790502b0
+                  values:
+                    - entryLink
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 61a52075-e8d1-4571-94a5-73b6448cb2e1 # Entry link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dcf58cf1-93b2-44eb-a745-53aceb98e22e
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 52c4e51e-b5d1-433e-8683-073d97a20e51 # Option
+                  layoutElementUid: ca9af274-930f-4a77-812b-0601fad4b3d2
+                  operator: in
+                  uid: 118befa2-a09e-4a69-9188-990bb0c349c8
+                  values:
+                    - urlLink
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 8e986997-22af-4fce-8225-a1fc3cbb5bac # URL link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b36e597e-165b-4dbc-80c6-377b92bc053d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 52c4e51e-b5d1-433e-8683-073d97a20e51 # Option
+                  layoutElementUid: ca9af274-930f-4a77-812b-0601fad4b3d2
+                  operator: in
+                  uid: 8b52c3a6-bcda-4611-abc2-f121ffa817f6
+                  values:
+                    - assetLink
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: c849e39d-e259-447a-bdd8-c577bf05b762 # Asset link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b1266986-24d9-4882-8a89-22e315c94d5a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 7a82df58-7169-4f16-9078-ab400c68ac97 # Link text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d37558b-24c8-463c-b78a-f758d679ddb6
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 52c4e51e-b5d1-433e-8683-073d97a20e51 # Option
+                  layoutElementUid: ca9af274-930f-4a77-812b-0601fad4b3d2
+                  operator: in
+                  uid: 55627b64-ad3c-4a8f-b130-992fdd744923
+                  values:
+                    - urlLink
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 1803a6fd-4bb9-4613-8953-bcfc78b4e0c7 # Open in a new window?
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d6fc0ceb-f110-413f-a669-f53d48bab0ac
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: bee9ce48-4580-49fc-ae3a-646e919098d0
+        userCondition: null
+handle: content__actionLink
+hasTitleField: false
+icon: link
+name: 'Action link'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
