@@ -5,11 +5,7 @@
   <div class="container">
     <div class="{{ containerWidth }} mx-auto">
       {% block matrixBlock %}
-        {% if block.type == "vizyBlock" %}
-          <p>Matrix "_{{ block.handle|kebab|replace("content-", "") }}" not found</p>
-        {% else %}
-          <p>Matrix "_{{ block.type|kebab|replace("content-", "") }}" not found</p>
-        {% endif %}
+        <p>Matrix "_{{ block.type|kebab|replace("content-", "") }}" not found</p>
       {% endblock %}
     </div>
   </div>

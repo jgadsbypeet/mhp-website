@@ -1,8 +1,8 @@
 {% extends "_layout" %}
 {% import "_macro" as macro %}
 
-{% set entryBody = entry.content__content.all() ?? null %}
 {% set heroImage = entry.heroImage.one() ?? null %}
+{% set bodyContent = entry.content__content.all() ?? null %}
 
 {% block adminBar %}
   {{ adminBar({editLinkUrl: entry.cpEditUrl, editLinkLabel: "entry"}) }}
@@ -36,20 +36,17 @@
         {% block careerDetails %}
         {% endblock %}
         
-        {% if entryBody %}
-          <div class="matrix-sections">
-            {% include "_matrix" with { 
-              "matrix": entryBody 
-            } %}
-            
-            {% if cookiePolicyEntry %}
-              {% if entry.id == cookiePolicyEntry.id %}
-                {% include "components/_cookie-preference-toggle" %}
-              {% endif %}
+        <div class="matrix-sections">
+          {% include "_matrix" with { 
+            "matrix": bodyContent 
+          } %}
+          
+          {% if cookiePolicyEntry %}
+            {% if entry.id == cookiePolicyEntry.id %}
+              {% include "components/_cookie-preference-toggle" %}
             {% endif %}
-          </div>
-        {% endif %}
-
+          {% endif %}
+        </div>
       {% endblock %}
     </div>
   {% endapply %}

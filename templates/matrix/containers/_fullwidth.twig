@@ -1,25 +1,7 @@
-{# sectional matrix blocks template #}
 {% set matrixClass = matrixClass ?? "" %}
-{# for children matrix blocks to be added as a new section #}
-{% set childchildAsNewSection = block.type|kebab == "body-call-to-action" and block.cta__width == "fullwidth" %}
-
-{# close current section for childAsNewSection blocks #}
-{% if childchildAsNewSection %}
-    </div>
-  </div>
-{% endif %}
 
 <div class="matrix-section matrix-section--{{ block.type|kebab }}{% if not childchildAsNewSection %}{{ matrixClass ? ' ' ~ matrixClass : '' }}{% endif %}">
-  {# open new section body for childAsNewSection blocks #}
-  {% if childchildAsNewSection %}
-    <div class="matrix-blocks">
-      <div class="matrix matrix--{{ block.type|kebab }}{{ matrixClass ? ' ' ~ matrixClass : '' }}">
-  {% endif %}
-
   {% block matrixBlock %}
-    <p>Matrix "_{{ block.type|kebab }}" not found.</p>
+    <p>Matrix "_{{ block.type|kebab|replace("content-", "") }}" not found</p>
   {% endblock %}
-
-{# close matrix div for childAsNewSection blocks #}
-{# close matrix-section div if not childAsNewSection  #}
 </div>

@@ -1,7 +1,3 @@
 {% for block in matrix %}
-	{% if block.type == "vizyBlock" %}
-		{% include ["matrix/blocks/_" ~ block.handle|kebab|replace("content-", ""), "matrix/containers/_standard"] %}
-	{% else %}
-		{% include ["matrix/blocks/_" ~ block.type|kebab|replace("content-", ""), "matrix/containers/_standard"] %}
-	{% endif %}
+	{% include ["matrix/blocks/_" ~ block.type|kebab|replace("content-", ""), "matrix/containers/_standard"] %}
 {% endfor %}
