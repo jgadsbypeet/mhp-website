@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: video__type
+handle: video__option
 instructions: null
-name: Type
+name: Option
 searchable: false
 settings:
   options:
@@ -9,21 +9,21 @@ settings:
       __assoc__:
         -
           - label
-          - Vimeo
+          - Select
         -
           - value
-          - vimeo
+          - ''
         -
           - default
-          - '1'
+          - ''
     -
       __assoc__:
         -
           - label
-          - Youtube
+          - 'Vimeo or Youtube'
         -
           - value
-          - youtube
+          - videoUrl
         -
           - default
           - ''
@@ -34,7 +34,7 @@ settings:
           - Upload
         -
           - value
-          - upload
+          - videoUpload
         -
           - default
           - ''

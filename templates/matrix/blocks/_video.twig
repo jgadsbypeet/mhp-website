@@ -1,57 +1,62 @@
 {% extends "matrix/containers/_standard" %}
 {% import "_macro" as macro %}
+
+{% set videoOption = block.video__option %}
+{% set video = "" %}
+{% set videoUrl = "" %}
+{% set transcript = block.video__transcript %}
+{% if videoOption == "videoUpload" %}
+	{% set video = block.video__videoUpload.one() %}
+{% else %}
+	{% set videoUrl = block.video__videoUrl %}
+{% endif %}
 {% set coverImage = block.video__coverImage.one() ?? null %}
-{% set videoFile = block.video__videoFile.one() ?? null %}
-{% set videoUrl = block.video__videoUrl %}
-{% set videoTranscript = block.video__transcript %}
 
 {% block matrixBlock %}
-  {% if videoFile or videoUrl %}
-    <div class="video relative my-12 md:my-12-lg">
-      <div class="video__frame relative pt-[56.25%] bg-black overflow-hidden">
-        {% if videoFile %}
-          <video class="video__asset video__asset--uploaded absolute top-0 right-0 bottom-0 left-0" controls {{ coverImage ? 'onloadedmetadata="getVideoDuration(this)"' : '' }}>
-            <source src="{{ url(video.url(), { v: video.dateModified.timestamp }) }}">
-            Your browser does not support the video tag.
-          </video>
-        {% else %}
-          {{ macro.videoEmbed(videoUrl) }}
-        {% endif %}
-          
-        {% if coverImage %}
-          <button class="video__button button-reset group absolute top-0 left-0 h-[100%] text-white hover:text-black">
-            {{ macro.image({
-              image: coverImage,
-              imageClass: "",
-              sizes: [
-                { maxScreen: "479px", width: 448, height: 252 },
-                { maxScreen: "767px", width: 688, height: 387 },
-                { maxScreen: "", width: 800, height: 450 }
-              ]
-            }) }}
+  <div class="video relative my-12 md:my-12-lg">
+    <div class="video__frame relative pt-[56.25%] bg-black overflow-hidden">
+      {% if video %}
+        <video class="video__asset video__asset--uploaded absolute top-0 right-0 bottom-0 left-0" controls {{ coverImage ? 'onloadedmetadata="getVideoDuration(this)"' : '' }}>
+          <source src="{{ url(video.url(), { v: video.dateModified.timestamp }) }}">
+          Your browser does not support the video tag.
+        </video>
+      {% else %}
+        {{ macro.videoEmbed(videoUrl) }}
+      {% endif %}
+        
+      {% if coverImage %}
+        <button class="video__button button-reset group absolute top-0 left-0 h-[100%] text-white hover:text-black">
+          {{ macro.image({
+            image: coverImage,
+            imageClass: "",
+            sizes: [
+              { maxScreen: "479px", width: 448, height: 252 },
+              { maxScreen: "767px", width: 688, height: 387 },
+              { maxScreen: "", width: 800, height: 450 }
+            ]
+          }) }}
 
-            <span class="visually-hidden">Play video</span>
-            <div class="absolute bottom-0 left-0 w-[80px] h-[80px] bg-primary flex flex-col items-center justify-center group-hover:text-white group-hover:bg-black group-focus-visible:bg-highlight md:bottom-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
-              {% if video %}
-                {{ svg('dist/images/icons/play.svg')|attr({class: 'video__play-icon block w-[19px] ml-[3px] mt-6'}) }}
+          <span class="visually-hidden">Play video</span>
+          <div class="absolute bottom-0 left-0 w-[80px] h-[80px] bg-primary flex flex-col items-center justify-center group-hover:text-white group-hover:bg-black group-focus-visible:bg-highlight md:bottom-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
+            {% if video %}
+              {{ svg('dist/images/icons/play.svg')|attr({class: 'video__play-icon block w-[19px] ml-[3px] mt-6'}) }}
 
-                <div class="video-duration text-sm leading-[16px] mx-auto mt-4"></div>
-              {% else %}
-                {{ svg('dist/images/icons/play.svg')|attr({class: 'video__play-icon block w-[19px] ml-[3px]'}) }}
-              {% endif %}
-            </div>
-          </button>
-        {% endif %}
-      </div>
-
-      {% if videoTranscript %}
-        {% include "components/_accordion" with {
-          class: "video", 
-          index: "", 
-          heading: "Read video transcript", 
-          body: videoTranscript
-        } %}
+              <div class="video-duration text-sm leading-[16px] mx-auto mt-4"></div>
+            {% else %}
+              {{ svg('dist/images/icons/play.svg')|attr({class: 'video__play-icon block w-[19px] ml-[3px]'}) }}
+            {% endif %}
+          </div>
+        </button>
       {% endif %}
     </div>
-  {% endif %}
+
+    {% if transcript %}
+      {% include "components/_accordion" with {
+        class: "video", 
+        index: "", 
+        heading: "Read video transcript", 
+        body: transcript
+      } %}
+    {% endif %}
+  </div>
 {% endblock %}
