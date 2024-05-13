@@ -1,0 +1,43 @@
+columnSuffix: null
+handle: heading__size
+instructions: null
+name: Size
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Heading level 2'
+        -
+          - value
+          - h2
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Heading level 3'
+        -
+          - value
+          - h3
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Heading level 4'
+        -
+          - value
+          - h4
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

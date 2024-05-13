@@ -1,4 +1,4 @@
-color: null
+color: blue
 fieldLayouts:
   e6e886e1-5195-4ee0-8d41-8b2a4335d530:
     tabs:
@@ -42,7 +42,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 5857e4c0-aeb0-4010-ba79-68f9240106b5
@@ -54,12 +54,68 @@ fieldLayouts:
         userCondition: null
       -
         elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 73f8e366-7f0d-422c-8131-f28b1309cde6 # Size
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: feaccd20-663f-4175-b444-8525668da3a9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 88868b59-0dc8-4932-8fbe-5a8a5fb28762 # Add to jump link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3d786b5d-d8e7-43a5-8de1-9566d9be075b
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: 88868b59-0dc8-4932-8fbe-5a8a5fb28762 # Add to jump link
+                  layoutElementUid: 3d786b5d-d8e7-43a5-8de1-9566d9be075b
+                  uid: 0c4b28ff-661d-4f3b-baa2-2b2e0e5102d1
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 5cf7e469-364f-4258-b9ab-37d6e6395222 # Jump link text (optional)
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5123d8bf-0117-4751-8c71-59ec23ed0163
+            userCondition: null
+            warning: null
+            width: 50
         name: Settings
         uid: 38421dbf-725a-446f-8ac2-4df16b90c26d
         userCondition: null
 handle: content__heading
 hasTitleField: false
-icon: ''
+icon: text
 name: Heading
 showSlugField: false
 showStatusField: false

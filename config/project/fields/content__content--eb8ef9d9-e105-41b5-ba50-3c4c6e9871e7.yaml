@@ -7,6 +7,7 @@ settings:
   createButtonLabel: New
   entryTypes:
     - 93688f52-2bc2-4914-aac6-0f949e89919e # Heading
+    - af11e5ad-a8af-4df5-a21c-e2608c19edeb # Text
     - 409117cb-de3e-4900-82ec-2a7440e33e84 # Image
     - c0a70d36-1182-4a66-aad7-1cbfbe3da1dc # Video
   includeTableView: false

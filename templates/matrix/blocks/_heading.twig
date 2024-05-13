@@ -1,5 +1,13 @@
 {% extends "matrix/containers/_standard" %}
 
+{% set el = block.heading__size %}
+
+{% if block.heading__jumpLink %}
+  {% set headingId = "heading-" ~ block.id %}
+{% else %}
+  {% set headingId = "" %} 
+{% endif %}
+
 {% block matrixBlock %}
-  <h2>{{ block.heading__heading }}</h2>
+  <{{ el }} {{ headingId ? "id=" ~ headingId : "" }}>{{ block.heading__heading }}</{{ el }}>
 {% endblock %}

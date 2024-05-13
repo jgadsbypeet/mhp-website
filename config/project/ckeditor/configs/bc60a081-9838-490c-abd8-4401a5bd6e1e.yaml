@@ -1,11 +1,14 @@
 headingLevels: false
 name: Standard
+options:
+  list:
+    properties:
+      styles: false
 toolbar:
-  - createEntry
   - heading
   - '|'
   - bold
   - italic
-  - link
   - bulletedList
   - numberedList
+  - link
