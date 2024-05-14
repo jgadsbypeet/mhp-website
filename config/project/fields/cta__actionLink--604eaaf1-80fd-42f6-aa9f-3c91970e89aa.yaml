@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: cta__actionLink
+instructions: null
+name: 'Action link'
+searchable: false
+settings:
+  createButtonLabel: null
+  entryTypes:
+    - 96349527-2c4a-4eb7-9481-e12be1fa2e29 # Action link
+  includeTableView: false
+  maxEntries: 1
+  minEntries: 1
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

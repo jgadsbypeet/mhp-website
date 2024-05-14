@@ -1,0 +1,49 @@
+{% extends "matrix/containers/_w-xl" %}
+{% import "_macro" as macro %}
+
+{% set button = block.cta__actionLink.one() %}
+{% set linkUrl = "" %}
+{% set linkTarget = "" %}
+{% set asset = "" %}
+{% set linkText = button.action__linkText ?? "More info" %}
+{% if button.action__option == "assetLink" %}
+  {% set asset = button.action__assetLink.one() %}
+  {% set linkUrl = asset.url %}
+{% elseif button.action__option == "urlLink" %}
+  {% set linkTarget = button.action__linkTarget %}
+  {% set linkUrl = button.actionLink__urlLink %}
+{% elseif button.action__option == "entryLink" %}
+  {% set linkUrl = button.action__entryLink.one().url %}
+{% endif %}
+
+{% set image = block.cta__image.one() ?? null %}
+
+{% block matrixBlock %}
+  <div class="my-8 md:my-8-lg md:flex md:flex-row-reverse text-white bg-grey-3 group hover:cursor-pointer data-link" data-link="{{ linkUrl }}">
+    {% if image %}
+      <div class="overflow-hidden md:basis-1/2">
+        {{ macro.image({
+          image: image,
+          imageClass: "w-full h-full object-cover",
+          alt: image.alt,
+          sizes: [
+            { maxScreen: "479px", width: 447, height: 251 },
+            { maxScreen: "575px", width: 527, height: 296 },
+            { maxScreen: "767px", width: 719, height: 404 },
+            { maxScreen: "", width: 592, height: 333 }
+          ]
+        }) }}
+      </div>
+    {% endif %}
+
+    <div class="p-sm md:p-lg{% if image %} md:basis-1/2{% endif %}">
+      <h3 class="mt-0">{{ block.cta__heading }}</h3>
+
+      <p>{{ block.cta__text }}</p>
+
+      <div>
+        <a class="button group-hover-button" href="{{ linkUrl }}">{{ linkText }}</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

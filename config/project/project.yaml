@@ -1,4 +1,4 @@
-dateModified: 1715678221
+dateModified: 1715682400
 elementSources:
   craft\elements\Entry:
     -
@@ -87,16 +87,19 @@ meta:
     9d1bef95-d78d-4735-952e-4b60158cf167: Images # Images
     10d1394f-6863-440f-945c-891da0c65bad: Videos # Videos
     17ea053e-13d0-4c0f-a465-42342bea6915: 'WJ Craft5 Boilerplate' # WJ Craft5 Boilerplate
+    42fdb1ca-7367-4cf5-9375-37416cbc8615: Image # Image
     52c4e51e-b5d1-433e-8683-073d97a20e51: Option # Option
     61a52075-e8d1-4571-94a5-73b6448cb2e1: 'Entry link' # Entry link
     73f8e366-7f0d-422c-8131-f28b1309cde6: Size # Size
     75e255f2-86f8-4b83-8bfa-39f20fa4eedd: Standard # Standard
     125a39f1-c7fd-462c-beff-e3dfd421bec7: Simple # Simple
     545bf85d-2516-4846-ab8f-778f8f10fcab: 'Website documentation' # Website documentation
+    604eaaf1-80fd-42f6-aa9f-3c91970e89aa: 'Action link' # Action link
     673cb6e1-eb77-40ba-b02e-122c3a42286a: 'Cover image' # Cover image
     944eb893-6b00-4c63-b7b9-9ee73630a1f1: Option # Option
     1803a6fd-4bb9-4613-8953-bcfc78b4e0c7: 'Open in a new window?' # Open in a new window?
     3031c488-fd65-4a4c-b69b-770f27f5fd77: 'Contact Form' # Contact Form
+    3354af91-f989-4740-bdd2-65c9630089b2: 'Call to action' # Call to action
     88868b59-0dc8-4932-8fbe-5a8a5fb28762: 'Add to jump link' # Add to jump link
     93688f52-2bc2-4914-aac6-0f949e89919e: Heading # Heading
     409117cb-de3e-4900-82ec-2a7440e33e84: Image # Image
@@ -113,6 +116,7 @@ meta:
     c849e39d-e259-447a-bdd8-c577bf05b762: 'Asset link' # Asset link
     cd14ae12-0e6a-4f07-9de0-bd0536bd55c1: Heading # Heading
     cdd0917f-398e-46b8-a373-2fcb84257eca: Heading # Heading
+    cf947787-479e-4889-93cf-2a7b62aafac4: Text # Text
     d0fc3bd4-7289-4c25-ab69-5e6b7d086eed: Accordion # Accordion
     d0247de8-ec57-403b-b334-bbf9703049f8: Video # Video
     d4b5dd99-9088-494e-b54b-39b5d76840f0: Image # Image
@@ -122,6 +126,7 @@ meta:
     ec8c86e6-93eb-406e-959b-b955e23b35e8: Logos # Logos
     f030fb15-80d7-484b-b74f-0e51dc2d82c8: Accordions # Accordions
     f532ffc5-e55e-40a0-b01e-70b9c34ba6f6: Text # Text
+    fb678e73-288b-42c7-8c19-27c44d13f324: Heading # Heading
     ffb3da3c-2f4d-47a3-a021-d496e6c5516a: Pages # Pages
 plugins:
   admin-bar:

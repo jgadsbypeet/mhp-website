@@ -1,0 +1,110 @@
+color: violet
+fieldLayouts:
+  4c23a5c2-e512-41eb-a9b8-997f7c4cb0c1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8b4d39f0-569a-43e2-9632-5e8f5d390059
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fb678e73-288b-42c7-8c19-27c44d13f324 # Heading
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1247d4aa-e385-4cbc-afc8-fc139a7eb7ea
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cf947787-479e-4889-93cf-2a7b62aafac4 # Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 642f24a3-e109-4426-982f-2d5f7083bba6
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 42fdb1ca-7367-4cf5-9375-37416cbc8615 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca8d97f0-d020-428b-aabd-2f731eb65cdd
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 604eaaf1-80fd-42f6-aa9f-3c91970e89aa # Action link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: __blank__
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ab697d2a-af79-4a05-bd0f-242d1ff4473e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2df1cf61-c8c2-45a2-b267-baf6c1f1df70
+        userCondition: null
+handle: content__callToAction
+hasTitleField: false
+icon: rocket-launch
+name: 'Call to action'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

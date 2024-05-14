@@ -17,25 +17,12 @@
       } %}
     {% endblock %}
     
-    <div class="site-content pt-9 lg:pt-9-lg">
+    <div class="site-content py-10 lg:py-10-lg">
       {% block jumplinks %}
         {% include "components/_jump-links" %}
       {% endblock %}
 
       {% block body %}
-        {# {% if entry.leadParagraph %}
-          <div class="container">
-            <div class="max-w-sm mx-auto">
-              <div class="lead-paragraph lc--nbm">
-                {{ entry.leadParagraph }}
-              </div>
-            </div>
-          </div>
-        {% endif %} #}
-
-        {% block careerDetails %}
-        {% endblock %}
-        
         <div class="matrix-sections">
           {% include "_matrix" with { 
             "matrix": bodyContent 
