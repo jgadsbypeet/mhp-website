@@ -1,0 +1,86 @@
+color: violet
+fieldLayouts:
+  27648bfa-f6f4-4ee8-bc57-27c9a3ff971e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 07eb0d3b-91c4-4de0-b420-b361f7169d5c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 506d8357-6bb1-4b98-aa31-628a66d53cfb # Entries
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d69ddf9-4c31-4f99-a527-b0a088d45599
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e7fc8f61-0f08-4d55-b789-c371e90ce67d
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 05ad0930-f6fa-430f-a8d6-f29e553e30dc # Columns
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eda4d11d-5de8-4194-b4c8-d49fa86ac14d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 514a827a-6bfc-4457-9b47-28571f50004c
+        userCondition: null
+handle: entryCards
+hasTitleField: false
+icon: grid
+name: 'Entry cards'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

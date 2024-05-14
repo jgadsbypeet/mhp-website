@@ -1,0 +1,38 @@
+<header class="site-header w-full relative z-10">
+  <div class="header-nav--overlay fixed top-0 left-0 right-0 h-screen"></div>
+  
+  <div class="site-header--top relative py-4 md:py-4-lg bg-white">
+    <div class="container">
+      <div class="flex justify-between items-center max-w-xl mx-auto">
+        <div class="site-logo">
+          <a class="main-logo block" href="/" aria-label="Return home">
+            {{ svg("dist/images/logos/site-logo-colour.svg")|attr({ class: "w-auto h-[48px] md:h-[72px]" }) }}
+
+            <span class="visually-hidden">{{ siteName }}</span>
+          </a>
+        </div>
+
+        <div class="hidden justify-end lg:flex">
+          {# {% include "components/_link-button" with {
+            buttonClasses: "button-red mr-xs", 
+            link: "/get-involved/donate", 
+            text: "Donate", 
+            iconRight: "dist/images/icons/button-heart.svg",
+          } %} #}
+
+          {% include "components/_search-form" %}
+        </div>
+
+        <button id="mobileNavButton" class="site-header__burger-menu p-0 button-reset inline-flex lg:hidden" value="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="Main navigation">
+          <span class="burger-menu-button-text body-xs text-red-dark font-normal mr-[4px]">Menu</span>
+
+          {{ svg("dist/images/icons/burger-menu.svg")|attr({ class: "site-header__burger-menu--open"}) }}
+          {{ svg("dist/images/icons/burger-menu-close.svg")|attr({ class: "site-header__burger-menu--close"}) }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {# navigation#}
+  {% include "components/_site-header-nav" %}
+</header>

@@ -1,0 +1,46 @@
+{# get url segments and create an array #}
+{% set segments = craft.app.request.segments %}
+{% set breadcrumb = [] %}
+{# Initialize parent URL #}
+{% set parentUrl = "" %}
+{# Loop through segments to create breadcrumbs #}
+{% for segment in segments %}
+  {# remove last segment (current page url) #}
+  {% if not loop.last %}
+    {# Append current segment to parent URL #}
+    {% set parentUrl = parentUrl ~ "/" ~ segment %}
+    
+    {# Create breadcrumb entry #}
+    {% set breadcrumbEntry = {
+        "title": segment,
+        "url": parentUrl
+    } %}
+    {# Add breadcrumb entry to breadcrumb list #}
+    {% set breadcrumb = breadcrumb|merge([breadcrumbEntry]) %}
+  {% endif %}
+{% endfor %}
+
+{% macro breadcrumb(url, title, linkClasses, chevronRightColour) %}
+	<li class="items-center mb-0 hidden last:flex md:flex">
+    {{ svg("dist/images/icons/breadcrumb-chevron-left.svg")|attr({class: "text-link mr-[9px] md:hidden"}) }}
+
+		<a class="{{ linkClasses ?? '' }}" href="{{ url }}">{{ title }}</a>
+
+    {{ svg("dist/images/icons/breadcrumb-chevron-right.svg")|attr({class: chevronRightColour ~ " ml-[9px] mr-[8px] hidden md:block"}) }}
+	</li>
+{% endmacro %}
+
+<div class="body-xs">
+  <nav aria-label="Breadcrumb" class="breadcrumb__nav">
+    {# Output the breadcrumb #}
+    <ol class="list-reset flex flex-wrap">
+      {% block breadcrumbItems %}
+        {{ _self.breadcrumb("/", "Home", "", "") }}
+
+        {% for entry in breadcrumb %}
+          {{ _self.breadcrumb(entry.url, entry.title|replace("-", " ")|capitalize, "", "") }}
+        {% endfor %}
+      {% endblock %}
+    </ol>
+  </nav>
+</div>

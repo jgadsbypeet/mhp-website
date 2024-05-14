@@ -22,29 +22,6 @@
   }
 }
 
-.header-nav__menu-bar,
-.header-nav__panel,
-.header-nav__sub {
-  @apply list-reset;
-
-  & > li {
-    & > span {
-      @include accessible-focus-state();
-      @apply hover:underline hover:underline-offset-[3px];
-    }
-
-    a {
-      @apply text-brand-sub-bright hover:text-brand-sub;
-    }
-  }
-}
-
-.header-nav__menu-bar > li > span, 
-.header-nav__menu-bar > li > a {
-  @apply font-semibold text-brand-sub-bright hover:text-brand-sub hover:decoration-1 md:font-medium;
-  @apply focus-visible:shadow-[inset_0_-4px_0_0_theme(colors.black.DEFAULT)];
-}
-
 .header-nav__panel--trigger {
   cursor: pointer;
   
@@ -60,7 +37,6 @@
 }
 
 .header-nav__panel {
-  // show/hide
   @apply hidden;
 
   &.active {
@@ -69,8 +45,7 @@
 }
 
 .header-nav--overlay {
-  @apply bg-[rgba(0,0,0,0.5)];
-  @apply hidden;
+  @apply bg-[rgba(0,0,0,.5)] hidden;
 
   &.active {
     @apply block;

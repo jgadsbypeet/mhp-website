@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: entryCards__columns
+instructions: null
+name: Columns
+searchable: false
+settings:
+  default: true
+  offLabel: '2'
+  onLabel: '3'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

@@ -1,0 +1,44 @@
+{% extends "_layout" %}
+{# Preview this page at {{ siteName }}/search #}
+
+{% block head %}
+	<title>{{ siteName }} | Search Results</title>
+{% endblock %}
+
+{% set searchQuery = craft.app.request.getParam("q") %}
+{% set entriesPerPage = 10 %}
+{% set totalResults = searchQuery ? craft.entries().section("not webDoc").search(searchQuery).orderBy("score") : null %}
+{% set searchResults = searchQuery ? craft.entries().section("not webDoc").search(searchQuery).orderBy("score").limit(entriesPerPage) : null %}
+
+{% block content %}
+	{% include "components/hero/_simple" with {
+    title: 'Search results',  
+  } %}
+
+	<div class="site-content pb-14 lg:pb-14-lg">
+		<div class="container">
+			{% include "components/_search-form" with {
+        classes: "w-full"
+      } %}
+
+			{% if searchQuery %}
+				<h2>{{ totalResults|length }} result{{ totalResults|length == 1 ? '' : 's'}}{{ totalResults|length ? ':' : ''}}</h2>
+			{% endif %}
+
+			{% if searchResults|length %}
+				{% paginate searchResults as pageInfo, searchResults %}
+
+        {% for entry in searchResults %}
+          {% include "components/entry-card/_simple" with {
+            cardUrl: entry.url,
+            cardTitle: entry.title,
+          } %}
+        {% endfor %}
+
+        {% if pageInfo.totalPages > 1 %}
+          {% include "components/_pagination" %}
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
