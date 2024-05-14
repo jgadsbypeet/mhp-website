@@ -1,0 +1,21 @@
+{% extends "matrix/containers/_standard" %}
+{% set accordions = block.acc__accordion.all() %}
+
+{% block matrixBlock %}
+  {% for item in accordions %}
+    {% set blockClasses = "my-4 md:my-4-lg" %}
+    {% if loop.first and loop.last %}
+      {% set blockClasses = "my-8 md:my-8-lg" %}
+    {% elseif loop.first %}
+      {% set blockClasses = "mb-4 mt-8 md:mb-4-lg md:mt-8-lg" %}
+    {% elseif loop.last %}
+      {% set blockClasses = "mt-4 mb-8 md:mt-4-lg md:mb-8-lg" %}
+    {% endif %}
+
+    {% include "components/_accordion" with {
+      heading: item.acc__heading, 
+      body:item.acc__content.all(), 
+      bodyType: "matrix"
+    } %}
+  {% endfor %}
+{% endblock %}

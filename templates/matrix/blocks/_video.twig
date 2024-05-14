@@ -13,7 +13,7 @@
 {% set coverImage = block.video__coverImage.one() ?? null %}
 
 {% block matrixBlock %}
-  <div class="video relative my-12 md:my-12-lg">
+  <div class="video relative my-8 md:my-8-lg">
     <div class="video__frame relative pt-[56.25%] bg-black overflow-hidden">
       {% if video %}
         <video class="video__asset video__asset--uploaded absolute top-0 right-0 bottom-0 left-0" controls {{ coverImage ? 'onloadedmetadata="getVideoDuration(this)"' : '' }}>

@@ -40,9 +40,9 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: __blank__
             providesThumbs: false
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 8de2139a-fa64-461f-98e5-f033d2853ed5

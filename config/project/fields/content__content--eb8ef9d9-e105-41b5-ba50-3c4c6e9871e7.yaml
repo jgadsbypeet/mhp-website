@@ -4,7 +4,7 @@ instructions: null
 name: Content
 searchable: true
 settings:
-  createButtonLabel: New
+  createButtonLabel: Content
   entryTypes:
     - 93688f52-2bc2-4914-aac6-0f949e89919e # Heading
     - af11e5ad-a8af-4df5-a21c-e2608c19edeb # Text

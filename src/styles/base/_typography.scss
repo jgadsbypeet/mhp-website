@@ -12,6 +12,9 @@
   h4, .heading-md {
     @apply font-heading font-semibold text-h-md md:text-h-md-lg mt-5 mb-4 md:mt-5-lg md:mb-4-lg -tracking-[.02375rem] md:-tracking-[0.03125rem];
   }
+  .heading-sm {
+    @apply font-heading font-semibold text-h-sm md:text-h-sm-lg mt-5 mb-4 md:mt-5-lg md:mb-4-lg -tracking-[.02375rem] md:-tracking-[0.03125rem];
+  }
   // paragraphs
   .body-md {
     @apply text-md md:text-md-lg;
@@ -95,7 +98,7 @@
     @apply bg-brand-dark hover:bg-brand-dark-2 active:bg-brand-dark-2;
   }
   .button-reset {
-    @apply inline bg-transparent border-none rounded-none leading-normal m-0 p-0 hover:bg-transparent;
+    @apply inline bg-transparent border-none rounded-none leading-normal text-black m-0 p-0 hover:bg-transparent hover:text-black;
   }
   .group-hover-button {
     @apply group-hover:bg-brand-sub group-hover:text-white group-active:bg-brand-sub;

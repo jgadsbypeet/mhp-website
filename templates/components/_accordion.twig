@@ -1,0 +1,21 @@
+{% set class = class ?? "" %}
+{% set bodyType = bodyType ?? "" %}
+{% set blockClasses = blockClasses ?? "rounded-lg my-8 md:my-8-lg" %}
+
+<div class="accordion border-y {{ blockClasses }}">
+  <div class="accordion__trigger group py-4 px-2 md:py-4-lg md:px-2-lg hover:cursor-pointer">
+    <button class="group no-path-fill button-reset inline-flex link-no-underline relative pl-6 md:pl-6-lg" aria-expanded="false">
+      {{ svg("dist/images/icons/chevron-down.svg")|attr({ class: "accordion__icon group-focus-visible:text-black absolute left-[4px] top-[9px] md:top-[10px]"}) }}
+
+      <h3 class="accordion__title text-base md:text-base-lg m-0">{{ heading }}</h3>
+    </button>
+  </div>
+
+  <div class="accordion__body lc--nbm hidden pb-4 px-6 md:pb-4-lg md:px-7-lg" role="region">
+    {% if bodyType == "matrix" %}
+      {% include "_matrix" with {"matrix": body} %}
+    {% else %}
+      {{ body }}
+    {% endif %}
+  </div>
+</div>
