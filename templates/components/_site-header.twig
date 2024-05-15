@@ -12,18 +12,11 @@
           </a>
         </div>
 
-        <div class="hidden justify-end lg:flex">
-          {# {% include "components/_link-button" with {
-            buttonClasses: "button-red mr-xs", 
-            link: "/get-involved/donate", 
-            text: "Donate", 
-            iconRight: "dist/images/icons/button-heart.svg",
-          } %} #}
-
+        <div class="hidden justify-end nav:flex">
           {% include "components/_search-form" %}
         </div>
 
-        <button id="mobileNavButton" class="site-header__burger-menu p-0 button-reset inline-flex lg:hidden" value="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="Main navigation">
+        <button id="mobileNavButton" class="site-header__burger-menu p-0 button-reset text-link inline-flex nav:hidden" value="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="Main navigation">
           <span class="burger-menu-button-text body-xs text-red-dark font-normal mr-[4px]">Menu</span>
 
           {{ svg("dist/images/icons/burger-menu.svg")|attr({ class: "site-header__burger-menu--open"}) }}

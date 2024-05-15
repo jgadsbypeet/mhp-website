@@ -19,7 +19,7 @@
 {% set image = block.cta__image.one() ?? null %}
 
 {% block matrixBlock %}
-  <div class="my-8 md:my-8-lg md:flex md:flex-row-reverse text-white bg-grey-3 group hover:cursor-pointer data-link" data-link="{{ linkUrl }}">
+  <div class="my-8 md:my-8-lg md:flex md:flex-row-reverse bg-primary group hover:cursor-pointer data-link" data-link="{{ linkUrl }}">
     {% if image %}
       <div class="overflow-hidden md:basis-1/2">
         {{ macro.image({
@@ -37,7 +37,7 @@
     {% endif %}
 
     <div class="p-sm md:p-lg{% if image %} md:basis-1/2{% endif %}">
-      <h3 class="mt-0">{{ block.cta__heading }}</h3>
+      <h3 class="mt-0 text-inherit">{{ block.cta__heading }}</h3>
 
       <p>{{ block.cta__text }}</p>
 

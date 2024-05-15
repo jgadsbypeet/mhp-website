@@ -78,16 +78,19 @@ module.exports = {
           DEFAULT: '#232323',
           'dark': '#000000',
         },
-        'brand': {
-          DEFAULT: '#FF004B',
+        'primary': {
+          DEFAULT: '#72ABB2',
+          'dark': '#4B8991',
+          'dark-2': '#396B71',
         },
-        'brand-sub': {
-          'bright': '#55068A',
-          DEFAULT: '#36005F',
+        'secondary': {
+          'light': '#057F13',
+          DEFAULT: '#04620F',
+          'dark': '#034E0C',
         },
         'link': {
-          DEFAULT: '#B2003C',
-          'hover': '#80002B',
+          DEFAULT: '#1A00B2',
+          'hover': '#0E005D',
         },
         'grey': {
           DEFAULT: '#8B878E',
