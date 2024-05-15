@@ -1,0 +1,23 @@
+columnSuffix: null
+handle: footer__legalNav
+instructions: null
+name: 'Legal nav'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:ffb3da3c-2f4d-47a3-a021-d496e6c5516a' # Pages
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

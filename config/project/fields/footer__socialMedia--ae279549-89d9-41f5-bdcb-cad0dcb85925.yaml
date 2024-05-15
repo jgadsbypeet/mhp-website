@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: footer__socialMedia
+instructions: null
+name: 'Social media accounts'
+searchable: false
+settings:
+  createButtonLabel: null
+  entryTypes:
+    - bf96f3a4-eb06-49f8-af84-f939d5426416 # Social media account
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

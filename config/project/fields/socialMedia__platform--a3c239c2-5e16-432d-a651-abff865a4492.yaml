@@ -1,0 +1,76 @@
+columnSuffix: null
+handle: socialMedia__platform
+instructions: null
+name: Platform
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Select
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Facebook
+        -
+          - value
+          - facebook
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Instagram
+        -
+          - value
+          - instagram
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Linkedin
+        -
+          - value
+          - linkedin
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - YouTube
+        -
+          - value
+          - youtube
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Pinterest
+        -
+          - value
+          - pinterest
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

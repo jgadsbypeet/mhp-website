@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: socialMedia__profileUrl
+instructions: null
+name: 'Profile URL'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

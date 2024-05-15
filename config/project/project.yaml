@@ -1,4 +1,4 @@
-dateModified: 1715770272
+dateModified: 1715780528
 elementSources:
   craft\elements\Entry:
     -
@@ -81,6 +81,7 @@ meta:
     3b11d463-accb-41de-ba6b-9331689fa7ce: Transcript # Transcript
     3fe2c1d5-8a1b-4113-898e-9819f561f482: 'Video file' # Video file
     4cd374ac-6a5a-483e-b17d-223382d6d4a1: 'List by channel' # List by channel
+    4df4913b-0a34-4362-a115-1480a1f194cf: 'Profile URL' # Profile URL
     05ad0930-f6fa-430f-a8d6-f29e553e30dc: Columns # Columns
     5cf7e469-364f-4258-b9ab-37d6e6395222: 'Jump link text (optional)' # Jump link text (optional)
     7a82df58-7169-4f16-9078-ab400c68ac97: 'Link text' # Link text
@@ -107,21 +108,27 @@ meta:
     88868b59-0dc8-4932-8fbe-5a8a5fb28762: 'Add to jump link' # Add to jump link
     93688f52-2bc2-4914-aac6-0f949e89919e: Heading # Heading
     95870b87-85c2-4fda-97ad-3dab5f1c81e9: SEO # SEO
+    0217698d-d0e4-4110-89bf-12e604fb40fe: 'Legal nav' # Legal nav
     409117cb-de3e-4900-82ec-2a7440e33e84: Image # Image
     53112398-e0df-4ef1-976b-8272da500720: Standfirst # Standfirst
     96349527-2c4a-4eb7-9481-e12be1fa2e29: 'Action link' # Action link
+    a3c239c2-5e16-432d-a651-abff865a4492: Platform # Platform
     adf10d1b-d5b5-4564-a880-732b9ec4e22c: 'Image ratio' # Image ratio
+    ae279549-89d9-41f5-bdcb-cad0dcb85925: 'Social media accounts' # Social media accounts
     af11e5ad-a8af-4df5-a21c-e2608c19edeb: Text # Text
     b53d1a3f-d0be-4181-b4f3-63b2415caf50: Item # Item
     b85f18dc-5c7d-4c3d-be23-437b9c3675f3: New # New
     b502800f-c7b7-47b3-85b1-a0d7a179ea00: Image # Image
     ba07e685-77b8-422c-a2ff-2c5ba52decc3: Caption # Caption
     bc60a081-9838-490c-abd8-4401a5bd6e1e: Standard # Standard
+    bf96f3a4-eb06-49f8-af84-f939d5426416: 'Social media account' # Social media account
     c0a70d36-1182-4a66-aad7-1cbfbe3da1dc: Video # Video
     c465af7a-827f-45c8-9e47-f9c38f3d83ac: 'Entry cards' # Entry cards
     c849e39d-e259-447a-bdd8-c577bf05b762: 'Asset link' # Asset link
+    c6072259-9bf9-4ec5-bcf4-32119fef2e0b: 'Registration details' # Registration details
     cd14ae12-0e6a-4f07-9de0-bd0536bd55c1: Heading # Heading
     cdd0917f-398e-46b8-a373-2fcb84257eca: Heading # Heading
+    cdd9e7cc-1867-45b4-9c9b-7310c18333bd: 'Site footer' # Site footer
     cf947787-479e-4889-93cf-2a7b62aafac4: Text # Text
     d0fc3bd4-7289-4c25-ab69-5e6b7d086eed: Accordion # Accordion
     d0247de8-ec57-403b-b334-bbf9703049f8: Video # Video

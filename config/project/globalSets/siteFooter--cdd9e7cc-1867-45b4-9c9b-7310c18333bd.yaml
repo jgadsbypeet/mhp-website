@@ -1,0 +1,63 @@
+fieldLayouts:
+  54b20a13-6e82-4e22-914b-3ff6ac2baa43:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ae279549-89d9-41f5-bdcb-cad0dcb85925 # Social media accounts
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a2e0a80-b650-4609-868c-64a309094c7c
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Social media'
+        uid: 2120c724-b70d-4d9d-8ee6-389b30cd64b2
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c6072259-9bf9-4ec5-bcf4-32119fef2e0b # Registration details
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3ae2f86e-c5f8-41fc-9817-e8919a5785b5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0217698d-d0e4-4110-89bf-12e604fb40fe # Legal nav
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c81734d2-98c2-4ad3-8393-874dba0a2f69
+            userCondition: null
+            warning: null
+            width: 100
+        name: Legal
+        uid: defafc7a-09c2-4108-8ba2-a3a577eb18c7
+        userCondition: null
+handle: siteFooter
+name: 'Site footer'
+sortOrder: 1
