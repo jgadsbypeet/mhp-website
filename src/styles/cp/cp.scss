@@ -1,12 +1,12 @@
 $white: #FFFFFF;
 $off-white: #F7F7F7;
-$brand: #55068A;
-$brand-darker: #36005F;
+$primary: #4B8991;
+$primary-darker: #396B71;
 
-/* brand-subactor styles */
+/* primary-subactor styles */
 .ck-content {
   h5 {
-    color: $brand-darker;
+    color: $primary-darker;
     font-size: 16px;
     font-weight: bold;
   }
@@ -25,15 +25,15 @@ body {
 /* CP styles */
 #global-sidebar {
   color: $white;
-  background-color: $brand;
+  background-color: $primary;
 
   #system-info:hover,
   .sidebar-action:hover {
-    background-color: $brand-darker;
+    background-color: $primary-darker;
   }
 
   .badge {
-    background-color: darken($brand-darker, 15%);
+    background-color: darken($primary-darker, 15%);
   }
 }
 
