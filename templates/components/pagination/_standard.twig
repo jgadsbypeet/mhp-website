@@ -1,0 +1,88 @@
+{% do seomatic.helper.paginate(pageInfo) %}
+{% set type = type ?? "" %}
+{% set classes = classes ?? "" %}
+{% set pagItemClasses = "no-underline h-12 w-12 flex justify-center items-center rounded-full border" %}
+
+<div class="{{ blockClasses }}">
+  <p class="w-full text-center">Page {{ pageInfo.currentPage }} of {{ pageInfo.totalPages }}</p>
+
+  <ul class="flex justify-center content-center w-full list-reset space-x-4">
+    <li class="p-0">
+      {% if pageInfo.prevUrl %}
+        <a href="{{ pageInfo.prevUrl }}" class="{{ pagItemClasses }}">
+          {{ svg("dist/images/icons/chevron.svg")|attr({class: "rotate-180"}) }}
+
+          <span class="visually-hidden">Previous</span>
+        </a>
+      {% else %}
+        <span class="{{ pagItemClasses }} text-grey">
+          {{ svg("dist/images/icons/chevron.svg")|attr({class: "rotate-180"}) }}
+          
+          <span class="visually-hidden">Previous</span>
+        </span>
+      {% endif %}
+    </li>
+
+    {# set page numbers to show max 3 for mobile view #}
+    {% if type == "mobile" %}
+      {% set prevPageNumbers = 1 %}
+      {% set nextPageNumbers = 1 %}
+
+      {% if pageInfo.currentPage == 1 %}
+        {% set nextPageNumbers = 2 %}
+      {% elseif pageInfo.currentPage > 2 and (pageInfo.currentPage < pageInfo.totalPages - 1) %}
+        {% set prevPageNumbers = 1 %}
+        {% set nextPageNumbers = 1 %}
+      {% elseif pageInfo.currentPage == pageInfo.totalPages %}
+        {% set prevPageNumbers = 2 %}
+      {% endif %}
+    {# set page numbers to show max 5 #}
+    {% else %}
+      {% set prevPageNumbers = 2 %}
+      {% set nextPageNumbers = 2 %}
+
+      {% if pageInfo.currentPage == 1 %}
+        {% set nextPageNumbers = 4 %}
+      {% elseif pageInfo.currentPage == 2 %}
+        {% set nextPageNumbers = 3 %}
+      {% elseif pageInfo.currentPage > 2 and (pageInfo.currentPage < pageInfo.totalPages - 1) %}
+        {% set prevPageNumbers = 2 %}
+        {% set nextPageNumbers = 2 %}
+      {% elseif pageInfo.currentPage == (pageInfo.totalPages - 1) %}
+        {% set prevPageNumbers = 3 %}
+      {% elseif pageInfo.currentPage == pageInfo.totalPages %}
+        {% set prevPageNumbers = 4 %}
+      {% endif %}
+    {% endif %}
+    
+    {% for page, url in pageInfo.getPrevUrls(prevPageNumbers) %}
+      <li class="p-0">
+        <a class="{{ pagItemClasses }}" href="{{ url }}">{{ page }}</a>
+      </li>
+    {% endfor %}
+
+    <li class="p-0">
+      <span class="{{ pagItemClasses }} bg-black text-white border-black">{{ pageInfo.currentPage }}</span>
+    </li>
+
+    {% for page, url in pageInfo.getNextUrls(nextPageNumbers) %}
+      <li class="p-0">
+        <a class="{{ pagItemClasses }}" href="{{ url }}">{{ page }}</a>
+      </li>
+    {% endfor %}
+
+    <li class="p-0">
+      {% if pageInfo.nextUrl %}
+        <a href="{{ pageInfo.nextUrl }}" class="{{ pagItemClasses }}">
+          <span class="visually-hidden">Next</span>
+          {{ svg("dist/images/icons/chevron.svg") }}
+        </a>
+      {% else %}
+        <span class="{{ pagItemClasses }} text-grey">
+          <span class="visually-hidden">Next</span>
+          {{ svg("dist/images/icons/chevron.svg") }}
+        </span>
+      {% endif %}
+    </li>
+  </ul>
+</div>

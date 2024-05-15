@@ -1,0 +1,27 @@
+{% do seomatic.helper.paginate(pageInfo) %}
+
+<ul class="flex justify-between w-full list-reset mb-0 mt-7 md:mt-7-lg">
+  <li class="my-3xs text-left">
+	  {% if pageInfo.prevUrl %}
+			<a href="{{ pageInfo.prevUrl }}" class="group link-no-underline">
+				{{ svg("dist/images/icons/page-prev-arrow.svg")|attr({class: "w-auto h-[15px] md:h-[18px]"}) }}
+
+				<div class="link mt-[3px]">Previous</div>
+
+        <div class="text-2xs md:text-2xs-lg">{{ pageInfo.currentPage - 1 }} of {{ pageInfo.totalPages }}</div>
+			</a>
+	  {% endif %}
+  </li>
+
+	<li class="my-3xs text-right">
+	  {% if pageInfo.nextUrl %}
+			<a href="{{ pageInfo.nextUrl }}" class="group link-no-underline">
+				{{ svg("dist/images/icons/page-next-arrow.svg")|attr({class: "w-auto h-[15px] md:h-[18px] ml-auto mr-0"}) }}
+
+				<div class="link mt-[3px]">Next</div>
+
+        <div class="text-2xs md:text-2xs-lg">{{ pageInfo.currentPage + 1 }} of {{ pageInfo.totalPages }}</div>
+			</a>
+	  {% endif %}
+  </li>
+</ul>

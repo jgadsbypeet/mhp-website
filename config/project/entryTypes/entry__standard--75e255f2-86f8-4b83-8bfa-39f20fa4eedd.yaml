@@ -69,8 +69,49 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 9d3c079b-9817-48f7-9661-57ef30eb4eea
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: e9f404d8-0076-45fc-aa9e-76a69b393f81 # Internal search keywords
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1edbcfaa-82b3-4a13-98b3-8cc304edde2f
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: bdb88b26-d6f3-4c33-89b3-a4b2b1cfbb65
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 95870b87-85c2-4fda-97ad-3dab5f1c81e9 # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a0859778-2a16-457a-b0dd-4e89e6db4eb8
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 8788b31c-63af-4b79-b2e2-320f744041bf
         userCondition: null
 handle: entry__standard
 hasTitleField: true

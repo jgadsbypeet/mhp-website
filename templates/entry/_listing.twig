@@ -1,0 +1,44 @@
+{% extends "entry/_standard" %}
+
+{# TODO: add listing query logics and filtering #}
+{% set listChannel = entry.listByChannel %}
+{% set entriesPerPage = 10 %}
+{% set allEntries = craft.entries().section(listChannel).all() ?? null %}
+{% set listEntries = craft.entries().section(listChannel).limit(entriesPerPage) %}
+
+{# Paginate entries #}
+{% paginate listEntries as pageInfo, pageEntries %}
+
+{% block body %}
+  <div class="container">
+    <div class="max-w-xl mx-auto">
+      {% if allEntries %}
+        <ul class="list-reset -mt-sm md:-mt-lg lg:-mt-xl">
+          {% for entry in listEntries %}
+            <li class="mt-sm md:mt-lg lg:mt-xl">
+              {% include "components/entry-card/_standard" with {
+                cardUrl: entry.url,
+                cardHeroImage: entry.heroImage.one() ?? null,
+                cardTitle: entry.title
+              } %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>There are no entries yet.</p>
+      {% endif %}
+
+      {# Page numbers #}
+      {% if pageInfo.totalPages > 1 %}
+        {% include "components/pagination/_standard" with {
+          type: "mobile",
+          blockClasses: "mt-7 md:hidden"
+        } %}
+
+        {% include "components/pagination/_standard" with {
+          blockClasses: "hidden md:block md:mt-7-lg"
+        } %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

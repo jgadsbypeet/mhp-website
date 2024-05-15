@@ -1,0 +1,42 @@
+columnSuffix: null
+handle: seo
+instructions: null
+name: SEO
+searchable: true
+settings:
+  elementDisplayPreviewType: google
+  facebookEnabledFields:
+    - seoPreview
+    - ogType
+    - ogTitle
+    - ogSiteNamePosition
+    - ogDescription
+    - ogImage
+    - ogImageDescription
+  facebookTabEnabled: '1'
+  generalEnabledFields:
+    - seoPreview
+    - mainEntityOfPage
+    - seoTitle
+    - siteNamePosition
+    - seoDescription
+    - seoImage
+    - seoImageDescription
+    - robots
+  generalTabEnabled: '1'
+  sitemapEnabledFields:
+    - sitemapUrls
+  sitemapTabEnabled: '1'
+  twitterEnabledFields:
+    - seoPreview
+    - twitterCardType
+    - twitterCreator
+    - twitterTitle
+    - twitterSiteNamePosition
+    - twitterDescription
+    - twitterImage
+    - twitterImageDescription
+  twitterTabEnabled: '1'
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\seomatic\fields\SeoSettings
