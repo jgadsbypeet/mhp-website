@@ -1,6 +1,7 @@
 {% extends "_layout" %}
 
 {% set heroImage = entry.heroImage.one() ?? null %}
+{% set bodyJumpLinks = entry.content__content.type("content__heading").heading__jumpLink(":notempty:").all() ?? null %}
 {% set bodyContent = entry.content__content.all() ?? null %}
 
 {% block adminBar %}

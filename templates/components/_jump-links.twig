@@ -1,41 +1,22 @@
-{# set jump links array #}
-{% set jumpLinks = [] %}
-{% set sections = entry.body__section.all() ?? null %}
-{# add jump link enabled blocks to jump links array #}
-{% if sections %}
-  {% for block in sections %}
-    {% set contentBlocks = block.body__contentBlock.all() ?? null %}
+<div class="relative container">
+  <div class="max-w-md mx-auto">
+    <nav id="page-contents" aria-label="Page contents" class="lc--nbm mb-8">
+      <h2 class="font-normal text-left text-base text-grey md:text-base-lg mt-0 mb-2 md:mb-2-lg">{{ label ?? "On this page" }}</h2>
 
-    {% if contentBlocks %}
-      {% for block in contentBlocks %}
-        {% if block.type == 'body__heading' and block.heading__jumpLink %}
-          {% set jumpLinks = jumpLinks|merge([block]) %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
+      <ol class="list-reset lc--nbm">
+        {% for jumpLink in bodyJumpLinks %}
+          <li class="pl-0 mb-3 md:mb-3-lg">
+            <a class="relative inline-block pl-[26px] md:pl-[28px]" href="#heading-{{ jumpLink.id }}">
+              {{ svg("dist/images/icons/arrow-down.svg")|attr({ class: "absolute left-1 top-[7px] md:top-[9px]"}) }}
 
-{% if jumpLinks %}
-  <div class="container">
-    <div class="max-w-sm mx-auto">
-      <nav id="page-contents" aria-label="Page contents" class="mb-6 md:mb-6-lg">
-        <h2 class="heading-sm text-black text-left mt-0 mb-2 md:mb-2-lg">{{ label ?? "On this page" }}</h2>
+              {{- jumpLink.heading__jumpLinkText ?? jumpLink.heading__heading -}}
+            </a>
+          </li>
+        {% endfor %}
 
-        <ol class="list-reset lc--nbm">
-          {% for jumpLink in jumpLinks %}
-            <li class="pl-0 mb-2xs">
-              {% apply spaceless %}
-                <a class="relative inline-block pl-[26px] md:pl-[28px]" href="#heading-{{ jumpLink.id }}">
-                  {{ svg("dist/images/icons/jump-link-dash.svg")|attr({ class: "text-secondary-light absolute left-0 top-[10px] md:top-[14px]"}) }}
-
-                  {{ jumpLink.heading__jumpLinkText ?? jumpLink.heading__text }}
-                </a>
-              {% endapply %}
-            </li>
-          {% endfor %}
-        </ol>
-      </nav>
-    </div>
+        {% block extraJumpLinks %}
+        {% endblock %}
+      </ol>
+    </nav>
   </div>
-{% endif %}
+</div>
