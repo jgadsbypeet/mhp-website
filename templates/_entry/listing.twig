@@ -16,7 +16,7 @@
         <ul class="list-reset -mt-sm md:-mt-lg lg:-mt-xl">
           {% for entry in listEntries %}
             <li class="mt-sm md:mt-lg lg:mt-xl">
-              {% include "components/entry-card/_standard" with {
+              {% include "_components/_entry-card/standard" with {
                 cardUrl: entry.url,
                 cardHeroImage: entry.heroImage.one() ?? null,
                 cardTitle: entry.title
@@ -30,12 +30,12 @@
 
       {# Page numbers #}
       {% if pageInfo.totalPages > 1 %}
-        {% include "components/pagination/_standard" with {
+        {% include "_components/_pagination/standard" with {
           type: "mobile",
           blockClasses: "mt-7 md:hidden"
         } %}
 
-        {% include "components/pagination/_standard" with {
+        {% include "_components/_pagination/standard" with {
           blockClasses: "hidden md:block md:mt-7-lg"
         } %}
       {% endif %}

@@ -43,14 +43,14 @@
         {# Don't show the cookie notice on the cookie policy entry #}
       {% else %}
         {# Show the cookie notice #}
-        {# {% include "components/_cookie-notice" %} #}
+        {# {% include "_components/cookie-notice" %} #}
       {% endif %}
     {% endif %}
 
     <a class="visually-hidden skip-link" href="#content">Skip to main content</a>
 
     {% block header %}
-      {% include "components/_site-header" %}
+      {% include "_components/site-header" %}
     {% endblock %}
 
     <main id="content" class="flex-grow">
@@ -59,7 +59,7 @@
     </main>
 
     {% block footer %}
-      {% include "components/_site-footer" %}
+      {% include "_components/site-footer" %}
     {% endblock %}
 
     {# CSRF for javascript post request #}

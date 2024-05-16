@@ -1,4 +1,4 @@
-{% extends "matrix/containers/_standard" %}
+{% extends "_matrix/_containers/standard" %}
 {% set accordions = block.acc__accordion.all() %}
 
 {% block matrixBlock %}
@@ -12,7 +12,7 @@
       {% set blockClasses = "mt-4 mb-8 md:mt-4-lg md:mb-8-lg" %}
     {% endif %}
 
-    {% include "components/_accordion" with {
+    {% include "_components/accordion" with {
       heading: item.acc__heading, 
       body:item.acc__content.all(), 
       bodyType: "matrix"

@@ -11,13 +11,13 @@
 {% set searchResults = searchQuery ? craft.entries().section("not webDoc").search(searchQuery).orderBy("score").limit(entriesPerPage) : null %}
 
 {% block content %}
-	{% include "components/hero/_simple" with {
-    title: 'Search results',  
+	{% include "_components/_hero/simple" with {
+    title: 'Search results',
   } %}
 
 	<div class="site-content pb-14 lg:pb-14-lg">
 		<div class="container">
-			{% include "components/_search-form" with {
+			{% include "_components/search-form" with {
         classes: "w-full"
       } %}
 
@@ -29,14 +29,14 @@
 				{% paginate searchResults as pageInfo, searchResults %}
 
         {% for entry in searchResults %}
-          {% include "components/entry-card/_simple" with {
+          {% include "_components/_entry-card/simple" with {
             cardUrl: entry.url,
             cardTitle: entry.title,
           } %}
         {% endfor %}
 
         {% if pageInfo.totalPages > 1 %}
-          {% include "components/_pagination" %}
+          {% include "_components/pagination" %}
         {% endif %}
       {% endif %}
     </div>

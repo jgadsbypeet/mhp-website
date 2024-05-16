@@ -1,4 +1,4 @@
-{% extends "matrix/containers/_standard" %}
+{% extends "_matrix/_containers/standard" %}
 {% import "_macro" as macro %}
 
 {% set videoOption = block.video__option %}
@@ -51,7 +51,7 @@
     </div>
 
     {% if transcript %}
-      {% include "components/_accordion" with {
+      {% include "_components/accordion" with {
         class: "video", 
         index: "", 
         heading: "Read video transcript", 

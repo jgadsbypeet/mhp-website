@@ -1,3 +1,6 @@
 {% for block in matrix %}
-	{% include ["matrix/blocks/_" ~ block.type|kebab|replace("content-", ""), "matrix/containers/_standard"] %}
+	{% include [
+		"_matrix/_blocks/" ~ block.type|kebab|replace("content-", ""),
+		"_matrix/_containers/standard"
+	] %}
 {% endfor %}

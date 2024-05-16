@@ -11,7 +11,7 @@
 {% block content %}
   {% apply typogrify %}
     {% block hero %}
-      {% include "components/hero/_standard" with {
+      {% include "_components/_hero/standard" with {
         title: entry.title ?? "",
         standfirst: entry.standfirst ?? ""
       } %}
@@ -19,7 +19,7 @@
     
     <div class="site-content py-10 lg:py-10-lg">
       {% block jumplinks %}
-        {% include "components/_jump-links" %}
+        {% include "_components/jump-links" %}
       {% endblock %}
 
       {% block body %}
@@ -30,7 +30,7 @@
           
           {% if cookiePolicyEntry %}
             {% if entry.id == cookiePolicyEntry.id %}
-              {% include "components/_cookie-preference-toggle" %}
+              {% include "_components/cookie-preference-toggle" %}
             {% endif %}
           {% endif %}
         </div>
