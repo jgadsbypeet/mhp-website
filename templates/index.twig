@@ -4,6 +4,13 @@
 {% block adminBar %}
 {% endblock %}
 
+{% block hero %}
+  {% include "_components/_hero/standard" with {
+    title: "Homepage",
+    standfirst: ""
+  } %}
+{% endblock %}
+
 {% block body %}
   <div class="container">
     {# use below for basic typo css settings #}

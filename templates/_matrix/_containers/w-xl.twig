@@ -2,8 +2,10 @@
 
 <div class="matrix matrix--{{ block.type|kebab }}{{ matrixClass ? ' ' ~ matrixClass : '' }}">
   <div class="container">
-    {% block matrixBlock %}
-      <p>Matrix "{{ block.type|kebab|replace("content-", "") }}" not found.</p>
-    {% endblock %}
+    <div class="max-w-xl">
+      {% block matrixBlock %}
+        <p>Matrix "{{ block.type|kebab|replace("content-", "") }}" not found.</p>
+      {% endblock %}
+    </div>
   </div>
 </div>
