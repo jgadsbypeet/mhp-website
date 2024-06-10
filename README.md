@@ -25,6 +25,7 @@ A site using this boilerplate is set up on William Joseph's Krystal hosting serv
 1. Set up craft (`PRIMARY_SITE_URL` value should be empty in .env)
     - `ddev php craft setup`
     - Follow instructions on terminal
+1. Edit the `cpTrigger` value, line 18 in `config/general.php` file to define the site's admin login URL.
 1. You should be able to log into CP (control panel) now. Some user login details are in 1Password if you need to create a new user for yourself.
     - Change user password
 1. Edit .env file (add below)
