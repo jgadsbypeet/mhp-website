@@ -1,8 +1,17 @@
 {% extends "_layout" %}
 
 {% set heroImage = entry.heroImage.one() ?? null %}
-{% set bodyJumpLinks = entry.content__content.type("content__heading").heading__jumpLink(":notempty:").all() ?? null %}
 {% set bodyContent = entry.content__content.all() ?? null %}
+{% set bodyJumpLinks = [] %}
+{% if bodyContent %}
+  {% for section in bodyContent %}
+    {% for block in section.content__section.all() ?? [] %}
+      {% if block.type == 'content__heading' and block.heading__jumpLink %}
+        {% set bodyJumpLinks = bodyJumpLinks|merge([block]) %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
 
 {% block adminBar %}
   {{ adminBar({editLinkUrl: entry.cpEditUrl, editLinkLabel: "entry"}) }}
@@ -16,10 +25,12 @@
         standfirst: entry.standfirst ?? ""
       } %}
     {% endblock %}
-    
-    <div class="site-content py-10 lg:py-10-lg">
+
+    <div class="site-content">
       {% block jumplinks %}
-        {% include "_components/jump-links" %}
+        {% if bodyJumpLinks %}
+          {% include "_components/jump-links" %}
+        {% endif %}
       {% endblock %}
 
       {% block body %}
@@ -27,7 +38,7 @@
           {% include "_matrix" with { 
             "matrix": bodyContent 
           } %}
-          
+
           {% if cookiePolicyEntry %}
             {% if entry.id == cookiePolicyEntry.id %}
               {% include "_components/cookie-preference-toggle" %}

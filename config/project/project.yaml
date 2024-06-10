@@ -1,4 +1,4 @@
-dateModified: 1715780528
+dateModified: 1718024347
 elementSources:
   craft\elements\Entry:
     -
@@ -96,6 +96,7 @@ meta:
     61a52075-e8d1-4571-94a5-73b6448cb2e1: 'Entry link' # Entry link
     73f8e366-7f0d-422c-8131-f28b1309cde6: Size # Size
     75e255f2-86f8-4b83-8bfa-39f20fa4eedd: Standard # Standard
+    92f8ff6a-4be8-49d9-80bb-870617aa0f85: Section # Section
     125a39f1-c7fd-462c-beff-e3dfd421bec7: Simple # Simple
     506d8357-6bb1-4b98-aa31-628a66d53cfb: Entries # Entries
     545bf85d-2516-4846-ab8f-778f8f10fcab: 'Website documentation' # Website documentation
@@ -120,6 +121,7 @@ meta:
     b85f18dc-5c7d-4c3d-be23-437b9c3675f3: New # New
     b502800f-c7b7-47b3-85b1-a0d7a179ea00: Image # Image
     ba07e685-77b8-422c-a2ff-2c5ba52decc3: Caption # Caption
+    bb5fd73c-d0d3-44b5-a992-476eb9b739a4: Section # Section
     bc60a081-9838-490c-abd8-4401a5bd6e1e: Standard # Standard
     bf96f3a4-eb06-49f8-af84-f939d5426416: 'Social media account' # Social media account
     c0a70d36-1182-4a66-aad7-1cbfbe3da1dc: Video # Video
