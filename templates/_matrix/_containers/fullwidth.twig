@@ -1,7 +1,7 @@
 {% set matrixClass = matrixClass ?? "" %}
 
-<div class="matrix-section matrix-section--{{ block.type|kebab }}{% if not childchildAsNewSection %}{{ matrixClass ? ' ' ~ matrixClass : '' }}{% endif %}">
+<div class="matrix-section matrix-section--{{ block.type|kebab }}{{ matrixClass ? ' ' ~ matrixClass : '' }}">
   {% block matrixBlock %}
-    <p>Matrix "_{{ block.type|kebab|replace("content-", "") }}" not found</p>
+    <p>Matrix "{{ block.type|kebab|replace("content-", "") }}" not found</p>
   {% endblock %}
 </div>

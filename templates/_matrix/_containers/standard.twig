@@ -5,7 +5,7 @@
   <div class="container">
     <div class="{{ containerWidth }} mx-auto">
       {% block matrixBlock %}
-        <p>Matrix "_{{ block.type|kebab|replace("content-", "") }}" not found</p>
+        <p>Matrix "{{ block.type|kebab|replace("content-", "") }}" not found</p>
       {% endblock %}
     </div>
   </div>

@@ -1,0 +1,9 @@
+{% extends "_matrix/_containers/fullwidth" %}
+
+{% block matrixBlock %}
+  <div class="matrix-blocks">
+    {% include "_matrix" with {
+      "matrix": block.content__section.all()
+    } %}
+  </div>
+{% endblock %}
