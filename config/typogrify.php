@@ -55,8 +55,9 @@ return [
     "set_classes_to_ignore" => [
         "vcard",
         "noTypo",
-        "button", 
-        "title", 
+        "button",
+        "title",
+        "no-typogrify",
     ],
 
     // sets IDs where typography of children will be untouched
@@ -112,7 +113,7 @@ return [
     // Allowed values for $style:
     // - "traditionalUS"
     // - "international"
-    "set_smart_dashes_style" => Dash_Style::TRADITIONAL_US,
+    "set_smart_dashes_style" => Dash_Style::INTERNATIONAL,
 
     // replaces "..." with "…"
     "set_smart_ellipses" => true,
