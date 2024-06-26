@@ -28,7 +28,9 @@ body {
   background-color: $primary;
 
   #system-info:hover,
-  .sidebar-action:hover {
+  .sidebar-action:hover,
+  .nav-item.sel {
+    color: $white;
     background-color: $primary-darker;
   }
 
