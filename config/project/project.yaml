@@ -1,4 +1,4 @@
-dateModified: 1718024347
+dateModified: 1719416027
 elementSources:
   craft\elements\Entry:
     -
@@ -181,7 +181,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: K73T4S4RZ6HPWJUIQB7AG4M2
-    schemaVersion: 3.4.3
+    schemaVersion: 3.4.6
   image-resizer:
     edition: standard
     enabled: true
@@ -198,6 +198,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.1.1
+  obfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   seomatic:
     edition: standard
     enabled: true
@@ -216,7 +220,7 @@ system:
   edition: pro
   live: true
   name: 'WJ Boilerplate'
-  schemaVersion: 5.0.0.20
+  schemaVersion: 5.0.0.21
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
