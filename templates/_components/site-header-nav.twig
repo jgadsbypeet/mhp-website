@@ -71,16 +71,15 @@
 	</li>
 {% endmacro %}
 
-<div id="siteHeaderNav" class="site-header--nav bg-grey-3 nav:block">
-	<nav
-		id="mainNav" class="header-nav bg-grey-3 lc--nbm absolute left-0 right-0 z-10 nav:relative nav:bg-grey-3" aria-label="Main navigation">
+<div id="siteHeaderNav" class="site-header--nav hidden [&.active]:block bg-grey-3 nav:block">
+	<nav id="mainNav" class="header-nav bg-grey-3 lc--nbm absolute left-0 right-0 z-10 nav:relative nav:bg-grey-3" aria-label="Main navigation">
 		{# nav sections - menu bar #}
 		<ul class="header-nav__menu-bar mb-0 pt-2 pb-4 nav:flex nav:items-center nav:mx-auto md:px-lg md:max-w-lg lg:px-xl nav:pb-2" role="menubar" aria-label="Main navigation">
 			{% nav menu in menus %}
         <li class="{{ navListItemClass }}" role="none">
           {% if menu.subLinks|length %}
-            <span class="header-nav__panel--trigger link link-no-underline font-heading font-medium text-sm inline-flex items-center mb-4 md:text-sm-lg md:px-l nav:py-2 nav:mb-0" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">
-              {{ menu.title }}{{ svg("dist/images/icons/chevron-down.svg") }}
+            <span class="header-nav__panel--trigger group link link-no-underline font-heading font-medium text-sm inline-flex items-center mb-4 cursor-pointer md:text-sm-lg md:px-l nav:py-2 nav:mb-0" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">
+              {{ menu.title }}{{ svg("dist/images/icons/chevron-down.svg")|attr({ class: "align-[1px] ml-[8px] transition-all group-[.active]:-rotate-180" }) }}
             </span>
           {% else %}
             <a class="font-heading font-medium inline-block items-center mb-4 md:px-l nav:py-2 nav:mb-0 link-no-underline" tabindex="0" href="{{ menu.url }}">
@@ -89,7 +88,7 @@
           {% endif %}
 
           {# show/hide nav panels - first level menu #}
-          <ul class="header-nav__panel bg-grey pb-3 mt-0 -mx-sm xs:-mx-md sm:-mx-lg nav:absolute nav:top-full nav:left-0 nav:right-0 nav:mx-0 nav:px-lg lg:px-xl min-[1088px]:px-[calc((100%-theme('maxWidth.lg'))/2+theme('padding.xl'))]" role="menu" aria-label="{{ menu.title }}">
+          <ul class="header-nav__panel hidden [&.active]:block bg-grey pb-3 mt-0 -mx-sm xs:-mx-md sm:-mx-lg nav:absolute nav:top-full nav:left-0 nav:right-0 nav:mx-0 nav:px-lg lg:px-xl min-[1088px]:px-[calc((100%-theme('maxWidth.lg'))/2+theme('padding.xl'))]" role="menu" aria-label="{{ menu.title }}">
             <li class="px-sm pt-4 mb-0 before:content-none xs:px-md sm:px-lg md:pt-4-lg nav:px-0 nav:flex" role="none">
               <div class="header-nav__main last:pb-4 md:mr-md md:last:pb-4-lg md:w-1/3 lc--nbm" role="none">
                 <a role="menuitem" class="inline-block mb-4 md:mb-4-lg" tabindex="-1" href="{{ menu.url }}">{{ menu.title }}</a>

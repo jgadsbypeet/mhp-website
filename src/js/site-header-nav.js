@@ -49,7 +49,7 @@ panelTrigger.keydown(function(e) {
 $(".header-nav__main:first-child > a").keydown(function(e) {
   const code = e.keyCode || e.which;
   let itsTrigger = $(this).closest(".header-nav__panel").siblings(".header-nav__panel--trigger");
-    
+
   // shift key and tab or space or down
   if ((e.shiftKey) && (code == 9 || code == 32 || code == 40)) 
   {
@@ -61,7 +61,7 @@ $(".header-nav__main:first-child > a").keydown(function(e) {
 $(".header-nav__panel li:last-child > a, .header-nav__main:last-child > a").keydown(function(e) {
   const code = e.keyCode || e.which;
   let itsTrigger = $(this).closest(".header-nav__panel").siblings(".header-nav__panel--trigger");
-    
+
   // no shift key but tab or space or down
   if ((!e.shiftKey) && (code == 9 || code == 32 || code == 40)) 
   {

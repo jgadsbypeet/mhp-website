@@ -1,6 +1,6 @@
 <header class="site-header w-full relative z-10">
-  <div class="header-nav--overlay fixed top-0 left-0 right-0 h-screen"></div>
-  
+  <div class="header-nav--overlay fixed top-0 left-0 right-0 h-screen bg-[rgba(0,0,0,.5)] hidden [&.active]:block"></div>
+
   <div class="site-header--top relative py-4 md:py-4-lg bg-white">
     <div class="container">
       <div class="flex justify-between items-center max-w-xl mx-auto">
@@ -16,11 +16,11 @@
           {% include "_components/search-form" %}
         </div>
 
-        <button id="mobileNavButton" class="site-header__burger-menu p-0 button-reset text-link inline-flex nav:hidden" value="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="Main navigation">
+        <button id="mobileNavButton" class="group p-0 button-reset text-link inline-flex nav:hidden" value="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="Main navigation">
           <span class="burger-menu-button-text body-xs text-red-dark font-normal mr-[4px]">Menu</span>
 
-          {{ svg("dist/images/icons/burger-menu.svg")|attr({ class: "site-header__burger-menu--open"}) }}
-          {{ svg("dist/images/icons/burger-menu-close.svg")|attr({ class: "site-header__burger-menu--close"}) }}
+          {{ svg("dist/images/icons/burger-menu.svg")|attr({ class: "block group-[.active]:hidden"}) }}
+          {{ svg("dist/images/icons/burger-menu-close.svg")|attr({ class: "hidden group-[.active]:block"}) }}
         </button>
       </div>
     </div>
