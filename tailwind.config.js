@@ -10,7 +10,7 @@ module.exports = {
       'xs': '420px',
       'sm': '600px',
       'md': '720px',
-      'nav': '900px',
+      'nav': '900px', // keep separately for easier updates on header navigation
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1440px',

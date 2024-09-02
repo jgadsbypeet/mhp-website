@@ -1,5 +1,5 @@
 {
-  "name": "royalfreecharity",
+  "name": "wj-craft5-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WilliamJosephLtd/royalfreecharity"
+    "url": "git+https://github.com/WilliamJosephLtd/wj-craft5-boilerplate"
   },
   "author": "William Joseph Ltd",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WilliamJosephLtd/royalfreecharity/issues"
+    "url": "https://github.com/WilliamJosephLtd/wj-craft5-boilerplate/issues"
   },
-  "homepage": "https://github.com/WilliamJosephLtd/royalfreecharity#readme",
+  "homepage": "https://github.com/WilliamJosephLtd/wj-craft5-boilerplate#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "browser-sync": "^2.27.10",
