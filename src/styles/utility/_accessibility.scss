@@ -11,7 +11,8 @@
   }
 }
 
-a, 
+a,
+.link,
 button {
   @include accessible-focus-state();
   @apply focus-visible:shadow-[0_-3px_0_0_theme(colors.highlight),0_1px_0_0_theme(colors.highlight),0_4px_0_0_theme(colors.black.DEFAULT)];
@@ -24,7 +25,8 @@ button {
 
 /* Fallback for browsers without :focus-visible support */
 @supports not selector(:focus-visible) {
-  a, 
+  a,
+  .link,
   button {
     @include accessible-focus-state();
     @apply focus-visible:shadow-[0_-3px_0_0_theme(colors.highlight),0_1px_0_0_theme(colors.highlight),0_4px_0_0_theme(colors.black.DEFAULT)];
