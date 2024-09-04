@@ -6,7 +6,7 @@
 {% block matrixBlock %}
   <div class="my-8 md:my-8-lg">
     {% if entries %}
-      <ul class="list-reset -mt-6 -ml-6 mb-0 md:-mt-6-lg md:-ml-6-lg md:flex">
+      <ul class="-mt-6 -ml-6 mb-0 md:-mt-6-lg md:-ml-6-lg md:flex">
         {% for entry in entries %}
           {% set heroImage = entry.heroImage.one() ?? null %}
 

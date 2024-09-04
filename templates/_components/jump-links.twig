@@ -3,7 +3,7 @@
     <nav id="page-contents" aria-label="Page contents" class="lc--nbm mb-8">
       <h2 class="font-normal text-left text-base text-grey md:text-base-lg mt-0 mb-2 md:mb-2-lg">{{ label ?? "On this page" }}</h2>
 
-      <ol class="list-reset lc--nbm">
+      <ol class="lc--nbm">
         {% for jumpLink in bodyJumpLinks %}
           <li class="pl-0 mb-3 md:mb-3-lg">
             <a class="relative inline-block pl-[26px] md:pl-[28px]" href="#heading-{{ jumpLink.id }}">

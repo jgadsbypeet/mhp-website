@@ -22,30 +22,38 @@
   .body-xs {
     @apply text-xs md:text-xs-lg;
   }
-  p, ol, ul {
+  p {
     @apply mb-4 md:mb-4-lg;
   }
-  ol {
-    @apply [counter-reset:section];
-  }
-  ol li {
-    @apply [counter-increment:section] relative pl-[22px] mb-2xs last:mb-0 md:pl-[24px];
-  }
-  ol li:before {
-    @apply [content:counters(section,'.')'.'] absolute left-0;
-  }
-  ul li {
-    @apply relative pl-[22px] mb-2xs last:mb-0 md:pl-[24px];
-  }
-  ul li:before {
-    @apply content-[''] block absolute left-[1px] top-[6px] w-[8px] h-[8px] bg-black rounded-full md:top-[10px] md:w-[8px] md:h-[8px];
-  }
-  .list-reset li {
-    @apply static pl-0 md:pl-0;
-  }
-  .list-reset li:before {
-    @apply content-none;
-  }
+  .styled-lists {
+		ol, ul {
+			@apply flex flex-col gap-2;
+
+			li {
+				@apply relative pl-[2.2rem] md:pl-[2.4rem];
+			}
+
+			&:not(.mb-0) {
+				@apply mb-4 md:mb-4-lg;
+			}
+		}
+
+		ol {
+			@apply [counter-reset:section];
+
+			li {
+				@apply [counter-increment:section];
+
+				&:before {
+					@apply [content:counters(section,'')'.'] absolute left-0;
+				}
+			}
+		}
+
+		ul li:before {
+			@apply content-[''] rounded-full block bg-black absolute left-1 top-[.8rem] w-[.8rem] h-[.8rem] md:top-[.9rem] md:w-[1rem] md:h-[1rem];
+		}
+	}
   // link
   a, .link {
     @apply text-link underline decoration-1 underline-offset-[3px] hover:text-link-hover hover:decoration-[3px] group-hover:text-link-hover group-hover:decoration-[3px];
