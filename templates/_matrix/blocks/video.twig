@@ -8,7 +8,7 @@
 {% if videoOption == "videoUpload" %}
 	{% set video = block.video__videoUpload.one() %}
 {% else %}
-	{% set videoUrl = block.video__videoUrl %}
+	{% set videoUrl = block.video__videoUrl.value %}
 {% endif %}
 {% set coverImage = block.video__coverImage.one() ?? null %}
 
