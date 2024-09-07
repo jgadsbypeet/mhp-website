@@ -1,8 +1,7 @@
 <?php
-return array(
-  '*' => array(
-    'pipeline' => 'manifest',
-    'manifestPath' => 'web/dist/rev-manifest.json', // same as gulp manifest path
-    'assetsBasePath' => '@webroot/dist', // directory where manifest is saved
-  ),
-);
+return [
+	'manifestPath' => '@webroot/dist/manifest.json', // Path to your Vite manifest
+	'assetsBasePath' => '@webroot/dist', // The base directory where the assets are
+	'assetUrlPrefix' => '@web/dist', // The base URL where assets are served
+];
+

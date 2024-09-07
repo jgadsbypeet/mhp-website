@@ -2,7 +2,7 @@
 {% set cookiePolicyEntry = cookies.cookiePolicyEntry.one() ?? null %}
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="text-reset scroll-smooth min-h-screen box-border">
+<html lang="en" dir="ltr" class="box-border min-h-screen text-reset scroll-smooth">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,9 +22,13 @@
     {% endif %}
 
     {# Main stylesheet #}
-    <link rel="preload" href="/dist/styles/{{ rev('main.css') }}" as="style" onerror="this.onerror=null;this.href='/dist/styles/main.css';">
-    <link href="/dist/styles/{{ rev('main.css') }}" rel="stylesheet" onerror="this.onerror=null;this.href='/dist/styles/main.css';">
-
+    {# <link rel="preload" href="/dist/styles/{{ rev('main.css') }}" as="style" onerror="this.onerror=null;this.href='/dist/styles/main.css';">
+    <link href="/dist/styles/{{ rev('main.css') }}" rel="stylesheet" onerror="this.onerror=null;this.href='/dist/styles/main.css';"> #}
+		{% if not craft.vite.devServerRunning() %}
+			{{ craft.vite.script("src/index.js", false, { 'defer': true }) }}
+		{% else %}
+			{{ craft.vite.script("src/index.js") }}
+		{% endif %}
     {# Add noindex and nofollow the website documentation so it doesn't appear in search results #}
     {% if entry is defined and entry.section.handle == 'webDoc' %}
       <meta name="robots" content="none">
@@ -49,9 +53,9 @@
 
     <a class="visually-hidden skip-link" href="#content">Skip to main content</a>
 
-    {% block header %}
+    {# {% block header %}
       {% include "_components/site-header" %}
-    {% endblock %}
+    {% endblock %} #}
 
     <main id="content" class="flex-grow">
       {% block content %}

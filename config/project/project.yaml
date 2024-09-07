@@ -1,4 +1,4 @@
-dateModified: 1719416027
+dateModified: 1725669082
 elementSources:
   craft\elements\Entry:
     -
@@ -208,6 +208,10 @@ plugins:
     licenseKey: 54OLWN3NMDQ0NZHSV00E6YVR
     schemaVersion: 3.0.12
   typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
