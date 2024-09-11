@@ -10,16 +10,14 @@ additional_hostnames: []
 additional_fqdns:
     - wj-craft5.test
 database:
-    type: mariadb
-    version: "10.6"
+    type: mysql
+    version: "8.0"
 performance_mode: none
-upload_dirs:
-    - storage/runtime/uploads/temp
 use_dns_when_possible: true
 composer_version: "2"
-web_environment: []
 disable_settings_management: true
-nodejs_version: "20"
+web_environment: []
+corepack_enable: false
 
 # Key features of DDEV's config.yaml:
 
