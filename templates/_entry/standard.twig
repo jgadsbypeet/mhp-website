@@ -35,11 +35,9 @@
 
       {% block body %}
         <div class="matrix-sections">
-          {% apply enkode_emails %}
-            {% include "_matrix" with {
-              "matrix": bodyContent 
-            } %}
-          {% endapply %}
+          {% include "_matrix" with {
+            "matrix": bodyContent 
+          } %}
 
           {% if cookiePolicyEntry %}
             {% if entry.id == cookiePolicyEntry.id %}
