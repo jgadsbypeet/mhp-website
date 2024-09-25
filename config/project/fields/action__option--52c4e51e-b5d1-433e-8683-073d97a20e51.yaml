@@ -9,24 +9,13 @@ settings:
       __assoc__:
         -
           - label
-          - Select
-        -
-          - value
-          - ''
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
           - 'Internal (entry) link'
         -
           - value
           - entryLink
         -
           - default
-          - ''
+          - '1'
     -
       __assoc__:
         -

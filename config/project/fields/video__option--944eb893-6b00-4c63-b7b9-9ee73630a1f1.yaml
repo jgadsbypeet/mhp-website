@@ -9,24 +9,13 @@ settings:
       __assoc__:
         -
           - label
-          - Select
-        -
-          - value
-          - ''
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
           - 'Vimeo or Youtube'
         -
           - value
           - videoUrl
         -
           - default
-          - ''
+          - '1'
     -
       __assoc__:
         -
