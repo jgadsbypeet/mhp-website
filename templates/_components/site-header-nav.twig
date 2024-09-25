@@ -63,6 +63,12 @@
   }
 ] %}
 
+{% macro menuItem(url, title) %}
+	<li class="" role="none">
+		<a role="menuitem" class="inline-block" tabindex="-1" href="{{ url }}">{{ title }}</a>
+	</li>
+{% endmacro %}
+
 <div id="siteHeaderNav" class="site-header--nav hidden [&.active]:block bg-grey nav:block">
 	<nav id="mainNav" class="header-nav bg-grey lc--nbm absolute left-0 right-0 z-10 nav:relative" aria-label="Main navigation">
 		{# nav sections - menu bar #}
@@ -72,8 +78,8 @@
           {% if menu.subLinks|length %}
             <span class="header-nav__panel--trigger group link link-no-underline font-semibold flex items-center justify-between cursor-pointer nav:mr-lg" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">
               {{- menu.title -}}
-              {{ svg("dist/images/icons/functional/chevron-down.svg")|attr({ class: "mt-[3px] -mr-[3px] w-auto h-[20px] block group-[.active]:hidden md:h-[24px] nav:ml-[3px]" }) }}
-              {{ svg("dist/images/icons/functional/chevron-up.svg")|attr({ class: "mt-[3px] -mr-[3px] w-auto h-[20px] hidden group-[.active]:block md:h-[24px] nav:ml-[3px]" }) }}
+              {{ svg("dist/images/icons/chevron-down.svg")|attr({ class: "mt-[3px] -mr-[3px] w-auto h-[20px] block group-[.active]:hidden md:h-[24px] nav:ml-[3px]" }) }}
+              {{ svg("dist/images/icons/chevron-up.svg")|attr({ class: "mt-[3px] -mr-[3px] w-auto h-[20px] hidden group-[.active]:block md:h-[24px] nav:ml-[3px]" }) }}
             </span>
           {% else %}
             <a class="inline-block font-semibold link-no-underline nav:mr-lg" tabindex="0" href="{{ menu.url }}">
