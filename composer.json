@@ -11,6 +11,7 @@
     "nystudio107/craft-cookies": "^5.0.0",
     "nystudio107/craft-seomatic": "^5.0.0",
     "nystudio107/craft-typogrify": "^5.0.0",
+    "nystudio107/craft-vite": "^5.0.1",
     "putyourlightson/craft-dashboard-begone": "^3.0.0",
     "verbb/formie": "^3.0.0-beta.15",
     "verbb/image-resizer": "^4.0.0",
