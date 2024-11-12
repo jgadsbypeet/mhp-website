@@ -49,13 +49,6 @@ A site using this boilerplate is set up on William Joseph's Krystal hosting serv
 1. Edit and lock the Craft and plugins versions
     - Check plugin versions from Settings > Plugins
     - Edit Craft and plugin versions in composer.json file
-1. Fix the front-end error: `None of the configured strategies 'manifest' returned a value.`
-    - From the project's root directory, run `ddev npm ci` to install the dependencies for the Gulp tasks. (See **Building assets** section for more details)
-        - `ddev npm ci` will install `node_modules` exactly same as `package-lock.json` file
-        - `ddev npm install` may change/update `package-lock.json` file
-    - Run `ddev npm run build` which will trigger a production ready build of the project's assets using Gulp
-    - A 'manifest' file for asset versions will be created in `/web/dist/rev-manifest.json`
-    - The front-end should load okay now
 1. Edit this README.md file for the new project by doing the following:
     - Edit the title and description at the top.
     - Remove the **How to use boilerplate** section.
@@ -88,12 +81,6 @@ The quickest way to get this site up and running in your local development machi
     - Update `EMAIL_SENDER_NAME`
 1. Run `ddev composer install`
 1. The website should be running on the URL given (e.g. `https://yourprojectname.ddev.site`)
-1. Fix the front-end error: `None of the configured strategies 'manifest' returned a value.`
-    - From the project's root directory, run `ddev npm ci` to install the dependencies for the Gulp tasks. (See **Building assets** section for more details)
-        - `ddev npm ci` will install `node_modules` exactly same as `package-lock.json` file
-        - `ddev npm install` may change/update `package-lock.json` file
-    - A 'manifest' file for asset versions will be created in `/web/dist/rev-manifest.json`
-    - The front-end should load okay now
 
 In the terminal, you should now run any PHP and Craft commands within the DDEV container. For example:
 ```
@@ -102,16 +89,14 @@ ddev php craft project-config/apply
 If you would like to use `DDEV share` CLI for sharing your local dev site over the internet, run `brew install ngrok/ngrok/ngrok` to install `ngrok`
 
 ## Building assets
-SCSS, JS and image assets are built using Gulp; the configuration for which can be found in `./gulpfile.js`. To begin development;
+SCSS, JS and image assets are built using Vite. To begin development;
 
-1. You will need to have the [Gulp CLI](https://gulpjs.com/docs/en/getting-started/quick-start/) installed globally on your machine in order to run the Gulp build tasks for this project. To install the Gulp CLI, run `npm install --global gulp-cli`. Once you have done these steps, you should never have to repeat them again for future projects.
-1. From the project's root directory, run `ddev npm ci` to install the dependencies for the Gulp tasks.
-    - `ddev npm ci` will install `node_modules` exactly same as `package-lock.json` file
-    - `ddev npm install` may change/update `package-lock.json` file
-1. From the project's root, run `ddev npm run dev`, which will trigger a Gulp dev task to build and watch your SCSS, JS and image files located in `./src/` as well as start a Browser-sync proxy server on `https://yourprojectname.ddev.site:3000` which should reflect your Craft development site. Note that Browser-sync will likely want to offer your project on `http` but ddev's router will accept `https` - you may just have to force this in your browser URL bar
-1. You can now begin editing your SCSS, JS and image files in their respective `./src/` folders whilst leaving the Gulp task open in your terminal. Any changes to relevant files should trigger the appropriate asset build task as well as immediately seeing your changes reflected in your Browser-sync tab in your browser<sup>1</sup>.
-
-<sup>1</sup>: Sometimes Browser-sync may get out of sync with the proxied main Craft development server, at which point you may be better to return to your main localhost URL (i.e. the one being served by DDEV or equivalent) with the disadvantage of refreshing the page to see your changes. Or alternatively you can kill the running `gulp` task and restart it.
+1. From the project's root directory, run `ddev npm ci` to install the dependencies for the Vite tasks.
+    - `ddev npm ci` will install `node_modules` exactly same as `package-lock.json` file.
+    - `ddev npm install` may change/update `package-lock.json` file.
+1. Run `ddev npm run dev`, to trigger a Vite dev task to build and watch your SCSS, JS and image files located in `./src/` as well as start a Browser-sync proxy server on `https://yourprojectname.ddev.site:3000` which should reflect your Craft development site. Note that Browser-sync will likely want to offer your project on `http` but ddev's router will accept `https` - you may just have to force this in your browser URL bar.
+1. Run `ddev npm run build` to build for production.
+1. You can now begin editing your SCSS, JS and image files in their respective `./src/` folders whilst leaving the Vite task open in your terminal. Any changes to relevant files should trigger the appropriate asset build task as well as immediately seeing your changes reflected in your Browser-sync tab in your browser<sup>1</sup>.
 
 ## Image srcset
 Image `srcset` can be generated by using `image srcset macro` in templates.
@@ -133,7 +118,7 @@ Image `srcset` can be generated by using `image srcset macro` in templates.
     - if height is empty, the image will not be cropped.
 
 ## CSS framework
-The Tailwind CSS framework has been installed on this site. The Tailwind CSS is compiled when a Gulp task is run (`gulp` or `gulp build`). The compiled Tailwind CSS only contains classes that are in use in the HTML. The Tailwind documentation gives you lists of classes to use: https://tailwindcss.com/docs/installation
+The Tailwind CSS framework has been installed on this site. The Tailwind CSS is compiled when a Vite task is run. The compiled Tailwind CSS only contains classes that are in use in the HTML. The Tailwind documentation gives you lists of classes to use: https://tailwindcss.com/docs/installation
 
 For example, instead of using `width:100%` in the custom CSS, add the class to the tag like this: `<header class="w-full">`
 
