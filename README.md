@@ -68,7 +68,8 @@ The quickest way to get this site up and running in your local development machi
 1. Install [DDEV-Local](https://ddev.com/get-started/). If you have Homebrew installed, run `brew tap drud/ddev && brew install ddev`
 1. Login to the production CMS, navigate to 'Utilities' in the left hand menu and download (and unzip) a back-up of the production database
 1. Clone this Github repository to your machine and open a terminal at the root of the project
-1. Copy-paste the `.env.example.dev` file and rename the new file to `.env`. Edit DB related values as below
+1. To create .env file from .env.example, run `cp .env.example.dev .env`
+1. Edit DB related values as below
     - `CRAFT_DB_SERVER=db`
     - `CRAFT_DB_DATABASE=db`
     - `CRAFT_DB_USER=db`
