@@ -6,5 +6,5 @@ import "./styles/site.scss";
 import "./scripts/site.js";
 
 // images
-import.meta.glob("./images/**/*", { eager: true, import: "default" })
+import.meta.glob(["./images/**/*", "./images/**/**/*"], { eager: true, import: "default" })
 // import.meta.glob("../sprite.svg", { eager: true, import: "default" })
