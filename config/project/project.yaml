@@ -215,11 +215,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  vizy:
-    edition: standard
-    enabled: true
-    licenseKey: EBFD8ITW70SVS3XRT9ROIN77
-    schemaVersion: 0.9.0
 system:
   edition: pro
   live: true
