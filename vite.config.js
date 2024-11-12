@@ -63,6 +63,7 @@ export default defineConfig(({ command }) => ({
             targets: ["defaults", "not IE 11"],
         }),
         ViteImageOptimizer({
+			minSize: 1, // Minimum file size to optimize (in bytes)
             svg: {
                 multipass: true,
                 plugins: [
