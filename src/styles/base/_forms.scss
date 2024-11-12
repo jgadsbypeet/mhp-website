@@ -38,7 +38,7 @@ input[type=checkbox] {
   @apply rounded-sm;
 
   &:checked {
-    @apply bg-[url('/dist/images/icons/checkbox-checked.svg')] bg-no-repeat bg-center bg-transparent;
+    @apply bg-[url('/dist/assets/images/icons/checkbox-checked.svg')] bg-no-repeat bg-center bg-transparent;
   }
 }
 
@@ -46,7 +46,7 @@ input[type=radio] {
   @apply rounded-full;
 
   &:checked {
-    @apply bg-[url('/dist/images/icons/radio-checked.svg')] bg-no-repeat bg-center bg-transparent;
+    @apply bg-[url('/dist/assets/images/icons/radio-checked.svg')] bg-no-repeat bg-center bg-transparent;
   }
 }
 

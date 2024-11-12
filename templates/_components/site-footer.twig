@@ -8,7 +8,7 @@
       <div class="social border-b border-white flex w-full overflow-hidden -mr-2xs -mt-2xs pb-4 md:pb-4-lg">
         {% for account in socialMediaAccounts %}
           <a href="{{ account.socialMedia__profileUrl }}" target="_blank" rel="noopener" class="text-white hover:text-white mr-2xs mt-2xs flex justify-center items-center w-[32px] h-[32px] md:w-[40px] md:h-[40px]">
-            {{ svg("dist/images/icons/social/" ~ account.socialMedia__platform.value ~ ".svg")|attr({class: "w-full h-auto"}) }}<span class="visually-hidden">{{ account.socialMedia__platform.label }}</span>
+            {{ svg("dist/assets/images/icons/social/" ~ account.socialMedia__platform.value ~ ".svg")|attr({class: "w-full h-auto"}) }}<span class="visually-hidden">{{ account.socialMedia__platform.label }}</span>
           </a>
         {% endfor %}
       </div>

@@ -10,13 +10,13 @@
     <li class="p-0">
       {% if pageInfo.prevUrl %}
         <a href="{{ pageInfo.prevUrl }}" class="{{ pagItemClasses }}">
-          {{ svg("dist/images/icons/chevron.svg")|attr({class: "rotate-180"}) }}
+          {{ svg("dist/assets/images/icons/chevron.svg")|attr({class: "rotate-180"}) }}
 
           <span class="visually-hidden">Previous</span>
         </a>
       {% else %}
         <span class="{{ pagItemClasses }} text-grey">
-          {{ svg("dist/images/icons/chevron.svg")|attr({class: "rotate-180"}) }}
+          {{ svg("dist/assets/images/icons/chevron.svg")|attr({class: "rotate-180"}) }}
           
           <span class="visually-hidden">Previous</span>
         </span>
@@ -75,12 +75,12 @@
       {% if pageInfo.nextUrl %}
         <a href="{{ pageInfo.nextUrl }}" class="{{ pagItemClasses }}">
           <span class="visually-hidden">Next</span>
-          {{ svg("dist/images/icons/chevron.svg") }}
+          {{ svg("dist/assets/images/icons/chevron.svg") }}
         </a>
       {% else %}
         <span class="{{ pagItemClasses }} text-grey">
           <span class="visually-hidden">Next</span>
-          {{ svg("dist/images/icons/chevron.svg") }}
+          {{ svg("dist/assets/images/icons/chevron.svg") }}
         </span>
       {% endif %}
     </li>

@@ -7,7 +7,7 @@
         {% for jumpLink in bodyJumpLinks %}
           <li class="pl-0 mb-3 md:mb-3-lg">
             <a class="relative inline-block pl-[26px] md:pl-[28px]" href="#heading-{{ jumpLink.id }}">
-              {{ svg("dist/images/icons/arrow-down.svg")|attr({ class: "absolute left-1 top-[7px] md:top-[9px]"}) }}
+              {{ svg("dist/assets/images/icons/arrow-down.svg")|attr({ class: "absolute left-1 top-[7px] md:top-[9px]"}) }}
 
               {{- jumpLink.heading__jumpLinkText ?? jumpLink.heading__heading -}}
             </a>

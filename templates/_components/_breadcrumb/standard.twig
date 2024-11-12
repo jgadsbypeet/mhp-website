@@ -22,11 +22,11 @@
 
 {% macro breadcrumb(url, title, linkClasses, chevronRightColour) %}
 	<li class="items-center mb-0 hidden last:flex md:flex">
-    {{ svg("dist/images/icons/breadcrumb-chevron-left.svg")|attr({class: "text-link mr-[9px] md:hidden"}) }}
+    {{ svg("dist/assets/images/icons/breadcrumb-chevron-left.svg")|attr({class: "text-link mr-[9px] md:hidden"}) }}
 
 		<a class="{{ linkClasses ?? '' }}" href="{{ url }}">{{ title }}</a>
 
-    {{ svg("dist/images/icons/breadcrumb-chevron-right.svg")|attr({class: chevronRightColour ~ " ml-[9px] mr-[8px] hidden md:block"}) }}
+    {{ svg("dist/assets/images/icons/breadcrumb-chevron-right.svg")|attr({class: chevronRightColour ~ " ml-[9px] mr-[8px] hidden md:block"}) }}
 	</li>
 {% endmacro %}
 
