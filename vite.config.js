@@ -53,9 +53,13 @@ export default defineConfig(({ command }) => ({
         }),
         copy({
             targets: [
-                { 
+                {
                     src: "./src/public/**/*",
                     dest: "./web/dist",
+                },
+				{
+                    src: "./src/images/icons/*",
+                    dest: "./web/dist/assets/images/icons",
                 },
             ],
         }),
