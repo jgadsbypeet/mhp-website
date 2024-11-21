@@ -16,6 +16,7 @@ A site using this boilerplate is set up on William Joseph's Krystal hosting serv
 	- `git push -u origin main`
 1. Change the `name` value in `.ddev/config.yaml` to the project name (this will define the dev site URL).
 1. Edit the `name`, `description` and `url` values in `package.json`.
+1. Check that the databse spec in the DDEV config file matches the one on the server.
 1. With Docker Desktop running in the background, run `ddev start`
     - See below **Running the site locally** section for [Docker Desktop](https://www.docker.com/products/docker-desktop/) install
 1. Install Craft/plugins
@@ -28,11 +29,7 @@ A site using this boilerplate is set up on William Joseph's Krystal hosting serv
 1. Edit the `cpTrigger` value, line 18 in `config/general.php` file to define the site's admin login URL.
 1. You should be able to log into CP (control panel) now. Some user login details are in 1Password if you need to create a new user for yourself.
     - Change user password
-1. Edit .env file (add below)
-    - SITE_NAME
-    - SITE_GROUP_NAME
-    - SYSTEM_EMAIL
-    - EMAIL_SENDER_NAME
+1. Edit .env file (add below).
 1. Check (or edit) system settings to match above variables from CMS settings
     - Settings > General ($SITE_GROUP_NAME),
 	- Settings > Sites ($SITE_NAME), Update the site group name
