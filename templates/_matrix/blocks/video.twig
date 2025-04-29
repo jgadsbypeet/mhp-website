@@ -13,10 +13,10 @@
 {% set coverImage = block.video__coverImage.one() ?? null %}
 
 {% block matrixBlock %}
-  <div class="video relative my-8 md:my-8-lg">
+  <div class="relative my-8 video md:my-8-lg">
     <div class="video__frame relative pt-[56.25%] bg-black overflow-hidden">
       {% if video %}
-        <video class="video__asset video__asset--uploaded absolute top-0 right-0 bottom-0 left-0" controls {{ coverImage ? 'onloadedmetadata="getVideoDuration(this)"' : '' }}>
+        <video class="absolute top-0 bottom-0 left-0 right-0 video__asset video__asset--uploaded" controls {{ coverImage ? 'onloadedmetadata="getVideoDuration(this)"' : '' }}>
           <source src="{{ url(video.url(), { v: video.dateModified.timestamp }) }}">
           Your browser does not support the video tag.
         </video>
@@ -29,6 +29,7 @@
           {{ macro.image({
             image: coverImage,
             imageClass: "",
+						alt: coverImage.alt,
             sizes: [
               { maxScreen: "479px", width: 448, height: 252 },
               { maxScreen: "767px", width: 688, height: 387 },
