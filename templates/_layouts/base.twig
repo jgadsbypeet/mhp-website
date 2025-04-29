@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#ffffff"> #}
 
     {# Google Tag Manger #}
-    {% if not craft.app.request.isLivePreview and getenv("ENVIRONMENT") == "production" and not currentUser %}
+    {% if not craft.app.request.isLivePreview and getenv("CRAFT_ENVIRONMENT") == "production" and not currentUser %}
       <!-- Google Tag Manager -->
     {% endif %}
 
