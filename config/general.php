@@ -44,7 +44,7 @@ return GeneralConfig::create()
     // Whether asset URLs should be revved so browsers don’t load cached versions when they’re modified.
     ->revAssetUrls(true)
     // Whether Craft should run pending queue jobs automatically when someone visits the control panel.
-    ->runQueueAutomatically(App::env('CRAFT_DEV_MODE') ?? false)
+    ->runQueueAutomatically(App::env('CRAFT_RUN_QUEUE_AUTOMATICALLY') ?? false)
     // Whether an X-Powered-By: Craft CMS header should be sent
     ->sendPoweredByHeader(false)
     // Whether Craft should set users’ usernames to their email addresses, rather than let them set their username separately.
