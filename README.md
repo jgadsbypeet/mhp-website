@@ -91,8 +91,7 @@ SCSS, JS and image assets are built using Vite. To begin development;
 1. From the project's root directory, run `ddev npm ci` to install the dependencies for the Vite tasks.
     - `ddev npm ci` will install `node_modules` exactly same as `package-lock.json` file.
     - `ddev npm install` may change/update `package-lock.json` file.
-1. Run `ddev npm run dev`, to trigger a Vite dev task to build and watch your SCSS, JS and image files located in `./src/` as well as start a Browser-sync proxy server on `https://yourprojectname.ddev.site:3000` which should reflect your Craft development site. Note that Browser-sync will likely want to offer your project on `http` but ddev's router will accept `https` - you may just have to force this in your browser URL bar.
-1. You can now begin editing your SCSS, JS and image files in their respective `./src/` folders whilst leaving the Vite task open in your terminal. Any changes to relevant files should trigger the appropriate asset build task as well as immediately seeing your changes reflected in your Browser-sync tab in your browser.
+1. Run `ddev npm run dev`, to trigger a Vite dev task to build and watch your SCSS, JS and image files located in `./src/` as well as start a Browser-sync which should reflect your Craft development site.
 1. Run `ddev npm run build` to build for production.
 
 ## Image srcset
@@ -144,7 +143,7 @@ Tailwind uses similar class names for margins – just replace `p` with `m`.
 The spacing sizes are set in the Tailwind configuration file (`spacing` in `tailwind.config.js`).
 
 Use the responsive spacing Tailwind classes in the HTML like this:
-`<div class="social pb-10 md:pb-10-lg">`
+`<div class="pb-10 social md:pb-10-lg">`
 
 ### Hover states
 Prefix the class name with `hover:` to have a utility take effect on hover, for example:
