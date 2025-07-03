@@ -1,33 +1,35 @@
 {% extends '_layouts/base' %}
 {# Preview this page at {{ siteUrl }}/error/error #}
 
+{% set title = title ?? 'Something went wrong' %}
+
 {% block head %}
-    <title>{{ siteName }} | Page Not Found</title>
+    <title>{{ siteName }} | {{ title }}</title>
 {% endblock %}
 
 {% block content %}
     {% include "_components/_hero/simple" with {
-        title: 'Something went wrong',  
+        title: title,  
     } %}
 
     <div class="site-content section">
         <div class="container">
             {% block errorMessage %}
                 <p>{{ statusCode ?? 'Status Code' }} - {{ message ?? 'Status Message' }}</p>
-            {% endblock %}
-            <p><a id="goBackLink" style="cursor: pointer;">Go back</a></p>
-            {% if currentUser %}
-                <hr />
-                <h3>Logged in admins only:</h3>
-                <p class="m-0">Status Code:</p>
-                <pre class="mb-6">{{ statusCode ?? 'Status Code' }}</pre>
-                <p class="m-0">Error message:</p>
-                <pre class="mb-6">{{ message ?? 'Status Message' }}</pre>
-                <p class="m-0">Exception code:</p>
-                <pre class="mb-6">{{ code ?? 'Exception Code' }}</pre>
-                <p class="m-0">File:</p>
-                <pre class="break-words whitespace-normal">{{ file ?? 'File Name' }}: {{ line ?? 'File Line' }}</pre>
-            {% endif %}
+				<p><a id="goBackLink" style="cursor: pointer;">Go back</a></p>
+				{% if currentUser %}
+					<hr />
+					<h3>Logged in admins only:</h3>
+					<p class="m-0">Status Code:</p>
+					<pre class="mb-6">{{ statusCode ?? 'Status Code' }}</pre>
+					<p class="m-0">Error message:</p>
+					<pre class="mb-6">{{ message ?? 'Status Message' }}</pre>
+					<p class="m-0">Exception code:</p>
+					<pre class="mb-6">{{ code ?? 'Exception Code' }}</pre>
+					<p class="m-0">File:</p>
+					<pre class="break-words whitespace-normal">{{ file ?? 'File Name' }}: {{ line ?? 'File Line' }}</pre>
+				{% endif %}
+			{% endblock %}
         </div>
     </div>
 {% endblock %}

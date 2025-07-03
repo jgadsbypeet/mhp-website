@@ -1,0 +1,70 @@
+color: null
+description: null
+fieldLayouts:
+  e2a6f8a5-f54b-48eb-9fa0-a0758957534e:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-07-03T15:10:47+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0ed78315-ca41-4197-8d58-bc1355163f3d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-03T15:12:29+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: f532ffc5-e55e-40a0-b01e-70b9c34ba6f6 # Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca499008-88b7-4592-909f-8ccecb90afce
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 11917302-94d2-4685-9079-daebc2496d39
+        userCondition: null
+handle: entry__simple
+hasTitleField: true
+icon: newspaper
+name: Simple
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

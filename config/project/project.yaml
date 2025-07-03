@@ -1,11 +1,23 @@
-dateModified: 1751554716
+dateModified: 1751555603
 elementSources:
   craft\elements\Entry:
     -
       key: '*'
       type: native
     -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: singles
+      tableAttributes:
+        - status
+        - link
+      type: native
+    -
       heading: Structures
+      key: 'heading:47fc041d-127e-4262-bf63-a0ed33cf4d4a'
       type: heading
     -
       defaultSort:
@@ -21,6 +33,7 @@ elementSources:
       type: native
     -
       heading: 'Site info'
+      key: 'heading:0d7ddaac-499e-44b9-93a2-f4a3699400dc'
       type: heading
     -
       defaultSort:
@@ -34,6 +47,10 @@ elementSources:
         - authors
         - link
       type: native
+    -
+      heading: ''
+      key: 'heading:02e05bd2-7f19-4a14-94b8-84366af8247c'
+      type: heading
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $EMAIL_SENDER_NAME
@@ -101,6 +118,7 @@ meta:
     61a52075-e8d1-4571-94a5-73b6448cb2e1: 'Entry link' # Entry link
     73f8e366-7f0d-422c-8131-f28b1309cde6: Size # Size
     75e255f2-86f8-4b83-8bfa-39f20fa4eedd: Standard # Standard
+    85e95b71-c28f-45bb-9ddc-e0aa66e50a7b: 'Page not found' # Page not found
     92f8ff6a-4be8-49d9-80bb-870617aa0f85: Section # Section
     125a39f1-c7fd-462c-beff-e3dfd421bec7: Simple # Simple
     506d8357-6bb1-4b98-aa31-628a66d53cfb: Entries # Entries
@@ -141,6 +159,7 @@ meta:
     d0247de8-ec57-403b-b334-bbf9703049f8: Video # Video
     d4b5dd99-9088-494e-b54b-39b5d76840f0: Image # Image
     d8da528a-5de1-4ea5-9278-983c10cfe9a5: Documents # Documents
+    d276fadb-2ae1-4f6d-8b4a-7e1fb1b54c78: Simple # Simple
     e9f404d8-0076-45fc-aa9e-76a69b393f81: 'Internal search keywords' # Internal search keywords
     e618d81f-6316-4a68-b87b-c324a5ba248b: Icons # Icons
     eb8ef9d9-e105-41b5-ba50-3c4c6e9871e7: Content # Content
