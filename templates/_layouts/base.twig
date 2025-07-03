@@ -11,13 +11,13 @@
 		<!-- The website is up (this is for the uptime monitor) -->
 
     {# TODO - Favicons - use https://realfavicongenerator.net/ to generate the files, add them to a folder named ‘favicons’ in the folder named ‘src’ and run the Vite task to save versions of the files in the ‘web’ folder. #}
-    {# <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e35205">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff"> #}
+    {#
+		<link rel="icon" type="image/png" href="/dist/assets/images/icons/favicon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/dist/assets/images/icons/favicon/favicon.svg" />
+		<link rel="shortcut icon" href="/dist/assets/images/icons/favicon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/dist/assets/images/icons/favicon/apple-touch-icon.png" />
+		<link rel="manifest" href="/dist/assets/images/icons/favicon/site.webmanifest" />
+		#}
 
     {# Google Tag Manger #}
     {% if not craft.app.request.isLivePreview and getenv("CRAFT_ENVIRONMENT") == "production" and not currentUser %}
