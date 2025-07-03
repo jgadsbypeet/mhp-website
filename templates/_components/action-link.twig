@@ -15,7 +15,7 @@
 	</a>
 	{# if download link #}
 	{% if asset %}
-		<div class="body-xs ml-[calc(32px+theme('margin.2xs'))] md:ml-[calc(40px+theme('margin.2xs'))]">
+		<div class="body-xs ml-[calc(32px+theme('margin.2'))] md:ml-[calc(40px+theme('margin.2'))]">
 			{{ asset.extension|upper }} | {{ asset.size|filesize|number_format(2) }} {{ asset.size|filesize|split(' ')|last }}
 		</div>
 	{% endif %}

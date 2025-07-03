@@ -1,7 +1,7 @@
 @layer components {
   // layout 
   .container {
-    @apply max-w-lg mx-auto px-sm md:px-lg lg:px-xl;
+    @apply max-w-lg mx-auto px-sm md:px-lg lg:px-lg;
   }
   // for blocks like the accordion
   .container .container {
