@@ -26,14 +26,9 @@ A site using this boilerplate is set up on William Joseph's Krystal hosting serv
 1. Set up craft (`PRIMARY_SITE_URL` value should be empty in .env)
     - `ddev php craft setup`
     - Follow instructions on terminal
-1. Edit the `cpTrigger` value, line 18 in `config/general.php` file to define the site's admin login URL.
-1. You should be able to log into CP (control panel) now. Some user login details are in 1Password if you need to create a new user for yourself.
+1. Log into CP (control panel). Some user login details are in 1Password if you need to create a new user for yourself.
     - Change user password
-1. Edit .env file (add below).
-1. Check (or edit) system settings to match above variables from CMS settings
-    - Settings > General ($SITE_GROUP_NAME),
-	- Settings > Sites ($SITE_NAME), Update the site group name
-	- Settings > Email ($SYSTEM_EMAIL, $EMAIL_SENDER_NAME)
+1. Edit .env file.
 1. Recreate a Craft license key
     - Delete `config/license.key` file
     - Craft will recreate a new license key automatically
@@ -59,23 +54,13 @@ The quickest way to get this site up and running in your local development machi
 1. Login to the production CMS, navigate to 'Utilities' in the left hand menu and download (and unzip) a back-up of the production database
 1. Clone this Github repository to your machine and open a terminal at the root of the project
 1. To create .env file from .env.example, run `cp .env.example.dev .env`
-1. Edit DB related values as below
-    - `CRAFT_DB_SERVER=db`
-    - `CRAFT_DB_DATABASE=db`
-    - `CRAFT_DB_USER=db`
-    - `CRAFT_DB_PASSWORD=db`
 1. With Docker Desktop running in the background, run `ddev start`
 1. This will give the URL of the site (e.g. `https://yourprojectname.ddev.site`)
     - If you are running DDEV for the first time, you need to run `mkcert -install` for SSL certificate
 1. Import database
     - Run `ddev import-db`
     - enter the file path for the `.sql` or `.zip` database export you downloaded (e.g. `/Users/username/Desktop/craft-boilerplate.sql.zip`)
-1. You may need to fetch some other `.env` values (by fetching them from the server)
-    - Update `PRIMARY_SITE_URL` value to match the URL given
-    - Update `SITE_NAME`
-    - Update `SITE_GROUP_NAME`
-    - Update `SYSTEM_EMAIL`
-    - Update `EMAIL_SENDER_NAME`
+1. Update the `.env` values (you may need to fetching some from the server)
 1. Run `ddev composer install`
 1. The website should be running on the URL given (e.g. `https://yourprojectname.ddev.site`)
 
