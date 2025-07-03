@@ -11,7 +11,7 @@
   {% set linkUrl = asset.url %}
 {% elseif button.action__option == "urlLink" %}
   {% set linkTarget = button.action__linkTarget %}
-  {% set linkUrl = button.actionLink__urlLink %}
+  {% set linkUrl = button.action__urlLink %}
 {% elseif button.action__option == "entryLink" %}
   {% set linkUrl = button.action__entryLink.one().url %}
 {% endif %}
