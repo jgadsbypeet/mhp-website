@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import ViteRestart from "vite-plugin-restart";
 import copy from "rollup-plugin-copy";
 import legacy from "@vitejs/plugin-legacy";
@@ -16,7 +15,7 @@ export default defineConfig(({ command }) => ({
         rollupOptions: {
             input: {
                 index: "./src/index.js",
-                // sprite: "./src/sprite.svg" // Ensure this is included
+				// sprite: "./src/sprite.svg" // Ensure this is included
             },
             output: {
                 dir: "./web/dist/",
@@ -35,6 +34,14 @@ export default defineConfig(({ command }) => ({
                         {
                             src: "./src/static/*",
                             dest: "./web/dist",
+                        },
+						{
+                            src: "./src/images/*",
+                            dest: "./web/dist/assets/images",
+                        },
+						{
+                            src: "./src/fonts/*",
+                            dest: "./web/dist/fonts",
                         },
                     ],
                     flatten: true,
@@ -57,54 +64,10 @@ export default defineConfig(({ command }) => ({
                     src: "./src/public/**/*",
                     dest: "./web/dist",
                 },
-				{
-                    src: "./src/images/icons/*",
-                    dest: "./web/dist/assets/images/icons",
-                },
             ],
         }),
         legacy({
             targets: ["defaults", "not IE 11"],
-        }),
-        ViteImageOptimizer({
-			minSize: 1, // Minimum file size to optimize (in bytes)
-            svg: {
-                multipass: true,
-                plugins: [
-                    {
-                        name: "preset-default",
-                        params: {
-                            overrides: {
-                                removeUselessDefs: false,
-                                cleanupIds: false,
-                                removeHiddenElems: false,
-                                cleanupNumericValues: false,
-                                removeViewBox: false,
-                            },
-                            cleanupIDs: {
-                                minify: false,
-                                remove: false,
-                            },
-                            convertPathData: false,
-                        },
-                    },
-                    "sortAttrs",
-                    {
-                        name: "addAttributesToSVGElement",
-                        params: {
-                            attributes: [
-                                { xmlns: "http://www.w3.org/2000/svg" },
-                            ],
-                        },
-                    },
-                ],
-            },
-            jpeg: {
-                quality: 80,
-            },
-            jpg: {
-                quality: 80,
-            },
         }),
     ],
 }));
