@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: internalSearch
-instructions: 'This won''t help you with SEO – it''s only for the internal Craft search function. Add the search terms that you want the entry to appear for in the internal search results but are typos or misspelt (so you don''t want to display them in the page content). Separate the terms with a comma.'
+instructions: "This won't help you with SEO – it's only for the internal Craft search function. Add the search terms that you want the entry to appear for in the internal search results but are typos or misspelt (so you don't want to display them in the page content). Separate the terms with a comma."
 name: 'Internal search keywords'
 searchable: true
 settings:
