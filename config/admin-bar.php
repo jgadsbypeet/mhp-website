@@ -23,7 +23,7 @@ return array(
     'additionalLinks' => [
       [
         'title' => 'Admin (' . $env . ')',
-        'url' => '/admin',
+        'url' => App::env('CRAFT_ADMIN_URL') ?? 'admin',
         'type' => 'url',
       ]
     ],

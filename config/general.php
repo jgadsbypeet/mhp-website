@@ -15,7 +15,7 @@ return GeneralConfig::create()
     // Allow administrative changes
     ->allowAdminChanges(App::env('CRAFT_ALLOW_ADMIN_CHANGES') ?? false)
     // The URI segment Craft should look for when determining if the current request should route to the control panel rather than the front-end website.
-    ->cpTrigger("boiler-admin")
+    ->cpTrigger(App::env('CRAFT_ADMIN_URL') ?? 'admin')
     // The default language the control panel should use for users who haven’t set a preferred language yet.
     ->defaultCpLanguage("en-GB")
     // The quality level Craft will use when saving JPG and PNG files. Ranges from 1 (worst quality, smallest file) to 100 (best quality, biggest file).
