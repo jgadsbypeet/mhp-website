@@ -1,6 +1,7 @@
 {% set matrixClasses = matrixClasses ?? "" %}
+{% set styledLists = styledLists ?? true %}
 
-<div class="matrix matrix--{{ block.type|kebab }}{{ matrixClasses ? ' ' ~ matrixClasses : '' }}">
+<div class="matrix matrix--{{ block.type|kebab }}{{ matrixClasses ? ' ' ~ matrixClasses : '' }}{% if styledLists %} styled-lists{% endif %}">
   <div class="container">
     <div class="max-w-md">
       {% block matrixBlock %}
