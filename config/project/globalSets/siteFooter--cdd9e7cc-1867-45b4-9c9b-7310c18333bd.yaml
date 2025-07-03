@@ -1,10 +1,13 @@
 fieldLayouts:
   54b20a13-6e82-4e22-914b-3ff6ac2baa43:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-07-03T14:25:00+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: ae279549-89d9-41f5-bdcb-cad0dcb85925 # Social media accounts
             handle: null
@@ -26,6 +29,31 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-07-03T14:26:22+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 5b009523-fed7-46a1-8967-a249920725be # Contact phone number
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2237a3ce-0491-4494-b145-4fb6c487a292
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Contact details'
+        uid: eed8a3ab-527e-4a06-b735-890f992a0171
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-07-03T14:25:00+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: c6072259-9bf9-4ec5-bcf4-32119fef2e0b # Registration details
             handle: null
@@ -41,6 +69,8 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-07-03T14:25:00+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 0217698d-d0e4-4110-89bf-12e604fb40fe # Legal nav
             handle: null

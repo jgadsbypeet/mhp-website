@@ -1,6 +1,9 @@
+{% import "_macro" as macro %}
+
 {% set socialMediaAccounts = siteFooter.footer__socialMedia.all() ?? null %}
 {% set legalNav = siteFooter.footer__legalNav.all() ?? null %}
 {% set registration = siteFooter.registration ?? null %}
+{% set contactPhoneNumber = siteFooter.contactPhoneNumber ?? null %}
 
 <div class="py-8 bg-black text-reversed-text md:py-8-lg">
   <div class="container">
@@ -12,7 +15,14 @@
           </a>
         {% endfor %}
       </div>
-    {% endif %}
+		{% endif %}
+
+		{% if contactPhoneNumber %}
+			<div class="flex gap-3 mb-3 contact text-reversed-text body-xs md:flex-row md:gap-3-lg md:mb-3-lg">
+				{{ macro.clickToCall(contactPhoneNumber, 'text-reversed-text hover:text-reversed-text') }}
+			</div>
+		{% endif %}
+
 
     {% if legalNav %}
       <div class="w-full pt-6 overflow-hidden small">

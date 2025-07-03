@@ -16,7 +16,23 @@ Youtube video {{ macro.videoEmbed('videoUrl') }}
     {% set videoEmbedUrl = 'https://player.vimeo.com/video/' ~ videoId %}
   {% endif %}
 
-  <iframe src="{{ videoEmbedUrl }}" frameborder="0" allowfullscreen allow="autoplay" class="video__asset video__asset-iframe absolute top-0 left-0 w-full h-full"></iframe>
+  <iframe src="{{ videoEmbedUrl }}" frameborder="0" allowfullscreen allow="autoplay" class="absolute top-0 left-0 w-full h-full video__asset video__asset-iframe"></iframe>
+{% endmacro %}
+
+{#******************************************************************************************
+Click to call {{ macro.clickToCall('contactNo', 'class') }}
+*******************************************************************************************#}
+{% macro clickToCall(contactNo, class) %}
+	{# Remove any spaces from the phone number, e.g. 08000540000 #}
+	{% set contactNoFormatted = contactNo|replace({" ":""}) %}
+	{# Split the first zero from the rest of the phone number, e.g. [0, 8000540000] #}
+	{% set contactNoFormatted = contactNoFormatted|split('0', 2) %}
+	{# Get the second part of the split phone number, e.g. 8000540000 #}
+	{% set contactNoFormatted = contactNoFormatted|last %}
+	{# Add the country code to the phone number, e.g. +448000540000 #}
+	{% set contactNoFormatted = "+44" ~ contactNoFormatted %}
+
+	<a href="{{ "tel:" ~ contactNoFormatted }}" class="{{ class ?? '' }}">{{ contactNo }}</a>
 {% endmacro %}
 
 {#******************************************************************************************
