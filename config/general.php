@@ -30,7 +30,7 @@ return GeneralConfig::create()
     ->enableGql(false)
     // Prevent generated URLs from including "index.php"
     // Put error templates in /templates/error directory
-    ->errorTemplatePrefix('_error/')
+    ->errorTemplatePrefix('error/')
     // The maximum upload file size allowed. (160mb)
     ->maxUploadFileSize(167772160)
     // Prevent generated URLs from including "index.php"
