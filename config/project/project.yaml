@@ -1,4 +1,4 @@
-dateModified: 1751527449
+dateModified: 1751537109
 elementSources:
   craft\elements\Entry:
     -
@@ -180,7 +180,7 @@ plugins:
   formie:
     edition: standard
     enabled: true
-    licenseKey: K73T4S4RZ6HPWJUIQB7AG4M2
+    licenseKey: 13MPFKT5UOW481PDVLOHTMG5
     schemaVersion: 3.4.8
   image-resizer:
     edition: standard
@@ -205,7 +205,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: 54OLWN3NMDQ0NZHSV00E6YVR
+    licenseKey: 1A1RRDXAJA7S52YPQWM87Q8O
     schemaVersion: 3.0.13
   typogrify:
     edition: standard
