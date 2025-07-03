@@ -69,36 +69,28 @@ module.exports = {
     },
     extend: {
       colors: {
-        'white': {
-          DEFAULT: '#FFF',
-          'off': '#F7F7F7',
-        },
-        'black': {
-          'light': '#625C66',
-          DEFAULT: '#232323',
-          'dark': '#000000',
-        },
-        'primary': {
-          DEFAULT: '#72ABB2',
-          'dark': '#4B8991',
-          'dark-2': '#396B71',
-        },
-        'secondary': {
-          'light': '#057F13',
-          DEFAULT: '#04620F',
-          'dark': '#034E0C',
-        },
-        'link': {
-          DEFAULT: '#1A00B2',
-          'hover': '#0E005D',
-        },
         'grey': {
-          DEFAULT: '#8B878E',
-          '3': '#C5C3C7',
-          '4': '#F6F5F7',
+					'1': 'var(--color-grey-1)',
+					'2': 'var(--color-grey-2)',
+					'3': 'var(--color-grey-3)',
+					'4': 'var(--color-grey-4)',
+					'5': 'var(--color-grey-5)'
+				},
+        'interactions': {
+          DEFAULT: '#0055FF',
+          'hover': '#0044CC',
+					'press': '#003399'
+				},
+        'focus': {
+          'dark': 'var(--color-black)',
+          'light': 'var(--color-yellow)',
         },
-        'error-red': '#F00',
-        'highlight': '#FFE100', // should match with accessibility hightlight colour
+        'error': 'var(--color-red)',
+				'primary-text': 'var(--color-black)',
+        'secondary-text': 'var(--color-grey-1)',
+				'reversed-text': 'white',
+				'primary': 'var(--color-black)',
+        'secondary': 'var(--color-grey-1)',
       },
       maxWidth: {
         'sm' : '600px',

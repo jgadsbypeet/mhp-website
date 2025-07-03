@@ -4,10 +4,10 @@
     @apply font-display font-semibold text-2xl md:text-2xl-lg mb-8 md:mb-8-lg tracking-[0];
   }
   h2, .heading-xl {
-    @apply font-heading font-semibold text-secondary text-xl md:text-xl-lg mt-9 mb-7 md:mt-9-lg md:mb-7-lg -tracking-[.0375rem] md:-tracking-[0.06rem];
+    @apply font-heading font-semibold text-secondary-text text-xl md:text-xl-lg mt-9 mb-7 md:mt-9-lg md:mb-7-lg -tracking-[.0375rem] md:-tracking-[0.06rem];
   }
   h3, .heading-lg {
-    @apply font-heading font-semibold text-secondary text-lg md:text-lg-lg mt-5 mb-4 md:mt-5-lg md:mb-4-lg -tracking-[.03rem] md:-tracking-[0.0375rem];
+    @apply font-heading font-semibold text-secondary-text text-lg md:text-lg-lg mt-5 mb-4 md:mt-5-lg md:mb-4-lg -tracking-[.03rem] md:-tracking-[0.0375rem];
   }
   h4, .heading-md {
     @apply font-heading font-semibold text-h-md md:text-h-md-lg mt-5 mb-4 md:mt-5-lg md:mb-4-lg -tracking-[.02375rem] md:-tracking-[0.03125rem];
@@ -56,10 +56,10 @@
 	}
   // link
   a, .link {
-    @apply text-link underline decoration-1 underline-offset-[3px] hover:text-link-hover hover:decoration-[3px] group-hover:text-link-hover group-hover:decoration-[3px];
+    @apply text-interactions underline decoration-1 underline-offset-[3px] hover:text-interactions-hover hover:decoration-[3px] group-hover:text-interactions-hover group-hover:decoration-[3px];
   }
   a.invert, .link-invert, .link-invert a {
-    @apply text-white hover:text-white group-hover:text-white;
+    @apply text-reversed-text hover:text-reversed-text group-hover:text-reversed-text;
   }
   .link-no-underline {
     @apply no-underline;
@@ -68,7 +68,7 @@
     @apply font-semibold;
   }
   .text-testimonial {
-    @apply text-[2.2rem] leading-[2.8rem] md:text-[2.8rem] md:leading-[3.6rem] text-secondary-light;
+    @apply text-[2.2rem] leading-[2.8rem] md:text-[2.8rem] md:leading-[3.6rem] text-secondary-text;
   }
   // table
   table {
@@ -82,10 +82,10 @@
     }
   }
   th {
-    @apply font-semibold border-b-grey;
+    @apply font-semibold border-b-secondary;
   }
   td {
-    @apply border-b-grey-3;
+    @apply border-b-secondary;
   }
   // CK editor table
   figure.table {
@@ -94,21 +94,5 @@
     table {
       @apply mb-0;
     }
-  }
-  // buttons
-  button, 
-  .button, 
-  [type="button"], 
-  [type="submit"] {
-    @apply inline-flex justify-center items-center bg-secondary-light text-white rounded-full px-[18px] py-[10px] md:px-[20px] md:pt-[9px] no-underline border-none outline-none hover:bg-secondary hover:text-white active:bg-secondary;
-  }
-  .button-primary {
-    @apply bg-primary-dark hover:bg-primary-dark-2 active:bg-primary-dark-2;
-  }
-  .button-reset {
-    @apply inline bg-transparent border-none rounded-none leading-normal text-black m-0 p-0 hover:bg-transparent hover:text-black;
-  }
-  .group-hover-button {
-    @apply group-hover:bg-secondary group-hover:text-white group-active:bg-secondary;
   }
 }

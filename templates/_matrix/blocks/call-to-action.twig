@@ -20,7 +20,7 @@
 {% set image = block.cta__image.one() ?? null %}
 
 {% block matrixBlock %}
-  <div class="my-8 md:my-8-lg md:flex md:flex-row-reverse bg-primary group hover:cursor-pointer data-link" data-link="{{ linkUrl }}">
+  <div class="my-8 md:my-8-lg md:flex md:flex-row-reverse bg-secondary group hover:cursor-pointer data-link" data-link="{{ linkUrl }}">
     {% if image %}
       <div class="overflow-hidden md:basis-1/2">
         {{ macro.image({

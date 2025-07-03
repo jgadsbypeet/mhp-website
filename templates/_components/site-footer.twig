@@ -2,12 +2,12 @@
 {% set legalNav = siteFooter.footer__legalNav.all() ?? null %}
 {% set registration = siteFooter.registration ?? null %}
 
-<div class="bg-black text-white py-8 md:py-8-lg">
+<div class="py-8 bg-black text-reversed-text md:py-8-lg">
   <div class="container">
     {% if socialMediaAccounts %}
-      <div class="social border-b border-white flex w-full overflow-hidden -mr-2xs -mt-2xs pb-4 md:pb-4-lg">
+      <div class="flex w-full pb-4 overflow-hidden border-b border-white social -mr-2xs -mt-2xs md:pb-4-lg">
         {% for account in socialMediaAccounts %}
-          <a href="{{ account.socialMedia__profileUrl }}" target="_blank" rel="noopener" class="text-white hover:text-white mr-2xs mt-2xs flex justify-center items-center w-[32px] h-[32px] md:w-[40px] md:h-[40px]">
+          <a href="{{ account.socialMedia__profileUrl }}" target="_blank" rel="noopener" class="text-reversed-text hover:text-reversed-text mr-2xs mt-2xs flex justify-center items-center w-[32px] h-[32px] md:w-[40px] md:h-[40px]">
             {{ svg("dist/assets/images/icons/social/" ~ account.socialMedia__platform.value ~ ".svg")|attr({class: "w-full h-auto"}) }}<span class="visually-hidden">{{ account.socialMedia__platform.label }}</span>
           </a>
         {% endfor %}
@@ -15,21 +15,21 @@
     {% endif %}
 
     {% if legalNav %}
-      <div class="small w-full overflow-hidden pt-6">
+      <div class="w-full pt-6 overflow-hidden small">
         <ul class="p-0 m-0">
           {% for entry in legalNav %}
             <li class="block before:content-[''] md:float-left pl-0 md:pr-[12px] md:mr-[12px] md:border-r md:border-r-white md:last:mr-0 md:last:pr-0 md:last:border-none">
-              <a href="{{ entry.url }}" class="text-white hover:text-white hover:underline">{{ entry.title }}</a>
+              <a href="{{ entry.url }}" class="text-reversed-text hover:text-reversed-text hover:underline">{{ entry.title }}</a>
             </li>
           {% endfor %}
         </ul>
       </div>
     {% endif %}
 
-    <div class="small-print text-sm pt-4 md:pt-4-lg md:flex md:justify-between">
-      <div class="reg-details mb-3 md:grow md:mb-0 md:mr-9">&copy;&nbsp;{{ now|date("Y") }}&nbsp;{{ siteName }}{{ registration ? ", " ~ registration : "" }}</div>
+    <div class="pt-4 text-sm small-print md:pt-4-lg md:flex md:justify-between">
+      <div class="mb-3 reg-details md:grow md:mb-0 md:mr-9">&copy;&nbsp;{{ now|date("Y") }}&nbsp;{{ siteName }}{{ registration ? ", " ~ registration : "" }}</div>
 
-      <div class="credit md:shrink-0 md:text-right">Website: <a class="text-white hover:text-white" href="https://www.williamjoseph.co.uk" target="_blank">William Joseph</a></div>
+      <div class="credit md:shrink-0 md:text-right">Website: <a class="text-reversed-text hover:text-reversed-text" href="https://www.williamjoseph.co.uk" target="_blank">William Joseph</a></div>
     </div>
   </div>
 </div>

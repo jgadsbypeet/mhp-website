@@ -6,7 +6,7 @@
 <div class="{{ blockClasses }}">
   <p class="w-full text-center">Page {{ pageInfo.currentPage }} of {{ pageInfo.totalPages }}</p>
 
-  <ul class="flex justify-center content-center w-full space-x-4">
+  <ul class="flex content-center justify-center w-full space-x-4">
     <li class="p-0">
       {% if pageInfo.prevUrl %}
         <a href="{{ pageInfo.prevUrl }}" class="{{ pagItemClasses }}">
@@ -62,7 +62,7 @@
     {% endfor %}
 
     <li class="p-0">
-      <span class="{{ pagItemClasses }} bg-black text-white border-black">{{ pageInfo.currentPage }}</span>
+      <span class="{{ pagItemClasses }} bg-black text-reversed-text border-black">{{ pageInfo.currentPage }}</span>
     </li>
 
     {% for page, url in pageInfo.getNextUrls(nextPageNumbers) %}
