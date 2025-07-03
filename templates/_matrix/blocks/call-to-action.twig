@@ -6,13 +6,14 @@
 {% set linkTarget = "" %}
 {% set asset = "" %}
 {% set linkText = button.action__linkText ?? "More info" %}
-{% if button.action__option == "assetLink" %}
+{% set linkOption = button.action__option %}
+{% if linkOption == "assetLink" %}
   {% set asset = button.action__assetLink.one() %}
   {% set linkUrl = asset.url %}
-{% elseif button.action__option == "urlLink" %}
+{% elseif linkOption == "urlLink" %}
   {% set linkTarget = button.action__linkTarget %}
   {% set linkUrl = button.action__urlLink %}
-{% elseif button.action__option == "entryLink" %}
+{% elseif linkOption == "entryLink" %}
   {% set linkUrl = button.action__entryLink.one().url %}
 {% endif %}
 
@@ -41,9 +42,13 @@
 
       <p>{{ block.cta__text }}</p>
 
-      <div>
-        <a class="button group-hover-button" href="{{ linkUrl }}">{{ linkText }}</a>
-      </div>
+			{% include "_components/action-link" with {
+				blockClasseses: "",
+				linkOption: linkOption,
+				linkUrl: linkUrl,
+				linkTarget: linkTarget,
+				linkText: linkText,
+			} %}
     </div>
   </div>
 {% endblock %}
