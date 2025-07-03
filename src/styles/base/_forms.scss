@@ -15,38 +15,40 @@ input[type="text"],
 input[type="url"],
 select,
 textarea {
-  @apply px-[8px] py-[4px] border-2 border-secondary w-full rounded-sm;
-  @apply mb-4 md:mb-4-lg;
-
-  &:focus {
-    @apply outline-none border-focus-dark;
-    @apply shadow-[0_0_0_4px_theme(colors.focus.light),inset_0_0_0_2px_theme(colors.focus.dark)];
-  }
+  @apply flex items-center appearance-none outline-none px-4 py-1 border-2 border-secondary w-full rounded-none mb-5 md:mb-5-lg placeholder:text-secondary-text mt-[1.2rem];
 }
 
-input[type=checkbox],
-input[type=radio] {
-  @apply appearance-none w-[40px] h-[40px] flex-shrink-0 flex-grow-0 border-2 border-secondary bg-white;
+select {
+	@apply pr-[44px] bg-[url('/dist/assets/images/icons/dropdown-icon.svg')] bg-no-repeat bg-[right_.5rem_center];
 
-  &:focus {
-    @apply outline-none border-focus-dark;
-    @apply shadow-[0_0_0_4px_theme(colors.focus.light),inset_0_0_0_2px_theme(colors.focus.dark)];
-  }
+	&:focus-visible {
+		@apply bg-[url('/dist/assets/images/icons/dropdown-icon--black.svg')];
+	}
 }
 
-input[type=checkbox] {
-  @apply rounded-sm;
+input[type="checkbox"],
+input[type="radio"] {
+  @apply appearance-none w-[40px] h-[40px] mr-[12px] flex-shrink-0 flex-grow-0 border-2 border-secondary bg-white;
+}
 
+input[type="checkbox"].checkbox-small {
+	@apply w-[24px] h-[24px];
+	&:checked {
+		@apply bg-[size:16px]
+	}
+}
+
+input[type="checkbox"] {
   &:checked {
-    @apply bg-[url('/dist/assets/images/icons/checkbox-checked.svg')] bg-no-repeat bg-center bg-transparent;
+    @apply bg-[url('/dist/assets/images/icons/checkbox-checked.svg')] bg-[size:28px] bg-no-repeat bg-center;
   }
 }
 
-input[type=radio] {
+input[type="radio"] {
   @apply rounded-full;
 
   &:checked {
-    @apply bg-[url('/dist/assets/images/icons/radio-checked.svg')] bg-no-repeat bg-center bg-transparent;
+    @apply bg-[url('/dist/assets/images/icons/radio-checked.svg')] bg-no-repeat bg-center;
   }
 }
 
@@ -55,27 +57,22 @@ textarea {
 }
 
 label {
-  @apply block mb-[8px];
-}
-
-// form buttons
-form button:not(.custom-button),
-form [type=button]:not(.custom-button), 
-form [type=submit]:not(.custom-button) {
-  @apply py-[13px] px-[28px] md:py-[14px] md:px-[32px];
-  @apply active:shadow-[inset_0_6px_0_0_rgba(0,0,0,0.25)] active:bg-secondary;
-  @apply focus-visible:shadow-[0_0_0_4px_theme(colors.focus.dark)];
+  @apply block mb-1;
 }
 
 // Formie
+.fui-legend, .fui-label {
+  @apply font-body font-semibold text-s md:text-s-lg;
+}
+
 .fui-legend {
-  @apply heading-l mb-sm;
+  @apply mb-4;
 }
 
 .fui-instructions {
-  @apply mb-sm text-secondary-text;
+  @apply text-secondary-text;
 
-  & > *:last-child {
+	& > *:last-child {
     @apply mb-0;
   }
 }
@@ -90,13 +87,13 @@ form [type=submit]:not(.custom-button) {
 
 .fui-checkbox,
 .fui-radio {
-  @apply flex mb-2;
+  @apply flex mb-2 md:mb-2-lg;
 
   & > input {
-    @apply mr-3;
+    @apply mr-4;
 
     & + label {
-      @apply mt-[9px] mb-0 md:mt-[6px];
+      @apply mt-4 mb-1 md:mt-[6px];
     }
   }
 }
@@ -114,16 +111,16 @@ form [type=submit]:not(.custom-button) {
 }
 
 .fui-error-message {
-  @apply font-semibold -mt-[10px] pl-[28px] md:pl-[32px];
-  @apply bg-[url('../images/icons/error.svg')] bg-no-repeat bg-[left_center] bg-[length:20px_20px] md:bg-[length:24px_24px];
+  @apply font-semibold -mt-[10px] pl-[28px] md:pl-[32px] text-error;
+  @apply bg-[url('/dist/assets/images/icons/error.svg')] bg-no-repeat bg-[left_center] bg-[length:20px_20px] md:bg-[length:24px_24px];
 }
 
 .fui-fieldset + .fui-error-message {
-  @apply font-semibold -mt-[24px]
+  @apply font-semibold -mt-md
 }
 
 .fui-field.fui-error {
-  @apply border-l-4 border-l-error p-[16px] mb-4 md:mb-4-lg;
+  @apply border-l-4 border-l-error p-sm mb-4 md:mb-4-lg;
 
   input[type="date"],
   input[type="email"],
@@ -140,7 +137,7 @@ form [type=submit]:not(.custom-button) {
 }
 
 .fui-alert {
-  @apply font-semibold border-4 border-error p-[16px] mb-8 md:p-[24px] md:mb-8-lg;
+  @apply font-semibold border-4 border-error p-sm md:p-md lg:p-lg mb-8 md:mb-8-lg;
 
   p {
     @apply last:mb-0;
@@ -148,14 +145,6 @@ form [type=submit]:not(.custom-button) {
 }
 
 .fui-type-multi-line-text {
-  .fui-input-wrapper {
-    @apply mb-4 md:mb-4-lg;
-  }
-
-  textarea {
-    @apply mr-[6px];
-  }
-
   .fui-limit-text {
     @apply text-secondary-text;
   }
