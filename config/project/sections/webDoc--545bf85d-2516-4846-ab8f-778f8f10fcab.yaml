@@ -20,7 +20,7 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  17ea053e-13d0-4c0f-a465-42342bea6915: # WJ Craft5 Boilerplate
+  17ea053e-13d0-4c0f-a465-42342bea6915: # $SITE_NAME
     enabledByDefault: true
     hasUrls: true
     template: _entry

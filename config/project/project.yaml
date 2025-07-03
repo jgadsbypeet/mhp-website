@@ -1,4 +1,4 @@
-dateModified: 1751537109
+dateModified: 1751548727
 elementSources:
   craft\elements\Entry:
     -
@@ -35,8 +35,12 @@ elementSources:
         - link
       type: native
 email:
-  fromEmail: mani.bae@williamjoseph.co.uk
-  fromName: 'WJ Boilerplate'
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $EMAIL_SENDER_NAME
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    command: '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
   documents:
@@ -76,7 +80,7 @@ fs:
     url: '@web/assets/videos'
 meta:
   __names__:
-    1a5747be-fb88-4384-a10e-ab7459382bc0: 'WJ Boilerplate' # WJ Boilerplate
+    1a5747be-fb88-4384-a10e-ab7459382bc0: $SITE_GROUP_NAME # $SITE_GROUP_NAME
     1c25abdf-4ed0-4f3e-9efc-afaa953f4da7: 'Video URL' # Video URL
     3b11d463-accb-41de-ba6b-9331689fa7ce: Transcript # Transcript
     3fe2c1d5-8a1b-4113-898e-9819f561f482: 'Video file' # Video file
@@ -89,7 +93,7 @@ meta:
     8e986997-22af-4fce-8225-a1fc3cbb5bac: 'URL link' # URL link
     9d1bef95-d78d-4735-952e-4b60158cf167: Images # Images
     10d1394f-6863-440f-945c-891da0c65bad: Videos # Videos
-    17ea053e-13d0-4c0f-a465-42342bea6915: 'WJ Craft5 Boilerplate' # WJ Craft5 Boilerplate
+    17ea053e-13d0-4c0f-a465-42342bea6915: $SITE_NAME # $SITE_NAME
     42fdb1ca-7367-4cf5-9375-37416cbc8615: Image # Image
     52c4e51e-b5d1-433e-8683-073d97a20e51: Option # Option
     53cc26d6-9a93-49c4-a588-2ae7871da1cf: Listing # Listing
@@ -218,7 +222,8 @@ plugins:
 system:
   edition: pro
   live: true
-  name: 'WJ Boilerplate'
+  name: $SITE_NAME
+  retryDuration: null
   schemaVersion: 5.8.0.3
   timeZone: America/Los_Angeles
 users:

@@ -3,7 +3,7 @@ enabled: true
 handle: default
 hasUrls: true
 language: en-GB
-name: 'WJ Craft5 Boilerplate'
+name: $SITE_NAME
 primary: true
-siteGroup: 1a5747be-fb88-4384-a10e-ab7459382bc0 # WJ Boilerplate
+siteGroup: 1a5747be-fb88-4384-a10e-ab7459382bc0 # $SITE_GROUP_NAME
 sortOrder: 1
