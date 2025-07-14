@@ -127,7 +127,9 @@ module.exports = {
 		},
 	},
 	plugins: [],
-	// safelist: [
-	// 	'w-[50%]',
-	// ],
+	safelist: [
+		'w-[50%]',
+		'w-[70%]',
+		'w-[85%]',
+	],
 }

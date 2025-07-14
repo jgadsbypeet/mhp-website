@@ -1,4 +1,4 @@
-dateModified: 1752506691
+dateModified: 1752507793
 elementSources:
   craft\elements\Entry:
     -
@@ -105,6 +105,7 @@ meta:
     4df4913b-0a34-4362-a115-1480a1f194cf: 'Profile URL' # Profile URL
     05ad0930-f6fa-430f-a8d6-f29e553e30dc: Columns # Columns
     5b009523-fed7-46a1-8967-a249920725be: 'Contact phone number' # Contact phone number
+    5cc8ff4e-e6fd-4abd-97e9-d82e220310b0: Logos # Logos
     5cf7e469-364f-4258-b9ab-37d6e6395222: 'Jump link text (optional)' # Jump link text (optional)
     6f14b3a9-6d8f-4463-83aa-8293c141995d: 'Pull quote' # Pull quote
     7a82df58-7169-4f16-9078-ab400c68ac97: 'Link text' # Link text
@@ -115,6 +116,7 @@ meta:
     9d1bef95-d78d-4735-952e-4b60158cf167: Images # Images
     10d1394f-6863-440f-945c-891da0c65bad: Videos # Videos
     17ea053e-13d0-4c0f-a465-42342bea6915: $SITE_NAME # $SITE_NAME
+    27d4aa56-2fc6-4e74-a20e-f5fee6f2dc20: Logos # Logos
     42fdb1ca-7367-4cf5-9375-37416cbc8615: Image # Image
     52c4e51e-b5d1-433e-8683-073d97a20e51: Option # Option
     53cc26d6-9a93-49c4-a588-2ae7871da1cf: Listing # Listing
