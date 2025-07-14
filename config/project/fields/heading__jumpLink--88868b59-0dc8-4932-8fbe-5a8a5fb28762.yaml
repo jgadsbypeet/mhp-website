@@ -1,12 +1,12 @@
 columnSuffix: null
 handle: heading__jumpLink
 instructions: null
-name: 'Add to jump link'
+name: 'Jump link display'
 searchable: false
 settings:
   default: false
-  offLabel: Remove
-  onLabel: Add
+  offLabel: 'Remove from jump link'
+  onLabel: 'Add to jump link'
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch

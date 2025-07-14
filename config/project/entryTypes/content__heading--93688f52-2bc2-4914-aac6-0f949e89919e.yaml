@@ -1,40 +1,32 @@
 color: blue
+description: null
 fieldLayouts:
   e6e886e1-5195-4ee0-8d41-8b2a4335d530:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2025-07-14T10:11:57+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
+            fieldUid: 73f8e366-7f0d-422c-8131-f28b1309cde6 # Size
+            handle: null
             includeInCards: false
-            inputType: null
             instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
+            label: __blank__
             providesThumbs: false
-            readonly: false
-            requirable: false
-            size: null
-            step: null
+            required: false
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 5879bc07-b415-4129-9413-1c97967f7092
+            type: craft\fieldlayoutelements\CustomField
+            uid: feaccd20-663f-4175-b444-8525668da3a9
             userCondition: null
             warning: null
             width: 100
           -
+            dateAdded: '2025-07-14T10:11:57+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: cd14ae12-0e6a-4f07-9de0-bd0536bd55c1 # Heading
             handle: null
@@ -49,34 +41,15 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Content
-        uid: adfdf151-29c1-4756-b30f-0565901646a9
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
           -
+            dateAdded: '2025-07-14T10:11:57+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: 73f8e366-7f0d-422c-8131-f28b1309cde6 # Size
+            fieldUid: 88868b59-0dc8-4932-8fbe-5a8a5fb28762 # Jump link display
             handle: null
             includeInCards: false
             instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: feaccd20-663f-4175-b444-8525668da3a9
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 88868b59-0dc8-4932-8fbe-5a8a5fb28762 # Add to jump link
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
+            label: __blank__
             providesThumbs: false
             required: false
             tip: null
@@ -84,14 +57,16 @@ fieldLayouts:
             uid: 3d786b5d-d8e7-43a5-8de1-9566d9be075b
             userCondition: null
             warning: null
-            width: 25
+            width: 50
           -
+            dateAdded: '2025-07-14T10:11:57+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
                 -
                   class: craft\fields\conditions\LightswitchFieldConditionRule
-                  fieldUid: 88868b59-0dc8-4932-8fbe-5a8a5fb28762 # Add to jump link
+                  fieldUid: 88868b59-0dc8-4932-8fbe-5a8a5fb28762 # Jump link display
                   layoutElementUid: 3d786b5d-d8e7-43a5-8de1-9566d9be075b
                   uid: 0c4b28ff-661d-4f3b-baa2-2b2e0e5102d1
                   value: true
@@ -110,8 +85,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-        name: Settings
-        uid: 38421dbf-725a-446f-8ac2-4df16b90c26d
+        name: Content
+        uid: adfdf151-29c1-4756-b30f-0565901646a9
         userCondition: null
 handle: content__heading
 hasTitleField: false
@@ -121,6 +96,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

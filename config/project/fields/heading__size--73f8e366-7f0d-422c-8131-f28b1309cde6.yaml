@@ -4,6 +4,7 @@ instructions: null
 name: Size
 searchable: false
 settings:
+  customOptions: false
   options:
     -
       __assoc__:
@@ -13,6 +14,12 @@ settings:
         -
           - value
           - h2
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - '1'
@@ -25,6 +32,12 @@ settings:
           - value
           - h3
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -35,6 +48,12 @@ settings:
         -
           - value
           - h4
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''
