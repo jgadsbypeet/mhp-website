@@ -1,11 +1,11 @@
 {% extends "error/error" %}
-{# Content #is managed in an entry in the Singles section #}
+{# Content is managed in an entry in the Singles section #}
 
 {% set title = pageNotFound.title ?? 'Page not found' %}
 {% set text = pageNotFound.text__text ?? '' %}
 
 {% block errorMessage %}
-  {% if text|length %}
+	{% if text|length %}
 		{{ text }}
 	{% else %}
 		<p>We couldn't find that page. Try using the <a href="/search">site search</a> to find what you're looking for or contact us.</p>

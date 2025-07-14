@@ -28,7 +28,6 @@ return GeneralConfig::create()
     ->disallowRobots(App::env('CRAFT_DISALLOW_ROBOTS') ?? false)
     // Whether the GraphQL API should be enabled.
     ->enableGql(false)
-    // Prevent generated URLs from including "index.php"
     // Put error templates in /templates/error directory
     ->errorTemplatePrefix('error/')
     // The maximum upload file size allowed. (160mb)
