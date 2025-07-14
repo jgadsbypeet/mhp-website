@@ -1,4 +1,4 @@
-dateModified: 1752504210
+dateModified: 1752506235
 elementSources:
   craft\elements\Entry:
     -
@@ -106,6 +106,7 @@ meta:
     05ad0930-f6fa-430f-a8d6-f29e553e30dc: Columns # Columns
     5b009523-fed7-46a1-8967-a249920725be: 'Contact phone number' # Contact phone number
     5cf7e469-364f-4258-b9ab-37d6e6395222: 'Jump link text (optional)' # Jump link text (optional)
+    6f14b3a9-6d8f-4463-83aa-8293c141995d: 'Pull quote' # Pull quote
     7a82df58-7169-4f16-9078-ab400c68ac97: 'Link text' # Link text
     7bc04821-75ee-4a76-8dd0-c441bea1894f: Blockquote # Blockquote
     7c170c10-15c0-45a5-87d1-3e5b5789a737: 'Embed code' # Embed code
@@ -132,7 +133,7 @@ meta:
     1803a6fd-4bb9-4613-8953-bcfc78b4e0c7: 'Link target' # Link target
     3031c488-fd65-4a4c-b69b-770f27f5fd77: 'Contact Form' # Contact Form
     3354af91-f989-4740-bdd2-65c9630089b2: 'Call to action' # Call to action
-    8924a5aa-d54c-4ce1-b2e9-8131d50cb594: 'Quote attribution' # Quote attribution
+    8924a5aa-d54c-4ce1-b2e9-8131d50cb594: 'Quote attribution (optional)' # Quote attribution (optional)
     36604ffc-ec95-4bf9-bac8-457d543a7851: 'Embed code' # Embed code
     88868b59-0dc8-4932-8fbe-5a8a5fb28762: 'Jump link display' # Jump link display
     93688f52-2bc2-4914-aac6-0f949e89919e: Heading # Heading
@@ -148,7 +149,7 @@ meta:
     b53d1a3f-d0be-4181-b4f3-63b2415caf50: Item # Item
     b85f18dc-5c7d-4c3d-be23-437b9c3675f3: New # New
     b502800f-c7b7-47b3-85b1-a0d7a179ea00: Image # Image
-    ba07e685-77b8-422c-a2ff-2c5ba52decc3: Caption # Caption
+    ba07e685-77b8-422c-a2ff-2c5ba52decc3: 'Caption (optional)' # Caption (optional)
     bb5fd73c-d0d3-44b5-a992-476eb9b739a4: Section # Section
     bc60a081-9838-490c-abd8-4401a5bd6e1e: Standard # Standard
     bf96f3a4-eb06-49f8-af84-f939d5426416: 'Social media account' # Social media account

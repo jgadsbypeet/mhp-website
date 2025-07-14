@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: blockquote__cite
-instructions: null
-name: 'Quote attribution'
+handle: quote__cite
+instructions: "The quote's source."
+name: 'Quote attribution (optional)'
 searchable: true
 settings:
   byteLimit: null

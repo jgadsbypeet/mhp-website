@@ -1,6 +1,6 @@
 columnSuffix: null
-handle: blockquote__text
-instructions: 'Does not have to be directly quoted speech.'
+handle: quote__text
+instructions: null
 name: Quote
 searchable: true
 settings:

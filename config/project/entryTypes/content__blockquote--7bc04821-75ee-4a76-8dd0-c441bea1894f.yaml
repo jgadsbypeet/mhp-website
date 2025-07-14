@@ -14,7 +14,7 @@ fieldLayouts:
             fieldUid: 379dfd72-5b5e-42ba-a705-d2785dbab0fa # Quote
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Does not have to be directly quoted speech.'
             label: null
             providesThumbs: false
             required: true
@@ -28,7 +28,7 @@ fieldLayouts:
             dateAdded: '2025-07-14T14:31:11+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 8924a5aa-d54c-4ce1-b2e9-8131d50cb594 # Quote attribution
+            fieldUid: 8924a5aa-d54c-4ce1-b2e9-8131d50cb594 # Quote attribution (optional)
             handle: null
             includeInCards: false
             instructions: null

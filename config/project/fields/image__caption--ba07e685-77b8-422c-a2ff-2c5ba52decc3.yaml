@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: image__caption
 instructions: null
-name: Caption
+name: 'Caption (optional)'
 searchable: true
 settings:
   byteLimit: null

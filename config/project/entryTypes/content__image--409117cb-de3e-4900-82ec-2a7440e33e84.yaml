@@ -28,7 +28,7 @@ fieldLayouts:
             dateAdded: '2025-07-14T10:59:29+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: ba07e685-77b8-422c-a2ff-2c5ba52decc3 # Caption
+            fieldUid: ba07e685-77b8-422c-a2ff-2c5ba52decc3 # Caption (optional)
             handle: null
             includeInCards: false
             instructions: null

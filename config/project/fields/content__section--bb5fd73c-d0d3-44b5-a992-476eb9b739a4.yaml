@@ -28,7 +28,15 @@ settings:
       __assoc__:
         -
           - uid
-          - 7bc04821-75ee-4a76-8dd0-c441bea1894f # Blockquote
+          - 409117cb-de3e-4900-82ec-2a7440e33e84 # Image
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - c0a70d36-1182-4a66-aad7-1cbfbe3da1dc # Video
         -
           - group
           - General
@@ -44,7 +52,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 409117cb-de3e-4900-82ec-2a7440e33e84 # Image
+          - 7bc04821-75ee-4a76-8dd0-c441bea1894f # Blockquote
         -
           - group
           - General
@@ -52,7 +60,7 @@ settings:
       __assoc__:
         -
           - uid
-          - c0a70d36-1182-4a66-aad7-1cbfbe3da1dc # Video
+          - 6f14b3a9-6d8f-4463-83aa-8293c141995d # Pull quote
         -
           - group
           - General
