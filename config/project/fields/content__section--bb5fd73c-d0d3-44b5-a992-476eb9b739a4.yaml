@@ -28,6 +28,14 @@ settings:
       __assoc__:
         -
           - uid
+          - 7bc04821-75ee-4a76-8dd0-c441bea1894f # Blockquote
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
           - 409117cb-de3e-4900-82ec-2a7440e33e84 # Image
         -
           - group

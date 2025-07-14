@@ -1,0 +1,11 @@
+{% extends "_matrix/containers/standard" %}
+
+{% block matrixBlock %}
+	<blockquote class="flex my-5 md:my-5-lg fm--ntm lm--nbm">
+		<div class="block w-[4px] bg-primary rounded flex-grow-0 flex-shrink-0"></div>
+		<div class="px-4 py-3 md:py-3-lg md:px-4-lg">
+			<p class="mb-1 md:mb-1-lg">{{ block.blockquote__text }}</p>
+			<p class="mb-0 body-xs text-secondary-text">{{ block.blockquote__cite }}</p>
+		</div>
+	</blockquote>
+{% endblock %}

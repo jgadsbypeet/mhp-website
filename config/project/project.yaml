@@ -1,4 +1,4 @@
-dateModified: 1752503032
+dateModified: 1752503617
 elementSources:
   craft\elements\Entry:
     -
@@ -107,6 +107,7 @@ meta:
     5b009523-fed7-46a1-8967-a249920725be: 'Contact phone number' # Contact phone number
     5cf7e469-364f-4258-b9ab-37d6e6395222: 'Jump link text (optional)' # Jump link text (optional)
     7a82df58-7169-4f16-9078-ab400c68ac97: 'Link text' # Link text
+    7bc04821-75ee-4a76-8dd0-c441bea1894f: Blockquote # Blockquote
     7c170c10-15c0-45a5-87d1-3e5b5789a737: 'Embed code' # Embed code
     7dd6601d-5a16-4e28-8d2a-2f0340c48b65: Content # Content
     8e986997-22af-4fce-8225-a1fc3cbb5bac: 'URL link' # URL link
@@ -122,6 +123,7 @@ meta:
     85e95b71-c28f-45bb-9ddc-e0aa66e50a7b: 'Page not found' # Page not found
     92f8ff6a-4be8-49d9-80bb-870617aa0f85: Section # Section
     125a39f1-c7fd-462c-beff-e3dfd421bec7: Simple # Simple
+    379dfd72-5b5e-42ba-a705-d2785dbab0fa: Quote # Quote
     506d8357-6bb1-4b98-aa31-628a66d53cfb: Entries # Entries
     545bf85d-2516-4846-ab8f-778f8f10fcab: 'Website documentation' # Website documentation
     604eaaf1-80fd-42f6-aa9f-3c91970e89aa: 'Action link' # Action link
@@ -130,6 +132,7 @@ meta:
     1803a6fd-4bb9-4613-8953-bcfc78b4e0c7: 'Link target' # Link target
     3031c488-fd65-4a4c-b69b-770f27f5fd77: 'Contact Form' # Contact Form
     3354af91-f989-4740-bdd2-65c9630089b2: 'Call to action' # Call to action
+    8924a5aa-d54c-4ce1-b2e9-8131d50cb594: 'Quote attribution' # Quote attribution
     36604ffc-ec95-4bf9-bac8-457d543a7851: 'Embed code' # Embed code
     88868b59-0dc8-4932-8fbe-5a8a5fb28762: 'Jump link display' # Jump link display
     93688f52-2bc2-4914-aac6-0f949e89919e: Heading # Heading
