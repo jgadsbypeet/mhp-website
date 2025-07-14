@@ -1,41 +1,77 @@
 @mixin accessible-focus-state() {
-  &:focus-visible {
-    @apply outline-none bg-focus-light no-underline hover:no-underline hover:bg-focus-light group-hover:bg-focus-light;
-    @apply text-focus-dark #{!important};
+	@apply outline-none bg-focus-light no-underline hover:no-underline hover:bg-focus-light group-hover:bg-focus-light #{!important};
+	@apply text-focus-dark hover:text-focus-dark group-hover:text-focus-dark #{!important};
 
-    &:not(.no-path-fill) {
-      path {
-        @apply fill-focus-dark #{!important};
-      }
-    }
-  }
+	&:not(.no-path-fill) {
+		path {
+			@apply fill-focus-dark #{!important};
+		}
+	}
+}
+
+@mixin button-accessible-focus-state() {
+  @apply border-b-0 shadow-[0_0_0_4px_theme(colors.focus.dark)];
+}
+
+@mixin link-accessible-focus-state() {
+  @apply shadow-[0_-3px_0_0_theme(colors.focus.light),0_1px_0_0_theme(colors.focus.light),0_4px_0_0_theme(colors.focus.dark)];
+}
+
+button,
+.button  {
+	&:not(.button-reset) {
+		&:focus-visible {
+			@include accessible-focus-state();
+			@include button-accessible-focus-state();
+		}
+	}
 }
 
 a,
-.link,
-button {
-  @include accessible-focus-state();
-  @apply focus-visible:shadow-[0_-3px_0_0_theme(colors.focus.light),0_1px_0_0_theme(colors.focus.light),0_4px_0_0_theme(colors.focus.dark)];
+.link {
+	&:focus-visible {
+		@include accessible-focus-state();
+  	@include link-accessible-focus-state();
+	}
 }
 
-.button  {
-  @include accessible-focus-state();
-  @apply focus-visible:shadow-[0_0_0_4px_theme(colors.focus.dark)];
+.button-reset {
+	&:focus-visible {
+		.link {
+			@include accessible-focus-state();
+  		@include link-accessible-focus-state();
+		}
+	}
 }
 
 /* Fallback for browsers without :focus-visible support */
 @supports not selector(:focus-visible) {
-  a,
-  .link,
-  button {
-    @include accessible-focus-state();
-    @apply focus-visible:shadow-[0_-3px_0_0_theme(colors.focus.light),0_1px_0_0_theme(colors.focus.light),0_4px_0_0_theme(colors.focus.dark)];
-  }
+  button,
+	.button  {
+		&:not(.button-reset) {
+			&:focus {
+				@include accessible-focus-state();
+				@include button-accessible-focus-state();
+			}
+		}
+	}
 
-  .button {
-    @include accessible-focus-state();
-    @apply focus-visible:shadow-[0_0_0_4px_theme(colors.focus.dark)];
-  }
+	a,
+	.link {
+		&:focus {
+			@include accessible-focus-state();
+			@include link-accessible-focus-state();
+		}
+	}
+
+	.button-reset {
+		&:focus {
+			.link {
+				@include accessible-focus-state();
+				@include link-accessible-focus-state();
+			}
+		}
+	}
 }
 
 .visually-hidden {
