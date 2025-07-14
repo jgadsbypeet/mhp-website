@@ -2,6 +2,7 @@ altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
   a1a433e5-be43-4cdd-a37a-a846972db09c:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -11,6 +12,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2025-07-14T11:15:14+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -32,6 +34,32 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
             uid: f31c5888-6319-4201-ab4f-1353c4bab7f1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            dateAdded: '2025-07-14T11:16:56+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            instructions: null
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: true
+            required: false
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 5245f09d-40fb-4d71-b261-3872d0f51eb0
             userCondition: null
             warning: null
             width: 100
