@@ -158,18 +158,18 @@ fieldLayouts:
                     - urlLink
               elementType: craft\elements\Entry
               fieldContext: global
-            fieldUid: 1803a6fd-4bb9-4613-8953-bcfc78b4e0c7 # Open in a new window?
+            fieldUid: 1803a6fd-4bb9-4613-8953-bcfc78b4e0c7 # Link target
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: __blank__
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: d6fc0ceb-f110-413f-a669-f53d48bab0ac
             userCondition: null
-            warning: null
+            warning: 'While it may be tempting to open an external link in a new browser tab or window, this breaks the back button.'
             width: 50
         name: Content
         uid: bee9ce48-4580-49fc-ae3a-646e919098d0
@@ -178,7 +178,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            content: 'The action link block allows you to add an internal link (an entry on the site) or an external link (a page on another site).'
+            content: "The action link block allows you to add an internal link (an entry on the site) or an external link (a page on another site).\r\n\r\nLinks should open in the current browser tab (this includes links to PDFs). While it may be tempting to open them in a new browser tab or window, this takes the choice away from the user. Users can use standard browser interactions to open the link in a new tab or window (for example, right-clicking the link).\r\n\r\nMost links do not open in new tabs, so users may not realise what’s happened and screen readers don’t announce it. Other problems with forcing links to open in a new tab include the following:\r\n\r\n- The back button breaks because the tab contains the browser history.\r\n\r\n- The device slows down because each tab consumes additional memory.\r\n\r\n- Analytics can be affected because the page is still open when the user has left the site."
             dateAdded: '2025-07-14T11:06:53+00:00'
             displayInPane: false
             elementCondition: null

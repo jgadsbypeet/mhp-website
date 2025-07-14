@@ -1,4 +1,4 @@
-dateModified: 1752492870
+dateModified: 1752500289
 elementSources:
   craft\elements\Entry:
     -
@@ -126,7 +126,7 @@ meta:
     604eaaf1-80fd-42f6-aa9f-3c91970e89aa: 'Action link' # Action link
     673cb6e1-eb77-40ba-b02e-122c3a42286a: 'Cover image' # Cover image
     944eb893-6b00-4c63-b7b9-9ee73630a1f1: Option # Option
-    1803a6fd-4bb9-4613-8953-bcfc78b4e0c7: 'Open in a new window?' # Open in a new window?
+    1803a6fd-4bb9-4613-8953-bcfc78b4e0c7: 'Link target' # Link target
     3031c488-fd65-4a4c-b69b-770f27f5fd77: 'Contact Form' # Contact Form
     3354af91-f989-4740-bdd2-65c9630089b2: 'Call to action' # Call to action
     88868b59-0dc8-4932-8fbe-5a8a5fb28762: 'Jump link display' # Jump link display

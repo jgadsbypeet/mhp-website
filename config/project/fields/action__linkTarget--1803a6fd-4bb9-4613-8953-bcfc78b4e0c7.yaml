@@ -1,12 +1,12 @@
 columnSuffix: null
 handle: action__linkTarget
-instructions: null
-name: 'Open in a new window?'
+instructions: "\r\n"
+name: 'Link target'
 searchable: false
 settings:
   default: false
-  offLabel: null
-  onLabel: null
+  offLabel: 'Open in same window or tab'
+  onLabel: 'Open in new window or tab'
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch
