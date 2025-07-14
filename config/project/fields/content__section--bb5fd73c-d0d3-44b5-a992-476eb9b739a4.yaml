@@ -36,6 +36,14 @@ settings:
       __assoc__:
         -
           - uid
+          - de877a1b-7d14-4113-aed7-3c9b5e2db277 # Highlighted text
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
           - 409117cb-de3e-4900-82ec-2a7440e33e84 # Image
         -
           - group

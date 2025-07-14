@@ -109,8 +109,8 @@ module.exports = {
 				'10-lg': '80px',
 				// container-spacing
 				'sm': '16px',
-        'md': '24px',
-        'lg': '32px',
+				'md': '24px',
+				'lg': '32px',
 			},
 			borderRadius: {
 				'sm': '4px',

@@ -1,4 +1,4 @@
-dateModified: 1752503617
+dateModified: 1752504210
 elementSources:
   craft\elements\Entry:
     -
@@ -165,6 +165,7 @@ meta:
     d4b5dd99-9088-494e-b54b-39b5d76840f0: Image # Image
     d8da528a-5de1-4ea5-9278-983c10cfe9a5: Documents # Documents
     d276fadb-2ae1-4f6d-8b4a-7e1fb1b54c78: Simple # Simple
+    de877a1b-7d14-4113-aed7-3c9b5e2db277: 'Highlighted text' # Highlighted text
     e9f404d8-0076-45fc-aa9e-76a69b393f81: 'Internal search keywords' # Internal search keywords
     e618d81f-6316-4a68-b87b-c324a5ba248b: Icons # Icons
     e687be04-1ff6-43b7-9785-a7dd65447c4b: Attribution # Attribution
