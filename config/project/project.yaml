@@ -1,4 +1,4 @@
-dateModified: 1752500289
+dateModified: 1752502852
 elementSources:
   craft\elements\Entry:
     -
@@ -107,6 +107,7 @@ meta:
     5b009523-fed7-46a1-8967-a249920725be: 'Contact phone number' # Contact phone number
     5cf7e469-364f-4258-b9ab-37d6e6395222: 'Jump link text (optional)' # Jump link text (optional)
     7a82df58-7169-4f16-9078-ab400c68ac97: 'Link text' # Link text
+    7c170c10-15c0-45a5-87d1-3e5b5789a737: 'Embed code' # Embed code
     7dd6601d-5a16-4e28-8d2a-2f0340c48b65: Content # Content
     8e986997-22af-4fce-8225-a1fc3cbb5bac: 'URL link' # URL link
     9d1bef95-d78d-4735-952e-4b60158cf167: Images # Images
@@ -129,6 +130,7 @@ meta:
     1803a6fd-4bb9-4613-8953-bcfc78b4e0c7: 'Link target' # Link target
     3031c488-fd65-4a4c-b69b-770f27f5fd77: 'Contact Form' # Contact Form
     3354af91-f989-4740-bdd2-65c9630089b2: 'Call to action' # Call to action
+    36604ffc-ec95-4bf9-bac8-457d543a7851: 'Embed code' # Embed code
     88868b59-0dc8-4932-8fbe-5a8a5fb28762: 'Jump link display' # Jump link display
     93688f52-2bc2-4914-aac6-0f949e89919e: Heading # Heading
     95870b87-85c2-4fda-97ad-3dab5f1c81e9: SEO # SEO
