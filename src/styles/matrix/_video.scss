@@ -1,15 +1,15 @@
 .video {
 	.cover-image iframe {
-    @apply hidden;
+    @apply hidden; // Stop keyboard navigation focusing on hidden YouTube buttons
   }
 
-  &__playing {
+	&__playing {
     .video__image,
     .video__button {
       @apply hidden;
     }
 
-    &.cover-image iframe {
+		&.cover-image iframe {
       @apply block;
     }
   }

@@ -14,7 +14,7 @@
 
 {% block matrixBlock %}
   <div class="relative my-8 video md:my-8-lg">
-    <div class="video__frame relative pt-[56.25%] bg-black overflow-hidden">
+    <div class="video__frame relative pt-[56.25%] bg-black overflow-hidden{% if coverImage %} cover-image{% endif %}">
       {% if video %}
         <video class="absolute top-0 bottom-0 left-0 right-0 video__asset video__asset--uploaded" controls {{ coverImage ? 'onloadedmetadata="getVideoDuration(this)"' : '' }}>
           <source src="{{ url(video.url(), { v: video.dateModified.timestamp }) }}">
