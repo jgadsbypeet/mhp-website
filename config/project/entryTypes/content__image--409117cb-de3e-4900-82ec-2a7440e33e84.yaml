@@ -1,40 +1,15 @@
 color: cyan
+description: null
 fieldLayouts:
   f0e94ed0-f641-41b7-8877-91a9c78b82e0:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: a47589c4-373a-4dc1-a43a-4b8efd4b66d9
-            userCondition: null
-            warning: null
-            width: 100
-          -
+            dateAdded: '2025-07-14T10:59:29+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: b502800f-c7b7-47b3-85b1-a0d7a179ea00 # Image
             handle: null
@@ -50,6 +25,8 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-07-14T10:59:29+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: ba07e685-77b8-422c-a2ff-2c5ba52decc3 # Caption
             handle: null
@@ -71,6 +48,8 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-07-14T10:59:29+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: adf10d1b-d5b5-4564-a880-732b9ec4e22c # Image ratio
             handle: null
@@ -88,6 +67,21 @@ fieldLayouts:
         name: Settings
         uid: a8f6c090-42cc-4fb1-b56e-b4896ba53210
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "Images in this are resized to the maximum width they’ll be displayed.\r\n\r\nThe image caption is used to convey additional information that is either not present or tangentially related to the picture.\r\n\r\nIn the settings, you can choose whether to use the standard ratio of 16:9 or leave the image uncropped."
+            dateAdded: '2025-07-14T11:02:01+00:00'
+            displayInPane: false
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 04e955c4-b5ff-468b-bd75-0074e0cbd088
+            userCondition: null
+            width: 100
+        name: 'Editor guide'
+        uid: 87e8d196-a0c5-4f85-8d07-04f508949f74
+        userCondition: null
 handle: content__image
 hasTitleField: false
 icon: image
@@ -96,6 +90,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

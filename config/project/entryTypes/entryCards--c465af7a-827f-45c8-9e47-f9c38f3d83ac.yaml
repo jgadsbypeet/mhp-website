@@ -1,40 +1,15 @@
 color: violet
+description: null
 fieldLayouts:
   27648bfa-f6f4-4ee8-bc57-27c9a3ff971e:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 07eb0d3b-91c4-4de0-b420-b361f7169d5c
-            userCondition: null
-            warning: null
-            width: 100
-          -
+            dateAdded: '2025-07-14T11:08:01+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 506d8357-6bb1-4b98-aa31-628a66d53cfb # Entries
             handle: null
@@ -56,6 +31,8 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-07-14T11:08:01+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 05ad0930-f6fa-430f-a8d6-f29e553e30dc # Columns
             handle: null
@@ -76,11 +53,11 @@ fieldLayouts:
 handle: entryCards
 hasTitleField: false
 icon: grid
-name: 'Entry cards'
+name: 'Entry navigation cards'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

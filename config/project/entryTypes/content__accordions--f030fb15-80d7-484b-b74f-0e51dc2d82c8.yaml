@@ -1,40 +1,15 @@
 color: blue
+description: null
 fieldLayouts:
   40f62781-6812-44e4-9db3-86bcdc6a6a22:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 5f0f4067-8cb7-4fcd-a32a-922abcb9ed74
-            userCondition: null
-            warning: null
-            width: 100
-          -
+            dateAdded: '2025-07-14T11:02:25+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: d0fc3bd4-7289-4c25-ab69-5e6b7d086eed # Accordion
             handle: null
@@ -52,6 +27,21 @@ fieldLayouts:
         name: Content
         uid: cacc48d7-58e2-48b8-8811-cf60c738a443
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: 'Accordions make content easier to digest by letting users reveal more detailed information only if they need it. They can contain paragraphs and lists.'
+            dateAdded: '2025-07-14T11:05:45+00:00'
+            displayInPane: false
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 401ec42b-a14c-46d0-b98f-603f661ac230
+            userCondition: null
+            width: 100
+        name: 'Editor guide'
+        uid: 628bad34-a56a-4af3-810c-aa16514511c4
+        userCondition: null
 handle: content__accordions
 hasTitleField: false
 icon: table-list
@@ -60,6 +50,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

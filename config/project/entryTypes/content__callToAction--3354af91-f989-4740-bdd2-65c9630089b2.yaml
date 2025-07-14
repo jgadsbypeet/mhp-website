@@ -122,6 +122,21 @@ fieldLayouts:
         name: Content
         uid: 2df1cf61-c8c2-45a2-b267-baf6c1f1df70
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "This large eye-catching block is used to persuade users to perform an action, such as:\r\n\r\n- moving to another piece of content;\r\n- signing up for an event; or\r\n- making a donation.\r\n\r\nIdeally, it should only be used once per page (to keep the desired action clear to users)."
+            dateAdded: '2025-07-14T11:08:54+00:00'
+            displayInPane: false
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 8e8f9f98-898c-4c8b-8643-c02a6ac3fe42
+            userCondition: null
+            width: 100
+        name: 'Editor guide'
+        uid: 045168f0-2189-402a-bd10-5881b781619a
+        userCondition: null
 handle: content__callToAction
 hasTitleField: false
 icon: rocket-launch

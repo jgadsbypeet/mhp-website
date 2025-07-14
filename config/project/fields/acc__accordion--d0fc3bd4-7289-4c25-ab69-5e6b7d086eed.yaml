@@ -5,8 +5,17 @@ name: Accordion
 searchable: true
 settings:
   createButtonLabel: Item
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - b53d1a3f-d0be-4181-b4f3-63b2415caf50 # Item
+    -
+      __assoc__:
+        -
+          - uid
+          - b53d1a3f-d0be-4181-b4f3-63b2415caf50 # Item
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: 1

@@ -13,7 +13,7 @@ settings:
     - f030fb15-80d7-484b-b74f-0e51dc2d82c8 # Accordions
     - 96349527-2c4a-4eb7-9481-e12be1fa2e29 # Action link
     - 3354af91-f989-4740-bdd2-65c9630089b2 # Call to action
-    - c465af7a-827f-45c8-9e47-f9c38f3d83ac # Entry cards
+    - c465af7a-827f-45c8-9e47-f9c38f3d83ac # Entry navigation cards
   includeTableView: false
   maxEntries: null
   minEntries: null

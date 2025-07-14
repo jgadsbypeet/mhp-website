@@ -1,40 +1,15 @@
 color: blue
+description: null
 fieldLayouts:
   ef2abe74-6689-4b90-a4c8-44690f7f0999:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 8b0e1dc3-4b41-4d7f-9d48-7444d9a445c2
-            userCondition: null
-            warning: null
-            width: 100
-          -
+            dateAdded: '2025-07-14T11:03:27+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: cdd0917f-398e-46b8-a373-2fcb84257eca # Heading
             handle: null
@@ -50,11 +25,13 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-07-14T11:03:27+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 7dd6601d-5a16-4e28-8d2a-2f0340c48b65 # Content
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Keep the content small so the page content doesn’t shift a lot when the accordion is opened.'
             label: null
             providesThumbs: false
             required: true
@@ -75,6 +52,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

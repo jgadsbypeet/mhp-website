@@ -88,6 +88,21 @@ fieldLayouts:
         name: Content
         uid: adfdf151-29c1-4756-b30f-0565901646a9
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "Use this block to add headings (H2, H3, or H4) to structure your content and improve readability. Proper use of headings helps visitors and search engines understand the organisation of your page content.\r\n\r\n**Text:** Enter the text for your heading. Keep it concise and descriptive to clearly indicate the topic of the section.\r\n\r\n**Size:** Select the appropriate heading level (H2 (default), H3, or H4). Headings should follow a logical order. Start with H2 for main sections, and use H3 and H4 for sub-sections. Avoid skipping levels (e.g., jumping from H2 to H4).\r\n\r\n**Jump link:** Enable this if you want this heading to appear in the 'On this page' section at the top of the page. This is useful for long-form content where a table of contents improves navigation.\r\n\r\n**Jump link text:** If you have opted for this heading to be in the jump links, you can use this field to define some alternative wording to use within the 'On this page' section.\r\n\r\n**Accessibility:** Ensure your headings follow a hierarchical structure (e.g., H2 > H3 > H4) to maintain semantic HTML. This structure helps screen readers and other assistive technologies navigate your page efficiently. Avoid skipping heading levels, which can confuse users and affect accessibility compliance."
+            dateAdded: '2025-07-14T10:58:22+00:00'
+            displayInPane: false
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 1b9081d4-1aaf-4f1c-a92a-41e3b950f13d
+            userCondition: null
+            width: 100
+        name: 'Editor guide'
+        uid: d6a7d4f7-06c5-4fa2-825f-dc73aeb0d355
+        userCondition: null
 handle: content__heading
 hasTitleField: false
 icon: text

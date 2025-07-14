@@ -1,40 +1,15 @@
 color: violet
+description: null
 fieldLayouts:
   300461e9-7560-41a7-ba53-516f2af3d005:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: c3ebace7-f6b9-400b-b9bc-733bb4785f9e
-            userCondition: null
-            warning: null
-            width: 100
-          -
+            dateAdded: '2025-07-14T11:04:51+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 52c4e51e-b5d1-433e-8683-073d97a20e51 # Option
             handle: null
@@ -50,6 +25,8 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-07-14T11:04:51+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -77,6 +54,8 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-07-14T11:04:51+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -104,6 +83,8 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-07-14T11:04:51+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -131,6 +112,8 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-07-14T11:04:51+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -160,6 +143,8 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-07-14T11:04:51+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -189,6 +174,21 @@ fieldLayouts:
         name: Content
         uid: bee9ce48-4580-49fc-ae3a-646e919098d0
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: 'The action link block allows you to add an internal link (an entry on the site) or an external link (a page on another site).'
+            dateAdded: '2025-07-14T11:06:53+00:00'
+            displayInPane: false
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: c97ef134-3f0e-42a9-9396-de373f8ade89
+            userCondition: null
+            width: 100
+        name: 'Editor guide'
+        uid: e0cf2918-38d1-4df4-a161-3e7eaab71d5d
+        userCondition: null
 handle: content__actionLink
 hasTitleField: false
 icon: link
@@ -197,6 +197,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

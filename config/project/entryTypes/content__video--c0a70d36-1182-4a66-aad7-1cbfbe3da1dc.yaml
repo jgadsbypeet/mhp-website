@@ -1,40 +1,15 @@
 color: cyan
+description: null
 fieldLayouts:
   81dcc96a-7ab4-4769-8ea2-062a0f3838e1:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: db60901b-a50c-4226-93ff-70e6d4d4e9f9
-            userCondition: null
-            warning: null
-            width: 100
-          -
+            dateAdded: '2025-07-14T11:01:32+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 944eb893-6b00-4c63-b7b9-9ee73630a1f1 # Option
             handle: null
@@ -50,6 +25,8 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-07-14T11:01:32+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -77,6 +54,8 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-07-14T11:01:32+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -104,6 +83,8 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-07-14T11:01:32+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 673cb6e1-eb77-40ba-b02e-122c3a42286a # Cover image
             handle: null
@@ -119,6 +100,8 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-07-14T11:01:32+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 3b11d463-accb-41de-ba6b-9331689fa7ce # Transcript
             handle: null
@@ -136,6 +119,21 @@ fieldLayouts:
         name: Content
         uid: 7c65d4f7-7303-4dc3-8f45-eece8060b2da
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "Videos are large files that use up a lot of server resources. To lighten the bandwidth on your server, use a video platform like YouTube or Vimeo to serve your videos on the website. Embedding videos on your website allows you to use the video platform’s world-class servers and video optimising function.\r\n\r\nYouTube is also a powerful ally for SEO, which is another benefit of adding your videos to the platform. However, school networks sometimes block YouTube, so embedding Vimeo videos may be a better option.\r\n\r\nIf you must upload a video file, optimise the video before you upload it to avoid performance issues like the user having to wait a long time for the video to load."
+            dateAdded: '2025-07-14T11:03:19+00:00'
+            displayInPane: false
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: cd8287ed-eccf-4c67-8317-fbcd73ad1641
+            userCondition: null
+            width: 100
+        name: 'Editor guide'
+        uid: e6e2bacd-2339-421a-b7a2-8c3636a40674
+        userCondition: null
 handle: content__video
 hasTitleField: false
 icon: video
@@ -144,6 +142,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
