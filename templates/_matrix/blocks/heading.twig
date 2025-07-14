@@ -2,6 +2,14 @@
 
 {% set el = block.heading__size %}
 
+{% if el == "h2" %}
+	{% set headingClass = "heading-xl mt-6 mb-4 md:mt-6-lg md:mb-4-lg" %}
+{% elseif el == "h3" %}
+	{% set headingClass = "heading-l mt-5 mb-4 md:mt-5-lg md:mb-4-lg reading-width" %}
+{% else %}
+	{% set headingClass = "heading-m mt-5 mb-4 md:mt-5-lg md:mb-4-lg reading-width" %}
+{% endif %}
+
 {% block matrixBlock %}
-  <{{ el }} id="heading-{{ block.id }}">{{ block.heading__heading }}</{{ el }}>
+  <{{ el }} id="heading-{{ block.id }}" class="{{ headingClass }}">{{ block.heading__heading }}</{{ el }}>
 {% endblock %}

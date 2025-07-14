@@ -1,11 +1,10 @@
 {% set classes = classes ?? "" %}
 
-<form role="search" placeholder="Search our site" class="search-form flex bg-white-off{{ classes ? " " ~ classes : "" }}" action="{{ url('search') }}">
-  <input type="search" class="!mb-0 md:!mb-0 grow w-full border-none bg-transparent" name="q" aria-label="search text" placeholder="Search" value="{{ searchQuery ?? '' }}" />
-  
-  <button type="submit" class="flex-none !px-[14px] rounded-none" value="Search">
-    {{ svg("dist/assets/images/icons/magnifying-glass.svg")|attr({ class: ""}) }}
+<form role="search" class="search-form flex{{ classes ? " " ~ classes : "" }}" action="{{ url('search') }}" aria-label="Site search">
+  <input type="search" class="!mb-0 md:!mb-0 grow w-full" name="q" placeholder="Search the site" value="{{ searchQuery ?? '' }}" />
 
-    <span class="visually-hidden">Search</span>
+  <button type="submit" value="Search" class="p-2 rounded-none">
+    {{ svg("dist/assets/images/icons/magnifying-glass.svg")|attr({ class: "w-auto h-[2.4rem]"}) }}
+    <span class="visually-hidden">Search the site</span>
   </button>
 </form>

@@ -39,17 +39,6 @@
 p {
 	@apply mb-4 md:mb-4-lg;
 }
-.styled-headings {
-	h2 {
-		@apply heading-xl mt-6 mb-4 md:mt-6-lg md:mb-4-lg;
-	}
-	h3 {
-		@apply heading-l mt-5 mb-4 md:mt-5-lg md:mb-4-lg;
-	}
-	h4 {
-		@apply heading-m mt-5 mb-4 md:mt-5-lg md:mb-4-lg;
-	}
-}
 .styled-lists {
 	ol, ul {
 		@apply flex flex-col gap-2 mb-4 md:mb-4-lg;
