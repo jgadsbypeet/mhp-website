@@ -2,10 +2,11 @@
 {% import "_macro" as macro %}
 {% set image = block.image__image.one() %}
 {% set crop = block.image__imageRatio == "standard" %}
-{% set caption = block.image__caption %}
+{% set caption = block.image__caption ?? "" %}
+{% set attribution = image.image__attribution ?? "" %}
 
 {% block matrixBlock %}
-	<div class="content-image my-8 md:my-8-lg">
+	<div class="my-8 content-image md:my-8-lg">
 		{{ macro.image({
 			image: image,
 			imageClass: "",
@@ -17,6 +18,11 @@
 			]
 		}) }}
 
-		{{ caption ? ('<div class="border-l-2 border-secondary body-xs text-grey max-w-md pl-4 mt-2 md:pl-5 md:mt-2-lg">' ~ caption ~ '</div>')|raw : '' }}
+		{% if caption or attribution %}
+			<p class="mt-2 mb-0 reading-width body-xs text-secondary-text md:mt-2-lg">
+				{{ caption|raw }}
+				{{ attribution ? ' Image: ' ~ attribution : '' }}
+			</p>
+		{% endif %}
 	</div>
 {% endblock %}

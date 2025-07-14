@@ -46,7 +46,7 @@ fieldLayouts:
             elementCondition: null
             id: null
             includeInCards: false
-            instructions: null
+            instructions: 'This is a description of the image, used as the alt text.'
             label: null
             name: null
             orientation: null
@@ -60,6 +60,23 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\assets\AltField
             uid: 5245f09d-40fb-4d71-b261-3872d0f51eb0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-14T11:19:03+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e687be04-1ff6-43b7-9785-a7dd65447c4b # Attribution
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6cfce005-f554-4bb3-8bb6-2d423f41727b
             userCondition: null
             warning: null
             width: 100

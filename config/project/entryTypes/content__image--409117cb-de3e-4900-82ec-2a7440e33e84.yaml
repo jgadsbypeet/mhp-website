@@ -71,7 +71,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            content: "Images in this are resized to the maximum width they’ll be displayed.\r\n\r\nThe image caption is used to convey additional information that is either not present or tangentially related to the picture.\r\n\r\nIn the settings, you can choose whether to use the standard ratio of 16:9 or leave the image uncropped."
+            content: "Images in this are resized to the maximum width they’ll be displayed.\r\n\r\nThe image caption is used to convey additional information that is either not present or tangentially related to the picture.\r\n\r\nIn the settings, you can choose whether to use the standard ratio of 16:9 or leave the image uncropped.\r\n\r\nIn the asset editor, you can add the alternative text and/or an attribution to credit the image creator."
             dateAdded: '2025-07-14T11:02:01+00:00'
             displayInPane: false
             elementCondition: null
