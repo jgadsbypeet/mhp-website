@@ -1,6 +1,6 @@
 <div class="{{ blockClasseses }}">
 	<a href="{{ linkUrl }}" {{ linkTarget ? 'target="_blank"' }} class="inline-flex group no-path-fill">
-		<div class="flex-grow-0 flex-shrink-0 flex-[32px] w-[32px] h-[32px] rounded-full bg-link group-hover:bg-link-hover group-focus-visible:bg-black flex items-center justify-center mr-2xs md:flex-[40px] md:w-[40px] md:h-[40px]">
+		<div class="flex-grow-0 flex-shrink-0 flex-[32px] w-[32px] h-[32px] rounded-full bg-interactions group-hover:bg-interactions-hover group-focus-visible:bg-black flex items-center justify-center mr-3 md:flex-[40px] md:w-[40px] md:h-[40px]">
 			{% if linkOption == "asset" %}
 				{# if download link #}
 				{{ svg("dist/assets/images/icons/download.svg")|attr({ class: "link-invert group-focus-visible:text-highlight" })}}
