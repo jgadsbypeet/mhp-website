@@ -1,5 +1,6 @@
 {% extends "error/error" %}
 {# Content is managed in an entry in the Singles section #}
+{# To preview the page when in dev mode, use {{ siteUrl }}/error/404 #}
 
 {% set title = pageNotFound.title ?? 'Page not found' %}
 {% set text = pageNotFound.text__text ?? '' %}

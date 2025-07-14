@@ -22,7 +22,7 @@ propagationMethod: all
 siteSettings:
   17ea053e-13d0-4c0f-a465-42342bea6915: # $SITE_NAME
     enabledByDefault: true
-    hasUrls: true
-    template: error/404.twig
-    uriFormat: error/404
+    hasUrls: false
+    template: null
+    uriFormat: null
 type: single
