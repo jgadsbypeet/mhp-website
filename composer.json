@@ -13,6 +13,7 @@
     "nystudio107/craft-typogrify": "^5.0.0",
     "nystudio107/craft-vite": "^5.0.1",
     "putyourlightson/craft-dashboard-begone": "^3.0.0",
+    "putyourlightson/craft-sherlock": "5.1.2",
     "verbb/formie": "^3.0.0-beta.15",
     "verbb/image-resizer": "^4.0.0",
     "verbb/knock-knock": "^3.0.0",
@@ -43,5 +44,12 @@
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
     ]
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
 }
