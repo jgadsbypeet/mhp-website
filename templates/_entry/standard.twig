@@ -6,7 +6,7 @@
 {% if bodyContent %}
   {% for section in bodyContent %}
     {% for block in section.content__section.all() ?? [] %}
-      {% if block.type == 'content__heading' and block.heading__jumpLink %}
+      {% if (block.type == 'content__heading' and block.heading__jumpLink) or (block.type == 'content__callToAction' and block.heading__jumpLink) %}
         {% set bodyJumpLinks = bodyJumpLinks|merge([block]) %}
       {% endif %}
     {% endfor %}
