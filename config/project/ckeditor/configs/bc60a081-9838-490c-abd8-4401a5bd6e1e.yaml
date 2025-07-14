@@ -5,8 +5,6 @@ options:
     properties:
       styles: false
 toolbar:
-  - heading
-  - '|'
   - bold
   - italic
   - bulletedList
