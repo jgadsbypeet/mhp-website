@@ -50,7 +50,7 @@ fieldLayouts:
         name: Settings
         uid: 514a827a-6bfc-4457-9b47-28571f50004c
         userCondition: null
-handle: entryCards
+handle: content__entryCards
 hasTitleField: false
 icon: grid
 name: 'Entry navigation cards'
