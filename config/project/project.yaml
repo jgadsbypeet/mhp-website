@@ -1,4 +1,4 @@
-dateModified: 1752670093
+dateModified: 1752670587
 elementSources:
   craft\elements\Entry:
     -
@@ -121,6 +121,7 @@ meta:
     52c4e51e-b5d1-433e-8683-073d97a20e51: Option # Option
     53cc26d6-9a93-49c4-a588-2ae7871da1cf: Listing # Listing
     61a52075-e8d1-4571-94a5-73b6448cb2e1: 'Entry link' # Entry link
+    66b51777-4793-45b7-970a-96e13d70af96: Homepage # Homepage
     73f8e366-7f0d-422c-8131-f28b1309cde6: Size # Size
     75e255f2-86f8-4b83-8bfa-39f20fa4eedd: Standard # Standard
     85e95b71-c28f-45bb-9ddc-e0aa66e50a7b: 'Page not found' # Page not found
@@ -156,6 +157,7 @@ meta:
     bc60a081-9838-490c-abd8-4401a5bd6e1e: Standard # Standard
     bf96f3a4-eb06-49f8-af84-f939d5426416: 'Social media account' # Social media account
     c0a70d36-1182-4a66-aad7-1cbfbe3da1dc: Video # Video
+    c21d1001-859c-458e-a198-adce917c2f88: Homepage # Homepage
     c465af7a-827f-45c8-9e47-f9c38f3d83ac: 'Entry navigation cards' # Entry navigation cards
     c849e39d-e259-447a-bdd8-c577bf05b762: 'Asset link' # Asset link
     c6072259-9bf9-4ec5-bcf4-32119fef2e0b: 'Registration details' # Registration details

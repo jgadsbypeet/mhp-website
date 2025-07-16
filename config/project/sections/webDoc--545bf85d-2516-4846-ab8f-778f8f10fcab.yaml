@@ -25,7 +25,7 @@ siteSettings:
   17ea053e-13d0-4c0f-a465-42342bea6915: # $SITE_NAME
     enabledByDefault: true
     hasUrls: true
-    template: _entry
+    template: _entry.twig
     uriFormat: '{parent.uri}/{slug}'
 structure:
   maxLevels: null
