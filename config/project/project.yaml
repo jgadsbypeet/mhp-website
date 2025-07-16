@@ -1,4 +1,4 @@
-dateModified: 1752507793
+dateModified: 1752670093
 elementSources:
   craft\elements\Entry:
     -
@@ -40,7 +40,7 @@ elementSources:
         - structure
         - asc
       disabled: false
-      key: 'section:545bf85d-2516-4846-ab8f-778f8f10fcab' # Website documentation
+      key: 'section:545bf85d-2516-4846-ab8f-778f8f10fcab' # Website guides
       tableAttributes:
         - postDate
         - expiryDate
@@ -128,7 +128,7 @@ meta:
     125a39f1-c7fd-462c-beff-e3dfd421bec7: Simple # Simple
     379dfd72-5b5e-42ba-a705-d2785dbab0fa: Quote # Quote
     506d8357-6bb1-4b98-aa31-628a66d53cfb: Entries # Entries
-    545bf85d-2516-4846-ab8f-778f8f10fcab: 'Website documentation' # Website documentation
+    545bf85d-2516-4846-ab8f-778f8f10fcab: 'Website guides' # Website guides
     604eaaf1-80fd-42f6-aa9f-3c91970e89aa: 'Action link' # Action link
     673cb6e1-eb77-40ba-b02e-122c3a42286a: 'Cover image' # Cover image
     944eb893-6b00-4c63-b7b9-9ee73630a1f1: Option # Option

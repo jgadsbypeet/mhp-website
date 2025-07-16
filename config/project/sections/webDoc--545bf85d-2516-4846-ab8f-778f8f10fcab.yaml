@@ -1,11 +1,13 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 75e255f2-86f8-4b83-8bfa-39f20fa4eedd # Standard
-  - 53cc26d6-9a93-49c4-a588-2ae7871da1cf # Listing
+  -
+    uid: 75e255f2-86f8-4b83-8bfa-39f20fa4eedd # Standard
+  -
+    uid: 53cc26d6-9a93-49c4-a588-2ae7871da1cf # Listing
 handle: webDoc
 maxAuthors: 1
-name: 'Website documentation'
+name: 'Website guides'
 previewTargets:
   -
     __assoc__:
