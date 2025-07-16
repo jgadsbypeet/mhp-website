@@ -1,8 +1,6 @@
 # William Joseph Craft Boilerplate
 This is the boilerplate install for Craft CMS builds at William Joseph. It contains an asset build pipeline, common plugins and a starting template architecture.
 
-A site using this boilerplate is set up on William Joseph's Krystal hosting server and uses the subdomain craft-boilerplate.williamjoseph.dev (DNS in Cloudflare). The deployment pipeline is set up in William Joseph's Buddy account.
-
 ## How to use boilerplate
 1. Make a website local directory
     - `mkdir folder-name`
