@@ -5,25 +5,27 @@ name: 'Cover image'
 searchable: false
 settings:
   allowSelfRelations: false
-  allowSubfolders: false
+  allowSubfolders: true
   allowUploads: true
-  allowedKinds: null
+  allowedKinds:
+    - image
   branchLimit: null
+  defaultPlacement: end
   defaultUploadLocationSource: 'volume:9d1bef95-d78d-4735-952e-4b60158cf167' # Images
   defaultUploadLocationSubpath: null
-  localizeRelations: false
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
   previewMode: full
-  restrictFiles: false
-  restrictLocation: false
+  restrictFiles: true
+  restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:9d1bef95-d78d-4735-952e-4b60158cf167' # Images
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
+  showSearchInput: true
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:
@@ -32,5 +34,5 @@ settings:
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Assets

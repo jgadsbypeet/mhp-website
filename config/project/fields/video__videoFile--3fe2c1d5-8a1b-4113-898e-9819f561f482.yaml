@@ -10,21 +10,22 @@ settings:
   allowedKinds:
     - video
   branchLimit: null
+  defaultPlacement: end
   defaultUploadLocationSource: 'volume:10d1394f-6863-440f-945c-891da0c65bad' # Videos
   defaultUploadLocationSubpath: null
-  localizeRelations: false
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: true
-  restrictLocation: false
+  restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:9d1bef95-d78d-4735-952e-4b60158cf167' # Images
+  restrictedLocationSource: 'volume:10d1394f-6863-440f-945c-891da0c65bad' # Videos
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
+  showSearchInput: true
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:
@@ -33,5 +34,5 @@ settings:
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Assets

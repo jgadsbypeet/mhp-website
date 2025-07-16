@@ -7,7 +7,8 @@ settings:
   allowSelfRelations: false
   allowSubfolders: true
   allowUploads: true
-  allowedKinds: null
+  allowedKinds:
+    - image
   branchLimit: null
   defaultPlacement: end
   defaultUploadLocationSource: 'volume:9d1bef95-d78d-4735-952e-4b60158cf167' # Images
@@ -16,7 +17,7 @@ settings:
   maxRelations: null
   minRelations: 1
   previewMode: full
-  restrictFiles: false
+  restrictFiles: true
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:ec8c86e6-93eb-406e-959b-b955e23b35e8' # Logos
@@ -24,7 +25,7 @@ settings:
   selectionLabel: 'Add a logo'
   showCardsInGrid: false
   showSearchInput: true
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'

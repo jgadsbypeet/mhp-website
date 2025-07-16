@@ -9,26 +9,28 @@ settings:
   allowUploads: true
   allowedKinds:
     - excel
+    - image
     - pdf
     - powerpoint
     - text
     - word
   branchLimit: null
+  defaultPlacement: end
   defaultUploadLocationSource: 'volume:d8da528a-5de1-4ea5-9278-983c10cfe9a5' # Documents
   defaultUploadLocationSubpath: null
-  localizeRelations: false
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: true
-  restrictLocation: false
+  restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:9d1bef95-d78d-4735-952e-4b60158cf167' # Images
+  restrictedLocationSource: 'volume:d8da528a-5de1-4ea5-9278-983c10cfe9a5' # Documents
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
+  showSearchInput: true
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:
@@ -37,5 +39,5 @@ settings:
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Assets
