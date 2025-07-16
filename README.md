@@ -7,10 +7,10 @@ This is the boilerplate install for Craft CMS builds at William Joseph. It conta
 1. Enter that directory
     - `cd folder-name`
 1. Git clone boilerplate into the directory
-    - `git clone https://github.com/WilliamJosephLtd/wj-craft5-boilerplate.git .`
+    - `git clone https://github.com/WilliamJosephLtd/wj-craft5-boilerplate.git`
 1. Create a new repository on the command line
 	- `git init`
-    - `git remote set-url origin https://github.com/git-repo-url.git`
+    - `git remote set-url origin https://github.com/WilliamJosephLtd/git-repo-url.git`
 	- `git push -u origin main`
 1. Change the `name` value in `.ddev/config.yaml` to the project name (this will define the dev site URL).
 1. Edit the `name`, `description` and `url` values in `package.json`.
@@ -24,8 +24,6 @@ This is the boilerplate install for Craft CMS builds at William Joseph. It conta
 1. Set up craft (`PRIMARY_SITE_URL` value should be empty in .env)
     - `ddev php craft setup`
     - Follow instructions on terminal
-1. Log into CP (control panel). Some user login details are in 1Password if you need to create a new user for yourself.
-    - Change user password
 1. Edit .env file.
 1. Recreate a Craft license key
     - Delete `config/license.key` file
