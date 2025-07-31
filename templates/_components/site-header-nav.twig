@@ -70,21 +70,24 @@
 {% endmacro %}
 
 <div id="siteHeaderNav" class="site-header--nav hidden [&.active]:block bg-grey nav:block">
-	<nav id="mainNav" class="header-nav bg-grey lc--nbm absolute left-0 right-0 z-10 nav:relative" aria-label="Main navigation">
+	<nav id="mainNav" class="absolute left-0 right-0 z-10 header-nav bg-grey lc--nbm nav:relative" aria-label="Main navigation">
 		{# nav sections - menu bar #}
 		<ul class="header-nav__menu-bar px-sm md:px-lg nav:flex nav:items-center nav:max-w-xl nav:mx-auto" role="menubar" aria-label="Main navigation">
 			{% nav menu in menus %}
         <li class="border-t border-black py-sm first:border-none nav:border-none" role="none">
           {% if menu.subLinks|length %}
-            <span class="header-nav__panel--trigger group link link-no-underline font-semibold flex items-center justify-between cursor-pointer nav:mr-lg" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">
+						<noscript>
+							<a class="inline-block font-semibold link-no-underline nav:mr-lg" tabindex="0" href="{{ menu.url }}">{{ menu.title }}</a>
+							<style>.header-nav__panel--trigger { display:none; }</style>
+						</noscript>
+
+            <span class="flex items-center justify-between font-semibold cursor-pointer header-nav__panel--trigger group link link-no-underline nav:mr-lg" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">
               {{- menu.title -}}
               {{ svg("dist/assets/images/icons/chevron-down.svg")|attr({ class: "mt-[3px] -mr-[3px] w-auto h-[20px] block group-[.active]:hidden md:h-[24px] nav:ml-[3px]" }) }}
               {{ svg("dist/assets/images/icons/chevron-up.svg")|attr({ class: "mt-[3px] -mr-[3px] w-auto h-[20px] hidden group-[.active]:block md:h-[24px] nav:ml-[3px]" }) }}
             </span>
           {% else %}
-            <a class="inline-block font-semibold link-no-underline nav:mr-lg" tabindex="0" href="{{ menu.url }}">
-              {{ menu.title }}
-            </a>
+            <a class="inline-block font-semibold link-no-underline nav:mr-lg" tabindex="0" href="{{ menu.url }}">{{ menu.title }}</a>
           {% endif %}
 
           {# show/hide nav panels - first level menu #}
