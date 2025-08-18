@@ -1,0 +1,47 @@
+fieldLayouts:
+  c968328c-9755-4495-9427-160feb6e0603:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-08-18T10:50:39+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 44ced02b-3d0e-4240-b4aa-26d9ed64141e # Page title
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 459fc760-df4d-411c-a925-9eda3677258b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-08-18T10:50:39+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: f532ffc5-e55e-40a0-b01e-70b9c34ba6f6 # Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 424bdeab-9165-44ed-b343-dae2a59dfe60
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 94e889ea-0819-44dc-9864-ffa58a8d7074
+        userCondition: null
+handle: pageNotFound
+name: '404 page not found'
+sortOrder: 2

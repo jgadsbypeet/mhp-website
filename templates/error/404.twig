@@ -1,9 +1,10 @@
 {% extends "error/error" %}
-{# Content is managed in an entry in the Singles section #}
+{# Content is managed in the Globals area #}
 {# To preview the page when in dev mode, use {{ siteUrl }}/error/404 #}
 
-{% set title = pageNotFound.title ?? 'Page not found' %}
+{% set title = pageNotFound.global__pageTitle ?? 'Page not found' %}
 {% set text = pageNotFound.text__text ?? '' %}
+{% set breadcrumb = false %}
 
 {% block errorMessage %}
 	{% if text|length %}
