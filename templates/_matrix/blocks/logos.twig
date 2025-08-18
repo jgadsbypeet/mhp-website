@@ -3,23 +3,36 @@
 
 {% block matrixBlock %}
 	{% if logos %}
-		<div class="flex flex-row flex-wrap my-5 container-spacing-gap md:my-5-lg fm--ntm lm--nbm">
+		<div class="flex flex-row flex-wrap items-center my-8 gap-7 md:gap-7-lg md:my-8-lg">
 			{% for logo in logos %}
+				{% set logoWidthSmall = "200" %}
+				{% set logoWidthMedium = "240" %}
 				{# An algorithm is used to proportionally size logos based on their aspect ratio. This way square logos should hopefully ‘feel’ the same sizes as landscape ones. #}
 				{% set aspectRatio = logo.width / logo.height %}
 				{% if aspectRatio < 1.5 %}
-					{% set logoWidth = "[50%]" %}
+					{% set logoWidthSmall = logoWidthSmall * 0.5 %}
+					{% set logoWidthMedium = logoWidthMedium * 0.5 %}
 				{% elseif aspectRatio >= 1.5 and aspectRatio < 2.5 %}
-					{% set logoWidth = "[70%]" %}
+					{% set logoWidthSmall = logoWidthSmall * 0.7 %}
+					{% set logoWidthMedium = logoWidthMedium * 0.7 %}
 				{% elseif aspectRatio >= 2.5 and aspectRatio < 5 %}
-					{% set logoWidth = "[85%]" %}
+					{% set logoWidthSmall = logoWidthSmall * 0.85 %}
+					{% set logoWidthMedium = logoWidthMedium * 0.85 %}
 				{% elseif aspectRatio >= 5 %}
-					{% set logoWidth = "full" %}
+					{% set logoWidthSmall = logoWidthSmall %}
+					{% set logoWidthMedium = logoWidthMedium %}
 				{% endif %}
-				<div class="flex-grow-0 flex-shrink-0 max-w-full w-[200px] md:w-[240px]{{ loop.length > 1 ? ' sm:flex items-center justify-center' }}">
-					<img src="{{ logo.url }}" class="block w-{{ logoWidth }} h-auto" width="{{ logo.width }}" height="{{ logo.height }}" alt="{{ logo.title }}" />
-				</div>
+
+				{{ macro.image({
+					image: logo,
+					imageClass: "block",
+					alt: logo.title,
+					sizes: [
+						{ maxScreen: "640px", width: logoWidthSmall, height: '' },
+						{ maxScreen: "", width: logoWidthMedium, height: '' }
+					]
+				}) }}
 			{% endfor %}
-		{% endif %}
-	</div>
+		</div>
+	{% endif %}
 {% endblock %}
