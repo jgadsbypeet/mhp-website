@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   7d13a944-d21e-4c86-9519-16aade300af6:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -10,6 +12,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2025-08-18T10:46:16+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -24,7 +27,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -35,6 +38,8 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-08-18T10:46:16+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 53112398-e0df-4ef1-976b-8272da500720 # Standfirst
             handle: null
@@ -50,11 +55,14 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-08-18T10:46:16+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 5d11c24d-7475-4845-b9a2-71f32a5cf8c6
             userCondition: null
           -
+            dateAdded: '2025-08-18T10:46:16+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 4cd374ac-6a5a-483e-b17d-223382d6d4a1 # List by channel
             handle: null
@@ -70,11 +78,14 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-08-18T10:46:16+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 9220d960-cffb-44b4-8239-80c1bf6b955f
             userCondition: null
           -
+            dateAdded: '2025-08-18T10:46:16+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: e9f404d8-0076-45fc-aa9e-76a69b393f81 # Internal search keywords
             handle: null
@@ -96,6 +107,8 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-08-18T10:46:16+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 95870b87-85c2-4fda-97ad-3dab5f1c81e9 # SEO
             handle: null
@@ -116,11 +129,11 @@ fieldLayouts:
 handle: entry__listing
 hasTitleField: true
 icon: list
-name: Listing
+name: 'Listing page'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

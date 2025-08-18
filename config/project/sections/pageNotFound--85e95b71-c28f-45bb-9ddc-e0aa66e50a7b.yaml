@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: d276fadb-2ae1-4f6d-8b4a-7e1fb1b54c78 # Simple
+    uid: d276fadb-2ae1-4f6d-8b4a-7e1fb1b54c78 # Simple page
 handle: pageNotFound
 maxAuthors: 1
 name: 'Page not found'

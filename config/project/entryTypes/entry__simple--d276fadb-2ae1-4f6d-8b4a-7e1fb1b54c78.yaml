@@ -60,7 +60,7 @@ fieldLayouts:
 handle: entry__simple
 hasTitleField: true
 icon: newspaper
-name: Simple
+name: 'Simple page'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

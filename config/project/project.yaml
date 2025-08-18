@@ -1,4 +1,4 @@
-dateModified: 1755513882
+dateModified: 1755514050
 elementSources:
   craft\elements\Entry:
     -
@@ -120,11 +120,11 @@ meta:
     27d4aa56-2fc6-4e74-a20e-f5fee6f2dc20: Logos # Logos
     42fdb1ca-7367-4cf5-9375-37416cbc8615: Image # Image
     52c4e51e-b5d1-433e-8683-073d97a20e51: Option # Option
-    53cc26d6-9a93-49c4-a588-2ae7871da1cf: Listing # Listing
+    53cc26d6-9a93-49c4-a588-2ae7871da1cf: 'Listing page' # Listing page
     61a52075-e8d1-4571-94a5-73b6448cb2e1: 'Entry link' # Entry link
     66b51777-4793-45b7-970a-96e13d70af96: Homepage # Homepage
     73f8e366-7f0d-422c-8131-f28b1309cde6: Size # Size
-    75e255f2-86f8-4b83-8bfa-39f20fa4eedd: Standard # Standard
+    75e255f2-86f8-4b83-8bfa-39f20fa4eedd: 'Standard page' # Standard page
     85e95b71-c28f-45bb-9ddc-e0aa66e50a7b: 'Page not found' # Page not found
     125a39f1-c7fd-462c-beff-e3dfd421bec7: Simple # Simple
     379dfd72-5b5e-42ba-a705-d2785dbab0fa: Quote # Quote
@@ -167,7 +167,7 @@ meta:
     cf947787-479e-4889-93cf-2a7b62aafac4: Text # Text
     d0fc3bd4-7289-4c25-ab69-5e6b7d086eed: Accordion # Accordion
     d8da528a-5de1-4ea5-9278-983c10cfe9a5: Documents # Documents
-    d276fadb-2ae1-4f6d-8b4a-7e1fb1b54c78: Simple # Simple
+    d276fadb-2ae1-4f6d-8b4a-7e1fb1b54c78: 'Simple page' # Simple page
     de877a1b-7d14-4113-aed7-3c9b5e2db277: 'Highlighted text' # Highlighted text
     e9f404d8-0076-45fc-aa9e-76a69b393f81: 'Internal search keywords' # Internal search keywords
     e618d81f-6316-4a68-b87b-c324a5ba248b: Icons # Icons

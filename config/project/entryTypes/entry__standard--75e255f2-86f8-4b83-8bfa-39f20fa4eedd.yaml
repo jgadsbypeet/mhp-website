@@ -129,7 +129,7 @@ fieldLayouts:
 handle: entry__standard
 hasTitleField: true
 icon: newspaper
-name: Standard
+name: 'Standard page'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

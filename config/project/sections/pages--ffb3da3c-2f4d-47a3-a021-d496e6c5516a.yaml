@@ -2,9 +2,9 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 75e255f2-86f8-4b83-8bfa-39f20fa4eedd # Standard
+    uid: 75e255f2-86f8-4b83-8bfa-39f20fa4eedd # Standard page
   -
-    uid: 53cc26d6-9a93-49c4-a588-2ae7871da1cf # Listing
+    uid: 53cc26d6-9a93-49c4-a588-2ae7871da1cf # Listing page
 handle: pages
 maxAuthors: 1
 name: Pages
