@@ -1,4 +1,4 @@
-color: blue
+color: lime
 description: null
 fieldLayouts:
   ef2abe74-6689-4b90-a4c8-44690f7f0999:
@@ -47,7 +47,7 @@ fieldLayouts:
 handle: acc__item
 hasTitleField: false
 icon: table-list
-name: Item
+name: 'Accordion item'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
