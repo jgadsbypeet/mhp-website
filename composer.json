@@ -8,6 +8,7 @@
     "doublesecretagency/craft-cpcss": "^3.0.0",
     "miranj/craft-obfuscator": "^1.2.0",
     "nystudio107/craft-cookies": "^5.0.0",
+    "nystudio107/craft-retour": "5.0.12",
     "nystudio107/craft-seomatic": "^5.0.0",
     "nystudio107/craft-typogrify": "^5.0.0",
     "nystudio107/craft-vite": "^5.0.1",
