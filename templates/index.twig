@@ -1,47 +1,14 @@
-{% extends "_entry/standard" %}
+{% extends '_layouts/base' %}
 {% import "_macro" as macro %}
+
+{% set standfirst = entry.standfirst ?? null %}
 
 {% block adminBar %}
 {% endblock %}
 
-{% block hero %}
+{% block content %}
   {% include "_components/_hero/standard" with {
-    title: "Homepage",
-    standfirst: ""
+    title: entry.hero__heading ?? "Homepage",
+    standfirst: standfirst ?? "",
   } %}
-{% endblock %}
-
-{% block body %}
-  <div class="container">
-    {# use below for basic typo css settings #}
-    <div class="max-w-md mx-auto">
-      <h2 class="mb-[60px]">Section heading h2 heading xl</h2>
-
-      <h3>Cross heading h3 heading lang</h3>
-
-      <h4>Cross heading h4 heading md</h4>
-
-      <div class="standfirst lc--nbm">
-        <p>Standfirst lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices ullamcorper sem diam pellentesque ullamcorper tempor mauris.</p>
-      </div>
-
-      <p>Paragraph lorem ipsum dolor sit amet, <a href="#">consectetur adipiscy links</a> elit. Id enim <strong>sapien massa</strong> fusce. <i>Sed habitasse ut proin tincidunt at cras</i>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id enim sapien massa fusce.</p>
-
-      <ul>
-        <li>List unordered stack lorem ipsum dolor sit amet.</li>
-        <li>List unordered stack lorem ipsum dolor sit amet, consectetur adipiscing. Id enim sapien massa fusce.</li>
-        <li>List unordered solo/final lorem ipsum dolor sit amet consectetur.</li>
-      </ul>
-
-      <ol>
-        <li>List unordered stack lorem ipsum dolor sit amet.</li>
-        <li>List unordered stack lorem ipsum dolor sit amet, consectetur adipiscing. Id enim sapien massa fusce.</li>
-        <li>List unordered solo/final lorem ipsum dolor sit amet consectetur.</li>
-      </ul>
-
-      <div class="body-2xs">
-        Caption after paragraph lorem ipsum dolor amit sapien fusce
-      </div>
-    </div>
-  </div>
 {% endblock %}

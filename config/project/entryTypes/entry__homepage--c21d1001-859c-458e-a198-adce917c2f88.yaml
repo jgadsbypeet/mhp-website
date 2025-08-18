@@ -8,32 +8,36 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2025-07-16T12:50:58+00:00'
-            disabled: false
+            dateAdded: '2025-08-18T10:32:08+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
+            fieldUid: b6bdf0f7-0c95-4f0b-a670-ee6376525a98 # Hero heading
+            handle: null
             includeInCards: false
-            inputType: null
             instructions: null
             label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
             providesThumbs: false
-            readonly: false
-            required: true
-            size: null
-            step: null
+            required: false
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 09fda2f2-a112-457c-bb5d-19265fc1bca2
+            type: craft\fieldlayoutelements\CustomField
+            uid: cf0349f9-392e-42fe-b9cd-c9ac0f0a1aa8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-08-18T10:32:08+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 53112398-e0df-4ef1-976b-8272da500720 # Standfirst
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd5183ad-7821-4a81-a1f7-499a6b68b54d
             userCondition: null
             warning: null
             width: 100
@@ -41,13 +45,13 @@ fieldLayouts:
         uid: b69ea0df-7de0-4768-be35-9621c82a5a2f
         userCondition: null
 handle: entry__homepage
-hasTitleField: true
+hasTitleField: false
 icon: newspaper
 name: Homepage
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: Homepage
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
