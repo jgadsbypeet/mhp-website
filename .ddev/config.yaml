@@ -15,6 +15,7 @@ database:
 performance_mode: none
 use_dns_when_possible: true
 composer_version: "2"
+nodejs_version: "20.16.0"
 disable_settings_management: true
 web_environment: []
 
