@@ -1,4 +1,4 @@
-dateModified: 1755513200
+dateModified: 1755513657
 elementSources:
   craft\elements\Entry:
     -
@@ -203,10 +203,6 @@ plugins:
       additionalCss: ''
       cacheBusting: true
       cssFile: $CRAFT_CP_CSS
-  cp-field-inspect:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   dashboard-begone:
     edition: standard
     enabled: true
