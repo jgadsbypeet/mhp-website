@@ -44,6 +44,29 @@ fieldLayouts:
         name: Content
         uid: b69ea0df-7de0-4768-be35-9621c82a5a2f
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-08-18T11:08:06+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 95870b87-85c2-4fda-97ad-3dab5f1c81e9 # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff10e677-c7b1-4804-8436-e35b87f18462
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 9f52e34a-4947-40f3-b3d5-143dffcab944
+        userCondition: null
 handle: entry__homepage
 hasTitleField: false
 icon: newspaper
