@@ -15,7 +15,11 @@ module.exports = {
 		},
 		fontFamily: {
 			'display': ['sans-serif'],
-			'heading': ['sans-serif'],
+			'heading': [
+				['sans-serif'], {
+					// fontFeatureSettings: '"ss01", "ss04", "cv10"',
+				}
+			],
 			'body': ['sans-serif'],
 		},
 		fontWeight: {
