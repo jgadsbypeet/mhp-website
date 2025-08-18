@@ -1,4 +1,4 @@
-dateModified: 1755511663
+dateModified: 1755512326
 elementSources:
   craft\elements\Entry:
     -
@@ -97,6 +97,7 @@ fs:
     url: '@web/assets/videos'
 meta:
   __names__:
+    0b198ebd-d5db-4728-bde8-40067f347789: 'Section divider' # Section divider
     1a5747be-fb88-4384-a10e-ab7459382bc0: $SITE_GROUP_NAME # $SITE_GROUP_NAME
     1c25abdf-4ed0-4f3e-9efc-afaa953f4da7: 'Video URL' # Video URL
     3b11d463-accb-41de-ba6b-9331689fa7ce: Transcript # Transcript
@@ -125,7 +126,6 @@ meta:
     73f8e366-7f0d-422c-8131-f28b1309cde6: Size # Size
     75e255f2-86f8-4b83-8bfa-39f20fa4eedd: Standard # Standard
     85e95b71-c28f-45bb-9ddc-e0aa66e50a7b: 'Page not found' # Page not found
-    92f8ff6a-4be8-49d9-80bb-870617aa0f85: Section # Section
     125a39f1-c7fd-462c-beff-e3dfd421bec7: Simple # Simple
     379dfd72-5b5e-42ba-a705-d2785dbab0fa: Quote # Quote
     506d8357-6bb1-4b98-aa31-628a66d53cfb: Entries # Entries
@@ -153,7 +153,6 @@ meta:
     b85f18dc-5c7d-4c3d-be23-437b9c3675f3: New # New
     b502800f-c7b7-47b3-85b1-a0d7a179ea00: Image # Image
     ba07e685-77b8-422c-a2ff-2c5ba52decc3: 'Caption (optional)' # Caption (optional)
-    bb5fd73c-d0d3-44b5-a992-476eb9b739a4: Section # Section
     bc60a081-9838-490c-abd8-4401a5bd6e1e: Standard # Standard
     bf96f3a4-eb06-49f8-af84-f939d5426416: 'Social media account' # Social media account
     c0a70d36-1182-4a66-aad7-1cbfbe3da1dc: Video # Video
@@ -166,8 +165,6 @@ meta:
     cdd9e7cc-1867-45b4-9c9b-7310c18333bd: 'Site footer' # Site footer
     cf947787-479e-4889-93cf-2a7b62aafac4: Text # Text
     d0fc3bd4-7289-4c25-ab69-5e6b7d086eed: Accordion # Accordion
-    d0247de8-ec57-403b-b334-bbf9703049f8: Video # Video
-    d4b5dd99-9088-494e-b54b-39b5d76840f0: Image # Image
     d8da528a-5de1-4ea5-9278-983c10cfe9a5: Documents # Documents
     d276fadb-2ae1-4f6d-8b4a-7e1fb1b54c78: Simple # Simple
     de877a1b-7d14-4113-aed7-3c9b5e2db277: 'Highlighted text' # Highlighted text

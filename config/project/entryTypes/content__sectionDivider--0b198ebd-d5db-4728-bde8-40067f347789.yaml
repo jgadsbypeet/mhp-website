@@ -1,0 +1,22 @@
+color: orange
+description: null
+fieldLayouts:
+  f80e538e-4814-4aa9-a237-dfd1aa1e0572:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        name: Content
+        uid: 07817588-a405-4480-9cb5-e251a12e3763
+        userCondition: null
+handle: content__sectionDivider
+hasTitleField: false
+icon: horizontal-rule
+name: 'Section divider'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
