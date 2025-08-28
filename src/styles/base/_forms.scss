@@ -106,10 +106,6 @@ label {
   @apply mt-5 md:mt-5-lg;
 }
 
-.fui-required {
-  @apply hidden;
-}
-
 .fui-error-message {
   @apply font-semibold -mt-[10px] pl-[28px] md:pl-[32px] text-error;
   @apply bg-[url('/dist/assets/images/icons/error.svg')] bg-no-repeat bg-[left_center] bg-[length:20px_20px] md:bg-[length:24px_24px];
@@ -148,4 +144,13 @@ label {
   .fui-limit-text {
     @apply text-secondary-text;
   }
+}
+
+// Required inversion
+.fui-field:not(.fui-field-required) > .fui-field-container > .fui-label:after{
+  content: " (optional)";
+}
+
+.fui-required {
+  display: none;
 }
