@@ -1,19 +1,23 @@
-dateModified: 1755515443
+dateModified: 1756822496
 elementSources:
   craft\elements\Entry:
     -
-      key: '*'
-      type: native
-    -
       defaultSort:
-        - title
-        - asc
+        - postDate
+        - desc
       defaultViewMode: ''
       disabled: false
-      key: singles
+      key: '*'
       tableAttributes:
         - status
+        - section
+        - postDate
+        - expiryDate
+        - authors
         - link
+      type: native
+    -
+      key: 'single:66b51777-4793-45b7-970a-96e13d70af96' # Homepage
       type: native
     -
       heading: Structures
@@ -47,10 +51,6 @@ elementSources:
         - authors
         - link
       type: native
-    -
-      heading: ''
-      key: 'heading:02e05bd2-7f19-4a14-94b8-84366af8247c'
-      type: heading
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $EMAIL_SENDER_NAME
@@ -208,6 +208,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   formie:
     edition: standard
     enabled: true
@@ -236,6 +240,7 @@ plugins:
   retour:
     edition: standard
     enabled: true
+    licenseKey: JORLT14IVJO084U355A47X7P
     schemaVersion: 3.0.12
   seomatic:
     edition: standard
