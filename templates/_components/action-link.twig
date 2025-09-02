@@ -12,7 +12,7 @@
 		<div>
 			<p class="my-[4px] md:my-[6px] heading-sm text-inherit">{{ linkText }}</p>
 
-			{% if asset %}
+			{% if linkOption == "asset" %}
 				{% set assetSizeUnit = asset.size|filesize|split(' ')|last %}
 				{% if assetSizeUnit == 'KB' %}
 					{% set assetSize = asset.size|filesize|number_format %}

@@ -1,8 +1,5 @@
 {% extends "_matrix/containers/standard" %}
 
-{% set linkUrl = "" %}
-{% set linkTarget = "" %}
-{% set asset = "" %}
 {% set linkText = block.action__linkText ?? "More info" %}
 {% set linkOption = block.action__option ?? "" %}
 {% if linkOption == "assetLink" %}
@@ -19,8 +16,8 @@
   {% include "_components/action-link" with {
     blockClasseses: "my-8 md:my-8-lg",
     linkOption: linkOption,
-    linkUrl: linkUrl,
-    linkTarget: linkTarget,
+    linkUrl: linkUrl ?? "",
+    linkTarget: linkTarget ?? "",
     linkText: linkText,
   } %}
 {% endblock %}
