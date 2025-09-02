@@ -1,4 +1,4 @@
-dateModified: 1756823818
+dateModified: 1756826315
 elementSources:
   craft\elements\Entry:
     -
@@ -101,6 +101,7 @@ meta:
     1a5747be-fb88-4384-a10e-ab7459382bc0: $SITE_GROUP_NAME # $SITE_GROUP_NAME
     1c25abdf-4ed0-4f3e-9efc-afaa953f4da7: 'Video URL' # Video URL
     3b11d463-accb-41de-ba6b-9331689fa7ce: Transcript # Transcript
+    3c1f14a9-4cf7-4eae-9720-c8d72a8a267a: 'Cookie policy entry' # Cookie policy entry
     3fe2c1d5-8a1b-4113-898e-9819f561f482: 'Video file' # Video file
     4cd374ac-6a5a-483e-b17d-223382d6d4a1: 'List by channel' # List by channel
     4df4913b-0a34-4362-a115-1480a1f194cf: 'Profile URL' # Profile URL
@@ -137,6 +138,7 @@ meta:
     3031c488-fd65-4a4c-b69b-770f27f5fd77: 'Contact Form' # Contact Form
     3354af91-f989-4740-bdd2-65c9630089b2: 'Call to action' # Call to action
     8924a5aa-d54c-4ce1-b2e9-8131d50cb594: 'Quote attribution (optional)' # Quote attribution (optional)
+    25349a04-34fd-42df-8d99-d385a2df68cd: 'Cookie banner' # Cookie banner
     36604ffc-ec95-4bf9-bac8-457d543a7851: 'Embed code' # Embed code
     88868b59-0dc8-4932-8fbe-5a8a5fb28762: 'Jump link display' # Jump link display
     93688f52-2bc2-4914-aac6-0f949e89919e: Heading # Heading
@@ -147,7 +149,9 @@ meta:
     53112398-e0df-4ef1-976b-8272da500720: Standfirst # Standfirst
     96349527-2c4a-4eb7-9481-e12be1fa2e29: 'Action link' # Action link
     a3c239c2-5e16-432d-a651-abff865a4492: Platform # Platform
+    aaf979dc-4cea-4f1f-9fa8-3c91c22876e4: 'Cookie notice banner text' # Cookie notice banner text
     adf10d1b-d5b5-4564-a880-732b9ec4e22c: 'Image ratio' # Image ratio
+    ae90fa1f-0a8b-407f-8117-34743b22a912: 'Cookie notice banner heading' # Cookie notice banner heading
     ae279549-89d9-41f5-bdcb-cad0dcb85925: 'Social media accounts' # Social media accounts
     af11e5ad-a8af-4df5-a21c-e2608c19edeb: Text # Text
     b6bdf0f7-0c95-4f0b-a670-ee6376525a98: 'Hero heading' # Hero heading

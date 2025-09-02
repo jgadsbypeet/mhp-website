@@ -1,0 +1,31 @@
+{% extends '_layouts/base' %}
+{# Preview this page at {{ siteUrl }}/cookie-preference-updated #}
+
+{% set title = 'Cookie preferences updated' %}
+{% set bodyClasses = 'bg-sand' %}
+
+{% block head %}
+    <title>{{ siteName }} | {{ title }}</title>
+{% endblock %}
+
+{% set newPreference = craft.app.request.getParam("cookie-preference") %}
+{% set cookieConsentStatus = "WJ__cookieConsentStatus" %}
+
+{% if newPreference == "allow" %}
+  {% do setCookie(cookieConsentStatus, newPreference, now|date_modify("+ 365 days").timestamp, "/") %}
+{% elseif newPreference == "reject" %}
+  {% do setCookie(cookieConsentStatus, newPreference, now|date_modify("+ 31 days").timestamp, "/") %}
+{% endif %}
+
+{% block content %}
+    {% include "_components/_hero/simple" with {
+        title: title,
+		breadcrumb: false,
+    } %}
+
+    <div class="pb-10 site-content lg:pb-10-lg">
+        <div class="container">
+            <p class="reading-width">Your cookie preferences have been updated. <a href="/">Return home.</a></p>
+        </div>
+    </div>
+{% endblock %}

@@ -49,13 +49,9 @@
 			{% endif %}
     {% endblock %}
 
-    {% if cookiePolicyEntry %}
-      {% if entry is defined and entry.id == cookiePolicyEntry.id %}
-        {# Don't show the cookie notice on the cookie policy entry #}
-      {% else %}
-        {# Show the cookie notice #}
-        {# {% include "_components/cookie-notice" %} #}
-      {% endif %}
+    {% if entry is defined and entry.id != cookiePolicyEntry.id %}
+        {# Show the cookie notice on pages, except for the cookie policy page. #}
+        {% include "_components/cookie-notice" %}
     {% endif %}
 
     {% block header %}

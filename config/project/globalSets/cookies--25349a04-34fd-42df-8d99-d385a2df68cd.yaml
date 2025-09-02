@@ -1,0 +1,64 @@
+fieldLayouts:
+  728c72d1-9f34-451c-bf82-749b7e57257f:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-09-02T14:55:04+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: ae90fa1f-0a8b-407f-8117-34743b22a912 # Cookie notice banner heading
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fe440a4b-de13-4963-b1ba-3ccdfcd0646b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-02T14:55:04+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: aaf979dc-4cea-4f1f-9fa8-3c91c22876e4 # Cookie notice banner text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5de8a48e-fb81-4117-8f0b-05bcc97983e0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-02T14:55:04+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 3c1f14a9-4cf7-4eae-9720-c8d72a8a267a # Cookie policy entry
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 41593b73-91fa-457c-a3c7-640825de5bbe
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b7755f04-06a1-41b5-bdaf-d1f4551c4380
+        userCondition: null
+handle: cookies
+name: 'Cookie banner'
+sortOrder: 3

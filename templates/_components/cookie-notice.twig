@@ -1,0 +1,18 @@
+{# Get the cookie named WJ__cookieConsentStatus and use it in the query #}
+{% set cookieConsentStatus = getCookie("WJ__cookieConsentStatus") %}
+{# Show cookie notice if the WJ__cookieConsentStatus cookie has not been set #}
+{% if cookieConsentStatus == "" %}
+  <div class="cookie-notice flex flex-col bg-white fixed bottom-0 left-0 p-sm md:p-md lg:p-lg z-50 shadow-[0_-5px_20px_0_rgba(0,0,0,0.25)] md:bottom-md md:left-md md:rounded border-t md:border border-navy w-full md:w-fit overflow-auto max-h-full">
+	<h2 class="mb-4 heading-m md:mb-4-lg">{{ cookies.cookieBannerHeading ?? 'Our use of cookies' }}</h2>
+    <div class="max-w-md">
+		{{ cookies.cookieBannerText ?? 'Like most websites, this website would like to set analytics cookies. These send information about how our site is used to a service called Google Analytics. We use this information to improve our site.' }}
+		{% if cookies.cookiePolicyEntry|length %}
+			<p>Read more about the cookies we use on <a href="{{ cookies.cookiePolicyEntry.one().url }}">our Cookies page</a>.</p>
+		{% endif %}
+	</div>
+    <div class="flex flex-col gap-4 md:flex-row md:gap-4-lg">
+    	<button onclick="setCookieConsentStatus('allow');">Accept all cookies</button>
+    	<button onclick="setCookieConsentStatus('reject');">Reject additional cookies</button>
+    </div>
+  </div>
+{% endif %}

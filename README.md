@@ -129,3 +129,32 @@ Use the responsive spacing Tailwind classes in the HTML like this:
 ### Hover states
 Prefix the class name with `hover:` to have a utility take effect on hover, for example:
 `<label class="border block bg-white hover:bg-grey cursor-pointer...`
+
+## Cookie preferences tool
+The tool included in this boilerplate will be displayed once a cookie policy entry has been set in the Globals area of the Craft control panel.
+
+Although we don’t use a third-party plugin for the cookie notice itself, we utilise the Cookies plugin by nystudio107 to set and retrieve the cookie set by the cookie notice.
+
+You should be able to set up Google Consent Mode in GTM, but we were unsuccessful when attempting to do so for CAP, so we’re stating that this option isn’t compatible with Google Consent Mode.
+
+Additionally, there is no automatic scanning and categorisation of cookies, so this option is only recommended for websites with a straightforward setup (for example, those that only use Google Analytics).
+
+It’s a manual process to set up the triggers in GTM to set the tracking cookies after consent is given:
+1. Open the website’s Google Tag Manager (GTM) container.
+1. Select ‘Variables’ to open the variables panel.
+1. Select ‘New’ and add a 1st-party cookie variable:
+1. Name the variable ‘Cookie Preference Status’.
+1. Use the name of the cookie preferences cookie for the variable, e.g. ‘WJ_cookieConsent’.
+1. Select ‘Triggers’ to open the triggers panel.
+1. Select ‘New’ and add a custom event trigger:
+	1. Name the event ‘No Cookie Consent’.
+	1. Under ‘Event name’, enter `.*` (full stop and asterisk).
+	1. Enable using regex matching.
+	1. Select the ‘Some custom events’ option.
+	1. Select the variable name ‘Cookie Preference Status’ in the condition settings.
+	1. Set the trigger to fire when the cookie does not equal the value set when the visitor gives consent, e.g. allow.
+1. Select ‘Tags’ to open the tags panel.
+1. Open the settings for any tracking script tags. A tracking script is any script set to track a website visitor, including scripts from Google Analytics, Hotjar, and Facebook/Meta Pixel.
+1. Select the ‘Edit’ (pencil icon) in the ‘Triggering’ section.
+1. Select ‘Add Exceptions’ and add the cookie consent trigger to the tag as an exception. (If there are already exceptions in the tag, select the plus symbol next to ‘Exceptions’ to add the exception.)
+1. Select ‘Submit’ at the top of the screen and then ‘Publish’. You may need to wait for about 20 minutes or so before the tag changes go live.
