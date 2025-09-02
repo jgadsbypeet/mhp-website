@@ -4,20 +4,21 @@
 {% set linkTarget = "" %}
 {% set asset = "" %}
 {% set linkText = block.action__linkText ?? "More info" %}
-{% if block.action__option == "assetLink" %}
+{% set linkOption = block.action__option ?? "" %}
+{% if linkOption == "assetLink" %}
   {% set asset = block.action__assetLink.one() %}
   {% set linkUrl = asset.url %}
-{% elseif block.action__option == "urlLink" %}
+{% elseif linkOption == "urlLink" %}
   {% set linkTarget = block.action__linkTarget %}
   {% set linkUrl = block.action__urlLink %}
-{% elseif block.action__option == "entryLink" %}
+{% elseif linkOption == "entryLink" %}
   {% set linkUrl = block.action__entryLink.one().url %}
 {% endif %}
 
 {% block matrixBlock %}
   {% include "_components/action-link" with {
     blockClasseses: "my-8 md:my-8-lg",
-    linkOption: block.action__option, 
+    linkOption: linkOption,
     linkUrl: linkUrl,
     linkTarget: linkTarget,
     linkText: linkText,
