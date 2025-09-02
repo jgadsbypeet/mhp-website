@@ -3,9 +3,6 @@
 
 {% set standfirst = entry.standfirst ?? null %}
 
-{% block adminBar %}
-{% endblock %}
-
 {% block content %}
   {% include "_components/_hero/standard" with {
     title: entry.hero__heading ?? "Homepage",

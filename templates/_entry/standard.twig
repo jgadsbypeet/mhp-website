@@ -11,10 +11,6 @@
   {% endfor %}
 {% endif %}
 
-{% block adminBar %}
-  {{ adminBar({editLinkUrl: entry.cpEditUrl, editLinkLabel: "entry"}) }}
-{% endblock %}
-
 {% block content %}
   {% apply typogrify %}
     {% block hero %}

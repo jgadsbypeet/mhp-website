@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12d20a72e285ddbc4af8a7480961b853",
+    "content-hash": "4d7004ac202f3bd70a12baa3de257765",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -9919,71 +9919,6 @@
                 "urlify"
             ],
             "time": "2022-01-24T19:08:46+00:00"
-        },
-        {
-            "name": "wbrowar/craft-admin-bar",
-            "version": "5.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wbrowar/craft-admin-bar.git",
-                "reference": "c9d4522f02eafba699f5d3c7db58604d27a1559d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wbrowar/craft-admin-bar/zipball/c9d4522f02eafba699f5d3c7db58604d27a1559d",
-                "reference": "c9d4522f02eafba699f5d3c7db58604d27a1559d",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^5.8.0",
-                "nystudio107/craft-code-editor": "^1.0.18"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Admin Bar",
-                "class": "wbrowar\\adminbar\\AdminBar",
-                "handle": "admin-bar",
-                "changelogUrl": "https://raw.githubusercontent.com/wbrowar/craft-admin-bar/main/CHANGELOG.md",
-                "developerUrl": "https://wbrowar.com",
-                "hasCpSection": false,
-                "hasCpSettings": true,
-                "schemaVersion": "3.1.0",
-                "documentationUrl": "https://raw.githubusercontent.com/wbrowar/craft-admin-bar/main/README.md"
-            },
-            "autoload": {
-                "psr-4": {
-                    "wbrowar\\adminbar\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Will Browar",
-                    "homepage": "https://wbrowar.com"
-                }
-            ],
-            "description": "Front-end shortcuts for clients logged into Craft CMS.",
-            "keywords": [
-                "Craft",
-                "admin bar",
-                "admin toolbar",
-                "admin-bar",
-                "author experience",
-                "ax",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "toolbar"
-            ],
-            "support": {
-                "docs": "https://raw.githubusercontent.com/wbrowar/craft-admin-bar/main/README.md",
-                "issues": "https://github.com/wbrowar/craft-admin-bar/issues",
-                "source": "https://github.com/wbrowar/craft-admin-bar/tree/5.6.0"
-            },
-            "time": "2025-07-02T01:22:17+00:00"
         },
         {
             "name": "web-auth/cose-lib",

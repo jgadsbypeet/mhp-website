@@ -1,4 +1,4 @@
-dateModified: 1756822496
+dateModified: 1756823818
 elementSources:
   craft\elements\Entry:
     -
@@ -180,10 +180,6 @@ meta:
     fb678e73-288b-42c7-8c19-27c44d13f324: Heading # Heading
     ffb3da3c-2f4d-47a3-a021-d496e6c5516a: Pages # Pages
 plugins:
-  admin-bar:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.1.0
   assetrev:
     edition: standard
     enabled: true

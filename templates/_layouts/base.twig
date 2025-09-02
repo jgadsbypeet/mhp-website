@@ -39,7 +39,14 @@
   </head>
 
   <body class="text-primary-text body-s min-h-screen flex flex-col antialiased{{ bodyClasses ? ' ' ~ bodyClasses : '' }}">
-    {% block adminBar %}
+    <a class="visually-hidden skip-link" href="#content">Skip to main content</a>
+
+		{% block adminBar %}
+			{% if currentUser and entry is defined %}
+				<div class="fixed z-50 pt-2 bg-black rounded-b p-sm ml-sm">
+					<strong><a href="{{ entry.cpEditUrl }}" class="link-invert">Edit entry</a></strong>
+				</div>
+			{% endif %}
     {% endblock %}
 
     {% if cookiePolicyEntry %}
@@ -50,8 +57,6 @@
         {# {% include "_components/cookie-notice" %} #}
       {% endif %}
     {% endif %}
-
-    <a class="visually-hidden skip-link" href="#content">Skip to main content</a>
 
     {% block header %}
       {% include "_components/site-header" %}
