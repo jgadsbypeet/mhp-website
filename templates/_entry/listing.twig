@@ -16,9 +16,8 @@
         <ul class="-mt-sm md:-mt-lg lg:-mt-xl">
           {% for entry in listEntries %}
             <li class="mt-sm md:mt-lg lg:mt-xl">
-              {% include "_components/_entry-card/standard" with {
+              {% include "_components/_entry-card/simple" with {
                 cardUrl: entry.url,
-                cardHeroImage: entry.heroImage.one() ?? null,
                 cardTitle: entry.title
               } %}
             </li>
