@@ -4,7 +4,7 @@ instructions: null
 name: Content
 searchable: true
 settings:
-  createButtonLabel: Section
+  createButtonLabel: Block
   defaultIndexViewMode: cards
   enableVersioning: false
   entryTypes:
