@@ -65,9 +65,6 @@ a, .link, .heading-s.link {
 .link-invert {
 	@apply text-reversed-text hover:text-reversed-text group-hover:text-reversed-text;
 }
-.data-link {
-	@apply cursor-pointer;
-}
 .link-no-underline {
 	@apply no-underline;
 }
