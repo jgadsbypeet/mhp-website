@@ -6,11 +6,11 @@
 {% block matrixBlock %}
   <div class="my-8 md:my-8-lg">
     {% if entries %}
-      <ul class="-mt-6 -ml-6 mb-0 md:-mt-6-lg md:-ml-6-lg md:flex">
+      <ul class="flex flex-col gap-6 md:flex-row md:gap-6-lg">
         {% for entry in entries %}
           {% set heroImage = entry.heroImage.one() ?? null %}
 
-          <li class="mt-6 ml-6 mb-0 md:mt-6-lg md:ml-6-lg md:basis-1/2{% if threeCol %} lg:basis-1/3{% endif %}">
+          <li class="md:basis-1/2{% if threeCol %} lg:basis-1/3{% endif %}">
             {% include "_components/_entry-card/standard" with {
               cardHeroImage: heroImage,
               cardUrl: entry.url,
