@@ -30,6 +30,7 @@
 			{{ craft.vite.script("src/index.js") }}
 		{% endif %}
     {# Add noindex and nofollow the website documentation so it doesn't appear in search results #}
+		{# TODO: In the SEOmatic settings, add noindex and nofollow the website documentation and remove the section from the sitemap #}
     {% if entry is defined and entry.section.handle == 'webDoc' %}
       <meta name="robots" content="none">
     {% endif %}
