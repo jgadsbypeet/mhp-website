@@ -14,7 +14,7 @@
     <div class="max-w-xl mx-auto">
       {% if allEntries %}
         <ul class="-mt-sm md:-mt-lg lg:-mt-xl">
-          {% for entry in listEntries %}
+          {% for entry in pageEntries %}
             <li class="mt-sm md:mt-lg lg:mt-xl">
               {% include "_components/_entry-card/simple" with {
                 cardUrl: entry.url,
