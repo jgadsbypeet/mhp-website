@@ -19,8 +19,7 @@
 		<link rel="manifest" href="/dist/assets/images/icons/favicon/site.webmanifest" />
 		#}
 
-    {# Google Tag Manger #}
-    {% if not craft.app.request.isPreview and getenv("CRAFT_ENVIRONMENT") == "production" and not currentUser %}
+    {% if not craft.app.request.isPreview and craft.app.config.env == "production" and not currentUser %}
       <!-- Google Tag Manager -->
     {% endif %}
 
