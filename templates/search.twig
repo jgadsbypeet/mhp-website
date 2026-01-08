@@ -7,8 +7,8 @@
 
 {% set searchQuery = craft.app.request.getParam("q") %}
 {% set entriesPerPage = 10 %}
-{% set totalResults = searchQuery ? craft.entries().section("not webDoc").search(searchQuery).orderBy("score") : null %}
-{% set searchResults = searchQuery ? craft.entries().section("not webDoc").search(searchQuery).orderBy("score").limit(entriesPerPage) : null %}
+{% set totalResults = searchQuery ? craft.entries().section("not webDoc").search(searchQuery).with(['url', 'title']) : null %}
+{% set searchResults = searchQuery ? totalResults.limit(entriesPerPage) : null %}
 
 {% block content %}
 	{% include "_components/_hero/simple" with {

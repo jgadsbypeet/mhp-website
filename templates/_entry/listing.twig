@@ -3,8 +3,9 @@
 {# TODO: add listing query logics and filtering #}
 {% set listChannel = entry.listByChannel %}
 {% set entriesPerPage = 10 %}
-{% set allEntries = craft.entries().section(listChannel).all() ?? null %}
-{% set listEntries = craft.entries().section(listChannel).limit(entriesPerPage) %}
+{% set listByChannel = craft.entries().section(listChannel).with(['url', 'title']) ?? null %}
+{% set allEntries = listByChannel.all() ?? null %}
+{% set listEntries = listByChannel.limit(entriesPerPage) %}
 
 {# Paginate entries #}
 {% paginate listEntries as pageInfo, pageEntries %}

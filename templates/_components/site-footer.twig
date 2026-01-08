@@ -1,7 +1,7 @@
 {% import "_macro" as macro %}
 
 {% set socialMediaAccounts = siteFooter.footer__socialMedia.all() ?? null %}
-{% set legalNav = siteFooter.footer__legalNav.all() ?? null %}
+{% set legalNav = siteFooter.footer__legalNav.with(['url', 'title']).all() ?? null %}
 {% set registration = siteFooter.registration ?? null %}
 {% set contactPhoneNumber = siteFooter.contactPhoneNumber ?? null %}
 

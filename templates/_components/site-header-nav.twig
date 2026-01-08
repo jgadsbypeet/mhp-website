@@ -101,12 +101,14 @@
               {% set menuAsEntry = craft.entries()
                   .section(menu.section)
                   .slug(menu.url|replace("/", ""))
+									.with(['url', 'title'])
                   .one() ?? null %}
 
               {% if menuAsEntry %}
                 {% set subPages = craft.entries()
                     .descendantOf(menuAsEntry)
                     .descendantDist(1)
+										.with(['url', 'title'])
                     .all() ?? null %}
                 {# second level menus #}
                 {% if subPages %}
