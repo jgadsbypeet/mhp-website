@@ -42,7 +42,7 @@
     <a class="visually-hidden skip-link" href="#content">Skip to main content</a>
 
 		{% block adminBar %}
-			{% if currentUser and entry is defined %}
+			{% if entry is defined and currentUser and not craft.app.request.isPreview %}
 				<div class="fixed z-50 pt-2 bg-black rounded-b p-sm ml-sm">
 					<strong><a href="{{ entry.cpEditUrl }}" class="link-invert">Edit entry</a></strong>
 				</div>
