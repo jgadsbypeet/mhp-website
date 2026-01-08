@@ -22,7 +22,7 @@ settings:
   maxRelations: 1
   minRelations: null
   previewMode: full
-  restrictFiles: true
+  restrictFiles: false
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:d8da528a-5de1-4ea5-9278-983c10cfe9a5' # Documents
