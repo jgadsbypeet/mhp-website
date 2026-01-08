@@ -1,4 +1,3 @@
-// We only style the accordion title to be clickable if JavaScript is loaded
 .accordion {
 	&__heading {
 		button {
@@ -10,5 +9,11 @@
 		button[aria-expanded="true"] span {
 			@apply bg-[url('/dist/assets/images/icons/chevron-up.svg')];
 		}
+	}
+
+	.collapse {
+		@apply hidden;
+		// I looked at hiding content visually, so it's still visible to search engine and AI bots, but it looks like SEO and AI bots can see hidden content, and just hiding the content visually would mean screen reader users wouldn’t be able to toggle
+		// @apply h-0 overflow-hidden;
 	}
 }

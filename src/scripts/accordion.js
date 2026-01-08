@@ -32,7 +32,7 @@ const initAccordion = () => {
 
 		// Create a wrapper element for `contents` and hide it, but only if JS is loaded
 		let wrapper = document.createElement('div')
-		wrapper.hidden = true
+		wrapper.classList.add('collapse')
 
 		// Add each element of `contents` to `wrapper`
 		contents.forEach(node => {
@@ -52,7 +52,7 @@ const initAccordion = () => {
 			// Switch the state
 			btn.setAttribute('aria-expanded', !expanded)
 			// Switch the content's visibility
-			wrapper.hidden = expanded
+			wrapper.classList.toggle('collapse')
 		}
 	})
 }
