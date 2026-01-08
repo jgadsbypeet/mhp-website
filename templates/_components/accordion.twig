@@ -2,16 +2,12 @@
 {% set bodyType = bodyType ?? "" %}
 {% set blockClasses = blockClasses ?? "rounded-lg my-8 md:my-8-lg" %}
 
+{# As a fallback, we only hide the accordion panel and style the accordion heading to be clickable if JavaScript is loaded #}
+
 <div class="accordion border-y {{ blockClasses }}">
-  <div class="px-2 py-4 accordion__trigger group md:py-4-lg md:px-2-lg hover:cursor-pointer">
-    <button class="relative inline-flex pl-6 group no-path-fill button-reset link-no-underline md:pl-6-lg text-interactions hover:text-interactions-hover" aria-expanded="false">
-      {{ svg("dist/assets/images/icons/chevron-down.svg")|attr({ class: "rotate-0 group-aria-expanded:rotate-180 group-focus-visible:text-focus-dark absolute left-0"}) }}
+  <h3 class="m-0 text-base accordion__heading text-inherit md:text-base-lg">{{ heading }}</h3>
 
-      <h3 class="m-0 text-base accordion__title text-inherit md:text-base-lg">{{ heading }}</h3>
-    </button>
-  </div>
-
-  <div class="hidden px-6 pb-4 accordion__body lc--nbm md:pb-4-lg md:px-7-lg" role="region">
+  <div class="px-6 pb-4 accordion__body lc--nbm md:pb-4-lg md:px-7-lg"">
     {% if bodyType == "matrix" %}
       {% include "_matrix" with {"matrix": body} %}
     {% else %}
