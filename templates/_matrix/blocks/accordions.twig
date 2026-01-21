@@ -7,8 +7,9 @@
 
     {% include "_components/accordion" with {
       heading: item.acc__heading,
-      body:item.acc__content.all(),
-      bodyType: "matrix"
+      body: item.acc__content.all(),
+      bodyType: "matrix",
+			blockId: item.id
     } %}
   {% endfor %}
 {% endblock %}

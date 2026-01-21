@@ -1,11 +1,12 @@
 {% set class = class ?? "" %}
 {% set bodyType = bodyType ?? "" %}
 {% set blockClasses = blockClasses ?? "rounded-lg my-8 md:my-8-lg" %}
+{% set blockId = blockId ?? "" %}
 
 {# As a fallback, we only hide the accordion panel and style the accordion heading to be clickable if JavaScript is loaded #}
 
 <div class="accordion border-y {{ blockClasses }}">
-  <h3 class="m-0 text-base accordion__heading text-inherit md:text-base-lg">{{ heading }}</h3>
+  <h3 {{ blockId ? 'id=' ~ blockId }} class="m-0 text-base accordion__heading text-inherit md:text-base-lg">{{ heading }}</h3>
 
   <div class="px-6 pb-4 accordion__body lc--nbm md:pb-4-lg md:px-7-lg"">
     {% if bodyType == "matrix" %}
