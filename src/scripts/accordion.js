@@ -8,7 +8,7 @@ const initAccordion = () => {
 		if (heading.querySelector('button')) return
 
 		// Get block ID
-		let blockID = heading.id
+		let blockID = 'acc-' + heading.id
 
 		// Give each <h3> a toggle button child, but only if JS is loaded
 		// Communicate the state non-visually by applying aria-expanded to the button
