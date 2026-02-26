@@ -7,7 +7,7 @@ This is the boilerplate install for Craft CMS builds at William Joseph. It conta
 1. Enter that directory
     - `cd folder-name`
 1. Git clone boilerplate into the directory
-    - `git clone https://github.com/WilliamJosephLtd/wj-craft5-boilerplate.git`
+    - `git clone https://github.com/WilliamJosephLtd/wj-craft5-boilerplate.git .`
 1. Create a new repository on the command line
 	- `git init`
     - `git remote set-url origin https://github.com/WilliamJosephLtd/git-repo-url.git`
