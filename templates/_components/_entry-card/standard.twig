@@ -1,23 +1,25 @@
 {% import "_macro" as macro %}
 
-<div class="relative z-10 h-full bg-grey-3 data-link" data-link="{{ cardUrl }}">
-  {% if cardHeroImage %}
-    {{ macro.image({
-      image: cardHeroImage,
-      imageClass: "",
-      alt: "",
-      sizes: [
-        { maxScreen: "479px", width: 447, height: 251 },
-        { maxScreen: "575px", width: 527, height: 296 },
-        { maxScreen: "767px", width: 719, height: 404 },
-        { maxScreen: "", width: 592, height: 333 }
-      ]
-    }) }}
-  {% endif %}
+{% if cardUrl|length %}
+	<div class="relative z-10 h-full bg-grey-3 data-link" data-link="{{ cardUrl }}">
+		{% if cardHeroImage %}
+			{{ macro.image({
+				image: cardHeroImage,
+				imageClass: "",
+				alt: "",
+				sizes: [
+					{ maxScreen: "479px", width: 447, height: 251 },
+					{ maxScreen: "575px", width: 527, height: 296 },
+					{ maxScreen: "767px", width: 719, height: 404 },
+					{ maxScreen: "", width: 592, height: 333 }
+				]
+			}) }}
+		{% endif %}
 
-  <div class="p-sm md:p-lg lc--nbm">
-    <h3 class="mt-0"><a href="{{ cardUrl }}">{{ cardTitle }}</a></h3>
+		<div class="p-sm md:p-lg lc--nbm">
+			<h3 class="mt-0"><a href="{{ cardUrl }}">{{ cardTitle }}</a></h3>
 
-    {{ cardExcerpt ?? "" }}
-  </div>
-</div>
+			{{ cardExcerpt ?? "" }}
+		</div>
+	</div>
+{% endif %}
