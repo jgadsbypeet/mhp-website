@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 27d4aa56-2fc6-4e74-a20e-f5fee6f2dc20 # Logos
             handle: null
-            includeInCards: false
             instructions: "Upload logos with a transparent background, ideally in SVG format for the best quality. The logo's title is used as the alt text; you can edit this in the asset editor."
             label: __blank__
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 52c4e51e-b5d1-433e-8683-073d97a20e51 # Option
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -42,10 +40,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 61a52075-e8d1-4571-94a5-73b6448cb2e1 # Entry link
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -71,10 +67,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 8e986997-22af-4fce-8225-a1fc3cbb5bac # URL link
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -100,10 +94,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: c849e39d-e259-447a-bdd8-c577bf05b762 # Asset link
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -131,10 +123,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 7a82df58-7169-4f16-9078-ab400c68ac97 # Link text
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -160,10 +150,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 1803a6fd-4bb9-4613-8953-bcfc78b4e0c7 # Link target
             handle: null
-            includeInCards: false
             instructions: null
             label: __blank__
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

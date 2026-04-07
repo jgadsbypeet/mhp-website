@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: b502800f-c7b7-47b3-85b1-a0d7a179ea00 # Image
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -30,10 +28,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: ba07e685-77b8-422c-a2ff-2c5ba52decc3 # Caption (optional)
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -53,10 +49,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: adf10d1b-d5b5-4564-a880-732b9ec4e22c # Image ratio
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

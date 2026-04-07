@@ -1,4 +1,4 @@
-dateModified: 1767886672
+dateModified: 1775553525
 elementSources:
   craft\elements\Entry:
     -
@@ -208,7 +208,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 13MPFKT5UOW481PDVLOHTMG5
-    schemaVersion: 3.4.8
+    schemaVersion: 3.4.12
   image-resizer:
     edition: standard
     enabled: true
@@ -232,7 +232,7 @@ plugins:
   retour:
     edition: standard
     enabled: true
-    licenseKey: JORLT14IVJO084U355A47X7P
+    licenseKey: F8HOHLQVEPOAQ73H49K8YFPB
     schemaVersion: 3.0.12
   seomatic:
     edition: standard
@@ -554,7 +554,7 @@ system:
   live: true
   name: $SITE_GROUP_NAME
   retryDuration: null
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.9.0.8
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

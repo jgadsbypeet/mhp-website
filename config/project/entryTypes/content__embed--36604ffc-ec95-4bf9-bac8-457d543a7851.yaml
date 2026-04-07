@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 7c170c10-15c0-45a5-87d1-3e5b5789a737 # Embed code
             handle: null
-            includeInCards: false
             instructions: null
             label: __blank__
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 379dfd72-5b5e-42ba-a705-d2785dbab0fa # Quote
             handle: null
-            includeInCards: false
             instructions: "Pull quotes are short snippets of\_text repeated from\_the main content."
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -30,10 +28,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 8924a5aa-d54c-4ce1-b2e9-8131d50cb594 # Quote attribution (optional)
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

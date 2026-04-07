@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: cdd0917f-398e-46b8-a373-2fcb84257eca # Heading
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -30,10 +28,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 7dd6601d-5a16-4e28-8d2a-2f0340c48b65 # Content
             handle: null
-            includeInCards: false
             instructions: 'Keep the content small so the page content doesn’t shift a lot when the accordion is opened.'
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

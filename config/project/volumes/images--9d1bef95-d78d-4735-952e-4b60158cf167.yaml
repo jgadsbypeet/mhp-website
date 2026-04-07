@@ -16,7 +16,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -25,7 +24,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -45,13 +43,11 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             instructions: 'This is a description of the image, used as the alt text.'
             label: null
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: true
             required: false
@@ -69,10 +65,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: e687be04-1ff6-43b7-9785-a7dd65447c4b # Attribution
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

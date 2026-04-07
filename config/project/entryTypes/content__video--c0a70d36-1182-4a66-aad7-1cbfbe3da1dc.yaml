@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 944eb893-6b00-4c63-b7b9-9ee73630a1f1 # Option
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -42,10 +40,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 1c25abdf-4ed0-4f3e-9efc-afaa953f4da7 # Video URL
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -71,10 +67,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 3fe2c1d5-8a1b-4113-898e-9819f561f482 # Video file
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -88,10 +82,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 673cb6e1-eb77-40ba-b02e-122c3a42286a # Cover image
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -105,10 +97,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 3b11d463-accb-41de-ba6b-9331689fa7ce # Transcript
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
