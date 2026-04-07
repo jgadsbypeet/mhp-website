@@ -49,7 +49,7 @@
 			{% endif %}
     {% endblock %}
 
-    {% if entry is defined and entry.id != cookiePolicyEntry.id %}
+    {% if entry is defined and cookiePolicyEntry and entry.id != cookiePolicyEntry.id %}
         {# Show the cookie notice on pages, except for the cookie policy page. #}
         {% include "_components/cookie-notice" %}
     {% endif %}
