@@ -1,17 +1,22 @@
-$(".video__button").on("click", function() {
-  var $this = $(this);
-  var parent = $this.parents(".video__frame");
-  var videoEl = $this.siblings(".video__asset");
+document.querySelectorAll(".video__button").forEach(function (button) {
+  button.addEventListener("click", function () {
+    const parent = button.closest(".video__frame");
+    const videoEl = button.parentElement.querySelector(".video__asset");
 
-  parent.addClass("video__playing");
+    if (parent) {
+      parent.classList.add("video__playing");
+    }
 
-  // if uploaded video
-  if (videoEl.hasClass("video__asset--uploaded")) {
-    videoEl.trigger("play");
-  } 
-  // else youtube or vimeo video
-  else {
-    videoEl[0].src += "?autoplay=1";
-    // setTimeout(function(){ videoEl.show(); }, 200);
-  }
+    if (!videoEl) return;
+
+    // if uploaded video
+    if (videoEl.classList.contains("video__asset--uploaded")) {
+      videoEl.play();
+    } 
+    // else youtube or vimeo video
+    else {
+      videoEl.src += "?autoplay=1";
+      // setTimeout(() => { videoEl.style.display = "block"; }, 200);
+    }
+  });
 });
