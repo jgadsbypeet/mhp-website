@@ -4,20 +4,21 @@
 {% set title = title ?? 'Something went wrong' %}
 
 {% block head %}
-    <title>{{ siteName }} | {{ title }}</title>
+  <title>{{ siteName }} | {{ title }}</title>
 {% endblock %}
 
 {% block content %}
-    {% include "_components/_hero/simple" with {
-        title: title,
+	{% include "_components/_hero/simple" with {
+		title: title,
 		breadcrumb: false,
-    } %}
+	} %}
 
-    <div class="site-content section">
-        <div class="container">
-            {% block errorMessage %}
-                <p>{{ statusCode ?? 'Status Code' }} - {{ message ?? 'Status Message' }}</p>
-				<p><a id="goBackLink" style="cursor: pointer;">Go back</a></p>
+	<div class="site-content section">
+		<div class="container">
+			{% block errorMessage %}
+				<p>{{ statusCode ?? 'Status Code' }} - {{ message ?? 'Status Message' }}</p>
+				<p><a href="/" id="goBackLink" style="cursor: pointer;">Go back</a></p>
+
 				{% if currentUser %}
 					<hr />
 					<h3>Logged in admins only:</h3>
@@ -31,6 +32,6 @@
 					<pre class="break-words whitespace-normal">{{ file ?? 'File Name' }}: {{ line ?? 'File Line' }}</pre>
 				{% endif %}
 			{% endblock %}
-        </div>
-    </div>
+		</div>
+	</div>
 {% endblock %}
