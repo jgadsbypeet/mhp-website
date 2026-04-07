@@ -1,96 +1,115 @@
-var mobileNavButton = $("#mobileNavButton");
-var siteHeaderNav = $("#siteHeaderNav");
-var panelTrigger = $(".header-nav__panel--trigger");
-var panelOverlay = $(".header-nav--overlay");
+const mobileNavButton = document.getElementById("mobileNavButton");
+const siteHeaderNav = document.getElementById("siteHeaderNav");
+const panelTriggers = document.querySelectorAll(".header-nav__panel--trigger");
+const panelOverlay = document.querySelector(".header-nav--overlay");
 
 // mobile menu show/hide
-mobileNavButton.on("click", function() {
-  let isActive = $(this).hasClass("active") && siteHeaderNav.hasClass("active");
+mobileNavButton?.addEventListener("click", function () {
+  const isActive =
+    mobileNavButton.classList.contains("active") &&
+    siteHeaderNav?.classList.contains("active");
 
-  if (!isActive) 
-  {
-    $(this).addClass("active");
-    $(this).attr("aria-expanded", "true");
-    $(this).find(".burger-menu-button-text").text("Close");
-    siteHeaderNav.addClass("active");
-    panelOverlay.addClass("active");
-  } 
-  else 
-  {
-    $(this).removeClass("active");
-    $(this).attr("aria-expanded", "false");
-    $(this).find(".burger-menu-button-text").text("Menu");
-    siteHeaderNav.removeClass("active");
-    panelOverlay.removeClass("active");
+  const buttonText = mobileNavButton.querySelector(".burger-menu-button-text");
+
+  if (!isActive) {
+    mobileNavButton.classList.add("active");
+    mobileNavButton.setAttribute("aria-expanded", "true");
+    if (buttonText) buttonText.textContent = "Close";
+    siteHeaderNav?.classList.add("active");
+    panelOverlay?.classList.add("active");
+  } else {
+    mobileNavButton.classList.remove("active");
+    mobileNavButton.setAttribute("aria-expanded", "false");
+    if (buttonText) buttonText.textContent = "Menu";
+    siteHeaderNav?.classList.remove("active");
+    panelOverlay?.classList.remove("active");
   }
 });
 
 // sub menu (panels) show/hide
-panelTrigger.on("click", function() {
-  menuPanel($(this));
-});
+panelTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", function () {
+    menuPanel(trigger);
+  });
 
-// when press menu bar item
-panelTrigger.keydown(function(e) {
-  const code = e.keyCode || e.which;
-  // Enter or space or down
-  if (code == 13 || code == 32 || code == 40) 
-  {
-    menuPanel($(this));
-  }
-  // shift key and tab or space or down
-  else if ((e.shiftKey) && (code == 9 || code == 32 || code == 40)) 
-  {
-    menuPanelClose($(this));
-  }
+  // when press menu bar item
+  trigger.addEventListener("keydown", function (e) {
+    const code = e.keyCode || e.which;
+
+    // Enter or space or down
+    if (code === 13 || code === 32 || code === 40) {
+      menuPanel(trigger);
+    }
+    // shift key and tab or space or down
+    else if (e.shiftKey && (code === 9 || code === 32 || code === 40)) {
+      menuPanelClose(trigger);
+    }
+  });
 });
 
 // when shift-press the first menu item in menu panel
-$(".header-nav__main:first-child > a").keydown(function(e) {
-  const code = e.keyCode || e.which;
-  let itsTrigger = $(this).closest(".header-nav__panel").siblings(".header-nav__panel--trigger");
+document.querySelectorAll(".header-nav__main:first-child > a").forEach((link) => {
+  link.addEventListener("keydown", function (e) {
+    const code = e.keyCode || e.which;
+    const panel = link.closest(".header-nav__panel");
+    const itsTrigger = panel?.previousElementSibling;
 
-  // shift key and tab or space or down
-  if ((e.shiftKey) && (code == 9 || code == 32 || code == 40)) 
-  {
-    menuPanelClose(itsTrigger);
-  }
+    // shift key and tab or space or down
+    if (e.shiftKey && (code === 9 || code === 32 || code === 40)) {
+      if (itsTrigger?.classList.contains("header-nav__panel--trigger")) {
+        menuPanelClose(itsTrigger);
+      }
+    }
+  });
 });
 
 // when press the last menu item in menu panel
-$(".header-nav__panel li:last-child > a, .header-nav__main:last-child > a").keydown(function(e) {
-  const code = e.keyCode || e.which;
-  let itsTrigger = $(this).closest(".header-nav__panel").siblings(".header-nav__panel--trigger");
+document
+  .querySelectorAll(".header-nav__panel li:last-child > a, .header-nav__main:last-child > a")
+  .forEach((link) => {
+    link.addEventListener("keydown", function (e) {
+      const code = e.keyCode || e.which;
+      const panel = link.closest(".header-nav__panel");
+      const itsTrigger = panel?.previousElementSibling;
 
-  // no shift key but tab or space or down
-  if ((!e.shiftKey) && (code == 9 || code == 32 || code == 40)) 
-  {
-    menuPanelClose(itsTrigger);
-  }
-});
+      // no shift key but tab or space or down
+      if (!e.shiftKey && (code === 9 || code === 32 || code === 40)) {
+        if (itsTrigger?.classList.contains("header-nav__panel--trigger")) {
+          menuPanelClose(itsTrigger);
+        }
+      }
+    });
+  });
 
 // close all menus on overlay click
-panelOverlay.on("click", function() {
-  mobileNavButton.removeClass("active");
-  mobileNavButton.attr("aria-expanded", "false");
-  mobileNavButton.find(".burger-menu-button-text").text("Menu");
-  siteHeaderNav.removeClass("active");
-  panelTrigger.removeClass("active");
-  panelTrigger.attr("aria-expanded", "false");
-  $(".header-nav__panel").removeClass("active");
-  $(this).removeClass("active");
+panelOverlay?.addEventListener("click", function () {
+  mobileNavButton?.classList.remove("active");
+  mobileNavButton?.setAttribute("aria-expanded", "false");
+
+  const buttonText = mobileNavButton?.querySelector(".burger-menu-button-text");
+  if (buttonText) buttonText.textContent = "Menu";
+
+  siteHeaderNav?.classList.remove("active");
+
+  panelTriggers.forEach((trigger) => {
+    trigger.classList.remove("active");
+    trigger.setAttribute("aria-expanded", "false");
+  });
+
+  document.querySelectorAll(".header-nav__panel").forEach((panel) => {
+    panel.classList.remove("active");
+  });
+
+  panelOverlay.classList.remove("active");
 });
 
 function menuPanel(el) {
-  let isActive = el.hasClass("active");
+  const isActive = el.classList.contains("active");
 
   // open/close panel
-  if (!isActive) 
-  {
+  if (!isActive) {
     menuPanelOpen(el);
-  } 
-  else 
-  {
+  } else {
     menuPanelClose(el);
   }
 
@@ -99,32 +118,62 @@ function menuPanel(el) {
 }
 
 function menuPanelOpen(el) {
-  let itsPanel = el.next(".header-nav__panel");
+  const itsPanel = el.nextElementSibling;
 
-  el.addClass("active");
-  el.attr("aria-expanded", "true");
-  itsPanel.addClass("active");
-  itsPanel.find("a").attr("tabindex", 0);
+  if (!itsPanel || !itsPanel.classList.contains("header-nav__panel")) return;
+
+  el.classList.add("active");
+  el.setAttribute("aria-expanded", "true");
+  itsPanel.classList.add("active");
+
+  itsPanel.querySelectorAll("a").forEach((link) => {
+    link.setAttribute("tabindex", "0");
+  });
+
   // add overlay
-  panelOverlay.addClass("active");
+  panelOverlay?.classList.add("active");
 }
 
 function menuPanelClose(el) {
-  let itsPanel = el.next(".header-nav__panel");
+  const itsPanel = el.nextElementSibling;
 
-  el.removeClass("active");
-  el.attr("aria-expanded", "false");
-  itsPanel.removeClass("active");
-  itsPanel.find("a").attr("tabindex", -1);
+  if (!itsPanel || !itsPanel.classList.contains("header-nav__panel")) return;
+
+  el.classList.remove("active");
+  el.setAttribute("aria-expanded", "false");
+  itsPanel.classList.remove("active");
+
+  itsPanel.querySelectorAll("a").forEach((link) => {
+    link.setAttribute("tabindex", "-1");
+  });
+
   // remove overlay
-  panelOverlay.removeClass("active");
+  panelOverlay?.classList.remove("active");
 }
 
 function menuSiblingsClose(el) {
-  let itsSiblings = el.parent("li").siblings().find(".header-nav__panel--trigger");
-  let itsPanelSiblings = itsSiblings.next(".header-nav__panel");
+  const parentLi = el.closest("li");
+  if (!parentLi || !parentLi.parentElement) return;
 
-  itsSiblings.removeClass("active");
-  itsPanelSiblings.removeClass("active");
-  itsPanelSiblings.find("a").attr("tabindex", -1);
+  const siblingLis = Array.from(parentLi.parentElement.children).filter(
+    (li) => li !== parentLi
+  );
+
+  siblingLis.forEach((li) => {
+    const siblingTrigger = li.querySelector(".header-nav__panel--trigger");
+    const siblingPanel = siblingTrigger?.nextElementSibling;
+
+    if (siblingTrigger) {
+      siblingTrigger.classList.remove("active");
+      siblingTrigger.setAttribute("aria-expanded", "false");
+    }
+
+    if (siblingPanel && siblingPanel.classList.contains("header-nav__panel")) {
+      siblingPanel.classList.remove("active");
+
+      siblingPanel.querySelectorAll("a").forEach((link) => {
+        link.setAttribute("tabindex", "-1");
+      });
+    }
+  });
 }
