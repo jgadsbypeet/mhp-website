@@ -4,9 +4,28 @@ instructions: null
 name: 'URL link'
 searchable: false
 settings:
+  advancedFields:
+    - target
+  fullGraphqlData: false
   maxLength: 255
+  showLabelField: true
+  typeSettings:
+    __assoc__:
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - ''
+            -
+              - allowCustomSchemes
+              - ''
   types:
     - url
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\Url
+type: craft\fields\Link

@@ -1,23 +1,19 @@
 {% extends "_matrix/containers/standard" %}
-
-{% set linkText = block.action__linkText ?? "More info" %}
-{% set linkOption = block.action__option ?? "" %}
-{% if linkOption == "assetLink" %}
-  {% set asset = block.action__assetLink.one() %}
-  {% set linkUrl = asset.url %}
-{% elseif linkOption == "urlLink" %}
-  {% set linkTarget = block.action__linkTarget %}
-  {% set linkUrl = block.action__urlLink %}
-{% elseif linkOption == "entryLink" %}
-  {% set linkUrl = block.action__entryLink.one().url %}
+{% set type = block.action__option ?? "entryLink" %}
+{% set link = block.action__entryLink ?? null %}
+{% if type == "assetLink" %}
+  {% set link = block.action__assetLink ?? null %}
+  {% set linkSource = "" %}
+{% elseif type == "urlLink" %}
+  {% set link = block.action__urlLink ?? null %}
 {% endif %}
 
 {% block matrixBlock %}
   {% include "_components/action-link" with {
     blockClasseses: "my-8 md:my-8-lg",
-    linkOption: linkOption,
-    linkUrl: linkUrl ?? "",
-    linkTarget: linkTarget ?? "",
-    linkText: linkText,
+    linkOption: type,
+    linkUrl: link.value,
+    linkTarget: link.target,
+    linkText: link.label,
   } %}
 {% endblock %}

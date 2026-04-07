@@ -5,7 +5,6 @@
 {% else %}
 	{% set icon = 'chevron' %}
 {% endif %}
-
 {% set linkSource = linkSource ?? '' %}
 
 <div class="{{ blockClasseses ?? '' }}">
@@ -18,13 +17,18 @@
 
 		{# if download link #}
 		{% if linkOption == "assetLink" %}
-			{% set assetSizeUnit = asset.size|filesize|split(' ')|last %}
-			{% if assetSizeUnit == 'KB' %}
-				{% set assetSize = asset.size|filesize|number_format %}
+			{% set bytes = link.element.size %}
+			{% set mb = bytes / 1048576 %}
+			{% if mb >= 1 %}
+				{% set filesize = mb|number_format(1) ~ " MB" %}
 			{% else %}
-				{% set assetSize = asset.size|filesize|number_format(1) %}
+				{% set filesize = (bytes / 1024)|round ~ " KB" %}
 			{% endif %}
-			<p class="flex flex-wrap m-0 overflow-hidden body-xxs text-secondary-text"><span class="mr-sm">{{ asset.extension|upper }}</span><span class="relative before:content-[''] before:rounded-full before:block before:bg-secondary-text before:absolute before:-left-[10px] before:top-[.9rem] before:w-[4px] before:h-[4px]">{{ assetSize ~ ' ' ~ assetSizeUnit }}</span></p>
+
+			<p class="flex flex-wrap m-0 overflow-hidden body-xxs text-secondary-text">
+				<span class="mr-sm">{{ link.element.extension|upper }}</span>
+				<span class="relative before:content-[''] before:rounded-full before:block before:bg-secondary-text before:absolute before:-left-[10px] before:top-[.9rem] before:w-[4px] before:h-[4px]">{{ filesize }}</span>
+			</p>
 		{% elseif linkSource %}
 			<p class="m-0 body-xxs text-secondary-text">{{ linkSource }}</p>
 		{% endif %}

@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: violet
 description: null
 fieldLayouts:
@@ -11,6 +12,7 @@ fieldLayouts:
             dateAdded: '2025-07-14T11:04:51+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 52c4e51e-b5d1-433e-8683-073d97a20e51 # Option
             handle: null
             instructions: null
@@ -38,17 +40,18 @@ fieldLayouts:
                     - entryLink
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 61a52075-e8d1-4571-94a5-73b6448cb2e1 # Entry link
             handle: null
             instructions: null
-            label: null
+            label: Entry
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: dcf58cf1-93b2-44eb-a745-53aceb98e22e
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             dateAdded: '2025-07-14T11:04:51+00:00'
             editCondition: null
@@ -65,17 +68,18 @@ fieldLayouts:
                     - urlLink
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 8e986997-22af-4fce-8225-a1fc3cbb5bac # URL link
             handle: null
             instructions: null
-            label: null
+            label: URL
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b36e597e-165b-4dbc-80c6-377b92bc053d
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             dateAdded: '2025-07-14T11:04:51+00:00'
             editCondition: null
@@ -92,73 +96,18 @@ fieldLayouts:
                     - assetLink
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: c849e39d-e259-447a-bdd8-c577bf05b762 # Asset link
             handle: null
             instructions: null
-            label: null
+            label: Asset
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b1266986-24d9-4882-8a89-22e315c94d5a
             userCondition: null
             warning: null
-            width: 50
-          -
-            dateAdded: '2025-07-14T11:04:51+00:00'
-            editCondition: null
-            elementCondition:
-              class: craft\elements\conditions\entries\EntryCondition
-              conditionRules:
-                -
-                  class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: 52c4e51e-b5d1-433e-8683-073d97a20e51 # Option
-                  layoutElementUid: ca9af274-930f-4a77-812b-0601fad4b3d2
-                  operator: in
-                  uid: bfdcc309-b5b8-4b0b-92a6-c7a19cda17a8
-                  values:
-                    - entryLink
-                    - urlLink
-                    - assetLink
-              elementType: craft\elements\Entry
-              fieldContext: global
-            fieldUid: 7a82df58-7169-4f16-9078-ab400c68ac97 # Link text
-            handle: null
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8d37558b-24c8-463c-b78a-f758d679ddb6
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            dateAdded: '2025-07-14T11:04:51+00:00'
-            editCondition: null
-            elementCondition:
-              class: craft\elements\conditions\entries\EntryCondition
-              conditionRules:
-                -
-                  class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: 52c4e51e-b5d1-433e-8683-073d97a20e51 # Option
-                  layoutElementUid: ca9af274-930f-4a77-812b-0601fad4b3d2
-                  operator: in
-                  uid: 55627b64-ad3c-4a8f-b130-992fdd744923
-                  values:
-                    - urlLink
-              elementType: craft\elements\Entry
-              fieldContext: global
-            fieldUid: 1803a6fd-4bb9-4613-8953-bcfc78b4e0c7 # Link target
-            handle: null
-            instructions: null
-            label: __blank__
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d6fc0ceb-f110-413f-a669-f53d48bab0ac
-            userCondition: null
-            warning: 'While it may be tempting to open an external link in a new browser tab or window, this breaks the back button.'
-            width: 50
+            width: 100
         name: Content
         uid: bee9ce48-4580-49fc-ae3a-646e919098d0
         userCondition: null
@@ -177,6 +126,7 @@ fieldLayouts:
         name: 'Editor guide'
         uid: e0cf2918-38d1-4df4-a161-3e7eaab71d5d
         userCondition: null
+    thumbFieldKey: null
 handle: content__actionLink
 hasTitleField: false
 icon: link
@@ -188,3 +138,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

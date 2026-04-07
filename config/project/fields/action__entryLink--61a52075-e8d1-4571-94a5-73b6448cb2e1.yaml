@@ -4,19 +4,28 @@ instructions: null
 name: 'Entry link'
 searchable: false
 settings:
-  allowSelfRelations: false
-  branchLimit: null
-  localizeRelations: false
-  maintainHierarchy: false
-  maxRelations: 1
-  minRelations: null
-  selectionLabel: null
-  showCardsInGrid: false
-  showSiteMenu: false
-  sources: '*'
-  targetSiteId: null
-  validateRelatedElements: false
-  viewMode: list
+  advancedFields:
+    - target
+  fullGraphqlData: false
+  maxLength: 255
+  showLabelField: true
+  typeSettings:
+    __assoc__:
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - showUnpermittedSections
+              - ''
+            -
+              - showUnpermittedEntries
+              - ''
+  types:
+    - entry
 translationKeyFormat: null
-translationMethod: site
-type: craft\fields\Entries
+translationMethod: none
+type: craft\fields\Link
