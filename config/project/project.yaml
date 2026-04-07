@@ -1,4 +1,4 @@
-dateModified: 1775553525
+dateModified: 1775554240
 elementSources:
   craft\elements\Entry:
     -
@@ -127,7 +127,6 @@ meta:
     66b51777-4793-45b7-970a-96e13d70af96: Homepage # Homepage
     73f8e366-7f0d-422c-8131-f28b1309cde6: Size # Size
     75e255f2-86f8-4b83-8bfa-39f20fa4eedd: 'Standard page' # Standard page
-    125a39f1-c7fd-462c-beff-e3dfd421bec7: Simple # Simple
     379dfd72-5b5e-42ba-a705-d2785dbab0fa: Quote # Quote
     506d8357-6bb1-4b98-aa31-628a66d53cfb: Entries # Entries
     545bf85d-2516-4846-ab8f-778f8f10fcab: 'Website guides' # Website guides
@@ -159,7 +158,6 @@ meta:
     b85f18dc-5c7d-4c3d-be23-437b9c3675f3: New # New
     b502800f-c7b7-47b3-85b1-a0d7a179ea00: Image # Image
     ba07e685-77b8-422c-a2ff-2c5ba52decc3: 'Caption (optional)' # Caption (optional)
-    bc60a081-9838-490c-abd8-4401a5bd6e1e: Standard # Standard
     bf96f3a4-eb06-49f8-af84-f939d5426416: 'Social media account' # Social media account
     c0a70d36-1182-4a66-aad7-1cbfbe3da1dc: Video # Video
     c21d1001-859c-458e-a198-adce917c2f88: Homepage # Homepage
@@ -191,7 +189,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0.0
+    schemaVersion: 5.0.0.1
   cookies:
     edition: standard
     enabled: true
