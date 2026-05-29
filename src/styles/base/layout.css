@@ -1,0 +1,11 @@
+@layer components {
+	.container {
+		@apply max-w-lg mx-auto px-sm md:px-lg lg:px-lg;
+	}
+	.container .container {
+		@apply px-0;
+	}
+	.section {
+		@apply py-10 lg:py-10-lg;
+	}
+}

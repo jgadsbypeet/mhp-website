@@ -125,18 +125,8 @@
 	--max-width-xl: 1240px;
 }
 
-@layer components {
-	.container {
-		@apply max-w-lg mx-auto px-sm md:px-lg lg:px-lg;
-	}
-	.container .container {
-		@apply px-0;
-	}
-	.section {
-		@apply py-10 lg:py-10-lg;
-	}
-}
-
+@import "./base/font-face.css";
+@import "./base/layout.css";
 @import "./base/typography.css";
 @import "./base/buttons.css";
 @import "./base/forms.css";
@@ -145,3 +135,4 @@
 @import "./components/accordion.css";
 @import "./matrix/matrix.css";
 @import "./matrix/video.css";
+@import "./utility/print.css";
