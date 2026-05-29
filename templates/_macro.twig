@@ -55,6 +55,7 @@ Usage:
     imageClass: '',
     alt: null,
     lazyLoad: null,
+    quality: null,
     sizes: [
       { maxScreen: "", width: null, height: null },
       { maxScreen: "", width: null, height: null },
@@ -64,8 +65,9 @@ Usage:
   {% set atr = defaults|merge(atr) %}
 
   {# image transform settings #}
-  {% set quality = '82' %}{# very high #}
-  {% set formats = ['webp', ''] %}
+  {% set quality = atr.quality ?? '82' %}{# very high #}
+  {% set isSvg = atr.image.extension ?? '' == 'svg' %}
+  {% set formats = isSvg ? [''] : ['webp', ''] %}
 
   {# only output srcset if there is an image to output! #}
   {% if atr.image %}
@@ -92,7 +94,7 @@ Usage:
           {# webp format source #}
           {% if format == 'webp' %}
             <source {{ attr({
-              media: screenSize, 
+              media: screenSize,
               type: 'image/' ~ format,
               srcset: srcset ?? '',
               sizes: '100vw',
@@ -100,12 +102,12 @@ Usage:
           {# other format source #}
           {% else %}
             <source {{ attr({
-              media: screenSize, 
+              media: screenSize,
               srcset: srcset ?? '',
               sizes: '100vw',
             }) }}>
           {% endif %}
-          
+
           {# add default image src details once #}
           {% if loop.last %}
             {% set defaultImageSrcUrl = defaultImageSrcUrl|merge([imageSrcUrl]) %}
