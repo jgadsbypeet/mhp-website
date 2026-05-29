@@ -1,10 +1,10 @@
 columnSuffix: null
-handle: acc__accordion
+handle: block__accordion
 instructions: null
 name: Accordion
 searchable: true
 settings:
-  createButtonLabel: Item
+  createButtonLabel: Accordion
   defaultIndexViewMode: cards
   enableVersioning: false
   entryTypes:
@@ -12,7 +12,7 @@ settings:
       __assoc__:
         -
           - uid
-          - b53d1a3f-d0be-4181-b4f3-63b2415caf50 # Accordion item
+          - b53d1a3f-d0be-4181-b4f3-63b2415caf50 # Accordion
         -
           - group
           - General

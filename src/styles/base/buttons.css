@@ -3,6 +3,7 @@
 	.button,
 	[type="button"],
 	[type="submit"] {
+		@apply font-body font-normal text-s md:text-s-lg;
 		@apply inline-flex justify-center items-center bg-secondary text-reversed-text rounded-full px-[18px] py-[10px] md:px-[20px] md:pt-[9px] no-underline border-none outline-none hover:bg-secondary hover:text-reversed-text active:bg-secondary;
 	}
 	.button-primary {

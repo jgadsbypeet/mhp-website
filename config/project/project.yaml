@@ -1,4 +1,4 @@
-dateModified: 1780066827
+dateModified: 1780069093
 elementSources:
   craft\elements\Entry:
     -
@@ -154,7 +154,7 @@ meta:
     ae279549-89d9-41f5-bdcb-cad0dcb85925: 'Social media accounts' # Social media accounts
     af11e5ad-a8af-4df5-a21c-e2608c19edeb: Text # Text
     b6bdf0f7-0c95-4f0b-a670-ee6376525a98: 'Hero heading' # Hero heading
-    b53d1a3f-d0be-4181-b4f3-63b2415caf50: 'Accordion item' # Accordion item
+    b53d1a3f-d0be-4181-b4f3-63b2415caf50: Accordion # Accordion
     b85f18dc-5c7d-4c3d-be23-437b9c3675f3: New # New
     b502800f-c7b7-47b3-85b1-a0d7a179ea00: Image # Image
     ba07e685-77b8-422c-a2ff-2c5ba52decc3: 'Caption (optional)' # Caption (optional)

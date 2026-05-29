@@ -10,7 +10,7 @@
 
   <div class="px-6 pb-4 accordion__body lc--nbm md:pb-4-lg md:px-7-lg">
     {% if bodyType == "matrix" %}
-      {% include "_matrix" with {"matrix": body} %}
+      {{ body.eagerly().render() }}
     {% else %}
       {{ body }}
     {% endif %}
