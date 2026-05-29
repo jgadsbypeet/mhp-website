@@ -2,11 +2,11 @@ button,
 .button {
 	&:not(.button-reset) {
 		&:focus-visible {
-			@apply !outline-none !bg-focus-light !no-underline hover:!no-underline hover:!bg-focus-light group-hover:!bg-focus-light;
-			@apply !text-focus-dark hover:!text-focus-dark group-hover:!text-focus-dark;
+			@apply outline-none! bg-focus-light! no-underline! hover:no-underline! hover:bg-focus-light! group-hover:bg-focus-light!;
+			@apply text-focus-dark! hover:text-focus-dark! group-hover:text-focus-dark!;
 			&:not(.no-path-fill) {
 				& path {
-					@apply !fill-focus-dark;
+					@apply fill-focus-dark!;
 				}
 			}
 			@apply border-b-0 shadow-[0_0_0_4px_var(--color-focus-dark)];
@@ -17,11 +17,11 @@ button,
 a,
 .link {
 	&:focus-visible {
-		@apply !outline-none !bg-focus-light !no-underline hover:!no-underline hover:!bg-focus-light group-hover:!bg-focus-light;
-		@apply !text-focus-dark hover:!text-focus-dark group-hover:!text-focus-dark;
+		@apply outline-none! bg-focus-light! no-underline! hover:no-underline! hover:bg-focus-light! group-hover:bg-focus-light!;
+		@apply text-focus-dark! hover:text-focus-dark! group-hover:text-focus-dark!;
 		&:not(.no-path-fill) {
 			& path {
-				@apply !fill-focus-dark;
+				@apply fill-focus-dark!;
 			}
 		}
 		@apply shadow-[0_-3px_0_0_var(--color-focus-light),0_1px_0_0_var(--color-focus-light),0_4px_0_0_var(--color-focus-dark)];
@@ -31,11 +31,11 @@ a,
 .button-reset {
 	&:focus-visible {
 		& .link {
-			@apply !outline-none !bg-focus-light !no-underline hover:!no-underline hover:!bg-focus-light group-hover:!bg-focus-light;
-			@apply !text-focus-dark hover:!text-focus-dark group-hover:!text-focus-dark;
+			@apply outline-none! bg-focus-light! no-underline! hover:no-underline! hover:bg-focus-light! group-hover:bg-focus-light!;
+			@apply text-focus-dark! hover:text-focus-dark! group-hover:text-focus-dark!;
 			&:not(.no-path-fill) {
 				& path {
-					@apply !fill-focus-dark;
+					@apply fill-focus-dark!;
 				}
 			}
 			@apply shadow-[0_-3px_0_0_var(--color-focus-light),0_1px_0_0_var(--color-focus-light),0_4px_0_0_var(--color-focus-dark)];
@@ -49,11 +49,11 @@ a,
 	.button {
 		&:not(.button-reset) {
 			&:focus {
-				@apply !outline-none !bg-focus-light !no-underline hover:!no-underline hover:!bg-focus-light group-hover:!bg-focus-light;
-				@apply !text-focus-dark hover:!text-focus-dark group-hover:!text-focus-dark;
+				@apply outline-none! bg-focus-light! no-underline! hover:no-underline! hover:bg-focus-light! group-hover:bg-focus-light!;
+				@apply text-focus-dark! hover:text-focus-dark! group-hover:text-focus-dark!;
 				&:not(.no-path-fill) {
 					& path {
-						@apply !fill-focus-dark;
+						@apply fill-focus-dark!;
 					}
 				}
 				@apply border-b-0 shadow-[0_0_0_4px_var(--color-focus-dark)];
@@ -64,11 +64,11 @@ a,
 	a,
 	.link {
 		&:focus {
-			@apply !outline-none !bg-focus-light !no-underline hover:!no-underline hover:!bg-focus-light group-hover:!bg-focus-light;
-			@apply !text-focus-dark hover:!text-focus-dark group-hover:!text-focus-dark;
+			@apply outline-none! bg-focus-light! no-underline! hover:no-underline! hover:bg-focus-light! group-hover:bg-focus-light!;
+			@apply text-focus-dark! hover:text-focus-dark! group-hover:text-focus-dark!;
 			&:not(.no-path-fill) {
 				& path {
-					@apply !fill-focus-dark;
+					@apply fill-focus-dark!;
 				}
 			}
 			@apply shadow-[0_-3px_0_0_var(--color-focus-light),0_1px_0_0_var(--color-focus-light),0_4px_0_0_var(--color-focus-dark)];
@@ -78,11 +78,11 @@ a,
 	.button-reset {
 		&:focus {
 			& .link {
-				@apply !outline-none !bg-focus-light !no-underline hover:!no-underline hover:!bg-focus-light group-hover:!bg-focus-light;
-				@apply !text-focus-dark hover:!text-focus-dark group-hover:!text-focus-dark;
+				@apply outline-none! bg-focus-light! no-underline! hover:no-underline! hover:bg-focus-light! group-hover:bg-focus-light!;
+				@apply text-focus-dark! hover:text-focus-dark! group-hover:text-focus-dark!;
 				&:not(.no-path-fill) {
 					& path {
-						@apply !fill-focus-dark;
+						@apply fill-focus-dark!;
 					}
 				}
 				@apply shadow-[0_-3px_0_0_var(--color-focus-light),0_1px_0_0_var(--color-focus-light),0_4px_0_0_var(--color-focus-dark)];
@@ -92,23 +92,23 @@ a,
 }
 
 .visually-hidden {
-	@apply absolute -left-[9999px] top-auto w-[1px] h-[1px] overflow-hidden;
+	@apply absolute -left-[9999px] top-auto w-px h-px overflow-hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
 	* {
-		@apply !animate-none !transition-none;
+		@apply animate-none! transition-none!;
 	}
 }
 
 .skip-link:focus-visible {
-	@apply !outline-none !bg-focus-light !no-underline hover:!no-underline hover:!bg-focus-light group-hover:!bg-focus-light;
-	@apply !text-focus-dark hover:!text-focus-dark group-hover:!text-focus-dark;
+	@apply outline-none! bg-focus-light! no-underline! hover:no-underline! hover:bg-focus-light! group-hover:bg-focus-light!;
+	@apply text-focus-dark! hover:text-focus-dark! group-hover:text-focus-dark!;
 	&:not(.no-path-fill) {
 		& path {
-			@apply !fill-focus-dark;
+			@apply fill-focus-dark!;
 		}
 	}
 	@apply focus-visible:shadow-[0_-3px_0_0_var(--color-focus-light),0_1px_0_0_var(--color-focus-light),0_4px_0_0_var(--color-focus-dark)];
-	@apply fixed top-[1px] left-[1px] w-auto h-auto z-[99];
+	@apply fixed top-px left-px w-auto h-auto z-99;
 }
