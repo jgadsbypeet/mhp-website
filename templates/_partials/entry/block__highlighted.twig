@@ -1,0 +1,10 @@
+{% extends "_partials/block-containers/standard" %}
+
+{% block matrixBlock %}
+	<div class="flex items-stretch my-5 md:my-5-lg fm--ntm lm--nbm">
+		<div class="flex-grow-0 flex-shrink-0 block w-[.8rem] rounded bg-secondary"></div>
+  		<div class="px-4 py-3 md:py-3-lg md:px-4-lg lc--nbm">
+			{{ entry.text__text }}
+		</div>
+  	</div>
+{% endblock %}

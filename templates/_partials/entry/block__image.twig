@@ -1,0 +1,36 @@
+{% extends "_partials/block-containers/standard" %}
+{% import "_macro" as macro %}
+{% set image = entry.image__image.one() %}
+{% set crop = entry.image__imageRatio == "standard" %}
+{% set caption = entry.image__caption ?? "" %}
+{% set attribution = image.image__attribution ?? "" %}
+
+{# Small 0–639px: #}
+{% set imageWidthSmall = 544 %}
+{# Medium more than 640px: #}
+{% set imageWidthMedium = 800 %}
+
+{# 16:9 ratio #}
+{% set imageHeightSmall = imageWidthSmall * 0.5625 %}
+{% set imageHeightMedium = imageWidthMedium * 0.5625 %}
+
+{% block matrixBlock %}
+	<div class="my-8 content-image md:my-8-lg">
+		{{ macro.image({
+			image: image,
+			imageClass: "",
+			alt: image.alt,
+			sizes: [
+				{ maxScreen: "640px", width: imageWidthSmall, height: (crop ? imageHeightSmall : "") },
+				{ maxScreen: "", width: imageWidthMedium, height: (crop ? imageHeightMedium : "") }
+			]
+		}) }}
+
+		{% if caption or attribution %}
+			<p class="mt-2 mb-0 reading-width body-xs text-secondary-text md:mt-2-lg">
+				{{ caption|raw }}
+				{{ attribution ? ' Image: ' ~ attribution : '' }}
+			</p>
+		{% endif %}
+	</div>
+{% endblock %}

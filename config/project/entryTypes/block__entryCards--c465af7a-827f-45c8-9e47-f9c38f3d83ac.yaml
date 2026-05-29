@@ -1,0 +1,64 @@
+allowLineBreaksInTitles: false
+color: violet
+description: null
+fieldLayouts:
+  27648bfa-f6f4-4ee8-bc57-27c9a3ff971e:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-07-14T11:08:01+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 506d8357-6bb1-4b98-aa31-628a66d53cfb # Entries
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d69ddf9-4c31-4f99-a527-b0a088d45599
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e7fc8f61-0f08-4d55-b789-c371e90ce67d
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-07-14T11:08:01+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 05ad0930-f6fa-430f-a8d6-f29e553e30dc # Columns
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eda4d11d-5de8-4194-b4c8-d49fa86ac14d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 514a827a-6bfc-4457-9b47-28571f50004c
+        userCondition: null
+    thumbFieldKey: null
+handle: block__entryCards
+hasTitleField: false
+icon: grid
+name: 'Entry navigation cards'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,0 +1,11 @@
+{% set matrixClasses = matrixClasses ?? "" %}
+
+<div class="matrix matrix--{{ entry.type|kebab }}{{ matrixClasses ? ' ' ~ matrixClasses : '' }}">
+  <div class="container">
+    <div class="max-w-xl">
+      {% block matrixBlock %}
+        <p>Matrix "{{ entry.type|kebab|replace("content-", "") }}" not found.</p>
+      {% endblock %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+{% extends "_partials/block-containers/standard" %}
+{% set type = entry.action__option ?? "entryLink" %}
+{% set link = entry.action__entryLink ?? null %}
+{% if type == "assetLink" %}
+  {% set link = entry.action__assetLink ?? null %}
+  {% set linkSource = "" %}
+{% elseif type == "urlLink" %}
+  {% set link = entry.action__urlLink ?? null %}
+{% endif %}
+
+{% block matrixBlock %}
+  {% include "_components/action-link" with {
+    blockClasseses: "my-8 md:my-8-lg",
+    linkOption: type,
+    linkUrl: link.value,
+    linkTarget: link.target,
+    linkText: link.label,
+  } %}
+{% endblock %}

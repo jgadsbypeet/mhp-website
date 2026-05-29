@@ -29,9 +29,11 @@
 
       {% block body %}
         <div class="matrix-sections matrix-section--first section even:bg-secondary">
-          {% include "_matrix" with {
-            "matrix": bodyContent 
-          } %}
+          {# {% include "_matrix" with {
+            "matrix": bodyContent
+          } %} #}
+
+          {{ entry.standard__blocks.eagerly().render() }}
 
           {% if cookiePolicyEntry %}
             {% if entry.id == cookiePolicyEntry.id %}

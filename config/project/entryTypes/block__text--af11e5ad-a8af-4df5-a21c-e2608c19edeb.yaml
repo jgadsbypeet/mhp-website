@@ -1,0 +1,57 @@
+allowLineBreaksInTitles: false
+color: blue
+description: null
+fieldLayouts:
+  27f3b5db-d1ee-48a4-b3e8-1b8d67396563:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-07-14T10:57:27+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f532ffc5-e55e-40a0-b01e-70b9c34ba6f6 # Text
+            handle: null
+            instructions: null
+            label: __blank__
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f39d5cc9-26e6-4e4e-95fe-b549a6ce5bfe
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 034dfd2c-4cd2-4e1a-8f9f-ea2f6cd929dd
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "Write using plain English and short sentences.\r\n\r\nBody text can contain external links and internal links.\r\n\r\nAvoid italicising text, as this can make it harder to read for dyslexic users, and may not be announced by screenreader software. Use **bold (strong)** for emphasis.\r\n\r\nBulleted lists can be used to make blocks of text easier to read and break information into manageable chunks.\r\n\r\nNumbered lists can be used instead of bulleted lists when the order of the items is relevant."
+            dateAdded: '2025-07-14T11:00:20+00:00'
+            displayInPane: false
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 8f281575-04f0-4906-9300-30f6c128ec36
+            userCondition: null
+            width: 100
+        name: 'Editor guide'
+        uid: 72568765-e379-4143-a120-6e781bf138dc
+        userCondition: null
+    thumbFieldKey: null
+handle: block__text
+hasTitleField: false
+icon: i-cursor
+name: Text
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

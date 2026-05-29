@@ -1,7 +1,0 @@
-{% set matrixClasses = matrixClasses ?? "" %}
-
-<div class="matrix-section matrix-section--{{ block.type|kebab }} section even:bg-grey-4{{ matrixClasses ? ' ' ~ matrixClasses : '' }}">
-  {% block matrixBlock %}
-    <p>Matrix "{{ block.type|kebab|replace("content-", "") }}" not found</p>
-  {% endblock %}
-</div>

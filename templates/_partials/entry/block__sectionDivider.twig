@@ -1,0 +1,8 @@
+{% extends "_partials/block-containers/section" %}
+{# Use a section divider block instead of nested blocks so you can move blocks up and down between sections. #}
+
+</div>{# close section #}
+<div class="matrix-section matrix-section--{{ entry.type|kebab }} section even:bg-secondary">
+	{% block matrixBlock %}{% endblock %}
+</div>{# close section #}
+<div class="matrix-section matrix-section--{{ entry.type|kebab }} section even:bg-secondary">
