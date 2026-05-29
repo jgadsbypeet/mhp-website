@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
 @source "../../templates/**/*.{html,twig}";
-
-/* Force-include arbitrary width classes used dynamically */
-@source inline("w-[50%] w-[70%] w-[85%]");
+@source "../../src/scripts/**/*.js";
 
 @theme {
 	/* Breakpoints */
