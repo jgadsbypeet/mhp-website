@@ -1,4 +1,5 @@
 // CSS
+import "./styles/tailwind.css";
 import "./styles/site.scss";
 
 

@@ -1,0 +1,11 @@
+.lc--nbm {
+	& > *:last-child {
+		@apply mb-0;
+	}
+}
+
+.fc--ntm {
+	& > *:first-child {
+		@apply mt-0;
+	}
+}

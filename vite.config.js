@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 import ViteRestart from "vite-plugin-restart";
 import copy from "rollup-plugin-copy";
 import legacy from "@vitejs/plugin-legacy";
@@ -55,6 +56,7 @@ export default defineConfig(({ command }) => ({
         port: 3000,
     },
     plugins: [
+        tailwindcss(),
         ViteRestart({
             reload: ["./templates/**/*"],
         }),

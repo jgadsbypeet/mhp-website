@@ -1,4 +1,4 @@
-// headings
+/* headings */
 .heading-xxxl {
 	@apply font-heading font-semibold text-xxxl md:text-xxxl-md lg:text-xxxl-lg;
 }
@@ -23,7 +23,7 @@
 .heading-xxs {
 	@apply font-body font-semibold text-xxs;
 }
-// paragraphs
+/* paragraphs */
 .body-m {
 	@apply font-heading font-normal text-m md:text-m-lg;
 }
@@ -40,25 +40,22 @@ p {
 	@apply mb-4 md:mb-4-lg;
 }
 .styled-lists {
-	ol, ul {
+	& ol, & ul {
 		@apply flex flex-col gap-2 mb-4 md:mb-4-lg;
 	}
-
-	ol {
+	& ol {
 		@apply list-decimal pl-[2.2rem] md:pl-[2.4rem];
 	}
-
-	ul {
-		li {
+	& ul {
+		& li {
 			@apply relative pl-[2.2rem] md:pl-[2.4rem];
-
 			&:before {
 				@apply content-[''] rounded-full block bg-primary absolute left-1 top-[.8rem] w-[.8rem] h-[.8rem] md:top-[.9rem] md:w-[1rem] md:h-[1rem];
 			}
 		}
 	}
 }
-// link
+/* link */
 a, .link, .heading-s.link {
 	@apply text-interactions underline decoration-1 underline-offset-[3px] hover:text-interactions-hover hover:no-underline group-hover:text-interactions-hover group-hover:no-underline;
 }
@@ -74,13 +71,12 @@ strong {
 .text-testimonial {
 	@apply text-[2.2rem] leading-[2.8rem] md:text-[2.8rem] md:leading-[3.6rem] text-secondary-text;
 }
-// table
+/* table */
 table {
 	@apply w-full mb-7 md:mb-7-lg;
 }
 th, td {
 	@apply text-left align-top border-b py-3 pr-4 md:py-3-lg md:pr-4-lg last:pr-0;
-
 	& > *:last-child {
 		@apply mb-0;
 	}
@@ -91,11 +87,10 @@ th {
 td {
 	@apply border-b-grey-3;
 }
-// CK editor table
+/* CKEditor table */
 figure.table {
 	@apply w-full mb-7 md:mb-7-lg;
-
-	table {
+	& table {
 		@apply mb-0;
 	}
 }

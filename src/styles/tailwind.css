@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@source "../../templates/**/*.{html,twig}";
+
+/* Force-include arbitrary width classes used dynamically */
+@source inline("w-[50%] w-[70%] w-[85%]");
+
+@theme {
+	/* Breakpoints */
+	--breakpoint-sm: 420px;
+	--breakpoint-md: 640px;
+	--breakpoint-nav: 900px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1280px;
+
+	/* Font families */
+	--font-display: sans-serif;
+	--font-heading: sans-serif;
+	--font-body: sans-serif;
+
+	/* Font weights */
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+
+	/* Font sizes [size, line-height] */
+	--text-reset: 62.5%;
+	--text-xxxl: 3.6rem;
+	--text-xxxl--line-height: 4.4rem;
+	--text-xxxl-md: 5.2rem;
+	--text-xxxl-md--line-height: 6rem;
+	--text-xxxl-lg: 5.8rem;
+	--text-xxxl-lg--line-height: 6.8rem;
+	--text-xxl: 3.2rem;
+	--text-xxl--line-height: 4rem;
+	--text-xxl-md: 4.4rem;
+	--text-xxl-md--line-height: 5.2rem;
+	--text-xxl-lg: 4.8rem;
+	--text-xxl-lg--line-height: 5.6rem;
+	--text-xl: 2.8rem;
+	--text-xl--line-height: 3.6rem;
+	--text-xl-md: 4rem;
+	--text-xl-md--line-height: 4.8rem;
+	--text-xl-lg: 4.2rem;
+	--text-xl-lg--line-height: 5rem;
+	--text-l: 2.4rem;
+	--text-l--line-height: 3.2rem;
+	--text-l-lg: 3.2rem;
+	--text-l-lg--line-height: 4rem;
+	--text-m: 1.9rem;
+	--text-m--line-height: 2.4rem;
+	--text-m-lg: 2.3rem;
+	--text-m-lg--line-height: 3rem;
+	--text-s: 1.8rem;
+	--text-s--line-height: 2.4rem;
+	--text-s-lg: 2rem;
+	--text-s-lg--line-height: 2.8rem;
+	--text-xs: 1.6rem;
+	--text-xs--line-height: 2rem;
+	--text-xs-lg: 1.7rem;
+	--text-xs-lg--line-height: 2.2rem;
+	--text-xxs: 1.5rem;
+	--text-xxs--line-height: 1.8rem;
+
+	/* Colors */
+	--color-black: #303032;
+	--color-grey-1: #5D5D61;
+	--color-grey-2: #86868C;
+	--color-grey-3: #B8B8BF;
+	--color-grey-4: #D5D5DE;
+	--color-grey-5: #EDEDF2;
+	--color-red: #D8002E;
+	--color-yellow: #FFE600;
+	--color-green: #008525;
+	--color-interactions: #0055FF;
+	--color-interactions-hover: #0044CC;
+	--color-interactions-press: #003399;
+	--color-focus-dark: var(--color-black);
+	--color-focus-light: var(--color-yellow);
+	--color-error: var(--color-red);
+	--color-primary-text: var(--color-black);
+	--color-secondary-text: var(--color-grey-1);
+	--color-reversed-text: white;
+	--color-primary: var(--color-black);
+	--color-secondary: var(--color-grey-1);
+
+	/* Spacing */
+	--spacing-1: 4px;
+	--spacing-2: 8px;
+	--spacing-3: 12px;
+	--spacing-4: 16px;
+	--spacing-5: 24px;
+	--spacing-6: 32px;
+	--spacing-7: 40px;
+	--spacing-8: 48px;
+	--spacing-9: 56px;
+	--spacing-10: 64px;
+	--spacing-1-lg: 4px;
+	--spacing-2-lg: 8px;
+	--spacing-3-lg: 16px;
+	--spacing-4-lg: 24px;
+	--spacing-5-lg: 32px;
+	--spacing-6-lg: 40px;
+	--spacing-7-lg: 48px;
+	--spacing-8-lg: 56px;
+	--spacing-9-lg: 64px;
+	--spacing-10-lg: 80px;
+	--spacing-sm: 16px;
+	--spacing-md: 24px;
+	--spacing-lg: 32px;
+
+	/* Border radius */
+	--radius-sm: 4px;
+	--radius: 8px;
+	--radius-md: 12px;
+	--radius-lg: 20px;
+
+	/* Box shadows */
+	--shadow-md: 0px 3px 15px rgba(0, 0, 0, 0.2);
+
+	/* Max widths */
+	--max-width-sm: 600px;
+	--max-width-md: 768px;
+	--max-width-lg: 1088px;
+	--max-width-xl: 1240px;
+}
+
+@layer components {
+	.container {
+		@apply max-w-lg mx-auto px-sm md:px-lg lg:px-lg;
+	}
+	.container .container {
+		@apply px-0;
+	}
+	.section {
+		@apply py-10 lg:py-10-lg;
+	}
+}
+
+@import "./base/typography.css";
+@import "./base/buttons.css";
+@import "./base/forms.css";
+@import "./utility/helpers.css";
+@import "./utility/accessibility.css";
+@import "./components/accordion.css";
+@import "./matrix/matrix.css";
+@import "./matrix/video.css";

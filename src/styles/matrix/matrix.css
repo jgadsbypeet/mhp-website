@@ -1,0 +1,17 @@
+.matrix:last-child {
+	& > div:last-child > div:last-child {
+		@apply mb-0;
+		& > *:last-child {
+			@apply mb-0;
+		}
+	}
+}
+
+.matrix:first-child {
+	& > div:first-child > div:first-child {
+		@apply mt-0;
+		& > *:first-child {
+			@apply mt-0;
+		}
+	}
+}
