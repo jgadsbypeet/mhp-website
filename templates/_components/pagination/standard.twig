@@ -1,88 +1,76 @@
 {% do seomatic.helper.paginate(pageInfo) %}
-{% set type = type ?? "" %}
-{% set classes = classes ?? "" %}
-{% set pagItemClasses = "no-underline h-12 w-12 flex justify-center items-center rounded-full border" %}
+{% set isMobile = (type ?? "") == "mobile" %}
+{% set spread = isMobile ? 0 : 1 %}
+{% set current = pageInfo.currentPage %}
+{% set total = pageInfo.totalPages %}
 
-<div class="{{ blockClasses }}">
-  <p class="w-full text-center">Page {{ pageInfo.currentPage }} of {{ pageInfo.totalPages }}</p>
+{% set minPage = max(1, current - spread) %}
+{% set maxPage = min(total, current + spread) %}
 
-  <ul class="flex content-center justify-center w-full space-x-4">
+{% set pageItemClasses = "no-underline bg-white h-[40px] w-[40px] flex justify-center items-center rounded-sm border-2 focus-visible:border-focus-dark focus-visible:!shadow-[0_0_0_2px_theme(colors.focus.dark)]" %}
+
+<nav aria-label="Pagination" class="{{ blockClasses ?? '' }}">
+  <p class="w-full mb-3 md:mb-3-lg">Page {{ current }} of {{ total }}</p>
+
+  <ul class="flex flex-wrap gap-2">
     <li class="p-0">
       {% if pageInfo.prevUrl %}
-        <a href="{{ pageInfo.prevUrl }}" class="{{ pagItemClasses }}">
-          {{ svg("dist/assets/images/icons/chevron.svg")|attr({class: "rotate-180"}) }}
-
+        <a href="{{ pageInfo.prevUrl }}" class="{{ pageItemClasses }}">
+          {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
           <span class="sr-only">Previous</span>
         </a>
       {% else %}
-        <span class="{{ pagItemClasses }} text-secondary-text">
-          {{ svg("dist/assets/images/icons/chevron.svg")|attr({class: "rotate-180"}) }}
-          
-          <span class="sr-only">Previous</span>
+        <span class="{{ pageItemClasses }} hover:bg-white" aria-hidden="true">
+          {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
         </span>
       {% endif %}
     </li>
 
-    {# set page numbers to show max 3 for mobile view #}
-    {% if type == "mobile" %}
-      {% set prevPageNumbers = 1 %}
-      {% set nextPageNumbers = 1 %}
-
-      {% if pageInfo.currentPage == 1 %}
-        {% set nextPageNumbers = 2 %}
-      {% elseif pageInfo.currentPage > 2 and (pageInfo.currentPage < pageInfo.totalPages - 1) %}
-        {% set prevPageNumbers = 1 %}
-        {% set nextPageNumbers = 1 %}
-      {% elseif pageInfo.currentPage == pageInfo.totalPages %}
-        {% set prevPageNumbers = 2 %}
-      {% endif %}
-    {# set page numbers to show max 5 #}
-    {% else %}
-      {% set prevPageNumbers = 2 %}
-      {% set nextPageNumbers = 2 %}
-
-      {% if pageInfo.currentPage == 1 %}
-        {% set nextPageNumbers = 4 %}
-      {% elseif pageInfo.currentPage == 2 %}
-        {% set nextPageNumbers = 3 %}
-      {% elseif pageInfo.currentPage > 2 and (pageInfo.currentPage < pageInfo.totalPages - 1) %}
-        {% set prevPageNumbers = 2 %}
-        {% set nextPageNumbers = 2 %}
-      {% elseif pageInfo.currentPage == (pageInfo.totalPages - 1) %}
-        {% set prevPageNumbers = 3 %}
-      {% elseif pageInfo.currentPage == pageInfo.totalPages %}
-        {% set prevPageNumbers = 4 %}
-      {% endif %}
+    {% if minPage > 1 %}
+      <li class="p-0">
+        <a href="{{ pageInfo.getPageUrl(1) }}" class="{{ pageItemClasses }}">1</a>
+      </li>
     {% endif %}
-    
-    {% for page, url in pageInfo.getPrevUrls(prevPageNumbers) %}
+
+    {% if minPage > 2 %}
+      <li class="p-0" aria-hidden="true">
+        <span class="{{ pageItemClasses }} !bg-transparent border-transparent pb-[10px]">…</span>
+      </li>
+    {% endif %}
+
+    {% for page in range(minPage, maxPage) %}
       <li class="p-0">
-        <a class="{{ pagItemClasses }}" href="{{ url }}">{{ page }}</a>
+        {% if page == current %}
+          <span class="{{ pageItemClasses }}" aria-current="page">{{ page }}</span>
+        {% else %}
+          <a href="{{ pageInfo.getPageUrl(page) }}" class="{{ pageItemClasses }}">{{ page }}</a>
+        {% endif %}
       </li>
     {% endfor %}
 
-    <li class="p-0">
-      <span class="{{ pagItemClasses }} bg-black text-reversed-text border-black">{{ pageInfo.currentPage }}</span>
-    </li>
-
-    {% for page, url in pageInfo.getNextUrls(nextPageNumbers) %}
-      <li class="p-0">
-        <a class="{{ pagItemClasses }}" href="{{ url }}">{{ page }}</a>
+    {% if maxPage < total - 1 %}
+      <li class="p-0" aria-hidden="true">
+        <span class="{{ pageItemClasses }} !bg-transparent border-transparent pb-[10px]">…</span>
       </li>
-    {% endfor %}
+    {% endif %}
+
+    {% if maxPage < total %}
+      <li class="p-0">
+        <a href="{{ pageInfo.getPageUrl(total) }}" class="{{ pageItemClasses }}">{{ total }}</a>
+      </li>
+    {% endif %}
 
     <li class="p-0">
       {% if pageInfo.nextUrl %}
-        <a href="{{ pageInfo.nextUrl }}" class="{{ pagItemClasses }}">
+        <a href="{{ pageInfo.nextUrl }}" class="{{ pageItemClasses }}">
+          {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
           <span class="sr-only">Next</span>
-          {{ svg("dist/assets/images/icons/chevron.svg") }}
         </a>
       {% else %}
-        <span class="{{ pagItemClasses }} text-secondary-text">
-          <span class="sr-only">Next</span>
-          {{ svg("dist/assets/images/icons/chevron.svg") }}
+        <span class="{{ pageItemClasses }} hover:bg-white" aria-hidden="true">
+          {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
         </span>
       {% endif %}
     </li>
   </ul>
-</div>
+</nav>
