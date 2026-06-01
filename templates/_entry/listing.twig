@@ -5,7 +5,7 @@
 {% set entriesPerPage = 10 %}
 {% set listByChannel = craft.entries().section(listChannel).with(['url', 'title']) ?? null %}
 {% set allEntries = listByChannel.all() ?? null %}
-{% set listEntries = listByChannel.limit(entriesPerPage) %}
+{% set listEntries = listByChannel.eagerly().limit(entriesPerPage) %}
 
 {# Paginate entries #}
 {% paginate listEntries as pageInfo, pageEntries %}

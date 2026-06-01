@@ -1,26 +1,22 @@
 {% extends "_partials/block-containers/w-xl" %}
 {% import "_macro" as macro %}
 
+{# action link #}
 {% set button = entry.cta__actionLink.one() %}
-{% set linkUrl = "" %}
-{% set linkTarget = "" %}
-{% set asset = "" %}
 {% set linkText = button.action__linkText ?? "More info" %}
-{% set linkOption = button.action__option %}
-{% if linkOption == "assetLink" %}
-  {% set asset = button.action__assetLink.one() %}
-  {% set linkUrl = asset.url %}
-{% elseif linkOption == "urlLink" %}
-  {% set linkTarget = button.action__linkTarget %}
-  {% set linkUrl = button.action__urlLink %}
-{% elseif linkOption == "entryLink" %}
-  {% set linkUrl = button.action__entryLink.one().url %}
+{% set type = button.action__option ?? "entryLink" %}
+{% set link = button.action__entryLink ?? null %}
+{% if type == "assetLink" %}
+  {% set link = button.action__assetLink ?? null %}
+  {% set linkSource = "" %}
+{% elseif type == "urlLink" %}
+  {% set link = button.action__urlLink ?? null %}
 {% endif %}
 
 {% set image = entry.cta__image.one() ?? null %}
 
 {% block matrixBlock %}
-  <div class="my-8 md:my-8-lg md:flex md:flex-row-reverse bg-secondary group hover:cursor-pointer data-link" data-link="{{ linkUrl }}">
+  <div class="my-8 md:my-8-lg md:flex md:flex-row-reverse bg-secondary group hover:cursor-pointer data-link" data-link="{{ link.value }}">
     {% if image %}
       <div class="overflow-hidden md:basis-1/2">
         {{ macro.image({
@@ -42,13 +38,13 @@
 
       <p>{{ entry.cta__text }}</p>
 
-			{% include "_components/action-link" with {
-				blockClasseses: "",
-				linkOption: linkOption,
-				linkUrl: linkUrl,
-				linkTarget: linkTarget,
-				linkText: linkText,
-			} %}
+      {% include "_components/action-link" with {
+        blockClasseses: "my-8 md:my-8-lg",
+        linkOption: type,
+        linkUrl: link.value,
+        linkTarget: link.target,
+        linkText: link.label,
+      } %}
     </div>
   </div>
 {% endblock %}

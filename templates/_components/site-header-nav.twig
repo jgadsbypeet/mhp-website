@@ -109,6 +109,7 @@
                     .descendantOf(menuAsEntry)
                     .descendantDist(1)
 										.with(['url', 'title'])
+                    .eagerly()
                     .all() ?? null %}
                 {# second level menus #}
                 {% if subPages %}

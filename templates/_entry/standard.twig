@@ -1,15 +1,10 @@
 {% extends '_layouts/base' %}
 
 {% set heroImage = entry.heroImage.one() ?? null %}
-{% set bodyContent = entry.content__content.all() ?? null %}
-{% set bodyJumpLinks = [] %}
-{% if bodyContent %}
-  {% for block in bodyContent %}
-		{% if (block.type == 'content__heading' and block.heading__jumpLink) or (block.type == 'content__callToAction' and block.heading__jumpLink) %}
-			{% set bodyJumpLinks = bodyJumpLinks|merge([block]) %}
-		{% endif %}
-  {% endfor %}
-{% endif %}
+{% set bodyJumpLinks = entry.standard__blocks
+  .type(['block__heading', 'block__callToAction'])
+  .heading__jumpLink(true)
+  .all() %}
 
 {% block content %}
   {% apply typogrify %}

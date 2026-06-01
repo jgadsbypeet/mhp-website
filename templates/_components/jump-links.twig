@@ -1,7 +1,7 @@
 <div class="container relative">
   <div class="max-w-md mx-auto">
     <nav id="page-contents" aria-label="Page contents" class="mb-8 lc--nbm">
-      <h2 class="mt-0 mb-2 text-base font-normal text-left text-secondary-text md:text-base-lg md:mb-2-lg">On this page</h2>
+      <h2 class="mt-0 mb-2 text-left text-secondary-text md:text-base-lg md:mb-2-lg">On this page</h2>
 
       <ol class="lc--nbm">
         {% for jumpLink in bodyJumpLinks %}
@@ -9,7 +9,7 @@
             <a class="relative inline-block pl-[26px] md:pl-[28px]" href="#heading-{{ jumpLink.id }}">
               {{ svg("dist/assets/images/icons/arrow-down.svg")|attr({ class: "absolute left-1 top-[7px] md:top-[9px]"}) }}
 
-              {{- jumpLink.heading__jumpLinkText ?? jumpLink.heading__heading -}}
+              {{- jumpLink.heading__jumpLinkText ?? jumpLink.cta__heading ?? jumpLink.heading__heading -}}
             </a>
           </li>
         {% endfor %}

@@ -1,6 +1,6 @@
 {% extends "_partials/block-containers/w-xl" %}
 
-{% set entries = entry.entryCards__entries.all() ?? null %}
+{% set entries = entry.entryCards__entries.eagerly().all() ?? null %}
 {% set threeCol = entry.entryCards__columns %}
 
 {% block matrixBlock %}

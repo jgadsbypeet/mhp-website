@@ -1,5 +1,5 @@
 {% extends "_partials/block-containers/w-xl" %}
-{% set logos = entry.logos__logos.all() ?? '' %}
+{% set logos = entry.logos__logos.eagerly().all() ?? '' %}
 
 {% block matrixBlock %}
 	{% if logos %}
