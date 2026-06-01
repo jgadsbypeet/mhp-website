@@ -17,7 +17,7 @@
         <ul class="-mt-sm md:-mt-lg lg:-mt-xl">
           {% for entry in pageEntries %}
             <li class="mt-sm md:mt-lg lg:mt-xl">
-              {% include "_components/_entry-card/simple" with {
+              {% include "_components/entry-card/simple" with {
                 cardUrl: entry.url,
                 cardTitle: entry.title
               } %}
@@ -30,12 +30,12 @@
 
       {# Page numbers #}
       {% if pageInfo.totalPages > 1 %}
-        {% include "_components/_pagination/standard" with {
+        {% include "_components/pagination/standard" with {
           type: "mobile",
           blockClasses: "mt-7 md:hidden"
         } %}
 
-        {% include "_components/_pagination/standard" with {
+        {% include "_components/pagination/standard" with {
           blockClasses: "hidden md:block md:mt-7-lg"
         } %}
       {% endif %}

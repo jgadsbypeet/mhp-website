@@ -9,7 +9,7 @@
 {% block content %}
   {% apply typogrify %}
     {% block hero %}
-      {% include "_components/_hero/standard" with {
+      {% include "_components/hero/standard" with {
         title: entry.title ?? "",
         standfirst: entry.standfirst ?? ""
       } %}
