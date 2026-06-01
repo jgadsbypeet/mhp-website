@@ -3,16 +3,16 @@
 {% set blockClasses = blockClasses ?? "rounded-lg my-8 md:my-8-lg" %}
 {% set blockId = blockId ?? "" %}
 
-{# As a fallback, we only hide the accordion panel and style the accordion heading to be clickable if JavaScript is loaded #}
+<details class="border-y {{ blockClasses }}">
+  <summary {{ blockId ? 'id=' ~ blockId }} class="group cursor-pointer outline-none list-none [&::-webkit-details-marker]:hidden">
+    <span class="group-focus-visible:bg-focus-light group-focus-visible:shadow-[0_-3px_0_0_var(--color-focus-light),0_1px_0_0_var(--color-focus-light),0_4px_0_0_var(--color-focus-dark)];">{{- heading -}}</span>
+  </summary>
 
-<div class="accordion border-y {{ blockClasses }}">
-  <h3 {{ blockId ? 'id=' ~ blockId }} class="m-0 text-base accordion__heading text-inherit md:text-base-lg">{{ heading }}</h3>
-
-  <div class="px-6 pb-4 accordion__body lc--nbm md:pb-4-lg md:px-7-lg">
+  <div class="px-6 pb-4 lc--nbm md:pb-4-lg md:px-7-lg">
     {% if bodyType == "matrix" %}
       {{ body.eagerly().render() }}
     {% else %}
       {{ body }}
     {% endif %}
   </div>
-</div>
+</details>

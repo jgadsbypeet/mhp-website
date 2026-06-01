@@ -1,6 +1,5 @@
 import "./site-header-nav"
 import "./data-link"
-import "./accordion"
 import "./go-back"
 import "./copy-link"
 import "./video"
