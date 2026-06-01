@@ -12,13 +12,13 @@
         <a href="{{ pageInfo.prevUrl }}" class="{{ pagItemClasses }}">
           {{ svg("dist/assets/images/icons/chevron.svg")|attr({class: "rotate-180"}) }}
 
-          <span class="visually-hidden">Previous</span>
+          <span class="sr-only">Previous</span>
         </a>
       {% else %}
         <span class="{{ pagItemClasses }} text-secondary-text">
           {{ svg("dist/assets/images/icons/chevron.svg")|attr({class: "rotate-180"}) }}
           
-          <span class="visually-hidden">Previous</span>
+          <span class="sr-only">Previous</span>
         </span>
       {% endif %}
     </li>
@@ -74,12 +74,12 @@
     <li class="p-0">
       {% if pageInfo.nextUrl %}
         <a href="{{ pageInfo.nextUrl }}" class="{{ pagItemClasses }}">
-          <span class="visually-hidden">Next</span>
+          <span class="sr-only">Next</span>
           {{ svg("dist/assets/images/icons/chevron.svg") }}
         </a>
       {% else %}
         <span class="{{ pagItemClasses }} text-secondary-text">
-          <span class="visually-hidden">Next</span>
+          <span class="sr-only">Next</span>
           {{ svg("dist/assets/images/icons/chevron.svg") }}
         </span>
       {% endif %}

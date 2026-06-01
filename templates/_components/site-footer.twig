@@ -11,7 +11,7 @@
       <div class="flex w-full pb-4 overflow-hidden border-b border-white social -mr-2xs -mt-2xs md:pb-4-lg">
         {% for account in socialMediaAccounts %}
           <a href="{{ account.socialMedia__profileUrl }}" target="_blank" rel="noopener" class="text-reversed-text hover:text-reversed-text mr-2xs mt-2xs flex justify-center items-center w-[32px] h-[32px] md:w-[40px] md:h-[40px]">
-            {{ svg("dist/assets/images/icons/social/" ~ account.socialMedia__platform.value ~ ".svg")|attr({class: "w-full h-auto"}) }}<span class="visually-hidden">{{ account.socialMedia__platform.label }}</span>
+            {{ svg("dist/assets/images/icons/social/" ~ account.socialMedia__platform.value ~ ".svg")|attr({class: "w-full h-auto"}) }}<span class="sr-only">{{ account.socialMedia__platform.label }}</span>
           </a>
         {% endfor %}
       </div>

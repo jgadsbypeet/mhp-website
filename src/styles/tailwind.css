@@ -130,7 +130,6 @@
 @import "./base/forms.css";
 @import "./utility/helpers.css";
 @import "./utility/accessibility.css";
-@import "./components/accordion.css";
 @import "./matrix/matrix.css";
 @import "./matrix/video.css";
 @import "./utility/print.css";

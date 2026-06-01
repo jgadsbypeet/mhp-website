@@ -39,7 +39,7 @@
   </head>
 
   <body class="text-primary-text body-s min-h-screen flex flex-col antialiased{{ bodyClasses ? ' ' ~ bodyClasses : '' }}">
-    <a class="visually-hidden skip-link" href="#content">Skip to main content</a>
+    <a class="sr-only skip-link" href="#content">Skip to main content</a>
 
 		{% block adminBar %}
 			{% if entry is defined and currentUser and not craft.app.request.isPreview %}
