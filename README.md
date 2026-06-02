@@ -158,3 +158,32 @@ It’s a manual process to set up the triggers in GTM to set the tracking cookie
 1. Select the ‘Edit’ (pencil icon) in the ‘Triggering’ section.
 1. Select ‘Add Exceptions’ and add the cookie consent trigger to the tag as an exception. (If there are already exceptions in the tag, select the plus symbol next to ‘Exceptions’ to add the exception.)
 1. Select ‘Submit’ at the top of the screen and then ‘Publish’. You may need to wait for about 20 minutes or so before the tag changes go live.
+
+## Upgrade
+
+### Tailwind
+This boilerplate uses Tailwind CSS v4. Key differences from v3:
+
+- **No `tailwind.config.js`** — configuration is now done in CSS using `@theme` inside `src/styles/site.css`. Custom breakpoints, colours, spacing, and fonts are defined there.
+- **No `@apply` for unknown utilities** — arbitrary values must use the in-line syntax, e.g. `[clip-path:none]` instead of `@apply clip-path-none`.
+- **Breakpoint syntax** — `screen()` is used in CSS media queries instead of `theme(‘screens.md’)`.
+- **Utility renames** — some v3 class names changed in v4 (e.g. `shadow-sm` scales differ). Check the [Tailwind v4 upgrade guide](https://tailwindcss.com/docs/upgrade-guide) if a class appears to have no effect.
+
+### Matrix blocks
+Use `.eagerly().render()` to render nested matrix entries instead of a manual loop. Craft automatically maps each entry type to its corresponding `comp__<handle>.twig` partial.
+
+For example, the accordions block (`block__accordions.twig`) renders its nested accordion entries like this (`block__accordion` is entry type handle, and `comp__accordion` is the descent field handle.):
+
+```twig
+{{ entry.block__accordion.eagerly().render() }}
+```
+
+Craft looks up `templates/_partials/entry/comp__accordion.twig` for each entry and renders it — no loop needed. The `.eagerly()` call batch-loads all related entries and their fields in a single query, avoiding N+1 database queries.
+
+The equivalent manual loop (avoid this pattern where possible):
+
+```twig
+{% for accordion in entry.block__accordion.all() %}
+  {% include "_partials/entry/comp__accordion" %}
+{% endfor %}
+```

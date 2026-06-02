@@ -1,5 +1,5 @@
 // CSS
-import "./styles/tailwind.css";
+import "./styles/site.css";
 
 
 // js
