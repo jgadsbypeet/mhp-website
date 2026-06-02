@@ -1,4 +1,4 @@
-dateModified: 1780069093
+dateModified: 1780394902
 elementSources:
   craft\elements\Entry:
     -
@@ -195,6 +195,10 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
   dashboard-begone:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  datastar:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
