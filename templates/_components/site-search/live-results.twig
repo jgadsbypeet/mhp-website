@@ -1,5 +1,5 @@
 {#
-  Called via datastar.get() from site-search/form.twig on each debounced input event,
+  Called via datastar.get() from _components/site-search/form.twig on each debounced input event,
   and by pagination buttons when the user pages through results.
 
   {% patchelements %} sends a server-sent event; Datastar finds the matching element by id (e.g. id="search-results" in search.twig) and replaces it with the returned HTML.
@@ -36,7 +36,7 @@
 
       {#
         - Pagination styling should match with pagination/standard.twig
-        - might consider adding a css file
+        - might consider adding a new css file
       #}
       {% set pageItemClasses = "no-underline bg-white h-[40px] w-[40px] flex justify-center items-center rounded-sm border-2 focus-visible:border-focus-dark focus-visible:!shadow-[0_0_0_2px_theme(colors.focus.dark)]" %}
 

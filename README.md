@@ -159,9 +159,9 @@ It’s a manual process to set up the triggers in GTM to set the tracking cookie
 1. Select ‘Add Exceptions’ and add the cookie consent trigger to the tag as an exception. (If there are already exceptions in the tag, select the plus symbol next to ‘Exceptions’ to add the exception.)
 1. Select ‘Submit’ at the top of the screen and then ‘Publish’. You may need to wait for about 20 minutes or so before the tag changes go live.
 
-## Upgrade
+## Updates
 
-### Tailwind
+### Tailwind (02/06/2026)
 This boilerplate uses Tailwind CSS v4. Key differences from v3:
 
 - **No `tailwind.config.js`** — configuration is now done in CSS using `@theme` inside `src/styles/site.css`. Custom breakpoints, colours, spacing, and fonts are defined there.
@@ -169,7 +169,7 @@ This boilerplate uses Tailwind CSS v4. Key differences from v3:
 - **Breakpoint syntax** — `screen()` is used in CSS media queries instead of `theme(‘screens.md’)`.
 - **Utility renames** — some v3 class names changed in v4 (e.g. `shadow-sm` scales differ). Check the [Tailwind v4 upgrade guide](https://tailwindcss.com/docs/upgrade-guide) if a class appears to have no effect.
 
-### Matrix blocks
+### Matrix blocks (02/06/2026)
 Use `.eagerly().render()` to render nested matrix entries instead of a manual loop. Craft automatically maps each entry type to its corresponding `comp__<handle>.twig` partial.
 
 For example, the accordions block (`block__accordions.twig`) renders its nested accordion entries like this (`block__accordion` is entry type handle, and `comp__accordion` is the descent field handle.):
@@ -187,3 +187,16 @@ The equivalent manual loop (avoid this pattern where possible):
   {% include "_partials/entry/comp__accordion" %}
 {% endfor %}
 ```
+
+### Live search (Datastar) (02/06/2026)
+Search uses the `putyourlightson/craft-datastar` plugin to show results as the user types, without reloading the page.
+
+**How it works:**
+- Results update automatically as the user types (with a short delay to avoid firing on every keystroke)
+- Pagination is also live, clicking a page number updates the results in place
+- If JavaScript is unavailable, the search form still works as a normal submission
+
+**Key files:**
+- `templates/search.twig` for the main search page, shows the initial results on load
+- `templates/_components/site-search/form.twig` for the search input, triggers live updates as the user types
+- `templates/_components/site-search/live-results.twig` for fetched by Datastar on each update, returns the new results and pagination
