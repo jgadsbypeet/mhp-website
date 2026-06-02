@@ -1,0 +1,114 @@
+{#
+  Called via datastar.get() from site-search/form.twig on each debounced input event,
+  and by pagination buttons when the user pages through results.
+
+  {% patchelements %} sends a server-sent event; Datastar finds the matching element by id (e.g. id="search-results" in search.twig) and replaces it with the returned HTML.
+#}
+
+{% set limit = 10 %}
+{% set offset = signals.offset ?? 0 %}
+{% set searchQuery = signals.q ?? '' %}
+{% set results = searchQuery ? craft.entries().section("not webDoc").search(searchQuery).limit(limit).offset(offset).all() : [] %}
+{% set total = searchQuery ? craft.entries().section("not webDoc").search(searchQuery).count() : 0 %}
+{% set currentPage = (offset / limit + 1)|round(0, 'floor') %}
+{% set totalPages = total > 0 ? (total / limit)|round(0, 'ceil') : 0 %}
+
+{% patchelements %}
+<div id="search-results">
+  {% if searchQuery %}
+    <h2>{{ total }} result{{ total == 1 ? '' : 's'}}{{ total ? ':' : ''}}</h2>
+
+    {% for entry in results %}
+      {% include "_components/entry-card/simple" with {
+        cardUrl: entry.url,
+        cardTitle: entry.title,
+      } %}
+    {% endfor %}
+
+    {% if not results|length %}
+      <p>No results found for <strong>{{ searchQuery }}</strong>.</p>
+    {% endif %}
+
+    {% if totalPages > 1 %}
+      {% set spread = 1 %}
+      {% set minPage = max(1, currentPage - spread) %}
+      {% set maxPage = min(totalPages, currentPage + spread) %}
+
+      {#
+        - Pagination styling should match with pagination/standard.twig
+        - might consider adding a css file
+      #}
+      {% set pageItemClasses = "no-underline bg-white h-[40px] w-[40px] flex justify-center items-center rounded-sm border-2 focus-visible:border-focus-dark focus-visible:!shadow-[0_0_0_2px_theme(colors.focus.dark)]" %}
+
+      <nav aria-label="Pagination">
+        <p class="w-full mb-3 md:mb-3-lg">Page {{ currentPage }} of {{ totalPages }}</p>
+        <ul class="flex flex-wrap gap-2">
+
+          <li class="p-0">
+            {% if offset > 0 %}
+              <button class="{{ pageItemClasses }}" data-on:click="$offset = {{ offset - limit }}; {{ datastar.get('_components/site-search/live-results') }}">
+                {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
+                <span class="sr-only">Previous</span>
+              </button>
+            {% else %}
+              <span class="{{ pageItemClasses }} hover:bg-white" aria-hidden="true">
+                {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
+              </span>
+            {% endif %}
+          </li>
+
+          {% if minPage > 1 %}
+            <li class="p-0">
+              <button class="{{ pageItemClasses }}" data-on:click="$offset = 0; {{ datastar.get('_components/site-search/live-results') }}">1</button>
+            </li>
+          {% endif %}
+
+          {% if minPage > 2 %}
+            <li class="p-0" aria-hidden="true">
+              <span class="{{ pageItemClasses }} !bg-transparent border-transparent pb-[10px]">…</span>
+            </li>
+          {% endif %}
+
+          {% for page in range(minPage, maxPage) %}
+            <li class="p-0">
+              {% if page == currentPage %}
+                <span class="{{ pageItemClasses }}" aria-current="page">{{ page }}</span>
+              {% else %}
+                {% set pageOffset = (page - 1) * limit %}
+                <button class="{{ pageItemClasses }}" data-on:click="$offset = {{ pageOffset }}; {{ datastar.get('_components/site-search/live-results') }}">{{ page }}</button>
+              {% endif %}
+            </li>
+          {% endfor %}
+
+          {% if maxPage < totalPages - 1 %}
+            <li class="p-0" aria-hidden="true">
+              <span class="{{ pageItemClasses }} !bg-transparent border-transparent pb-[10px]">…</span>
+            </li>
+          {% endif %}
+
+          {% if maxPage < totalPages %}
+            <li class="p-0">
+              {% set lastOffset = (totalPages - 1) * limit %}
+              <button class="{{ pageItemClasses }}" data-on:click="$offset = {{ lastOffset }}; {{ datastar.get('_components/site-search/live-results') }}">{{ totalPages }}</button>
+            </li>
+          {% endif %}
+
+          <li class="p-0">
+            {% if currentPage < totalPages %}
+              <button class="{{ pageItemClasses }}" data-on:click="$offset = {{ offset + limit }}; {{ datastar.get('_components/site-search/live-results') }}">
+                {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
+                <span class="sr-only">Next</span>
+              </button>
+            {% else %}
+              <span class="{{ pageItemClasses }} hover:bg-white" aria-hidden="true">
+                {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
+              </span>
+            {% endif %}
+          </li>
+
+        </ul>
+      </nav>
+    {% endif %}
+  {% endif %}
+</div>
+{% endpatchelements %}

@@ -15,30 +15,34 @@
     title: 'Search results',
   } %}
 
-	<div class="site-content section">
+	<div class="site-content section" data-signals="{offset: 0}">
 		<div class="container">
-			{% include "_components/search-form" with {
-        classes: "w-full"
+			{% include "_components/site-search/form" with {
+        classes: "w-full",
+        liveSearch: true,
       } %}
 
-			{% if searchQuery %}
-				<h2>{{ totalResults|length }} result{{ totalResults|length == 1 ? '' : 's'}}{{ totalResults|length ? ':' : ''}}</h2>
-			{% endif %}
-
-			{% if searchResults|length %}
-				{% paginate searchResults as pageInfo, searchResults %}
-
-        {% for entry in searchResults %}
-          {% include "_components/entry-card/simple" with {
-            cardUrl: entry.url,
-            cardTitle: entry.title,
-          } %}
-        {% endfor %}
-
-        {% if pageInfo.totalPages > 1 %}
-          {% include "_components/pagination" %}
+      {# when live search (by datastar) is used, this part will be loaded from site-search/live-results.twig #}
+      <div id="search-results">
+        {% if searchQuery %}
+          <h2>{{ totalResults|length }} result{{ totalResults|length == 1 ? '' : 's'}}{{ totalResults|length ? ':' : ''}}</h2>
         {% endif %}
-      {% endif %}
+
+        {% if searchResults|length %}
+          {% paginate searchResults as pageInfo, searchResults %}
+
+          {% for entry in searchResults %}
+            {% include "_components/entry-card/simple" with {
+              cardUrl: entry.url,
+              cardTitle: entry.title,
+            } %}
+          {% endfor %}
+
+          {% if pageInfo.totalPages > 1 %}
+            {% include "_components/pagination/standard" %}
+          {% endif %}
+        {% endif %}
+      </div>
     </div>
   </div>
 {% endblock %}
