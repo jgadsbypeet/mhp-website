@@ -44,6 +44,7 @@ This is the boilerplate install for Craft CMS builds at William Joseph. It conta
     - Edit the title and description at the top.
     - Remove the **How to use boilerplate** section.
     - Edit the **Running the site locally** section.
+1. Update CLAUDE.md (if applicable)
 
 ## Running the site locally
 The quickest way to get this site up and running in your local development machine is to use [DDEV](https://ddev.com/). On a Mac;
@@ -124,7 +125,7 @@ We can also use:
 
 Tailwind uses similar class names for margins – just replace `p` with `m`.
 
-The spacing sizes are set in the `site.css` file (`--spacing` using `@theme` inside `src/styles/site.css`).
+The spacing sizes are set in the `src/styles/site.css` file (using `--spacing` inside `@theme`).
 
 Use the responsive spacing Tailwind classes in the HTML like this:
 `<div class="pb-10 social md:pb-10-lg">`

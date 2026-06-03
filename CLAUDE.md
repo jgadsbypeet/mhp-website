@@ -46,15 +46,15 @@ ddev import-db                      # Import database snapshot
 ### Template System
 - **Base layout:** `templates/_layouts/base.twig` — HTML shell, GTM, cookie consent
 - **Entry routing:** `templates/_entry.twig` — dispatches to section/type-specific templates by checking `entry.section` and `entry.type`
-- **Components:** `templates/_components/` — reusable partials (header, footer, hero, breadcrumb, pagination)
-- **Matrix blocks:** `templates/_matrix/blocks/` — flexible content blocks (text, heading, image, video, accordion, CTA, logos, embed, etc.) rendered dynamically based on block type
+- **Components:** `templates/_components/` — reusable partials (header, footer, hero, breadcrumb, pagination, site-search)
+- **Matrix blocks:** `templates/_partials/entry/` — block templates named `block__<handle>.twig`; each renders its nested entries via `.eagerly().render()`, which automatically maps to the corresponding `comp__<handle>.twig` partial in the same directory
 - **Macros:** `templates/_macro.twig` — utilities for responsive images (`srcset`), video embeds, click-to-call, and copy-link. Import with `{% import '_macro' as macro %}`
 
 ### JavaScript
 All JS is vanilla ES modules (jQuery was removed). Modules live in `src/scripts/` and are imported from `src/index.js`. Current modules: accordion, cookies, video, data-link, copy-link, go-back, site-header-nav.
 
 ### CSS
-Tailwind CSS (utility-first) + PostCSS + SCSS. Custom breakpoints: `sm` (420px), `md` (640px), `nav` (900px), `lg` (1024px), `xl` (1280px). SCSS source is organized under `src/styles/` with subdirectories: `base/`, `components/`, `matrix/`, `utility/`.
+Tailwind CSS v4 (utility-first) + PostCSS + SCSS. Configuration (breakpoints, colours, spacing, fonts) is done in CSS via `@theme` inside `src/styles/site.css` — there is no `tailwind.config.js`. Custom breakpoints: `sm` (420px), `md` (640px), `nav` (900px), `lg` (1024px), `xl` (1280px). SCSS source is organized under `src/styles/` with subdirectories: `base/`, `components/`, `matrix/`, `utility/`. Use arbitrary value syntax for unknown utilities, e.g. `[clip-path:none]` instead of `@apply`.
 
 ### Craft Configuration (`config/`)
 - `general.php` — core Craft settings (dev mode, admin URL, image quality 75%, max upload 160MB)
@@ -76,6 +76,7 @@ Tailwind CSS (utility-first) + PostCSS + SCSS. Custom breakpoints: `sm` (420px),
 | `nystudio107/craft-typogrify` | Typography enhancements |
 | `miranj/craft-obfuscator` | Email obfuscation |
 | `verbb/knock-knock` | Staging password protection |
+| `putyourlightson/craft-datastar` | Live search (server-sent events via Datastar) |
 
 ### Environment Variables
 Copy `.env.example.dev` to `.env`. Key variables: `CRAFT_ENVIRONMENT`, `CRAFT_DEV_MODE`, `CRAFT_ALLOW_ADMIN_CHANGES`, `CRAFT_DB_*`, `CRAFT_WEB_URL`, `CRAFT_ADMIN_URL` (default: `boiler-admin`), `SITE_NAME`, `PRIMARY_SITE_URL`, and Mailpit SMTP settings for local email testing.
