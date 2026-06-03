@@ -17,6 +17,7 @@ This is the boilerplate install for Craft CMS builds at William Joseph. It conta
 1. Check that the databse spec in the DDEV config file matches the one on the server.
 1. With Docker Desktop running in the background, run `ddev start`
     - See below **Running the site locally** section for [Docker Desktop](https://www.docker.com/products/docker-desktop/) install
+    - You might need to run `ddev delete -O && ddev start` to remove exisitng DB and start fresh
 1. Install Craft/plugins
     - `ddev composer install`
 1. Create .env file from .env.example
@@ -37,6 +38,8 @@ This is the boilerplate install for Craft CMS builds at William Joseph. It conta
 1. Edit and lock the Craft and plugins versions
     - Check plugin versions from Settings > Plugins
     - Edit Craft and plugin versions in composer.json file
+1. Edit package.json
+    - name and git details
 1. Edit this README.md file for the new project by doing the following:
     - Edit the title and description at the top.
     - Remove the **How to use boilerplate** section.
@@ -121,7 +124,7 @@ We can also use:
 
 Tailwind uses similar class names for margins – just replace `p` with `m`.
 
-The spacing sizes are set in the Tailwind configuration file (`spacing` in `tailwind.config.js`).
+The spacing sizes are set in the `site.css` file (`--spacing` using `@theme` inside `src/styles/site.css`).
 
 Use the responsive spacing Tailwind classes in the HTML like this:
 `<div class="pb-10 social md:pb-10-lg">`

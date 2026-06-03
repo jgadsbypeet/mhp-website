@@ -12,7 +12,7 @@
     "nystudio107/craft-typogrify": "^5.0.0",
     "nystudio107/craft-vite": "^5.0.1",
     "putyourlightson/craft-dashboard-begone": "^3.0.0",
-    "putyourlightson/craft-datastar": "1.0.1",
+    "putyourlightson/craft-datastar": "^1.0.1",
     "putyourlightson/craft-sherlock": "^5.0.0",
     "verbb/expanded-singles": "^3.0.0",
     "verbb/formie": "^3.0.0",
@@ -37,7 +37,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.2"
+      "php": "8.3"
     }
   },
   "scripts": {
