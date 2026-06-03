@@ -168,6 +168,7 @@ This boilerplate uses Tailwind CSS v4. Key differences from v3:
 - **No `@apply` for unknown utilities** — arbitrary values must use the in-line syntax, e.g. `[clip-path:none]` instead of `@apply clip-path-none`.
 - **Breakpoint syntax** — `screen()` is used in CSS media queries instead of `theme(‘screens.md’)`.
 - **Utility renames** — some v3 class names changed in v4 (e.g. `shadow-sm` scales differ). Check the [Tailwind v4 upgrade guide](https://tailwindcss.com/docs/upgrade-guide) if a class appears to have no effect.
+- **A few class names removed/changed** - `.visually-hidden` replaced with `.sr-only` (Tailwind built-in), `.button-reset` replaced with `.custom-button`, `.custom-link` added for eaiser theme style overrides.
 
 ### Matrix blocks (02/06/2026)
 Use `.eagerly().render()` to render nested matrix entries instead of a manual loop. Craft automatically maps each entry type to its corresponding `comp__<handle>.twig` partial.
