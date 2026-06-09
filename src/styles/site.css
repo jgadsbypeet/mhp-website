@@ -1,4 +1,14 @@
+@import "./base/font-face.css"; /* when font-face.css has @import used within the file, it needs to be put before tailwindcss */
 @import "tailwindcss";
+@import "./base/layout.css";
+@import "./base/typography.css";
+@import "./base/buttons.css";
+@import "./base/forms.css";
+@import "./utility/helpers.css";
+@import "./utility/accessibility.css";
+@import "./matrix/matrix.css";
+@import "./matrix/video.css";
+@import "./utility/print.css";
 
 @source "../../templates/**/*.{html,twig}";
 @source "../../src/scripts/**/*.js";
@@ -122,14 +132,3 @@
 	--max-width-lg: 1088px;
 	--max-width-xl: 1240px;
 }
-
-@import "./base/font-face.css";
-@import "./base/layout.css";
-@import "./base/typography.css";
-@import "./base/buttons.css";
-@import "./base/forms.css";
-@import "./utility/helpers.css";
-@import "./utility/accessibility.css";
-@import "./matrix/matrix.css";
-@import "./matrix/video.css";
-@import "./utility/print.css";
