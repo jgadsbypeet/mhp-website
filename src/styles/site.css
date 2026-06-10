@@ -80,15 +80,15 @@
 	--color-red: #D8002E;
 	--color-yellow: #FFE600;
 	--color-green: #008525;
+	--color-text-primary: var(--color-black);
+	--color-text-secondary: var(--color-grey-1);
+	--color-text-reversed: white;
 	--color-interactions: #0055FF;
 	--color-interactions-hover: #0044CC;
 	--color-interactions-press: #003399;
 	--color-focus-dark: var(--color-black);
 	--color-focus-light: var(--color-yellow);
 	--color-error: var(--color-red);
-	--color-primary-text: var(--color-black);
-	--color-secondary-text: var(--color-grey-1);
-	--color-reversed-text: white;
 	--color-primary: var(--color-black);
 	--color-secondary: var(--color-grey-1);
 

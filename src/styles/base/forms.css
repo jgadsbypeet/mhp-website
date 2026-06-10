@@ -15,7 +15,7 @@ input[type="text"],
 input[type="url"],
 select,
 textarea {
-	@apply flex items-center appearance-none outline-none px-4 py-1 border-2 border-secondary w-full rounded-none mb-5 md:mb-5-lg placeholder:text-secondary-text mt-[1.2rem];
+	@apply flex items-center appearance-none outline-none px-4 py-1 border-2 border-secondary w-full rounded-none mb-5 md:mb-5-lg placeholder:text-text-secondary mt-[1.2rem];
 }
 
 select {
@@ -68,7 +68,7 @@ label {
 }
 
 .fui-instructions {
-	@apply text-secondary-text;
+	@apply text-text-secondary;
 	& > *:last-child {
 		@apply mb-0;
 	}
@@ -134,7 +134,7 @@ label {
 
 .fui-type-multi-line-text {
 	& .fui-limit-text {
-		@apply text-secondary-text;
+		@apply text-text-secondary;
 	}
 }
 

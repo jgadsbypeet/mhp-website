@@ -5,12 +5,12 @@
 {% set registration = siteFooter.registration ?? null %}
 {% set contactPhoneNumber = siteFooter.contactPhoneNumber ?? null %}
 
-<div class="py-8 bg-black text-reversed-text md:py-8-lg">
+<div class="py-8 bg-black text-text-reversed md:py-8-lg">
   <div class="container">
     {% if socialMediaAccounts %}
       <div class="flex w-full pb-4 overflow-hidden border-b border-white social -mr-2xs -mt-2xs md:pb-4-lg">
         {% for account in socialMediaAccounts %}
-          <a href="{{ account.socialMedia__profileUrl }}" target="_blank" rel="noopener" class="text-reversed-text hover:text-reversed-text mr-2xs mt-2xs flex justify-center items-center w-[32px] h-[32px] md:w-[40px] md:h-[40px]">
+          <a href="{{ account.socialMedia__profileUrl }}" target="_blank" rel="noopener" class="text-text-reversed hover:text-text-reversed mr-2xs mt-2xs flex justify-center items-center w-[32px] h-[32px] md:w-[40px] md:h-[40px]">
             {{ svg("dist/assets/images/icons/social/" ~ account.socialMedia__platform.value ~ ".svg")|attr({class: "w-full h-auto"}) }}<span class="sr-only">{{ account.socialMedia__platform.label }}</span>
           </a>
         {% endfor %}
@@ -18,8 +18,8 @@
 		{% endif %}
 
 		{% if contactPhoneNumber %}
-			<div class="flex gap-3 mb-3 contact text-reversed-text body-xs md:flex-row md:gap-3-lg md:mb-3-lg">
-				{{ macro.clickToCall(contactPhoneNumber, 'text-reversed-text hover:text-reversed-text') }}
+			<div class="flex gap-3 mb-3 contact text-text-reversed body-xs md:flex-row md:gap-3-lg md:mb-3-lg">
+				{{ macro.clickToCall(contactPhoneNumber, 'text-text-reversed hover:text-text-reversed') }}
 			</div>
 		{% endif %}
 
@@ -29,7 +29,7 @@
         <ul class="p-0 m-0">
           {% for entry in legalNav %}
             <li class="block before:content-[''] md:float-left pl-0 md:pr-3 md:mr-3 md:border-r md:border-r-white md:last:mr-0 md:last:pr-0 md:last:border-none">
-              <a href="{{ entry.url }}" class="text-reversed-text hover:text-reversed-text hover:underline">{{ entry.title }}</a>
+              <a href="{{ entry.url }}" class="text-text-reversed hover:text-text-reversed hover:underline">{{ entry.title }}</a>
             </li>
           {% endfor %}
         </ul>
@@ -39,7 +39,7 @@
     <div class="pt-4 body-xxs md:pt-4-lg md:flex md:justify-between">
       <div class="mb-3 reg-details md:grow md:mb-0 md:mr-9">&copy;&nbsp;{{ now|date("Y") }}&nbsp;{{ siteName }}{{ registration ? ", " ~ registration : "" }}</div>
 
-      <div class="credit md:shrink-0 md:text-right">Website: <a class="text-reversed-text hover:text-reversed-text" href="https://www.williamjoseph.co.uk" target="_blank">William Joseph</a></div>
+      <div class="credit md:shrink-0 md:text-right">Website: <a class="text-text-reversed hover:text-text-reversed" href="https://www.williamjoseph.co.uk" target="_blank">William Joseph</a></div>
     </div>
   </div>
 </div>

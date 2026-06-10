@@ -25,12 +25,12 @@
 				{% set filesize = (bytes / 1024)|round ~ " KB" %}
 			{% endif %}
 
-			<p class="flex flex-wrap m-0 overflow-hidden body-xxs text-secondary-text">
+			<p class="flex flex-wrap m-0 overflow-hidden body-xxs text-text-secondary">
 				<span class="mr-sm">{{ link.element.extension|upper }}</span>
-				<span class="relative before:content-[''] before:rounded-full before:block before:bg-secondary-text before:absolute before:-left-[10px] before:top-[.9rem] before:w-[4px] before:h-[4px]">{{ filesize }}</span>
+				<span class="relative before:content-[''] before:rounded-full before:block before:bg-text-secondary before:absolute before:-left-[10px] before:top-[.9rem] before:w-[4px] before:h-[4px]">{{ filesize }}</span>
 			</p>
 		{% elseif linkSource %}
-			<p class="m-0 body-xxs text-secondary-text">{{ linkSource }}</p>
+			<p class="m-0 body-xxs text-text-secondary">{{ linkSource }}</p>
 		{% endif %}
 	</a>
 </div>

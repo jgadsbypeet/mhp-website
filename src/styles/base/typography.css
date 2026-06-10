@@ -60,7 +60,7 @@ a, .link, .heading-s.link {
 	@apply text-interactions underline decoration-1 underline-offset-[3px] hover:text-interactions-hover hover:no-underline group-hover:text-interactions-hover group-hover:no-underline;
 }
 .link-invert {
-	@apply text-reversed-text hover:text-reversed-text group-hover:text-reversed-text;
+	@apply text-text-reversed hover:text-text-reversed group-hover:text-text-reversed;
 }
 .link-no-underline {
 	@apply no-underline;
@@ -69,7 +69,7 @@ strong {
 	@apply font-semibold;
 }
 .text-testimonial {
-	@apply text-[2.2rem] leading-[2.8rem] md:text-[2.8rem] md:leading-[3.6rem] text-secondary-text;
+	@apply text-[2.2rem] leading-[2.8rem] md:text-[2.8rem] md:leading-[3.6rem] text-text-secondary;
 }
 /* table */
 table {
