@@ -1,96 +1,96 @@
-/* headings */
-.heading-xxxl {
-	@apply font-heading font-semibold text-xxxl md:text-xxxl-md lg:text-xxxl-lg;
-}
-.heading-xxl {
-	@apply font-heading font-semibold text-xxl md:text-xxl-md lg:text-xxl-lg;
-}
-.heading-xl {
-	@apply font-heading font-semibold text-xl md:text-xl-md lg:text-xl-lg;
-}
-.heading-l {
-	@apply font-heading font-semibold text-l md:text-l-lg;
-}
-.heading-m {
-	@apply font-heading font-semibold text-m md:text-m-lg;
-}
-.heading-s {
-	@apply font-body font-semibold text-s md:text-s-lg;
-}
-.heading-xs {
-	@apply font-body font-semibold text-xs md:text-xs-lg;
-}
-.heading-xxs {
-	@apply font-body font-semibold text-xxs;
-}
-/* paragraphs */
-.body-m {
-	@apply font-heading font-normal text-m md:text-m-lg;
-}
-.body-s {
-	@apply font-body font-normal text-s md:text-s-lg;
-}
-.body-xs {
-	@apply font-body font-normal text-xs md:text-xs-lg;
-}
-.body-xxs {
-	@apply font-body font-normal text-xxs;
-}
-p {
-	@apply mb-4 md:mb-4-lg;
-}
-.styled-lists {
-	& ol, & ul {
-		@apply flex flex-col gap-2 mb-4 md:mb-4-lg;
+@layer base {
+	p {
+		@apply mb-4 md:mb-4-lg;
 	}
-	& ol {
-		@apply list-decimal pl-[2.2rem] md:pl-[2.4rem];
+	a {
+		@apply text-buttons underline decoration-1 underline-offset-[2px] hover:text-links-hover hover:no-underline group-hover:text-links-hover group-hover:no-underline;
 	}
-	& ul {
-		& li {
-			@apply relative pl-[2.2rem] md:pl-[2.4rem];
-			&:before {
-				@apply content-[''] rounded-full block bg-primary absolute left-1 top-[.8rem] w-[.8rem] h-[.8rem] md:top-[.9rem] md:w-[1rem] md:h-[1rem];
-			}
+	strong {
+		@apply font-medium;
+	}
+	table {
+		@apply w-full mb-7 md:mb-7-lg;
+	}
+	th, td {
+		@apply text-left align-top border-b py-3 pr-4 md:py-3-lg md:pr-4-lg last:pr-0;
+		& > *:last-child {
+			@apply mb-0;
+		}
+	}
+	th {
+		@apply font-medium border-b-grey-2;
+	}
+	td {
+		@apply border-b-cuf-grey-10;
+	}
+	figure.table {
+		@apply w-full mb-7 md:mb-7-lg;
+		& table {
+			@apply mb-0;
 		}
 	}
 }
-/* link */
-a, .link, .heading-s.link {
-	@apply text-interactions underline decoration-1 underline-offset-[3px] hover:text-interactions-hover hover:no-underline group-hover:text-interactions-hover group-hover:no-underline;
-}
-.link-invert {
-	@apply text-text-reversed hover:text-text-reversed group-hover:text-text-reversed;
-}
-.link-no-underline {
-	@apply no-underline;
-}
-strong {
-	@apply font-semibold;
-}
-.text-testimonial {
-	@apply text-[2.2rem] leading-[2.8rem] md:text-[2.8rem] md:leading-[3.6rem] text-text-secondary;
-}
-/* table */
-table {
-	@apply w-full mb-7 md:mb-7-lg;
-}
-th, td {
-	@apply text-left align-top border-b py-3 pr-4 md:py-3-lg md:pr-4-lg last:pr-0;
-	& > *:last-child {
-		@apply mb-0;
+
+@layer components {
+	/* headings */
+	.heading-xxxl {
+		@apply font-heading font-medium text-xxxl md:text-xxxl-lg;
 	}
-}
-th {
-	@apply font-semibold border-b-secondary;
-}
-td {
-	@apply border-b-grey-3;
-}
-/* CKEditor table */
-figure.table {
-	@apply w-full mb-7 md:mb-7-lg;
-	& table {
-		@apply mb-0;
+	.heading-xxl {
+		@apply font-heading font-medium text-xxl md:text-xxl-lg;
+	}
+	.heading-xl {
+		@apply font-heading font-medium text-xl md:text-xl-lg;
+	}
+	.heading-l {
+		@apply font-heading font-medium text-l md:text-l-lg;
+	}
+	.heading-m {
+		@apply font-heading font-medium text-m md:text-m-lg;
+	}
+	.heading-s {
+		@apply font-body font-medium text-s md:text-s-lg;
+	}
+	.heading-xs {
+		@apply font-body font-medium text-xs md:text-xs-lg;
+	}
+	/* paragraphs */
+	.body-m {
+		@apply font-heading font-normal text-m md:text-m-lg;
+	}
+	.body-s {
+		@apply font-body font-normal text-s md:text-s-lg;
+	}
+	.body-xs {
+		@apply font-body font-normal text-xs md:text-xs-lg;
+	}
+	.styled-lists {
+		& ol, & ul {
+			@apply flex flex-col gap-2 mb-4 md:mb-4-lg;
+		}
+		& ol {
+			@apply list-decimal pl-[2.2rem] md:pl-[2.4rem];
+		}
+		& ul {
+			& li {
+				@apply relative pl-[2.2rem] md:pl-[2.4rem];
+				&:before {
+					@apply content-[''] rounded-full block bg-black absolute left-[.1rem] top-[1rem] w-[.6rem] h-[.6rem] md:top-[1.3rem] md:w-[.8rem] md:h-[.8rem];
+				}
+			}
+		}
+	}
+	/* links */
+	.link {
+		@apply text-buttons underline decoration-1 underline-offset-[2px] hover:text-links-hover hover:no-underline group-hover:text-links-hover group-hover:no-underline;
+	}
+	.link-invert {
+		@apply text-text-reversed hover:text-text-reversed group-hover:text-text-reversed;
+	}
+	.link-no-underline {
+		@apply no-underline;
+	}
+	.text-testimonial {
+		@apply text-[2.2rem] leading-[2.8rem] md:text-[2.8rem] md:leading-[3.6rem] text-text-secondary;
 	}
 }
