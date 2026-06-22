@@ -1,10 +1,9 @@
 {% set class = class ?? "" %}
 {% set bodyType = bodyType ?? "" %}
 {% set blockClasses = blockClasses ?? "rounded-lg my-8 md:my-8-lg" %}
-{% set blockId = blockId ?? "" %}
 
 <details class="border-y {{ blockClasses }}">
-  <summary {{ blockId ? 'id=' ~ blockId }} class="group cursor-pointer outline-none list-none [&::-webkit-details-marker]:hidden">
+  <summary class="group cursor-pointer outline-none list-none [&::-webkit-details-marker]:hidden">
     <span class="group-focus-visible:bg-focus-light group-focus-visible:shadow-[0_-3px_0_0_var(--color-focus-light),0_1px_0_0_var(--color-focus-light),0_4px_0_0_var(--color-focus-dark)];">{{- heading -}}</span>
   </summary>
 

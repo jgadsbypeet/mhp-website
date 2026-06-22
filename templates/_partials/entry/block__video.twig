@@ -47,11 +47,8 @@
 
     {% if transcript %}
       {% include "_components/accordion" with {
-        class: "video",
-        index: "",
-        heading: "Read video transcript",
+        heading: "Video transcript",
         body: transcript,
-				blockId: entry.id
       } %}
     {% endif %}
   </div>
