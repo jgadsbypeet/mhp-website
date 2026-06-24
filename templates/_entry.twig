@@ -1,6 +1,6 @@
 {% include [
-  "_entry_" ~ entry.section.handle|kebab ~ "/" ~ entry.type|kebab|replace("entry-", ""),
+  "_entry_" ~ entry.section.handle|kebab ~ "/" ~ entry.type.handle|replace("entry__", ""),
   "_entry/_" ~ entry.section.handle|kebab ~ "/standard",
-  "_entry/" ~ entry.type|kebab|replace("entry-", ""),
+  "_entry/" ~ entry.type.handle|replace("entry__", ""),
   "_entry/standard"
 ] %}
