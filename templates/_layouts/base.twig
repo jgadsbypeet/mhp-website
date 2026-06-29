@@ -67,24 +67,11 @@
       {% include "_components/site-footer" %}
     {% endblock %}
 
-    {# CSRF for javascript post request #}
-    <script type="text/javascript">
+    {# only include CSRF if javascript post request is used globally. (e.g. js fetch method: 'POST' #}
+    {# <script type="text/javascript">
         window.csrfTokenName = "{{ craft.app.config.general.csrfTokenName|e('js') }}";
         window.csrfTokenValue = "{{ craft.app.request.csrfToken|e('js') }}";
-    </script>
-    {# Javascript for fallback js files #}
-    <script>
-      function createScriptElement(src) {
-        const script = document.createElement('script');
-        script.src = src;
-        return script;
-      }
-
-      function loadFallbackScript(fallbackScript) {
-          const fallbackScriptElement = createScriptElement(fallbackScript);
-          document.head.append(fallbackScriptElement);
-      }
-    </script>
+    </script> #}
 
     {% block footerScripts %}
     {% endblock %}
