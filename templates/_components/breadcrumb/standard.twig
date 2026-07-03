@@ -38,7 +38,7 @@
         {{ _self.breadcrumb("/", "Home", "", "") }}
 
         {% for entry in breadcrumb %}
-          {{ _self.breadcrumb(entry.url, entry.title|replace("-", " ")|capitalize, "", "") }}
+          {{ _self.breadcrumb(entry.url, entry.title|replace("-", " "), "", "") }}
         {% endfor %}
       {% endblock %}
     </ol>
