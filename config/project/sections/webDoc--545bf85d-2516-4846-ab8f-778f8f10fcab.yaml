@@ -7,19 +7,13 @@ entryTypes:
     uid: 53cc26d6-9a93-49c4-a588-2ae7871da1cf # Listing page
 handle: webDoc
 maxAuthors: 1
+minAuthors: 1
 name: 'Website guides'
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - '1'
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   17ea053e-13d0-4c0f-a465-42342bea6915: # $SITE_NAME
