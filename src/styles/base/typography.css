@@ -3,7 +3,7 @@
 		@apply mb-4 md:mb-4-lg;
 	}
 	a {
-		@apply text-buttons underline decoration-1 underline-offset-[2px] hover:text-links-hover hover:no-underline group-hover:text-links-hover group-hover:no-underline;
+		@apply text-interactions underline decoration-1 underline-offset-[2px] hover:text-interactions-hover hover:no-underline group-hover:text-interactions-hover group-hover:no-underline;
 	}
 	strong {
 		@apply font-medium;
@@ -21,7 +21,7 @@
 		@apply font-medium border-b-grey-2;
 	}
 	td {
-		@apply border-b-cuf-grey-10;
+		@apply border-b-grey-4;
 	}
 	figure.table {
 		@apply w-full mb-7 md:mb-7-lg;
@@ -82,7 +82,7 @@
 	}
 	/* links */
 	.link {
-		@apply text-buttons underline decoration-1 underline-offset-[2px] hover:text-links-hover hover:no-underline group-hover:text-links-hover group-hover:no-underline;
+		@apply text-interactions underline decoration-1 underline-offset-[2px] hover:text-interactions-hover hover:no-underline group-hover:text-interactions-hover group-hover:no-underline;
 	}
 	.link-invert {
 		@apply text-text-reversed hover:text-text-reversed group-hover:text-text-reversed;
