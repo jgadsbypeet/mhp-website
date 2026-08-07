@@ -29,8 +29,8 @@
 			{{ craft.vite.script("src/index.js") }}
 		{% endif %}
 
-		{# Override the SEOmatic setting so the website documentation doesn't appear in search results #}
-    {% if entry is defined and entry.section.handle == 'webDoc' %}
+		{# Override the SEOmatic setting so the website documentation doesn't appear in search results and neither do entries that have 'Exclude from search results' enabled #}
+    {% if entry is defined and (entry.section.handle == 'webDoc' or entry.searchResults) %}
       {% do seomatic.meta.robots("none") %}
     {% endif %}
 

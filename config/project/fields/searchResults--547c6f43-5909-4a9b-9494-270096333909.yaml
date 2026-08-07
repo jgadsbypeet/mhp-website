@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: searchResults
+instructions: "Enabling this removes the entry from the site's search results page and overrides the meta robots value, setting it to 'none', which asks search engines like Google Search to stop sharing the entry."
+name: 'Exclude from search results'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

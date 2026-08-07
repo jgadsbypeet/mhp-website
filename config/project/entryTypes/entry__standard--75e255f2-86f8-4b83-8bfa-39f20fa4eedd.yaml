@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -39,6 +40,7 @@ fieldLayouts:
             dateAdded: '2025-08-18T10:11:57+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 53112398-e0df-4ef1-976b-8272da500720 # Standfirst
             handle: null
             instructions: null
@@ -60,6 +62,7 @@ fieldLayouts:
             dateAdded: '2025-08-18T10:11:57+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: eb8ef9d9-e105-41b5-ba50-3c4c6e9871e7 # Content
             handle: null
             instructions: null
@@ -78,9 +81,26 @@ fieldLayouts:
             uid: 9d3c079b-9817-48f7-9661-57ef30eb4eea
             userCondition: null
           -
+            dateAdded: '2026-08-07T12:29:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 547c6f43-5909-4a9b-9494-270096333909 # Exclude from search results
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 38f35c9c-c8c8-48f1-a7e4-11e26f35da32
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-08-18T10:11:57+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e9f404d8-0076-45fc-aa9e-76a69b393f81 # Internal search keywords
             handle: null
             instructions: null
@@ -102,6 +122,7 @@ fieldLayouts:
             dateAdded: '2025-08-18T10:11:57+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 95870b87-85c2-4fda-97ad-3dab5f1c81e9 # SEO
             handle: null
             instructions: null
@@ -116,6 +137,7 @@ fieldLayouts:
         name: SEO
         uid: 8788b31c-63af-4b79-b2e2-320f744041bf
         userCondition: null
+    thumbFieldKey: null
 handle: entry__standard
 hasTitleField: true
 icon: newspaper
@@ -127,3 +149,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

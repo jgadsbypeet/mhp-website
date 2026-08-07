@@ -1,4 +1,4 @@
-dateModified: 1780394902
+dateModified: 1786107310
 elementSources:
   craft\elements\Entry:
     -
@@ -130,6 +130,7 @@ meta:
     379dfd72-5b5e-42ba-a705-d2785dbab0fa: Quote # Quote
     506d8357-6bb1-4b98-aa31-628a66d53cfb: Entries # Entries
     545bf85d-2516-4846-ab8f-778f8f10fcab: 'Website guides' # Website guides
+    547c6f43-5909-4a9b-9494-270096333909: 'Exclude from search results' # Exclude from search results
     604eaaf1-80fd-42f6-aa9f-3c91970e89aa: 'Action link' # Action link
     673cb6e1-eb77-40ba-b02e-122c3a42286a: 'Cover image' # Cover image
     944eb893-6b00-4c63-b7b9-9ee73630a1f1: Option # Option
