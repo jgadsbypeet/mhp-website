@@ -23,7 +23,7 @@ ddev npm ci                         # Install Node dependencies (use ci, not ins
 
 ### Asset Pipeline
 ```bash
-ddev npm run dev                    # Vite dev server + BrowserSync (watches templates too)
+ddev npm run dev                    # Vite dev server (watches templates too, via vite-plugin-restart)
 ddev npm run build                  # Production build → web/dist/
 ```
 

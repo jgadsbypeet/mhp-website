@@ -19,6 +19,14 @@ nodejs_version: "20.16.0"
 disable_settings_management: true
 web_environment: []
 
+# Expose the Vite dev server (src/index.js -> web/dist) through ddev-router,
+# so Craft can reach it at ${PRIMARY_SITE_URL}:3000 — see config/vite.php.
+web_extra_exposed_ports:
+    - name: vite
+      container_port: 3000
+      http_port: 3001
+      https_port: 3000
+
 # Key features of DDEV's config.yaml:
 
 # name: <projectname> # Name of the project, automatically provides
