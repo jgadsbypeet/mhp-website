@@ -2,7 +2,7 @@
 {# Preview this page at {{ siteName }}/search #}
 
 {% block head %}
-	<title>{{ siteName }} | Search Results</title>
+  <title>{{ siteName }} | Search Results</title>
 {% endblock %}
 
 {% set searchQuery = craft.app.request.getParam("q") %}
@@ -11,13 +11,13 @@
 {% set searchResults = searchQuery ? totalResults.limit(entriesPerPage) : null %}
 
 {% block content %}
-	{% include "_components/hero/simple" with {
+  {% include "_components/hero/simple" with {
     title: 'Search results',
   } %}
 
-	<div class="site-content section" data-signals="{offset: 0}">
-		<div class="container">
-			{% include "_components/site-search/form" with {
+  <div class="site-content section" data-signals="{offset: 0}">
+    <div class="container">
+      {% include "_components/site-search/form" with {
         classes: "w-full",
         liveSearch: true,
       } %}
