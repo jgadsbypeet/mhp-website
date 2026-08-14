@@ -1,3 +1,30 @@
+# https://editorconfig.org
+# Describes the conventions this codebase actually uses, per file type.
+# EditorConfig only affects newly typed lines — it does not reformat files.
+root = true
+
 [*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# PSR-12, which Craft itself follows.
+[*.php]
+indent_size = 4
+
+# The YAML spec forbids tabs in indentation, and Craft regenerates
+# config/project/*.yaml as 2-space, so this is not negotiable.
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Stylesheets are the one place tabs are used consistently here.
+[*.{css,scss}]
 indent_style = tab
-#indent_size // Not set
+
+# Two trailing spaces are a hard line break in Markdown.
+[*.md]
+trim_trailing_whitespace = false
