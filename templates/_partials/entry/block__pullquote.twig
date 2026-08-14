@@ -3,12 +3,12 @@
 {% set cite = entry.quote__cite ?? '' %}
 
 {% block matrixBlock %}
-	<div class="container">
-		<p class="mb-1 body-m md:mb-1-lg">
-			{{ svg("dist/assets/images/icons/quote-mark-open.svg")|attr({ class: "quote-mark inline-block mr-[.8rem]"}) }}{{ entry.quote__text }}{{ svg("dist/assets/images/icons/quote-mark-close.svg")|attr({ class: "quote-mark inline-block ml-[.8rem]"}) }}
-		</p>
-		{% if cite %}
-			<p class="mb-0 body-xs text-text-secondary">{{ cite }}</p>
-		{% endif %}
-	</div>
+  <div class="container">
+    <p class="mb-1 body-m md:mb-1-lg">
+      {{ svg("dist/assets/images/icons/quote-mark-open.svg")|attr({ class: "quote-mark inline-block mr-[.8rem]"}) }}{{ entry.quote__text }}{{ svg("dist/assets/images/icons/quote-mark-close.svg")|attr({ class: "quote-mark inline-block ml-[.8rem]"}) }}
+    </p>
+    {% if cite %}
+      <p class="mb-0 body-xs text-text-secondary">{{ cite }}</p>
+    {% endif %}
+  </div>
 {% endblock %}
