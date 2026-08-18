@@ -1,4 +1,4 @@
-dateModified: 1786117075
+dateModified: 1787056929
 elementSources:
   craft\elements\Entry:
     -
@@ -183,10 +183,6 @@ meta:
     fb678e73-288b-42c7-8c19-27c44d13f324: Heading # Heading
     ffb3da3c-2f4d-47a3-a021-d496e6c5516a: Pages # Pages
 plugins:
-  assetrev:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   ckeditor:
     edition: standard
     enabled: true

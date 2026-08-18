@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55730e6c9587d891d720a4158a6cb139",
+    "content-hash": "0ba2b9694c129cc25146719d9374268e",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -208,42 +208,6 @@
                 "markdown-extra"
             ],
             "time": "2018-03-26T11:24:36+00:00"
-        },
-        {
-            "name": "clubstudioltd/craft-asset-rev",
-            "version": "8.0.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/clubstudioltd/craft-asset-rev/zipball/fbf2c9aae5447ea88478afdcd3a69a7741c7246e",
-                "reference": "fbf2c9aae5447ea88478afdcd3a69a7741c7246e",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^5.0",
-                "php": "^8.2"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Asset Rev",
-                "handle": "assetrev",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://github.com/clubstudioltd/craft-asset-rev/blob/master/CHANGELOG.md",
-                "documentationUrl": "https://github.com/clubstudioltd/craft-asset-rev",
-                "developer": "Club Studio Ltd",
-                "developerUrl": "https://clubstudio.co.uk",
-                "class": "club\\assetrev\\AssetRev"
-            },
-            "autoload": {
-                "psr-4": {
-                    "club\\assetrev\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "A plugin to aid cache-busting",
-            "time": "2024-03-26T19:39:38+00:00"
         },
         {
             "name": "commerceguys/addressing",
