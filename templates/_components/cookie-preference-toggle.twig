@@ -1,22 +1,22 @@
 {% set cookieConsentStatus = getCookie("WJ__cookieConsentStatus") %}
 <div class="section even:bg-sand">
-	<div id="cookie-preference-toggle" class="container cookie-preference-toggle">
-		<form action="{{ url('cookie-preference-updated') }}">
-			<fieldset class="mb-7 md:mb-7-lg">
-				<legend class="mb-7 md:mb-7-lg">
-					<h2 class="heading-l">Your cookie preferences</h2>
-				</legend>
-				<div class="fui-radio">
-					<input type="radio" id="cookie-preference--allow" name="cookie-preference" value="allow" required {{ cookieConsentStatus == "allow" ? "checked" }}>
-					<label for="cookie-preference--allow">Accept all cookies</label>
-				</div>
-				<div class="fui-radio">
-					<input type="radio" id="cookie-preference--reject" name="cookie-preference" value="reject" {{ cookieConsentStatus == "reject" ? "checked" }}>
-					<label for="cookie-preference--reject">Reject additional cookies</label>
-				</div>
-			</fieldset>
+  <div id="cookie-preference-toggle" class="container cookie-preference-toggle">
+    <form action="{{ url('cookie-preference-updated') }}">
+      <fieldset class="mb-7 md:mb-7-lg">
+        <legend class="mb-7 md:mb-7-lg">
+          <h2 class="heading-l">Your cookie preferences</h2>
+        </legend>
+        <div class="fui-radio">
+          <input type="radio" id="cookie-preference--allow" name="cookie-preference" value="allow" required {{ cookieConsentStatus == "allow" ? "checked" }}>
+          <label for="cookie-preference--allow">Accept all cookies</label>
+        </div>
+        <div class="fui-radio">
+          <input type="radio" id="cookie-preference--reject" name="cookie-preference" value="reject" {{ cookieConsentStatus == "reject" ? "checked" }}>
+          <label for="cookie-preference--reject">Reject additional cookies</label>
+        </div>
+      </fieldset>
 
-			<button type="submit">Update preferences</button>
-		</form>
-	</div>
+      <button type="submit">Update preferences</button>
+    </form>
+  </div>
 </div>

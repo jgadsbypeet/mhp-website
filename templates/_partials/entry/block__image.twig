@@ -15,22 +15,22 @@
 {% set imageHeightMedium = imageWidthMedium * 0.5625 %}
 
 {% block matrixBlock %}
-	<div class="my-8 content-image md:my-8-lg">
-		{{ macro.image({
-			image: image,
-			imageClass: "",
-			alt: image.alt,
-			sizes: [
-				{ maxScreen: "640px", width: imageWidthSmall, height: (crop ? imageHeightSmall : "") },
-				{ maxScreen: "", width: imageWidthMedium, height: (crop ? imageHeightMedium : "") }
-			]
-		}) }}
+  <div class="my-8 content-image md:my-8-lg">
+    {{ macro.image({
+      image: image,
+      imageClass: "",
+      alt: image.alt,
+      sizes: [
+        { maxScreen: "640px", width: imageWidthSmall, height: (crop ? imageHeightSmall : "") },
+        { maxScreen: "", width: imageWidthMedium, height: (crop ? imageHeightMedium : "") }
+      ]
+    }) }}
 
-		{% if caption or attribution %}
-			<p class="mt-2 mb-0 reading-width body-xs text-text-secondary md:mt-2-lg">
-				{{ caption|raw }}
-				{{ attribution ? ' Image: ' ~ attribution : '' }}
-			</p>
-		{% endif %}
-	</div>
+    {% if caption or attribution %}
+      <p class="mt-2 mb-0 reading-width body-xs text-text-secondary md:mt-2-lg">
+        {{ caption|raw }}
+        {{ attribution ? ' Image: ' ~ attribution : '' }}
+      </p>
+    {% endif %}
+  </div>
 {% endblock %}

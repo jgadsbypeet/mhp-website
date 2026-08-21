@@ -6,9 +6,9 @@
 {% set videoUrl = "" %}
 {% set transcript = entry.video__transcript %}
 {% if videoOption == "videoUpload" %}
-	{% set video = entry.video__videoFile.one() %}
+  {% set video = entry.video__videoFile.one() %}
 {% else %}
-	{% set videoUrl = entry.video__videoUrl.value %}
+  {% set videoUrl = entry.video__videoUrl.value %}
 {% endif %}
 {% set coverImage = entry.video__coverImage.one() ?? null %}
 
@@ -29,7 +29,7 @@
           {{ macro.image({
             image: coverImage,
             imageClass: "",
-						alt: coverImage.alt,
+            alt: coverImage.alt,
             sizes: [
               { maxScreen: "479px", width: 448, height: 252 },
               { maxScreen: "767px", width: 688, height: 387 },

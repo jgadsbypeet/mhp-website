@@ -4,6 +4,16 @@
 .DS_Store
 .cache
 
+# DDEV writes per-project Traefik routes and TLS certs named after the current
+# project. DDEV's own generated .ddev/.gitignore excludes them, but that file
+# is itself gitignored, so a fresh clone has no rule for them and each new
+# project would otherwise inherit the previous one's stale certs and routes.
+/.ddev/traefik/
+
+# Craft regenerates this on first run. Committing it means every project
+# started from this boilerplate begins holding the boilerplate's licence.
+/config/license.key
+
 # NPM
 /node_modules
 

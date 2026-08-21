@@ -4,6 +4,6 @@
   <li class="items-center mb-0 hidden last:flex md:flex">
     {{ svg("dist/assets/images/icons/breadcrumb-chevron-left.svg")|attr({class: "text-interactions mr-[9px]"}) }}
 
-		<span class="link {{ linkClasses ?? '' }}" onclick="history.go(-1);return false;">Go back</span>
-	</li>
+    <span class="link {{ linkClasses ?? '' }}" onclick="history.go(-1);return false;">Go back</span>
+  </li>
 {% endblock %}

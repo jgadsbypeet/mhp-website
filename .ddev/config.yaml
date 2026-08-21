@@ -12,12 +12,26 @@ additional_fqdns:
 database:
     type: mariadb
     version: "10.11"
-performance_mode: none
 use_dns_when_possible: true
 composer_version: "2"
 nodejs_version: "20.16.0"
 disable_settings_management: true
 web_environment: []
+
+# Relative to docroot, so this is web/assets — the parent of all five Craft
+# volumes (documents, icons, images, logos, videos), which project.yaml defines
+# as craft\fs\Local at @webroot/assets/*. Under Mutagen this path is
+# bind-mounted rather than synced, so uploads cost no sync time or extra disk.
+upload_dirs:
+    - assets
+
+# Expose the Vite dev server (src/index.js -> web/dist) through ddev-router,
+# so Craft can reach it at ${PRIMARY_SITE_URL}:3000 — see config/vite.php.
+web_extra_exposed_ports:
+    - name: vite
+      container_port: 3000
+      http_port: 3001
+      https_port: 3000
 
 # Key features of DDEV's config.yaml:
 

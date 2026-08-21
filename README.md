@@ -26,9 +26,6 @@ This is the boilerplate install for Craft CMS builds at William Joseph. It conta
     - `ddev php craft setup`
     - Follow instructions on terminal
 1. Edit .env file.
-1. Recreate a Craft license key
-    - Delete `config/license.key` file
-    - Craft will recreate a new license key automatically
 1. Upgrade Craft and plugins to the latest
     - Check available upgrade from Utilities > Updates
     - `ddev composer update`
@@ -76,7 +73,7 @@ SCSS, JS and image assets are built using Vite. To begin development;
 1. From the project's root directory, run `ddev npm ci` to install the dependencies for the Vite tasks.
     - `ddev npm ci` will install `node_modules` exactly same as `package-lock.json` file.
     - `ddev npm install` may change/update `package-lock.json` file.
-1. Run `ddev npm run dev`, to trigger a Vite dev task to build and watch your SCSS, JS and image files located in `./src/` as well as start a Browser-sync which should reflect your Craft development site.
+1. Run `ddev npm run dev`, to trigger a Vite dev task to build and watch your SCSS, JS and image files located in `./src/`. Changes to files in `./templates/` also trigger a page reload, via `vite-plugin-restart`. The dev server is served at `https://<project>.ddev.site:3000`, exposed by `web_extra_exposed_ports` in `.ddev/config.yaml`.
 1. Run `ddev npm run build` to build for production.
 
 ## Image srcset

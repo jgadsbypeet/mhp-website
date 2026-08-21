@@ -1,36 +1,36 @@
 {% set linkOption = linkOption ?? '' %}
 {% if linkOption == "assetLink" %}
-	{# if download link #}
-	{% set icon = 'download' %}
+  {# if download link #}
+  {% set icon = 'download' %}
 {% else %}
-	{% set icon = 'chevron' %}
+  {% set icon = 'chevron' %}
 {% endif %}
 {% set linkSource = linkSource ?? '' %}
 
 <div class="{{ blockClasseses ?? '' }}">
-	<a href="{{ linkUrl ?? '' }}" {{ linkTarget ? 'target="_blank"' }} class="relative group pl-[50px] md:pl-[60px] min-h-[40px] md:min-h-[48px] flex flex-col justify-center w-fit link-no-underline">
-		<div class="absolute left-0 flex-grow-0 flex-shrink-0 w-[32px] h-[32px] rounded-full bg-interactions group-hover:bg-interactions-hover group-focus-visible:bg-black flex items-center justify-center mr-3 md:w-[40px] md:h-[40px]">
-			{{ svg("dist/assets/images/icons/" ~ icon ~ ".svg")|attr({ class: "link-invert group-focus-visible:text-highlight" })}}
-		</div>
+  <a href="{{ linkUrl ?? '' }}" {{ linkTarget ? 'target="_blank"' }} class="relative group pl-[50px] md:pl-[60px] min-h-[40px] md:min-h-[48px] flex flex-col justify-center w-fit link-no-underline">
+    <div class="absolute left-0 flex-grow-0 flex-shrink-0 w-[32px] h-[32px] rounded-full bg-interactions group-hover:bg-interactions-hover group-focus-visible:bg-black flex items-center justify-center mr-3 md:w-[40px] md:h-[40px]">
+      {{ svg("dist/assets/images/icons/" ~ icon ~ ".svg")|attr({ class: "link-invert group-focus-visible:text-highlight" })}}
+    </div>
 
-		<p class="link my-0 heading-s{{ ' ' ~ linkClasseses ?? '' }}">{{ linkText ?? '' }}</p>
+    <p class="link my-0 heading-s{{ ' ' ~ linkClasseses ?? '' }}">{{ linkText ?? '' }}</p>
 
-		{# if download link #}
-		{% if linkOption == "assetLink" %}
-			{% set bytes = link.element.size %}
-			{% set mb = bytes / 1048576 %}
-			{% if mb >= 1 %}
-				{% set filesize = mb|number_format(1) ~ " MB" %}
-			{% else %}
-				{% set filesize = (bytes / 1024)|round ~ " KB" %}
-			{% endif %}
+    {# if download link #}
+    {% if linkOption == "assetLink" %}
+      {% set bytes = link.element.size %}
+      {% set mb = bytes / 1048576 %}
+      {% if mb >= 1 %}
+        {% set filesize = mb|number_format(1) ~ " MB" %}
+      {% else %}
+        {% set filesize = (bytes / 1024)|round ~ " KB" %}
+      {% endif %}
 
-			<p class="flex flex-wrap m-0 overflow-hidden body-xxs text-text-secondary">
-				<span class="mr-sm">{{ link.element.extension|upper }}</span>
-				<span class="relative before:content-[''] before:rounded-full before:block before:bg-text-secondary before:absolute before:-left-[10px] before:top-[.9rem] before:w-[4px] before:h-[4px]">{{ filesize }}</span>
-			</p>
-		{% elseif linkSource %}
-			<p class="m-0 body-xxs text-text-secondary">{{ linkSource }}</p>
-		{% endif %}
-	</a>
+      <p class="flex flex-wrap m-0 overflow-hidden body-xxs text-text-secondary">
+        <span class="mr-sm">{{ link.element.extension|upper }}</span>
+        <span class="relative before:content-[''] before:rounded-full before:block before:bg-text-secondary before:absolute before:-left-[10px] before:top-[.9rem] before:w-[4px] before:h-[4px]">{{ filesize }}</span>
+      </p>
+    {% elseif linkSource %}
+      <p class="m-0 body-xxs text-text-secondary">{{ linkSource }}</p>
+    {% endif %}
+  </a>
 </div>

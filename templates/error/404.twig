@@ -7,9 +7,9 @@
 {% set breadcrumb = false %}
 
 {% block errorMessage %}
-	{% if text|length %}
-		{{ text }}
-	{% else %}
-		<p>We couldn't find that page. Try using the <a href="/search">site search</a> to find what you're looking for or contact us.</p>
-	{% endif %}
+  {% if text|length %}
+    {{ text }}
+  {% else %}
+    <p>We couldn't find that page. Try using the <a href="/search">site search</a> to find what you're looking for or contact us.</p>
+  {% endif %}
 {% endblock %}
