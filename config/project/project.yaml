@@ -1,4 +1,4 @@
-dateModified: 1787056929
+dateModified: 1790606282
 elementSources:
   craft\elements\Entry:
     -
@@ -554,7 +554,7 @@ system:
   name: $SITE_GROUP_NAME
   retryDuration: null
   schemaVersion: 5.10.0.0
-  timeZone: America/Los_Angeles
+  timeZone: Europe/London
 users:
   allowPublicRegistration: false
   defaultGroup: null
