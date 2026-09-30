@@ -8,8 +8,8 @@
 {% set limit = 10 %}
 {% set offset = signals.offset ?? 0 %}
 {% set searchQuery = signals.q ?? '' %}
-{% set results = searchQuery ? craft.entries().section("not webDoc").searchResults(true).search(searchQuery).limit(limit).offset(offset).all() : [] %}
-{% set total = searchQuery ? craft.entries().section("not webDoc").searchResults(true).search(searchQuery).count() : 0 %}
+{% set results = searchQuery ? craft.entries().section("not webDoc").searchResults(false).search(searchQuery).limit(limit).offset(offset).all() : [] %}
+{% set total = searchQuery ? craft.entries().section("not webDoc").searchResults(false).search(searchQuery).count() : 0 %}
 {% set currentPage = (offset / limit + 1)|round(0, 'floor') %}
 {% set totalPages = total > 0 ? (total / limit)|round(0, 'ceil') : 0 %}
 
