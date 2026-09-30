@@ -10,7 +10,7 @@ Youtube video {{ macro.videoEmbed('videoUrl') }}
       {% set videoId = videoUrl|split('/')|last %}
       {% set videoId = videoId|split('?')|first %}{# clean up extra paremeters #}
     {% endif %}
-    {% set videoEmbedUrl = 'https://www.youtube.com/embed/' ~ videoId %}   
+    {% set videoEmbedUrl = 'https://www.youtube.com/embed/' ~ videoId %}
   {% elseif 'vimeo' in videoUrl %}
     {% set videoId = videoUrl|split('/')|last %}
     {% set videoEmbedUrl = 'https://player.vimeo.com/video/' ~ videoId %}
@@ -33,6 +33,20 @@ Click to call {{ macro.clickToCall('contactNo', 'class') }}
   {% set contactNoFormatted = "+44" ~ contactNoFormatted %}
 
   <a href="{{ "tel:" ~ contactNoFormatted }}" class="{{ class ?? '' }}">{{ contactNo }}</a>
+{% endmacro %}
+
+{#******************************************************************************************
+Event date {{ macro.formatEventDate(entry) }}
+*******************************************************************************************#}
+{% macro formatEventDate(event) %}
+  {% set sameYear = event.startDate|date('Y') == event.endDate|date('Y') %}
+  {% set sameDay = event.startDate == event.endDate %}
+  {% set dateFormat = 'j mm Y' %}
+  {% set timeFormat = 'g:ia' %}
+  {% set startDateFormat = sameYear and not sameDay ? 'j mm' : dateFormat %}
+  {% set date = sameDay ? event.startDate|date(startDateFormat) : event.startDate|date(startDateFormat) ~ ' to ' ~ event.endDate|date(dateFormat) %}
+  {% set time = event.endTime|length ? event.startTime|date(timeFormat) ~ ' to ' ~ event.endTime|date(timeFormat) : event.startTime|date(timeFormat) %}
+  {{ date ~ ', ' ~ time }}
 {% endmacro %}
 
 {#******************************************************************************************
