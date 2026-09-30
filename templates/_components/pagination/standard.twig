@@ -20,12 +20,12 @@
     <li class="p-0">
       {% if pageInfo.prevUrl %}
         <a href="{{ pageInfo.prevUrl }}" class="{{ pageItemClasses }}">
-          {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
+          {{ svg("dist/assets/images/icons/page-prev-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
           <span class="sr-only">Previous</span>
         </a>
       {% else %}
         <span class="{{ pageItemClasses }} hover:bg-white" aria-hidden="true">
-          {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
+          {{ svg("dist/assets/images/icons/page-prev-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
         </span>
       {% endif %}
     </li>
