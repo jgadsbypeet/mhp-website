@@ -5,8 +5,8 @@
   <title>{{ siteName }} | Search Results</title>
 {% endblock %}
 
-{% set searchQuery = craft.app.request.getParam("q") %}
 {% set entriesPerPage = 10 %}
+{% set searchQuery = craft.app.request.getParam("q") %}
 {% set totalResults = searchQuery ? craft.entries().section("not webDoc").searchResults(false).search(searchQuery).with(['url', 'title']) : null %}
 {% set searchResults = searchQuery ? totalResults.limit(entriesPerPage) : null %}
 

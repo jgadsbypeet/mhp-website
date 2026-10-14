@@ -1,38 +1,64 @@
-{% do seomatic.helper.paginate(pageInfo) %}
+{#
+  Two modes:
+  - Standard: uses `pageInfo` from {% paginate %} and renders links.
+  - Live (Datastar): pass `datastarTemplate`, `currentPage`, `totalPages` and `limit`.
+    Renders buttons that set the `$offset` signal and re-request `datastarTemplate`.
+#}
+{% macro pageLink(page, content, classes, pageInfo, datastarTemplate, limit) %}
+  {# Clickable styles live here so <a> and <button> look identical #}
+  {% set classes = classes ~ " text-interactions hover:text-interactions-hover" %}
+  {% if datastarTemplate %}
+    <button type="button" class="custom-button cursor-pointer {{ classes }}" data-on:click="$offset = {{ (page - 1) * limit }}; {{ datastar.get(datastarTemplate) }}">{{ content }}</button>
+  {% else %}
+    <a href="{{ pageInfo.getPageUrl(page) }}" class="{{ classes }}">{{ content }}</a>
+  {% endif %}
+{% endmacro %}
+{% import _self as self %}
+
+{% set datastarTemplate = datastarTemplate ?? null %}
+{% set pageInfo = pageInfo ?? null %}
+{% set limit = limit ?? null %}
+
+{% if datastarTemplate %}
+  {% set current = currentPage %}
+  {% set total = totalPages %}
+{% else %}
+  {% do seomatic.helper.paginate(pageInfo) %}
+  {% set current = pageInfo.currentPage %}
+  {% set total = pageInfo.totalPages %}
+{% endif %}
+
 {% set isMobile = (type ?? "") == "mobile" %}
 {% set spread = isMobile ? 0 : 1 %}
-{% set current = pageInfo.currentPage %}
-{% set total = pageInfo.totalPages %}
-
 {% set minPage = max(1, current - spread) %}
 {% set maxPage = min(total, current + spread) %}
 
-{#
-  - Pagination styling should match with site-search/live-results.twig
-  - might consider adding a new css file
-#}
 {% set pageItemClasses = "no-underline bg-white h-[40px] w-[40px] flex justify-center items-center rounded-sm border-2 focus-visible:border-focus-dark focus-visible:!shadow-[0_0_0_2px_theme(colors.focus.dark)]" %}
+
+{% set prevIcon %}
+  {{ svg("dist/assets/images/icons/page-prev-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
+{% endset %}
+{% set nextIcon %}
+  {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
+{% endset %}
+{% set prevContent %}{{ prevIcon }}<span class="sr-only">Previous</span>{% endset %}
+{% set nextContent %}{{ nextIcon }}<span class="sr-only">Next</span>{% endset %}
 
 <nav aria-label="Pagination" class="{{ blockClasses ?? '' }}">
   <p class="w-full mb-3 md:mb-3-lg">Page {{ current }} of {{ total }}</p>
 
   <ul class="flex flex-wrap gap-2">
     <li class="p-0">
-      {% if pageInfo.prevUrl %}
-        <a href="{{ pageInfo.prevUrl }}" class="{{ pageItemClasses }}">
-          {{ svg("dist/assets/images/icons/page-prev-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
-          <span class="sr-only">Previous</span>
-        </a>
+      {% if current > 1 %}
+        {{ self.pageLink(current - 1, prevContent, pageItemClasses, pageInfo, datastarTemplate, limit) }}
       {% else %}
-        <span class="{{ pageItemClasses }} hover:bg-white" aria-hidden="true">
-          {{ svg("dist/assets/images/icons/page-prev-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
-        </span>
+        <span class="{{ pageItemClasses }} hover:bg-white" aria-hidden="true">{{ prevIcon }}</span>
       {% endif %}
     </li>
 
     {% if minPage > 1 %}
       <li class="p-0">
-        <a href="{{ pageInfo.getPageUrl(1) }}" class="{{ pageItemClasses }}">1</a>
+        {{ self.pageLink(1, 1, pageItemClasses, pageInfo, datastarTemplate, limit) }}
       </li>
     {% endif %}
 
@@ -47,7 +73,7 @@
         {% if page == current %}
           <span class="{{ pageItemClasses }}" aria-current="page">{{ page }}</span>
         {% else %}
-          <a href="{{ pageInfo.getPageUrl(page) }}" class="{{ pageItemClasses }}">{{ page }}</a>
+          {{ self.pageLink(page, page, pageItemClasses, pageInfo, datastarTemplate, limit) }}
         {% endif %}
       </li>
     {% endfor %}
@@ -60,20 +86,15 @@
 
     {% if maxPage < total %}
       <li class="p-0">
-        <a href="{{ pageInfo.getPageUrl(total) }}" class="{{ pageItemClasses }}">{{ total }}</a>
+        {{ self.pageLink(total, total, pageItemClasses, pageInfo, datastarTemplate, limit) }}
       </li>
     {% endif %}
 
     <li class="p-0">
-      {% if pageInfo.nextUrl %}
-        <a href="{{ pageInfo.nextUrl }}" class="{{ pageItemClasses }}">
-          {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
-          <span class="sr-only">Next</span>
-        </a>
+      {% if current < total %}
+        {{ self.pageLink(current + 1, nextContent, pageItemClasses, pageInfo, datastarTemplate, limit) }}
       {% else %}
-        <span class="{{ pageItemClasses }} hover:bg-white" aria-hidden="true">
-          {{ svg("dist/assets/images/icons/page-next-arrow.svg")|attr({class: "w-[20px] h-auto md:w-[24px]"}) }}
-        </span>
+        <span class="{{ pageItemClasses }} hover:bg-white" aria-hidden="true">{{ nextIcon }}</span>
       {% endif %}
     </li>
   </ul>
