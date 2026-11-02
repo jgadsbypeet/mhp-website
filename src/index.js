@@ -6,6 +6,7 @@ import "./styles/site.css";
 import "./scripts/site.js";
 import "./scripts/file-input.js";
 import "./scripts/plan-copy.js";
+import "./scripts/library-gate.js";
 
 // images
 // Note that images that are duplicates of each other are ignored even if you change the file name.

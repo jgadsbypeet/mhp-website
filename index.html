@@ -4,8 +4,98 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pattern library</title>
+    <style>
+      html.library-locked #content,
+      html.library-locked .skip-link { display: none; }
+      html:not(.library-locked) #library-gate { display: none; }
+      #library-gate {
+        box-sizing: border-box;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 24px;
+        background: #001529;
+        color: #ffffff;
+        font-family: Graphik, sans-serif;
+      }
+      #library-gate-form {
+        width: min(100%, 420px);
+      }
+      #library-gate-form h1 {
+        margin: 0 0 8px;
+        font-size: 32px;
+        line-height: 1.2;
+        font-weight: 500;
+      }
+      #library-gate-form p {
+        margin: 0 0 16px;
+        font-size: 17px;
+        line-height: 22px;
+      }
+      #library-gate-form label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 17px;
+        line-height: 22px;
+      }
+      #library-password {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 48px;
+        margin: 0 0 16px;
+        padding: 8px 12px;
+        border: 2px solid #ffffff;
+        border-radius: 0;
+        background: #ffffff;
+        color: #001529;
+        font: inherit;
+      }
+      #library-password:focus-visible {
+        outline: 3px solid #30f2e6;
+        outline-offset: 2px;
+      }
+      #library-password-error {
+        color: #ffffff;
+        font-weight: 600;
+      }
+      #library-gate-form button {
+        min-height: 48px;
+        padding: 8px 20px;
+        border: 0;
+        border-radius: 999px;
+        background: #4133dc;
+        color: #ffffff;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      #library-gate-form button:hover { background: #271ca2; }
+      #library-gate-form button:focus-visible {
+        outline: 3px solid #30f2e6;
+        outline-offset: 2px;
+      }
+    </style>
+    <script>
+      try {
+        if (sessionStorage.getItem("mhp-library-open") !== "1") {
+          document.documentElement.classList.add("library-locked");
+        }
+      } catch (error) {}
+    </script>
   </head>
   <body>
+    <div id="library-gate">
+      <form id="library-gate-form">
+        <h1>Pattern library</h1>
+        <p>Enter the password to view this page.</p>
+        <label for="library-password">Password</label>
+        <input id="library-password" name="password" type="password" autocomplete="current-password" required>
+        <p id="library-password-error" role="alert" hidden>That password is not correct.</p>
+        <button class="custom-button" type="submit">Continue</button>
+      </form>
+    </div>
     <a class="sr-only skip-link" href="#content">Skip to main content</a>
     <main id="content">
       <h1 class="container pt-6 font-heading text-xl">Pattern library</h1>
