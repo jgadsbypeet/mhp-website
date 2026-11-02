@@ -8,10 +8,33 @@
 @import "./utility/accessibility.css";
 @import "./matrix/matrix.css";
 @import "./matrix/video.css";
+@import "./matrix/highlighted.css";
+@import "./matrix/action-link.css";
+@import "./matrix/text.css";
+@import "./matrix/pictogram-list.css";
+@import "./matrix/tick-list.css";
+@import "./matrix/stats.css";
+@import "./matrix/image.css";
+@import "./matrix/logos.css";
+@import "./matrix/accordion.css";
+@import "./matrix/blockquote.css";
+@import "./matrix/jump-links.css";
+@import "./matrix/cards.css";
+@import "./matrix/hero.css";
+@import "./matrix/testimonial.css";
+@import "./matrix/plan-hero.css";
+@import "./matrix/forms.css";
+@import "./matrix/chrome.css";
+@import "./matrix/table.css";
+@import "./matrix/pagination.css";
+@import "./matrix/specimens.css";
+@import "./matrix/call-to-action.css";
 @import "./utility/print.css";
 
 @source "../../templates/**/*.{html,twig}";
 @source "../../src/scripts/**/*.js";
+@source "../../index.html";
+@source "../../dev.html";
 
 @theme {
 	/* Breakpoints */
@@ -22,9 +45,10 @@
 	--breakpoint-xl: 1280px;
 
 	/* Font families */
-	--font-display: sans-serif;
-	--font-heading: sans-serif;
-	--font-body: sans-serif;
+	--font-sans: "Graphik", sans-serif;
+	--font-display: "Titling Gothic FB", sans-serif;
+	--font-heading: "Titling Gothic FB", sans-serif;
+	--font-body: "Graphik", sans-serif;
 
 	/* Font weights */
 	--font-weight-normal: 400;
@@ -91,6 +115,8 @@
 	--color-error: var(--color-red);
 	--color-primary: var(--color-black);
 	--color-secondary: var(--color-grey-1);
+	--color-boxout: #001529;
+	--color-highlight: #30f2e6;
 
 	/* Spacing */
 	--spacing-1: 4px;

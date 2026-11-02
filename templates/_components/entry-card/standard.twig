@@ -1,25 +1,87 @@
 {% import "_macro" as macro %}
 
+{% set cardStyle = cardStyle ?? "related" %}
+{% set headingTag = headingTag ?? "h3" %}
+
 {% if cardUrl|length %}
-  <div class="relative z-10 h-full bg-grey-3 data-link" data-link="{{ cardUrl }}">
-    {% if cardHeroImage %}
-      {{ macro.image({
-        image: cardHeroImage,
-        imageClass: "",
-        alt: "",
-        sizes: [
-          { maxScreen: "479px", width: 447, height: 251 },
-          { maxScreen: "575px", width: 527, height: 296 },
-          { maxScreen: "767px", width: 719, height: 404 },
-          { maxScreen: "", width: 592, height: 333 }
-        ]
-      }) }}
-    {% endif %}
-
-    <div class="p-sm md:p-lg lc--nbm">
-      <h3 class="mt-0"><a href="{{ cardUrl }}">{{ cardTitle }}</a></h3>
-
-      {{ cardExcerpt ?? "" }}
-    </div>
-  </div>
+  {% if cardStyle == "standard" %}
+    <article class="standard-card">
+      {% if cardHeroImage %}
+        {{ macro.image({
+          image: cardHeroImage,
+          imageClass: "standard-card__media",
+          alt: "",
+          sizes: [
+            { maxScreen: "640px", width: 576, height: 324 },
+            { maxScreen: "", width: 624, height: 351 }
+          ]
+        }) }}
+      {% endif %}
+      <div class="standard-card__body">
+        {% if headingTag == "h2" %}
+          <h2 class="standard-card__title"><a href="{{ cardUrl }}">{{ cardTitle }}</a><img src="/dist/assets/images/icons/card-arrow.svg" alt="" width="24" height="24"></h2>
+        {% else %}
+          <h3 class="standard-card__title"><a href="{{ cardUrl }}">{{ cardTitle }}</a><img src="/dist/assets/images/icons/card-arrow.svg" alt="" width="24" height="24"></h3>
+        {% endif %}
+        {% if cardExcerpt %}
+          <div class="standard-card__summary">{{ cardExcerpt }}</div>
+        {% endif %}
+      </div>
+    </article>
+  {% elseif cardStyle == "knowledge" %}
+    <article class="knowledge-card">
+      {% if cardHeroImage %}
+        {{ macro.image({
+          image: cardHeroImage,
+          imageClass: "knowledge-card__media",
+          alt: "",
+          sizes: [
+            { maxScreen: "640px", width: 576, height: 324 },
+            { maxScreen: "", width: 800, height: 450 }
+          ]
+        }) }}
+      {% endif %}
+      <div class="knowledge-card__body">
+        {% if headingTag == "h2" %}
+          <h2 class="knowledge-card__title"><a href="{{ cardUrl }}">{{ cardTitle }}</a></h2>
+        {% else %}
+          <h3 class="knowledge-card__title"><a href="{{ cardUrl }}">{{ cardTitle }}</a></h3>
+        {% endif %}
+        {% if cardTags is defined and cardTags %}
+          <ul class="knowledge-card__tags">
+            {% for tag in cardTags %}
+              <li>{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if cardExcerpt %}
+          <div class="knowledge-card__summary">{{ cardExcerpt }}</div>
+        {% endif %}
+      </div>
+    </article>
+  {% else %}
+    <article class="related-card">
+      {% if cardHeroImage %}
+        {{ macro.image({
+          image: cardHeroImage,
+          imageClass: "related-card__media",
+          alt: "",
+          sizes: [
+            { maxScreen: "640px", width: 592, height: 333 },
+            { maxScreen: "", width: 384, height: 216 }
+          ]
+        }) }}
+      {% endif %}
+      <div class="related-card__body">
+        {% if headingTag == "h2" %}
+          <h2 class="related-card__title"><a href="{{ cardUrl }}">{{ cardTitle }}</a></h2>
+        {% else %}
+          <h3 class="related-card__title"><a href="{{ cardUrl }}">{{ cardTitle }}</a></h3>
+        {% endif %}
+        {% if cardExcerpt %}
+          <div class="related-card__summary">{{ cardExcerpt }}</div>
+        {% endif %}
+      </div>
+    </article>
+  {% endif %}
 {% endif %}

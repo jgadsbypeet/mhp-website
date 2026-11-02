@@ -16,6 +16,8 @@ export default defineConfig(({ command }) => ({
         rollupOptions: {
             input: {
                 index: "./src/index.js",
+                "pattern-library": "./index.html",
+                "pattern-dev": "./dev.html",
 				// sprite: "./src/sprite.svg" // Ensure this is included
             },
             output: {
@@ -37,15 +39,21 @@ export default defineConfig(({ command }) => ({
                             dest: "./web/dist",
                         },
 						{
-                            src: "./src/images/*",
-                            dest: "./web/dist/assets/images",
-                        },
-						{
                             src: "./src/fonts/*",
                             dest: "./web/dist/fonts",
                         },
                     ],
                     flatten: true,
+                    hook: "writeBundle",
+                }),
+                copy({
+                    targets: [
+                        {
+                            src: "src/images/**/*",
+                            dest: "web/dist/assets",
+                        },
+                    ],
+                    flatten: false,
                     hook: "writeBundle",
                 }),
             ],

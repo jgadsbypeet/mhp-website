@@ -1,36 +1,60 @@
 {% set linkOption = linkOption ?? '' %}
-{% if linkOption == "assetLink" %}
-  {# if download link #}
-  {% set icon = 'download' %}
-{% else %}
-  {% set icon = 'chevron' %}
-{% endif %}
+{% set linkUrl = linkUrl ?? '' %}
+{% set linkText = linkText ?? '' %}
+{% set linkTarget = linkTarget ?? '' %}
 {% set linkSource = linkSource ?? '' %}
 
-<div class="{{ blockClasseses ?? '' }}">
-  <a href="{{ linkUrl ?? '' }}" {{ linkTarget ? 'target="_blank"' }} class="relative group pl-[50px] md:pl-[60px] min-h-[40px] md:min-h-[48px] flex flex-col justify-center w-fit link-no-underline">
-    <div class="absolute left-0 flex-grow-0 flex-shrink-0 w-[32px] h-[32px] rounded-full bg-interactions group-hover:bg-interactions-hover group-focus-visible:bg-black flex items-center justify-center mr-3 md:w-[40px] md:h-[40px]">
-      {{ svg("dist/assets/images/icons/" ~ icon ~ ".svg")|attr({ class: "link-invert group-focus-visible:text-highlight" })}}
-    </div>
-
-    <p class="link my-0 heading-s{{ ' ' ~ linkClasseses ?? '' }}">{{ linkText ?? '' }}</p>
-
-    {# if download link #}
-    {% if linkOption == "assetLink" %}
-      {% set bytes = link.element.size %}
-      {% set mb = bytes / 1048576 %}
-      {% if mb >= 1 %}
-        {% set filesize = mb|number_format(1) ~ " MB" %}
-      {% else %}
-        {% set filesize = (bytes / 1024)|round ~ " KB" %}
-      {% endif %}
-
-      <p class="flex flex-wrap m-0 overflow-hidden body-xxs text-text-secondary">
-        <span class="mr-sm">{{ link.element.extension|upper }}</span>
-        <span class="relative before:content-[''] before:rounded-full before:block before:bg-text-secondary before:absolute before:-left-[10px] before:top-[.9rem] before:w-[4px] before:h-[4px]">{{ filesize }}</span>
-      </p>
-    {% elseif linkSource %}
-      <p class="m-0 body-xxs text-text-secondary">{{ linkSource }}</p>
+{% if linkOption == "assetLink" %}
+  {% set asset = link is defined and link ? link.element : null %}
+  {% set format = asset ? asset.extension|upper : '' %}
+  {% set lengthLabel = length ?? '' %}
+  {% set summary = summary ?? '' %}
+  {% set cover = cover ?? '/dist/assets/images/document-download-fallback.png' %}
+  {% set filesize = '' %}
+  {% if asset and asset.size is not null %}
+    {% set bytes = asset.size %}
+    {% set mb = bytes / 1048576 %}
+    {% if mb >= 1 %}
+      {% set filesize = mb|number_format(1) ~ " MB" %}
+    {% else %}
+      {% set filesize = (bytes / 1024)|round ~ " KB" %}
     {% endif %}
-  </a>
-</div>
+  {% endif %}
+
+  <div class="document-downloads">
+    <article class="document-download">
+      <img class="document-download__cover" src="{{ cover }}" alt="" width="70" height="100">
+      <div class="document-download__content">
+        {% if linkUrl %}
+          <a class="document-download__title" href="{{ linkUrl }}"{% if linkTarget %} target="{{ linkTarget }}"{% if linkTarget == '_blank' %} rel="noopener noreferrer"{% endif %}{% endif %}>{{ linkText }}</a>
+        {% else %}
+          <p class="document-download__title">{{ linkText }}</p>
+        {% endif %}
+        {% if format or filesize or lengthLabel %}
+          <p class="document-download__meta">
+            {% if format %}<span>{{ format }}</span>{% endif %}
+            {% if filesize %}<span>{{ filesize }}</span>{% endif %}
+            {% if lengthLabel %}<span>{{ lengthLabel }}</span>{% endif %}
+          </p>
+        {% endif %}
+        {% if summary %}
+          <p class="document-download__summary">{{ summary }}</p>
+        {% endif %}
+      </div>
+    </article>
+  </div>
+{% else %}
+  <div class="action-links">
+    <a class="action-link" href="{{ linkUrl }}"{% if linkTarget %} target="{{ linkTarget }}"{% if linkTarget == '_blank' %} rel="noopener noreferrer"{% endif %}{% endif %}>
+      <span class="action-link__icon">
+        <img src="/dist/assets/images/icons/{{ linkOption == 'urlLink' ? 'action-arrow-external.svg' : 'action-arrow-right.svg' }}" alt="" width="32" height="32">
+      </span>
+      <span class="action-link__body">
+        <span class="action-link__label">{{ linkText }}{% if linkOption == 'urlLink' %}<span class="sr-only"> (external)</span>{% endif %}</span>
+        {% if linkSource %}
+          <span class="action-link__source">{{ linkSource }}</span>
+        {% endif %}
+      </span>
+    </a>
+  </div>
+{% endif %}

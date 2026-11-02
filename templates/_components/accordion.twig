@@ -1,13 +1,12 @@
 {% set class = class ?? "" %}
 {% set bodyType = bodyType ?? "" %}
-{% set blockClasses = blockClasses ?? "rounded-lg my-8 md:my-8-lg" %}
 
-<details class="border-y {{ blockClasses }}">
-  <summary class="group cursor-pointer outline-none list-none [&::-webkit-details-marker]:hidden">
-    <span class="group-focus-visible:bg-focus-light group-focus-visible:shadow-[0_-3px_0_0_var(--color-focus-light),0_1px_0_0_var(--color-focus-light),0_4px_0_0_var(--color-focus-dark)];">{{- heading -}}</span>
+<details class="accordion{{ class ? ' ' ~ class : '' }}"{% if open ?? false %} open{% endif %}>
+  <summary class="accordion__summary">
+    <span>{{ heading }}</span>
+    <img class="accordion__icon" src="/dist/assets/images/icons/accordion-chevron.svg" alt="" width="28" height="28">
   </summary>
-
-  <div class="px-6 pb-4 lc--nbm md:pb-4-lg md:px-7-lg">
+  <div class="accordion__panel">
     {% if bodyType == "matrix" %}
       {{ body.eagerly().render() }}
     {% else %}

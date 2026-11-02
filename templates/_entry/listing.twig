@@ -1,5 +1,12 @@
 {% extends "_entry/standard" %}
 
+{% block hero %}
+  {% include "_components/hero/listing" with {
+    title: entry.title ?? "",
+    standfirst: entry.standfirst ?? ""
+  } %}
+{% endblock %}
+
 {# TODO: add listing query logics and filtering #}
 {% set listChannel = entry.listByChannel %}
 {% set entriesPerPage = 10 %}
@@ -14,12 +21,15 @@
   <div class="container">
     <div class="max-w-xl mx-auto">
       {% if allEntries %}
-        <ul class="-mt-sm md:-mt-lg lg:-mt-xl">
+        <ul class="standard-cards">
           {% for entry in pageEntries %}
-            <li class="mt-sm md:mt-lg lg:mt-xl">
-              {% include "_components/entry-card/simple" with {
+            <li>
+              {% include "_components/entry-card/standard" with {
+                cardStyle: "standard",
+                headingTag: "h2",
                 cardUrl: entry.url,
-                cardTitle: entry.title
+                cardTitle: entry.title,
+                cardExcerpt: entry.standfirst ?? null,
               } %}
             </li>
           {% endfor %}

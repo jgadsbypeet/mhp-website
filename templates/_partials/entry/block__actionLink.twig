@@ -12,8 +12,9 @@
   {% include "_components/action-link" with {
     blockClasseses: "my-8 md:my-8-lg",
     linkOption: type,
-    linkUrl: link.value,
-    linkTarget: link.target,
-    linkText: link.label,
+    linkUrl: link.value ?? '',
+    linkTarget: link.target ?? '',
+    linkText: link.label ?? '',
+    link: link,
   } %}
 {% endblock %}

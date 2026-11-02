@@ -1,0 +1,12 @@
+---
+description: Mentally Healthy Productions Figma file and where components are built
+alwaysApply: true
+---
+
+# Mentally Healthy Productions
+
+This workspace is the Mentally Healthy Productions Craft site. Figma file key `mtlBVCLuZ6Y4JgHK94x2oG`. The component queue is `docs/figma-component-registry.md`.
+
+Follow the `wj-figma-to-craft` skill. Build `queued` rows in file order. A missing entry type blocks Craft wiring, not the pattern-library specimen. Leave a row `blocked` only for a rate limit or a field the user has not agreed. Do not copy CSS, colours, fonts, or node IDs from any other client project.
+
+If a request names a different Figma file key, stop and do not write files here.

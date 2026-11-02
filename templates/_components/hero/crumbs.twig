@@ -1,0 +1,27 @@
+{% set segments = craft.app.request.segments %}
+{% set breadcrumb = [] %}
+{% set parentUrl = "" %}
+{% for segment in segments %}
+  {% if not loop.last %}
+    {% set parentUrl = parentUrl ~ "/" ~ segment %}
+    {% set breadcrumb = breadcrumb|merge([{
+      title: segment,
+      url: parentUrl
+    }]) %}
+  {% endif %}
+{% endfor %}
+
+<nav class="hero-listing__crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li>
+      <a href="{{ siteUrl }}">Home</a>
+      <img src="/dist/assets/images/icons/breadcrumb-chevron-hero.svg" alt="" width="20" height="20">
+    </li>
+    {% for crumb in breadcrumb %}
+      <li>
+        <a href="{{ crumb.url }}">{{ crumb.title|replace("-", " ") }}</a>
+        <img src="/dist/assets/images/icons/breadcrumb-chevron-hero.svg" alt="" width="20" height="20">
+      </li>
+    {% endfor %}
+  </ol>
+</nav>

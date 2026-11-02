@@ -1,50 +1,60 @@
-{% extends "_partials/block-containers/w-xl" %}
-{% import "_macro" as macro %}
+{% extends "_partials/block-containers/fullwidth" %}
 
-{# action link #}
-{% set button = entry.cta__actionLink.one() %}
-{% set linkText = button.action__linkText ?? "More info" %}
-{% set type = button.action__option ?? "entryLink" %}
-{% set link = button.action__entryLink ?? null %}
-{% if type == "assetLink" %}
-  {% set link = button.action__assetLink ?? null %}
-  {% set linkSource = "" %}
-{% elseif type == "urlLink" %}
-  {% set link = button.action__urlLink ?? null %}
+{% set button = entry.cta__actionLink.one() ?? null %}
+{% set image = entry.cta__image.one() ?? null %}
+{% set heading = entry.cta__heading ?? "" %}
+{% set text = entry.cta__text ?? "" %}
+{% set linkUrl = "" %}
+{% set linkTarget = "" %}
+{% set linkText = "" %}
+
+{% if button %}
+  {% set type = button.action__option ?? "entryLink" %}
+  {% set link = button.action__entryLink ?? null %}
+  {% if type == "assetLink" %}
+    {% set link = button.action__assetLink ?? null %}
+  {% elseif type == "urlLink" %}
+    {% set link = button.action__urlLink ?? null %}
+  {% endif %}
+  {% set linkUrl = link.value ?? "" %}
+  {% set linkTarget = link.target ?? "" %}
+  {% set linkText = button.action__linkText ?? link.label ?? "" %}
 {% endif %}
 
-{% set image = entry.cta__image.one() ?? null %}
-
 {% block matrixBlock %}
-  <div class="my-8 md:my-8-lg md:flex md:flex-row-reverse bg-secondary group hover:cursor-pointer data-link" data-link="{{ link.value }}">
-    {% if image %}
-      <div class="overflow-hidden md:basis-1/2">
-        {{ macro.image({
-          image: image,
-          imageClass: "w-full h-full object-cover",
-          alt: image.alt,
-          sizes: [
-            { maxScreen: "479px", width: 447, height: 251 },
-            { maxScreen: "575px", width: 527, height: 296 },
-            { maxScreen: "767px", width: 719, height: 404 },
-            { maxScreen: "", width: 592, height: 333 }
-          ]
-        }) }}
-      </div>
+  <div class="cta-banner{% if image %} cta-banner--photo{% endif %}">
+    <div class="cta-banner__media">
+      {% if image %}
+        <img src="{{ image.url }}" alt="" width="{{ image.width }}" height="{{ image.height }}">
+      {% else %}
+        <img src="/dist/assets/images/cta-flare.png" alt="" width="1067" height="1067">
+      {% endif %}
+    </div>
+    {% if not image %}
+      <div class="cta-banner__noise" style="--cta-noise: url('/dist/assets/images/cta-noise.png')"></div>
     {% endif %}
 
-    <div class="p-sm md:p-lg{% if image %} md:basis-1/2{% endif %}">
-      <h2 id="heading-{{ entry.id }}" class="mt-0 text-inherit">{{ entry.cta__heading }}</h2>
+    <div class="container">
+      <div class="cta-banner__content">
+        {% if heading %}
+          <h2 id="heading-{{ entry.id }}" class="cta-banner__heading">
+            {% for word in heading|split(' ') %}
+              {% if word %}<span>{{ word }}</span>{% endif %}
+            {% endfor %}
+          </h2>
+        {% endif %}
 
-      <p>{{ entry.cta__text }}</p>
+        {% if text %}
+          <p class="cta-banner__text">{{ text|nl2br }}</p>
+        {% endif %}
 
-      {% include "_components/action-link" with {
-        blockClasseses: "my-8 md:my-8-lg",
-        linkOption: type,
-        linkUrl: link.value,
-        linkTarget: link.target,
-        linkText: link.label,
-      } %}
+        {% if linkUrl and linkText %}
+          <a class="cta-banner__action" href="{{ linkUrl }}"{% if linkTarget %} target="{{ linkTarget }}"{% if linkTarget == '_blank' %} rel="noopener noreferrer"{% endif %}>
+            {{- linkText -}}
+            {% if linkTarget == '_blank' %}<span class="sr-only"> (external)</span>{% endif %}
+          </a>
+        {% endif %}
+      </div>
     </div>
   </div>
 {% endblock %}

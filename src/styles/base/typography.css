@@ -6,7 +6,7 @@
 		@apply text-interactions underline decoration-1 underline-offset-[2px] hover:text-interactions-hover hover:no-underline group-hover:text-interactions-hover group-hover:no-underline;
 	}
 	strong {
-		@apply font-medium;
+		@apply font-semibold;
 	}
 	table {
 		@apply w-full mb-7 md:mb-7-lg;
@@ -18,7 +18,7 @@
 		}
 	}
 	th {
-		@apply font-medium border-b-grey-2;
+		@apply font-semibold border-b-grey-2;
 	}
 	td {
 		@apply border-b-grey-4;
@@ -49,10 +49,10 @@
 		@apply font-heading font-medium text-m md:text-m-lg;
 	}
 	.heading-s {
-		@apply font-body font-medium text-s md:text-s-lg;
+		@apply font-body font-semibold text-s md:text-s-lg;
 	}
 	.heading-xs {
-		@apply font-body font-medium text-xs md:text-xs-lg;
+		@apply font-body font-semibold text-xs md:text-xs-lg;
 	}
 	/* paragraphs */
 	.body-m {

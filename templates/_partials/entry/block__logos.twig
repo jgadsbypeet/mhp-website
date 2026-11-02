@@ -1,38 +1,25 @@
 {% extends "_partials/block-containers/w-xl" %}
-{% set logos = entry.logos__logos.eagerly().all() ?? '' %}
+{% import "_macro" as macro %}
+{% set logos = entry.logos__logos.eagerly().all() ?? [] %}
 
 {% block matrixBlock %}
   {% if logos %}
-    <div class="flex flex-row flex-wrap items-center my-8 gap-7 md:gap-7-lg md:my-8-lg">
-      {% for logo in logos %}
-        {% set logoWidthSmall = "200" %}
-        {% set logoWidthMedium = "240" %}
-        {# An algorithm is used to proportionally size logos based on their aspect ratio. This way square logos should hopefully ‘feel’ the same sizes as landscape ones. #}
-        {% set aspectRatio = logo.width / logo.height %}
-        {% if aspectRatio < 1.5 %}
-          {% set logoWidthSmall = logoWidthSmall * 0.5 %}
-          {% set logoWidthMedium = logoWidthMedium * 0.5 %}
-        {% elseif aspectRatio >= 1.5 and aspectRatio < 2.5 %}
-          {% set logoWidthSmall = logoWidthSmall * 0.7 %}
-          {% set logoWidthMedium = logoWidthMedium * 0.7 %}
-        {% elseif aspectRatio >= 2.5 and aspectRatio < 5 %}
-          {% set logoWidthSmall = logoWidthSmall * 0.85 %}
-          {% set logoWidthMedium = logoWidthMedium * 0.85 %}
-        {% elseif aspectRatio >= 5 %}
-          {% set logoWidthSmall = logoWidthSmall %}
-          {% set logoWidthMedium = logoWidthMedium %}
-        {% endif %}
-
-        {{ macro.image({
-          image: logo,
-          imageClass: "block",
-          alt: logo.title,
-          sizes: [
-            { maxScreen: "640px", width: logoWidthSmall, height: '' },
-            { maxScreen: "", width: logoWidthMedium, height: '' }
-          ]
-        }) }}
-      {% endfor %}
+    <div class="partner-logos">
+      <ul class="partner-logos__grid">
+        {% for logo in logos %}
+          <li>
+            {{ macro.image({
+              image: logo,
+              imageClass: "",
+              alt: logo.title,
+              sizes: [
+                { maxScreen: "640px", width: 280, height: "" },
+                { maxScreen: "", width: 480, height: "" }
+              ]
+            }) }}
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   {% endif %}
 {% endblock %}

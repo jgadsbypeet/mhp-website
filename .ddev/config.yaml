@@ -1,4 +1,4 @@
-name: wj-craft5-boilerplate
+name: mhp-website
 type: craftcms
 docroot: web
 php_version: "8.3"
@@ -7,8 +7,7 @@ router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: []
-additional_fqdns:
-    - wj-craft5.test
+additional_fqdns: []
 database:
     type: mariadb
     version: "10.11"

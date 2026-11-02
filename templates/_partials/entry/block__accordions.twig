@@ -1,5 +1,7 @@
 {% extends "_partials/block-containers/standard" %}
 
 {% block matrixBlock %}
-  {{ entry.block__accordion.eagerly().render() }}
+  <div class="accordions">
+    {{ entry.block__accordion.eagerly().render() }}
+  </div>
 {% endblock %}

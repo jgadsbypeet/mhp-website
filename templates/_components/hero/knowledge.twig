@@ -1,0 +1,39 @@
+{% set image = image ?? null %}
+{% set tags = tags ?? [] %}
+
+<div class="hero-knowledge">
+  <div class="hero-listing__panel">
+    <div class="container hero-listing__inner">
+      {% include "_components/hero/crumbs" %}
+
+      {% if title %}
+        <h1 class="hero-listing__title">{{ title }}</h1>
+      {% endif %}
+
+      {% if tags or standfirst %}
+        <div class="hero-knowledge__intro">
+          {% if tags %}
+            <ul class="hero-knowledge__tags">
+              {% for tag in tags %}
+                <li><a href="{{ tag.url ?? '#' }}">{{ tag.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if standfirst %}
+            <p class="hero-knowledge__standfirst">{{ standfirst|nl2br }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if image %}
+    <div class="hero-knowledge__media">
+      <img class="hero-knowledge__photo" src="{{ image }}" alt="" width="1028" height="576">
+      <img class="hero-knowledge__cut hero-knowledge__cut--top" src="/dist/assets/images/hero-listing-angle.svg" alt="" width="1024" height="100">
+      <img class="hero-knowledge__cut hero-knowledge__cut--bottom" src="/dist/assets/images/hero-angle-white.svg" alt="" width="1024" height="100">
+    </div>
+  {% else %}
+    <img class="hero-listing__angle" src="/dist/assets/images/hero-listing-angle.svg" alt="" width="1024" height="100">
+  {% endif %}
+</div>

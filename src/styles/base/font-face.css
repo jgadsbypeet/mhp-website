@@ -1,7 +1,44 @@
-/* @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-display: auto;
-  font-weight: 600;
-  src: url('/dist/fonts/Inter-SemiBold.woff2') format('woff2');
-} */
+@font-face {
+	font-family: "Graphik";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../../fonts/Graphik-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Graphik";
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("../../fonts/Graphik-Semibold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Titling Gothic FB";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("../../fonts/TitlingGothicFBNor-Med.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Titling Gothic FB Extended";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("../../fonts/TitlingGothicFBExt-Med.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Titling Gothic FB Wide";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("../../fonts/TitlingGothicFBWide-Med.otf") format("opentype");
+}
+
+html {
+	font-family: var(--font-body);
+	font-synthesis: none;
+}

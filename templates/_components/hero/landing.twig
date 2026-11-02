@@ -1,0 +1,45 @@
+{% set image = image ?? null %}
+{% set ctaUrl = ctaUrl ?? "" %}
+{% set ctaText = ctaText ?? "" %}
+
+<div class="hero-landing{% if not image %} hero-landing--plain{% endif %}">
+  <div class="hero-landing__bar">
+    <div class="container hero-listing__inner">
+      {% include "_components/hero/crumbs" %}
+    </div>
+  </div>
+  <div class="hero-landing__stage">
+    {% if image %}
+      <div class="hero-landing__media">
+        <img class="hero-landing__photo" src="{{ image }}" alt="" width="2000" height="1334">
+        <img class="hero-landing__cut hero-landing__cut--top" src="/dist/assets/images/hero-listing-angle.svg" alt="" width="1024" height="100">
+        <img class="hero-landing__cut hero-landing__cut--bottom" src="/dist/assets/images/hero-listing-angle.svg" alt="" width="1024" height="100">
+        <button type="button" class="hero-landing__pause" aria-pressed="false">
+          <img src="/dist/assets/images/icons/hero-pause.svg" alt="" width="44" height="44">
+          <span class="sr-only">Pause background video</span>
+        </button>
+      </div>
+    {% endif %}
+    <div class="hero-landing__copy">
+      <div class="container">
+        {% if title %}
+          <h1 class="hero-landing__title">
+            {% for word in title|split(' ') %}
+              {% if word %}<span>{{ word }}</span>{% endif %}
+            {% endfor %}
+          </h1>
+        {% endif %}
+        {% if standfirst or (ctaUrl and ctaText) %}
+          <div class="hero-landing__intro">
+            {% if standfirst %}
+              <p>{{ standfirst|nl2br }}</p>
+            {% endif %}
+            {% if ctaUrl and ctaText %}
+              <a class="hero-landing__action" href="{{ ctaUrl }}">{{ ctaText }}</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,10 +13,10 @@
 {% set coverImage = entry.video__coverImage.one() ?? null %}
 
 {% block matrixBlock %}
-  <div class="relative my-8 video md:my-8-lg">
-    <div class="video__frame relative pt-[56.25%] bg-black overflow-hidden{% if coverImage %} cover-image{% endif %}">
+  <div class="video-block">
+    <div class="video__frame{% if coverImage %} cover-image{% endif %}">
       {% if video %}
-        <video class="absolute top-0 bottom-0 left-0 right-0 video__asset video__asset--uploaded" controls>
+        <video class="video__asset video__asset--uploaded" controls>
           <source src="{{ url(video.url(), { v: video.dateModified.timestamp }) }}">
           Your browser does not support the video tag.
         </video>
@@ -25,29 +25,25 @@
       {% endif %}
 
       {% if coverImage %}
-        <button class="custom-button absolute top-0 left-0 h-full video__button group text-text-reversed hover:text-text-primary">
+        <button type="button" class="video__button custom-button">
           {{ macro.image({
             image: coverImage,
             imageClass: "",
             alt: coverImage.alt,
             sizes: [
-              { maxScreen: "479px", width: 448, height: 252 },
-              { maxScreen: "767px", width: 688, height: 387 },
-              { maxScreen: "", width: 800, height: 450 }
+              { maxScreen: "640px", width: 592, height: 333 },
+              { maxScreen: "", width: 904, height: 509 }
             ]
           }) }}
-
+          <img class="video__play" src="/dist/assets/images/icons/video-play.svg" alt="" width="80" height="80">
           <span class="sr-only">Play video</span>
-          <div class="absolute bottom-0 left-0 w-[80px] h-[80px] bg-secondary flex flex-col items-center justify-center group-hover:text-text-reversed group-hover:bg-black group-focus-visible:bg-focus-light md:bottom-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
-            {{ svg('dist/assets/images/icons/play.svg')|attr({class: 'video__play-icon block w-[19px] ml-[3px]'}) }}
-          </div>
         </button>
       {% endif %}
     </div>
 
     {% if transcript %}
       {% include "_components/accordion" with {
-        heading: "Video transcript",
+        heading: "Transcript",
         body: transcript,
       } %}
     {% endif %}

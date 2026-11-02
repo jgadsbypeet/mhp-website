@@ -1,0 +1,59 @@
+.body-image {
+	max-width: 904px;
+	margin-block: 40px;
+}
+
+.body-image__media {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.body-image--standard .body-image__media {
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+}
+
+.body-image--3x2 .body-image__media {
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+}
+
+.body-image__caption {
+	position: relative;
+	margin: 8px 0 0;
+	color: #596774;
+	font-family: var(--font-body);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	text-indent: 18px;
+}
+
+.body-image__camera {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	max-width: none;
+	aspect-ratio: auto;
+	object-fit: contain;
+}
+
+@media (min-width: 1024px) {
+	.body-image {
+		margin-block: 48px;
+	}
+
+	.body-image__caption {
+		font-size: 16px;
+		line-height: 20px;
+		text-indent: 20px;
+	}
+
+	.body-image__camera {
+		width: 16px;
+		height: 16px;
+	}
+}

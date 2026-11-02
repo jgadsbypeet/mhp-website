@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Blocks / Progress out of 49">
+<path id="Background" d="M38 20C38 29.9411 29.9411 38 20 38C10.0589 38 2 29.9411 2 20C2 10.0589 10.0589 2 20 2C29.9411 2 38 10.0589 38 20Z" fill="#001529" stroke-width="4" stroke="#001529"/>
+<path id="Completed" d="M20 0C24.751 5.66555e-08 29.3469 1.69132 32.9646 4.77108C36.5822 7.85084 38.9854 12.1179 39.7436 16.808C40.5019 21.4981 39.5658 26.305 37.1029 30.3679C34.64 34.4307 30.8112 37.484 26.3022 38.9811L20 20V0Z" fill="#30F2E6"/>
+<circle id="Foreground" cx="20" cy="20" r="16" fill="#334454"/>
+<g id="Icon / Functional / Tick">
+<path id="Vector" d="M17 27.4L10.3 20.7L11.7 19.3L17 24.6L28.3 13.3L29.7 14.7L17 27.4Z" fill="#30F2E6"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,16 @@
+<div class="hero-listing">
+  <div class="hero-listing__panel">
+    <div class="container hero-listing__inner">
+      {% include "_components/hero/crumbs" %}
+
+      {% if title %}
+        <h1 class="hero-listing__title">{{ title }}</h1>
+      {% endif %}
+
+      {% if standfirst %}
+        <p class="hero-listing__standfirst">{{ standfirst|nl2br }}</p>
+      {% endif %}
+    </div>
+  </div>
+  <img class="hero-listing__angle" src="/dist/assets/images/hero-listing-angle.svg" alt="" width="1024" height="100">
+</div>

@@ -1,22 +1,15 @@
-<div class="container relative">
-  <div class="max-w-md mx-auto">
-    <nav id="page-contents" aria-label="Page contents" class="mb-8 lc--nbm">
-      <h2 class="mt-0 mb-2 text-left text-text-secondary md:mb-2-lg">On this page</h2>
+<nav id="page-contents" class="page-contents" aria-label="Page contents">
+  <h2 class="page-contents__heading">On this page</h2>
+  <ol>
+    {% for jumpLink in bodyJumpLinks %}
+      <li>
+        <a href="#heading-{{ jumpLink.id }}">
+          {{- jumpLink.heading__jumpLinkText ?? jumpLink.cta__heading ?? jumpLink.heading__heading -}}
+        </a>
+      </li>
+    {% endfor %}
 
-      <ol class="lc--nbm">
-        {% for jumpLink in bodyJumpLinks %}
-          <li class="pl-0 mb-3 md:mb-3-lg">
-            <a class="relative inline-block pl-[26px] md:pl-[28px]" href="#heading-{{ jumpLink.id }}">
-              {{ svg("dist/assets/images/icons/arrow-down.svg")|attr({ class: "absolute left-1 top-[7px] md:top-[9px]"}) }}
-
-              {{- jumpLink.heading__jumpLinkText ?? jumpLink.cta__heading ?? jumpLink.heading__heading -}}
-            </a>
-          </li>
-        {% endfor %}
-
-        {% block extraJumpLinks %}
-        {% endblock %}
-      </ol>
-    </nav>
-  </div>
-</div>
+    {% block extraJumpLinks %}
+    {% endblock %}
+  </ol>
+</nav>

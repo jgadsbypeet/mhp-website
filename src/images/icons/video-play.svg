@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Dummy button">
+<rect width="80" height="80" rx="40" fill="#30F2E6"/>
+<circle id="Background ripple" cx="40" cy="40" r="8" fill="#30F2E6"/>
+<g id="Icon">
+<path id="Vector" d="M59.5 40C59.5 39.489 59.244 39.039 58.854 38.768V38.766L58.84 38.757C58.84 38.757 58.838 38.756 58.838 38.755L32.854 20.767C32.612 20.6 32.318 20.5 32.001 20.5C31.173 20.5 30.501 21.172 30.501 22V58C30.501 58.828 31.173 59.5 32.001 59.5C32.318 59.5 32.611 59.401 32.853 59.233L58.838 41.245C58.838 41.245 58.84 41.244 58.84 41.243L58.854 41.234V41.232C59.244 40.961 59.5 40.511 59.5 40ZM33.5 55.137V24.863L55.365 40L33.5 55.137Z" fill-rule="evenodd" clip-rule="evenodd" fill="#001529"/>
+</g>
+</g>
+</svg>

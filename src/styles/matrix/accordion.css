@@ -1,0 +1,96 @@
+.accordions {
+	margin-block: 32px;
+	padding-top: 8px;
+	border-top: 8px solid #b9b2ff;
+}
+
+.accordion {
+	border-bottom: 1px solid #c9ced3;
+	background-color: white;
+}
+
+.accordion__summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 16px;
+	color: #4133dc;
+	font-family: var(--font-body);
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 22px;
+	list-style: none;
+	cursor: pointer;
+}
+
+.accordion__summary::-webkit-details-marker {
+	display: none;
+}
+
+.accordion__summary:focus-visible {
+	outline: none;
+	background-color: var(--color-focus-light);
+	color: var(--color-focus-dark);
+	box-shadow: 0 -3px 0 0 var(--color-focus-light), 0 1px 0 0 var(--color-focus-light), 0 4px 0 0 var(--color-focus-dark);
+}
+
+.accordion__icon {
+	flex: 0 0 auto;
+	width: 24px;
+	height: 24px;
+}
+
+.accordion[open] .accordion__icon {
+	transform: rotate(180deg);
+}
+
+.accordion__panel {
+	padding: 8px 16px 24px;
+	color: #001529;
+	font-family: var(--font-body);
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.accordion__panel :is(p, ul, ol) {
+	margin-bottom: 16px;
+}
+
+.accordion__panel :is(p, ul, ol):last-child {
+	margin-bottom: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.accordion__icon {
+		transition: transform 0.2s ease;
+	}
+}
+
+@media (min-width: 1024px) {
+	.accordions {
+		margin-block: 40px;
+	}
+
+	.accordion__summary {
+		padding: 24px;
+		font-size: 21px;
+		line-height: 28px;
+	}
+
+	.accordion__icon {
+		width: 28px;
+		height: 28px;
+	}
+
+	.accordion__panel {
+		padding: 8px 24px 32px;
+		font-size: 21px;
+		line-height: 28px;
+	}
+
+	.accordion__panel :is(p, ul, ol) {
+		margin-bottom: 24px;
+	}
+}

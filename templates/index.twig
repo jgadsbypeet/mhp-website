@@ -4,8 +4,8 @@
 {% set standfirst = entry.standfirst ?? null %}
 
 {% block content %}
-  {% include "_components/hero/standard" with {
-    title: entry.hero__heading ?? "Homepage",
+  {% include "_components/hero/landing" with {
+    title: entry.hero__heading ?? entry.title ?? "Homepage",
     standfirst: standfirst ?? "",
   } %}
 {% endblock %}

@@ -1,0 +1,63 @@
+.tick-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	max-width: 696px;
+	margin: 0 0 16px;
+	padding: 0;
+	list-style: none;
+	color: #001529;
+	font-family: var(--font-body);
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.tick-list li {
+	position: relative;
+	margin: 0;
+	padding-left: 24px;
+}
+
+.tick-list img {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	max-width: none;
+}
+
+.tick-list p {
+	margin: 0;
+}
+
+.tick-list strong {
+	font-weight: 600;
+}
+
+.tick-list a {
+	color: #4133dc;
+	font-weight: 400;
+	text-decoration-line: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
+}
+
+@media (min-width: 1024px) {
+	.tick-list {
+		margin-bottom: 24px;
+		font-size: 21px;
+		line-height: 28px;
+	}
+
+	.tick-list li {
+		padding-left: 32px;
+	}
+
+	.tick-list img {
+		top: 4px;
+		width: 20px;
+		height: 20px;
+	}
+}
