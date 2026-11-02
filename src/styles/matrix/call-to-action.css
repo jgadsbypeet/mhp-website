@@ -23,7 +23,7 @@
 	position: absolute;
 	inset: 0;
 	z-index: 1;
-	background-image: var(--cta-noise);
+	background-image: url("../../images/cta-noise.png");
 	background-size: 128px 128px;
 	mix-blend-mode: overlay;
 	opacity: 0.2;

@@ -5,7 +5,7 @@ import copy from "rollup-plugin-copy";
 import legacy from "@vitejs/plugin-legacy";
 
 export default defineConfig(({ command }) => ({
-    base: command === "serve" ? "" : "/dist/",
+    base: command === "serve" ? "" : process.env.VITE_BASE || "/dist/",
     publicDir: false,
     build: {
         outDir: "./web/dist/",
